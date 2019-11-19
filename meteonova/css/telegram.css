@@ -1,0 +1,84 @@
+.but {
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 18px;
+    margin-left: 0;
+}
+.but.border {
+    border: 1px solid #40aadc;
+    border-radius: 3px;
+    color: #40aadc;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+.but {
+    display: inline-block;
+    border: none;
+    background: none;
+    cursor: pointer;
+    text-decoration: none!important;
+    position: relative;
+    line-height: 27px;
+    text-align: center;
+    height: 27px;
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none!important;
+}
+
+.but.addto::after {
+    background-size: 18px auto;
+    background-position: 0 -19px;
+    height: 35px;
+    width: 18px;
+}
+.but.addto::after {
+    content: ' ';
+    background: url(../images/add_sprite.svg) no-repeat 0px -18px transparent;
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-left: 6px;
+    margin-top: -5px;
+    background-size: 15px auto;
+}
+
+.but.border:hover {
+    color: #ffffff;
+    background-color: #40aadc;
+}
+
+.but.addto::after {
+    background-size: 18px auto;
+    background-position: 0 -19px;
+    height: 35px;
+    width: 18px;
+}
+
+.but.addto:hover::after {
+    background-position: 0 7px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.but.addto::before {
+    content: '';
+    background: none;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    overflow: hidden;
+    margin: 0;
+    background-size: 0 auto;
+}

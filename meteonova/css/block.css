@@ -1,0 +1,160 @@
+.block_top {
+    background: #eef1fd;
+    color: #4062b7;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+
+}
+
+.block_top .round_left {
+    border-top-left-radius: 4px;
+}
+
+.block_top .round_right {
+    border-top-right-radius: 4px;
+}
+.block_bottom {
+    width: 100%;
+    position: relative;
+    float: left;
+    padding-bottom: 8px;
+}
+.block_title,
+.block_top {
+    position: relative;
+    float: left
+}
+.block_title_2 {
+    height: 26px;
+}
+.block_bt,
+.block_title_2 {
+    float: left;
+    position: relative
+}
+.block_bt {
+    height: 8px;
+    background: url(../images/block_bt.png) repeat-x
+}
+.block_content {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    float: left
+}
+.block_content_2 {
+    background-color: #fff;
+    float: left;
+    position: relative;
+    padding-top: 8px;
+}
+.round_left, .round_right {
+    float: left;
+    background: #eef1fd;
+}
+
+.block_bottom .round_left,
+.block_bottom .round_right {
+    background: #fff;
+    height: 8px;
+}
+
+
+.block_bottom .round_left {
+    border-bottom-left-radius: 4px;
+}
+
+.block_bottom .round_right {
+    border-bottom-right-radius: 4px;
+}
+
+
+img.corner {
+    border: none;
+    display: block;
+    visibility: hidden;
+}
+.block_city {
+    width: 728px;
+    height: 55px;
+}
+.block_city h1 {
+    color: #FFFFFF;
+}
+
+.block_city .round_left {
+    border-top-left-radius: 4px;
+    background: #26346e;
+}
+
+.block_city .round_right {
+    border-top-right-radius: 4px;
+    background: #26346e;
+}
+
+.city_content {
+    width: 708px;
+    height: 46px;
+    background: #26346e;
+    z-index: 2
+}
+.city_content,
+.icon {
+    float: left;
+    position: relative
+}
+.icon {
+    width: 26px;
+    height: 26px;
+    margin-top: 5px;
+    margin-right: 6px;
+    display: none;
+}
+.autoinformer {
+    margin: 2px;
+    margin-right: 0;
+    margin-left: 0
+}
+.autoinformer table {
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%
+}
+.autoinformer td {
+    padding: 4px 2px;
+    margin: 2px;
+    font-weight: 700
+}
+.autoinformer .rai0 {
+    background-color: #f0fff0
+}
+.autoinformer .rai1 {
+    background-color: ivory
+}
+.autoinformer .rai2 {
+    background-color: #fff0f0
+}
+.newsmid ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0
+}
+.newsmid li {
+    vertical-align: middle;
+    display: block;
+    float: left;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 250px
+}
+.newsmid img {
+    width: 70px;
+    margin-right: 8px;
+    float: left
+}
+.newsmid a:link {
+    text-decoration: none;
+    color: #1f2298
+}

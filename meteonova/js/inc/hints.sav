@@ -1,0 +1,56 @@
+var hintTimeouts = new Array();
+
+function showHint(parentObj, id, bVisible, width) {
+	id = id.toString();
+	var obj = document.getElementById("hint_content_"+id);
+	if (!obj) initHint(id, width);
+
+	var hintObj = document.getElementById(id);
+	if (hintObj) {
+    hintObj.style.left=getPos(parentObj,"Left")+2+"px";
+    hintObj.style.top =  getPos(parentObj,"Top")+parentObj.offsetHeight+2+"px";
+    setTimeoutHint(hintObj, bVisible);
+  }
+}
+
+function setTimeoutHint(hintObj, bVisible) {
+	var id = hintObj.getAttribute("id").toString();
+	var hintTimeout = hintTimeouts[id];
+	clearTimeout(hintTimeout);
+  hintTimeouts[id] = setTimeout(function() {
+  		if (bVisible) hintObj.style.visibility="visible";
+  		else hintObj.style.visibility="hidden";
+    },
+    500
+  );
+}
+
+function initHint(id, width) {
+	var imgUrl = "/images/hints";
+	var hintObj = document.getElementById(id);
+	if (hintObj) {
+		var content = hintObj.innerHTML;
+		var hintBlock = "<div>";
+		hintBlock+="<div class='hint_top_left'><img src='"+imgUrl+"/hint_top_left.png' width='15' height='18' class='corner' onLoad='transparent(this)'></div>";
+		hintBlock+="<div class='hint_top_center' style='width: "+width+"px;'></div>";
+		hintBlock+="<div class='hint_top_right'><img src='"+imgUrl+"/hint_top_right.png' width='23' height='18' class='corner' onLoad='transparent(this)'></div>";
+		hintBlock+="</div>";
+    hintBlock+= "<div>";
+		hintBlock+="<div class='hint_body_left'><img src='"+imgUrl+"/hint_body_left.png' id='hint_body_left"+id+"' width=15 onLoad='transparent(this)'></div>";
+		hintBlock+="<div class='hint_body_center' id='hint_content_"+id+"' style='width: "+width+"px; background-color: #f8f9fd'>"+content+"</div>";
+		hintBlock+="<div class='hint_body_right'><img src='"+imgUrl+"/hint_body_right.png' id='hint_body_right"+id+"' width=23 onLoad='transparent(this)'></div>";
+		hintBlock+="</div>";
+    hintBlock+= "<div>";
+		hintBlock+="<div class='hint_bottom_left'><img src='"+imgUrl+"/hint_bottom_left.png' width='15' height='18' class='corner' onLoad='transparent(this)'></div>";
+		hintBlock+="<div class='hint_bottom_center' style='width: "+width+"px;'></div>";
+		hintBlock+="<div class='hint_bottom_right'><img src='"+imgUrl+"/hint_bottom_right.png' width='23' height='18' class='corner' onLoad='transparent(this)'></div>";
+		hintBlock+="</div>";
+		hintObj.innerHTML = hintBlock;
+		var content_height = document.getElementById("hint_content_"+id).offsetHeight;
+		document.getElementById("hint_body_left"+id).style.height = content_height;
+		document.getElementById("hint_body_right"+id).style.height = content_height;
+		hintObj.style.width = width+40;
+		hintObj.style.height = content_height;
+	}
+}
+

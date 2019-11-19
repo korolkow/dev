@@ -1,0 +1,216 @@
+A:LINK {color: #3b55c5;}
+A:VISITED {color: #3b55c5}
+
+.title{
+	position: relative;
+	color:#1f2298;
+	font-size: 16px;
+	float:left;
+	padding-left:3px;
+	margin-top: 7px;
+	position: relative;
+}
+
+.title2 {
+  font-size:15px;
+  font-weight: bold;
+  color:#3b55c5;
+  margin: 15px 0;
+}
+
+.title3 {
+  font-size:13px;
+  font-weight: bold;
+  color:#3b55c5;
+  margin-bottom:5px;
+}
+
+.title4 {
+  font-size:15px;
+  font-weight: bold;
+  color:#3b55c5;
+}
+
+.content {
+	position:relative;
+	margin: 8px 15px 10px 15px;
+}
+
+top_link{
+	float:left;
+}
+
+.informer {
+	width: 100%;
+	display: inline-block;
+	margin: 20px 0 20px 0;
+}
+
+#informer {
+	width: 185px;
+	float:left;
+	margin: 0 20px 20px 0;
+}
+
+#changeSettings {
+	float:left;
+	padding:0 0 0 10px;
+	margin-right: 40px;
+}
+
+#changeSettings p {
+	margin-bottom: 9px;
+}
+
+#colorSettings {
+	float:left;
+}
+
+#slideHandleR,#slideHandleG,#slideHandleB {
+	width: 13px;
+	height:22px;
+	float:left;
+	background:#3b55c5;
+	cursor:pointer;
+	position:relative;
+}
+
+#slideHandleR {
+	background:#ff7c7c;
+}
+
+#slideHandleG {
+	background:#54c95a;
+}
+
+/*.............................Контакты.......................................*/
+
+.contacts {
+	width:140px;
+	position:relative;
+}
+
+.contact {
+  float:left;
+  margin-bottom:7px;
+  position:relative;
+}
+
+.contact_last {
+	float:left;
+	position:relative;
+}
+
+.apun {
+	width:11px;
+	height:11px;
+	float:left;
+	margin-right:15px;
+}
+
+.apun_link {
+	float:left;
+}
+
+/*...............................Новости......................................*/
+
+.news_position {
+	width:95%;
+	position:relative;
+}
+
+#news_data {
+	color:#7c92f0;
+}
+
+#news_text a {
+	color:#1f2298;
+	text-decoration:none;
+}
+
+#news_text img {
+	float: left;
+	padding: 3px 10px 10px 0;
+}
+
+#news_text a:hover {
+	text-decoration:underline;
+}
+
+.news_line {
+  width:185px;
+  height:1px;
+  background: url(/images/news_line.png) no-repeat;
+  margin:10px 0 10px 0;
+  overflow:hidden;
+}
+
+h2 a {
+  font-size:13px;
+  font-weight:normal;
+}
+
+
+
+/*.............................Подвал.........................................*/
+
+textarea{width:52.7em;*width:52.7em; height:4em;*height:4em; color:#000000;}
+
+select {
+	margin-bottom: 19px;
+}
+
+.selectList {
+	width:210px;
+	color:#000000;
+	font-size:13px;
+	font-family:helvetica,clean,sans-serif;
+}
+
+.selectList_disable {
+	width:210px;
+	color:#999;
+	font-size:13px;
+	font-family:helvetica,clean,sans-serif;
+}
+
+.colortable {
+	width: 11px;
+	height: 11px;
+	border:1px solid #FFF;
+	cursor: pointer; }
+
+.colortable2 {
+	width: 20px;
+	height: 20px;
+	border: 1px solid #FFF;
+	cursor: pointer;
+}
+
+#icode, #i_BB_code {
+  width:947px;
+  height:60px;
+  border:1px solid #828790;
+  margin:0 0 20px 0;
+}
+  
+button { width: 90px; font:.9em/1.3 Arial,sans-serif }
+button.add {width: 70px;}
+button.up, button.down, button.delete { width: 60px }
+
+button.add { margin-bottom: 19px;}
+
+button.up, button.down, button.delete {
+	margin-bottom: 16px;
+}
+
+.bt-get-inf {width: 300px}
+
+.informer_line {
+	width: 600px;
+	height: 1px;
+	background: url(/images/informer_line.gif) no-repeat;
+	margin: 0px 0 20px 0;
+	overflow: hidden;
+}
+
