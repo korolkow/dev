@@ -1,58 +1,41 @@
-var zzz = 0;
 function mnovaAudio(par) {
  	this.player_button = par.player_button || null;
 	this.jessie = par.jessie;
 	this.smileWink = {timeout: null, smileTimeout: null};
-    this.media_files = [];
 	this.init = function() {
 		if (navigator.userAgent.match(/(ipad|iphone|ipod|android)/i) || 
 			navigator.userAgent.match(/(mobile|mini|pre\/|xoom)/i)  ||
 			!!document.createElement('audio').canPlayType) 
-			this.player = new _html5Audio(par.jessie, this);
-		else this.player = new _dancer(par.js || '.', par.jessie, this);
+			this.player = new _html5Audio(par.jessie);
+		else this.player = new _dancer(par.js || '.', par.jessie);	
 		var _this = this;						
-		this.player.init(function() {_this.onEnd(_this.player.parentClass)});
-		this.play = function() {_this.player._play()};
-		this.pause = function() {_this.player._pause()};
-		this.replay = function() {_this.player._replay()};
-		this.stop = function() {_this.player._stop()};
+		this.player.init(function() {_this.onEnd(_this)});
+		this.play = function(){_this.player._play(_this)};
+		this.pause = function(){_this.player._pause()};
+		this.replay = function(){_this.player._replay()};
+		this.stop = function(){_this.player._stop()};
 		this.playSmileWink();	 
 	}
-	this._load = function(media_files) {
-        this.player.media_files = [];
-        this.media_files = [];
-		if (typeof media_files == 'string') this.player.media_files.push(media_files);
-		else if (typeof media_files == 'object') this.player.media_files = this.player.media_files.concat(
-                media_files);
-		else return false;
-		
-		this.media_files = this.media_files.concat(this.player.media_files);
-		
-        var media_file = this.player.media_files.shift()
-        this.player._load(media_file);
-        
+	this._load = function(media_file) {
 		if(this.player.is_play) {
 			this.stop();
-            this.stopSmileWink();
-            this.play();
+			this.player._load(media_file);
+			this.player_button.trigger('click');
 		}
+		else this.player._load(media_file); 	
 	}
 	this.onEnd = function(_this) {
 		_this.player_button.children('span').removeClass().addClass('replay');
-		_this.playSmileWink();
-		if(_this.player.media_files.length == 0) {
-            _this.player.media_files = _this.player.media_files.concat(_this.media_files);
-            _this.player._load(_this.player.media_files.shift());
-        }
+		_this.playSmileWink();	
 	}	
 
 	this.player_button.on('click tap', $.proxy(function() {
 		this.player.is_play = !this.player.is_play;	
-		if (this.player.is_play) {
-			this.stopSmileWink();
-			this.play();
-			//this.player_button.children('span').removeClass().addClass('pause');
-		}
+  	if (this.player.is_play) {
+  		this.stopSmileWink();
+  		this.play();
+  		//this.player_button.children('span').removeClass().addClass('pause');
+  	}
 		else {
 			this.pause();
 			this.jessie.removeClass().addClass('jessie');
@@ -104,7 +87,7 @@ function mnovaAudio(par) {
 	this.init();
 }
 
-function _html5Audio(jessie, parentClass) {
+function _html5Audio(jessie) {
 	this.is_play = false;
 	this.html5Audio = document.createElement('audio');
 	this.html5Audio.setAttribute('id', 'audio');
@@ -112,8 +95,6 @@ function _html5Audio(jessie, parentClass) {
 	this.interval = null;
 	this.jessie = jessie;
 	this.onEnd = null;
-    this.media_files = [];
-    this.parentClass = parentClass;
 	this.getMediaFileParams = function() {
 		var supports_media = function(mimetype, container) {
 			var elem = container;
@@ -139,32 +120,26 @@ function _html5Audio(jessie, parentClass) {
 				clearInterval(_this.interval);
 				_this.interval = null;			
 				_this.is_play = false;				
-				if (_this.media_files.length == 0 && _this.onEnd) _this.onEnd();
-				else {
-                    _this._stop();
-                    _this._load(_this.media_files.shift());
-                    _this._play();
-				}
+				if (_this.onEnd) _this.onEnd();
 			}, false
 		);
 	}
 	this._load = function(media_file) {
 		this.mediaFile.file = media_file + this.mediaFile.ext+(typeof geosuffix !='undefined'?geosuffix:'');
 	}
-	this._play = function() {
+	this._play = function(parentClass) {
 		if (this.html5Audio.getAttribute('src') != this.mediaFile.file) {
-			this.parentClass.player_button.children('span').removeClass().addClass('preloader');
+			parentClass.player_button.children('span').removeClass().addClass('preloader'); 
 			this.html5Audio.setAttribute('src', this.mediaFile.file);
 			this.html5Audio.load();
 			var _this = this;
 			this.html5Audio.addEventListener('canplay', function() {
-				play(_this);
+				play(_this, parentClass);				
 			});
-		}
-		else play(this);
+		}	
+		else play(this, parentClass);
 		
-		function play(obj) {
-            obj.is_play = true;
+		function play(obj, parentClass) {
 			obj.html5Audio.play();
 			var min = 100, max = 300;
 			obj.html5Audio.addEventListener('playing', function() {		
@@ -176,7 +151,7 @@ function _html5Audio(jessie, parentClass) {
 					obj.jessie.removeClass().addClass('jessie talk'); 
 					setTimeout(function(){obj.jessie.removeClass().addClass('jessie');}, rand);
 				}, 200);
-                obj.parentClass.player_button.children('span').removeClass().addClass('pause');
+				parentClass.player_button.children('span').removeClass().addClass('pause');
 			});			
 		}
 	}
@@ -201,12 +176,11 @@ function _html5Audio(jessie, parentClass) {
 	}
 }
 
-function _dancer(url, jessie, parentClass) {
+function _dancer(url, jessie) {
 	this.is_play = false;
 	this.dancer = null;
 	this.jessie = jessie;
 	this.checkEndInterval = null;
-    this.parentClass = parentClass;
 	this.modules = [
 		{url: url+'/dancer.js', isLoaded: false},
 		{url: url+'/support.js', isLoaded: false},
@@ -280,7 +254,7 @@ function _dancer(url, jessie, parentClass) {
 		this.dancer.load({ src: media_file, codecs: [ 'mp3' ]});
 	}
   
-	this._play = function() {
+	this._play = function(parentClass) {
 		this.dancer.play();
 		kick.on();
 		var _this = this;
@@ -293,7 +267,7 @@ function _dancer(url, jessie, parentClass) {
 	  			_this._stop();
 	  		}
   		}, 250);
-		this.parentClass.player_button.children('span').removeClass().addClass('pause');
+		parentClass.player_button.children('span').removeClass().addClass('pause');
 	}
 	this._pause = function() {
 		this.dancer.pause();

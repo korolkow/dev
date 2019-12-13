@@ -70,6 +70,29 @@ var data = [
             '../js/utils.js',
             '../js/dropdownlist.js'
         ]
+    },
+    {
+        tpl: 'ru_today_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/config.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/scroll2.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js'
+        ]
     }
 ]
 

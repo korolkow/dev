@@ -3,12 +3,11 @@ if ((agent.indexOf("msie 6") > -1)||(agent.indexOf("msie 7") > -1)||(agent.index
   document.write("<link rel='stylesheet' href='/css/ie.css' type='text/css'>");
 }
 
-function InfObj(type, index, name, name_en) {
+function InfObj(type, index, name) {
 	var inf = this;
 	inf.type = type;
 	inf.index = index;
 	inf.townname = name;
-    inf.townname_en = name_en;
 	inf.cIndex = null;
 	inf.width = null;
   inf.height = null;
@@ -56,7 +55,7 @@ function InfObj(type, index, name, name_en) {
   inf.infChange=function(text, border, bgtitle, bgbodycolor1, bgbodycolor2, bglogo1,bglogo2){
   	inf.setInfParam(text, border, bgtitle, bgbodycolor1, bgbodycolor2, bglogo1,bglogo2);
   	inf.fillOwnColor(border);
-  	inf.setInformer(inf.index, inf.townname, inf.townname_en, border, false);
+  	inf.setInformer(inf.index, inf.townname, border, false);
   }
 
   inf.infFlashChange=function(params){
@@ -68,10 +67,9 @@ function InfObj(type, index, name, name_en) {
 		inf.callfunc = name;
   }
   
-  inf.setInformer=function(index, name, name_en, color, bUpdateSamples) {
+  inf.setInformer=function(index, name, color, bUpdateSamples) {
   	inf.index=index;
   	inf.townname = name;
-  	inf.townname_en = name_en;
   	if (color=="")  color=null;
   	if (color!=null) {
   		if (document.getElementById("borderinf").checked) inf.border=color;
@@ -176,7 +174,7 @@ function InfObj(type, index, name, name_en) {
 	if (e) {
 		//if (e.checked) inf.disabledSelectLists(true);
 		//else inf.disabledSelectLists(false);
-		inf.setInformer(inf.index, inf.townname, inf.townname_en, null, true);
+		inf.setInformer(inf.index, inf.townname, null, true);
 	}
   }	
 		
@@ -208,7 +206,7 @@ function InfObj(type, index, name, name_en) {
 	
 	inf.addCity = function() {
 		var e = document.getElementById("cities");
-		if (this.isInformerCityList(e.options[e.selectedIndex].value)) { alert('пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ'); return; }
+		if (this.isInformerCityList(e.options[e.selectedIndex].value)) { alert('ѓород уже присутствует в списке городов длЯ информера'); return; }
 		var arr = [];
 		arr.push(e.options[e.selectedIndex].value+e.options[e.selectedIndex].text);
 		this.fillInformerCityList(arr);
@@ -243,7 +241,7 @@ function InfObj(type, index, name, name_en) {
 	
 	inf.deleteCity = function() {
  		var e = document.getElementById("infcitylist");
-		if (e.options.length == 1) { alert("пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ"); return; }
+		if (e.options.length == 1) { alert("‘писок выбранных городов должен содержать хотЯ бы один город"); return; }
 		if (e.selectedIndex == -1) return;
 		e.remove(e.selectedIndex);
 		e.selectedIndex = e.length -1;

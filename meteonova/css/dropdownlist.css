@@ -1,0 +1,164 @@
+.searchform {
+    width: 210px;
+    height: 22px;
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: -2px
+}
+.searchform.w-300 {
+    width: 280px
+}
+.searchform.frc {
+    margin-top: 12px;
+    float: right
+}
+.searchform.frc.main {
+    width: 100%;
+    float: left;
+    margin-left: 0
+}
+input:focus {
+    outline: none
+}
+.fill-input {
+    background: url(/images/input_c.png) 0 0 repeat-x;
+    width: 92%;
+    height: 22px;
+    border: 0;
+    float: left
+}
+.left-input {
+    background: url(/images/input_l.png) 0 0 no-repeat;
+    width: 100%
+}
+.right-input {
+    background: url(/images/input_r.png) 100% 0 no-repeat;
+    padding: 0 0 0 9px;
+    height: 22px
+}
+.left-input.l {
+    background: #fff;
+}
+.right-input.r {
+    background: #fff;
+}
+.fill-input.c {
+    background: url(/images/input_c_white.png) 0 0 repeat-x
+}
+.gray .left-input.l {
+    background: url(/images/input_l_gray.png) 0 0 no-repeat
+}
+.gray .right-input.r {
+    background: url(/images/input_r_gray.png) 100% 0 no-repeat
+}
+.gray .fill-input.c {
+    background: url(/images/input_c_gray.png) 0 0 repeat-x
+}
+.gray .searchform {
+    margin-top: 0
+}
+.right-input input {
+    font-family: Arial;
+    font-size: 13px;
+    border: none;
+    width: 100%;
+    background: none;
+    padding-top: 0;
+    position: relative;
+    height: 18px;
+    margin-top: 2px
+}
+.right-input input.grey {
+    color: #333;
+    color: #666
+}
+.searchform .img {
+    width: 13px;
+    height: 13px;
+    background: url(/images/lens.png) no-repeat;
+    float: right;
+    margin-top: 6px;
+    position: absolute;
+    cursor: pointer;
+    right: 6px
+}
+.searchform .img.gray {
+    background: url(/images/lens_gray.png) no-repeat
+}
+.searchform .img.spinner {
+    background: url(/images/spinner.gif) no-repeat;
+    cursor: default
+}
+.searchform .img.spinner,
+.searchform .img.x {
+    width: 16px;
+    height: 16px;
+    margin-top: 3px;
+    right: 6px
+}
+.searchform .img.x {
+    background: url(/images/x.png) no-repeat;
+    cursor: pointer
+}
+.searchform .img.gray.x {
+    background: url(/images/x_gray.png) no-repeat
+}
+.suggest {
+    border: 1px solid #ccc;
+    padding-bottom: 1px;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    cursor: pointer
+}
+.suggest.e {
+    cursor: default
+}
+.suggest.onfocus {
+    display: block
+}
+.suggest div {
+    padding: 2px 4px;
+    color: #000;
+    background: transparent;
+    text-align: left
+}
+.suggest div span.dc {
+    font-size: 11px;
+    color: #666;
+    margin: 0;
+    padding-left: 5px
+}
+.suggest div.onhover,
+.suggest div.onhover span.dc {
+    background: url(/images/suggest_hover.png) repeat-x;
+    color: #fff
+}
+.suggest div.onhover span.dc {
+    font-weight: 400
+}
+.discript span.all_search,
+.discript span.c,
+.discript span.d,
+.discript span.e,
+.discript span.t {
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+    border-bottom: 1px dashed #333
+}
+.discript span.all_search a,
+.discript span.c a,
+.discript span.d a,
+.discript span.e a {
+    color: #333;
+    text-decoration: none
+}
+.discript span.d,
+.discript span.t {
+    border: none;
+    cursor: default
+}

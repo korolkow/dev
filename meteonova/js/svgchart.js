@@ -196,7 +196,7 @@ var svgChart = function (opt) {
         points.shift();
         points.pop();
 
-        var d = points.reduce(function (acc, point, i, a) { 
+        var d = points.reduce(function (acc, point, i, a) {
             return i === 0 ? 'M ' + point[0] + ',' + point[1] : acc + command(context, point, i, a);
         }, '');
 

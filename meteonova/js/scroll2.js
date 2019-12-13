@@ -103,18 +103,26 @@
 			}, false);
 		}
 		else {
-  			//_this.addHandler(_this.scrollObj, 'DOMMouseScroll', _this.wheel);
-  			//_this.addHandler(_this.scrollObj, 'mousewheel', _this.wheel);
+  		_this.addHandler(_this.scrollObj, 'DOMMouseScroll', _this.wheel);
+  		_this.addHandler(_this.scrollObj, 'mousewheel', _this.wheel);
 		}
 	}
 	this.wheel = function(evt, context) {
 		evt = evt || window.event;
-        var delta = Math.max(-1, Math.min(1, (evt.wheelDelta || -evt.detail)));
-    	console.log(delta);
-    	cancelAnimationFrame(context.requestId);
-    	if (context.callbacks.left || context.callbacks.right) var callback = (delta>=0?context.callbacks.left:context.callbacks.right);
-    	//if (context.callbacks.bottom || context.callbacks.top) var callback = (delta>=0?context.callbacks.top:context.callbacks.bottom);
-		//callback(context.scrollObj, context.min_delta);
+    if (evt.preventDefault) evt.preventDefault();
+    evt.returnValue = false;
+    var delta;
+    if (evt.wheelDelta) { // В Opera и IE
+      delta = evt.wheelDelta / 120;
+      //if (window.opera) delta = -delta; // Дополнительно для Opera
+    }
+    else if (evt.detail) { // Для Gecko
+      delta = -evt.detail / 3;
+    }
+    cancelAnimationFrame(context.requestId);
+    if (context.callbacks.left || context.callbacks.right) var callback = (delta>=0?context.callbacks.left:context.callbacks.right);
+    if (context.callbacks.bottom || context.callbacks.top) var callback = (delta>=0?context.callbacks.top:context.callbacks.bottom);
+		callback(context.scrollObj, context.min_delta);
 	}
 	this.jump = function(curSegment, newSegment) {
 		if (curSegment == newSegment) return;
@@ -123,7 +131,7 @@
 		this.delta = Math.abs(newSegment*this.scrollObj.offsetWidth - this.scrollObj.scrollLeft);
 		if (newSegment < curSegment) callback = par.doLeft;
 		var step = 25*Math.abs(newSegment - curSegment);
-		this.animate(0, step, callback, newSegment);
+		this.animate(0, step, callback);
 	}
 	this.getBnts = function(btns) {
 		var a = [];
@@ -133,14 +141,14 @@
 			}
 		return a;
 	}
-	this.animate = function(delta, defStep, callback, n) {
+	this.animate = function(delta, defStep, callback) {
 		var _this = this;
 		if (delta<this.delta) {
 			var step = defStep;
  			if (delta + defStep>=this.delta) step = this.delta -	delta;
- 			callback(this.scrollObj, step, n);
+ 			callback(this.scrollObj, step);
  			delta += defStep;
- 			this.requestId = requestAnimationFrame(function(){_this.animate(delta, defStep, callback, n)});
+ 			this.requestId = requestAnimationFrame(function(){_this.animate(delta, defStep, callback)});
 		}
 	}
 	this.detectTouch = function() {
