@@ -40,6 +40,18 @@ var data = [
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/scroll2.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/svgchart.js',
+            '../js/scroll2.js',
+            '../js/slider.js'
         ]
     },
     {
@@ -52,6 +64,11 @@ var data = [
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js'
         ]
     }
 ]
@@ -74,19 +91,30 @@ gulp.task('addCss', function () {
         .pipe(gulpSSH.dest('/home/nova/dev/meteonova/css'))
 })
 
-gulp.task('d', gulp.parallel('addCss', async function () {
-    var task = data.map(function(page) {
+gulp.task('build_dev', gulp.series('addCss', async function () {
+    return data.map(function(page) {
         return gulp.src(page.tpl+'.*')
             .pipe(inject(gulp.src(page.css), {
-                    transform: function (filepath) {
-                        return '<link rel="stylesheet" type="text/css" href="/css' +
-                            filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
-                    }
-                })
-            )
-            //.pipe(convertEncoding({to: '1251'}))
-            .pipe(gulp.dest('build/dev'))
-            .pipe(gulpSSH.dest('/home/nova/dev/meteonova'))
+                transform: function (filepath) {
+                    return '<link rel="stylesheet" type="text/css" href="/css' +
+                        filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
+                }
+                }))
+            .pipe(inject(gulp.src(page.js), {
+                transform: function (filepath) {
+                    return '<script type="text/javascript" src="/js' +
+                        filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
+                }
+            }))
+            .pipe(gulp.dest('build/dev'));
     })
 }))
+
+gulp.task('d', gulp.series('build_dev', async function () {
+    gulp.src('build/dev/*.htm         ').pipe(gulpSSH.dest('/home/nova/dev/meteonova'))
+}))
+
+//gulp.task('prod', gulp.series('build_prod', async function () {
+    //gulp.src('build/prod/*.html').pipe(gulp.dest('/'))
+//})))
 

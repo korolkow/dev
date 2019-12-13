@@ -1,12 +1,12 @@
 <!DOCTYPE html><#TEMPLATE ru_definitions_ru><#INITASTRO>
 <html>
 <head>
-<title>МЕТЕОНОВА - Прогноз аллергии на пыльцу и цветение <#TOWN2> - поллиноз, аллергический ринит, кашель и конъюнктивит</title>
+<title>РњР•РўР•РћРќРћР’Рђ - РџСЂРѕРіРЅРѕР· Р°Р»Р»РµСЂРіРёРё РЅР° РїС‹Р»СЊС†Сѓ Рё С†РІРµС‚РµРЅРёРµ <#TOWN2> - РїРѕР»Р»РёРЅРѕР·, Р°Р»Р»РµСЂРіРёС‡РµСЃРєРёР№ СЂРёРЅРёС‚, РєР°С€РµР»СЊ Рё РєРѕРЅСЉСЋРЅРєС‚РёРІРёС‚</title>
 <meta http-equiv="Content-Type" content="text/html; charset=<#ENCODING>">
-<meta name="description" content="Прогноз аллергии на пыльцу деревьев, злаков, трав, маревых <#TOWN2>, <#REGIONNAME>. Аллергический ринит, аллергический конъюнктивит">
-<meta name="keywords" content="прогноз аллерген аллергия пыльца береза ива орешник лещина липа клен дуб злаки полынь маревые лебеда сложноцветные мятлик ежа овсянница пыльца самочувствие астма затрудненное дыхание <#TOWN> <#REGIONNAME>">
-<meta name="Category" content="Справки, Погода">
-<meta name="Classification" content="Аллергия на пыльцу поллиноз <#TOWN3>"> 
+<meta name="description" content="РџСЂРѕРіРЅРѕР· Р°Р»Р»РµСЂРіРёРё РЅР° РїС‹Р»СЊС†Сѓ РґРµСЂРµРІСЊРµРІ, Р·Р»Р°РєРѕРІ, С‚СЂР°РІ, РјР°СЂРµРІС‹С… <#TOWN2>, <#REGIONNAME>. РђР»Р»РµСЂРіРёС‡РµСЃРєРёР№ СЂРёРЅРёС‚, Р°Р»Р»РµСЂРіРёС‡РµСЃРєРёР№ РєРѕРЅСЉСЋРЅРєС‚РёРІРёС‚">
+<meta name="keywords" content="РїСЂРѕРіРЅРѕР· Р°Р»Р»РµСЂРіРµРЅ Р°Р»Р»РµСЂРіРёСЏ РїС‹Р»СЊС†Р° Р±РµСЂРµР·Р° РёРІР° РѕСЂРµС€РЅРёРє Р»РµС‰РёРЅР° Р»РёРїР° РєР»РµРЅ РґСѓР± Р·Р»Р°РєРё РїРѕР»С‹РЅСЊ РјР°СЂРµРІС‹Рµ Р»РµР±РµРґР° СЃР»РѕР¶РЅРѕС†РІРµС‚РЅС‹Рµ РјСЏС‚Р»РёРє РµР¶Р° РѕРІСЃСЏРЅРЅРёС†Р° РїС‹Р»СЊС†Р° СЃР°РјРѕС‡СѓРІСЃС‚РІРёРµ Р°СЃС‚РјР° Р·Р°С‚СЂСѓРґРЅРµРЅРЅРѕРµ РґС‹С…Р°РЅРёРµ <#TOWN> <#REGIONNAME>">
+<meta name="Category" content="РЎРїСЂР°РІРєРё, РџРѕРіРѕРґР°">
+<meta name="Classification" content="РђР»Р»РµСЂРіРёСЏ РЅР° РїС‹Р»СЊС†Сѓ РїРѕР»Р»РёРЅРѕР· <#TOWN3>"> 
 <meta name="Document-state" content="Dynamic">
 <!--<base href="<#SERVERURL>/allergy.htm">-->
 <link rel="canonical" href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"/>
@@ -45,21 +45,21 @@ tbody tr:hover{ background:#f4f6ff; }
 
 <body>
 <div class="suggest" id="suggest"></div>
-<div class="hint hidden" id="agrohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Подробный прогноз погоды для садоводов и огродников.</div>
-<div class="hint hidden" id="autohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз неблагоприятных погодных явлений для автомобилистов.</div>
-<div class="hint hidden" id="prohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Более подробные данные о состоянии атмосферы, поверхности и почвы.</div>
-<div class="hint hidden" id="s3hint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Наглядный погоды <#TOWN3> на 3 дня</div>
-<div class="hint hidden" id="medhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Медицинский прогноз погоды <#TOWN3> для метеочувствительных людей с заболеваниями сердечно-сосудистой системы и дыхательных путей. <a href="<#SERVERURL>/faq.htm#med" target=_blank>Подробнее...</a></div>
-<div class="hint hidden" id="infhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Создали свой сайт и хотите повысить его информативность и привлекательность? Установите погодный информер!</div>
-<div class="hint hidden" id="monthhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз погоды на месяц <#TOWN2>. Оценка температуры и вероятности осадков на 30 дней. <a href="<#SERVERURL>/faq.htm#month" target=_blank>Подробнее...</a></div>
-<div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
-<div class="hint hidden" id="geomhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Показатель геомагнитной активности Солнца и прогноз магнитных бурь на широте г. <#TOWN>. <a href="<#SERVERURL>/faq.htm#geomagn" target=_blank>Подробнее...</a></div>
+<div class="hint hidden" id="agrohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РџРѕРґСЂРѕР±РЅС‹Р№ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РґР»СЏ СЃР°РґРѕРІРѕРґРѕРІ Рё РѕРіСЂРѕРґРЅРёРєРѕРІ.</div>
+<div class="hint hidden" id="autohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РџСЂРѕРіРЅРѕР· РЅРµР±Р»Р°РіРѕРїСЂРёСЏС‚РЅС‹С… РїРѕРіРѕРґРЅС‹С… СЏРІР»РµРЅРёР№ РґР»СЏ Р°РІС‚РѕРјРѕР±РёР»РёСЃС‚РѕРІ.</div>
+<div class="hint hidden" id="prohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Р‘РѕР»РµРµ РїРѕРґСЂРѕР±РЅС‹Рµ РґР°РЅРЅС‹Рµ Рѕ СЃРѕСЃС‚РѕСЏРЅРёРё Р°С‚РјРѕСЃС„РµСЂС‹, РїРѕРІРµСЂС…РЅРѕСЃС‚Рё Рё РїРѕС‡РІС‹.</div>
+<div class="hint hidden" id="s3hint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РќР°РіР»СЏРґРЅС‹Р№ РїРѕРіРѕРґС‹ <#TOWN3> РЅР° 3 РґРЅСЏ</div>
+<div class="hint hidden" id="medhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РњРµРґРёС†РёРЅСЃРєРёР№ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ <#TOWN3> РґР»СЏ РјРµС‚РµРѕС‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅС‹С… Р»СЋРґРµР№ СЃ Р·Р°Р±РѕР»РµРІР°РЅРёСЏРјРё СЃРµСЂРґРµС‡РЅРѕ-СЃРѕСЃСѓРґРёСЃС‚РѕР№ СЃРёСЃС‚РµРјС‹ Рё РґС‹С…Р°С‚РµР»СЊРЅС‹С… РїСѓС‚РµР№. <a href="<#SERVERURL>/faq.htm#med" target=_blank>РџРѕРґСЂРѕР±РЅРµРµ...</a></div>
+<div class="hint hidden" id="infhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РЎРѕР·РґР°Р»Рё СЃРІРѕР№ СЃР°Р№С‚ Рё С…РѕС‚РёС‚Рµ РїРѕРІС‹СЃРёС‚СЊ РµРіРѕ РёРЅС„РѕСЂРјР°С‚РёРІРЅРѕСЃС‚СЊ Рё РїСЂРёРІР»РµРєР°С‚РµР»СЊРЅРѕСЃС‚СЊ? РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїРѕРіРѕРґРЅС‹Р№ РёРЅС„РѕСЂРјРµСЂ!</div>
+<div class="hint hidden" id="monthhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РџСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РЅР° РјРµСЃСЏС† <#TOWN2>. РћС†РµРЅРєР° С‚РµРјРїРµСЂР°С‚СѓСЂС‹ Рё РІРµСЂРѕСЏС‚РЅРѕСЃС‚Рё РѕСЃР°РґРєРѕРІ РЅР° 30 РґРЅРµР№. <a href="<#SERVERURL>/faq.htm#month" target=_blank>РџРѕРґСЂРѕР±РЅРµРµ...</a></div>
+<div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РРЅРґРµРєСЃ СѓР»СЊС‚СЂР°С„РёРѕР»РµС‚РѕРІРѕРіРѕ РёР·Р»СѓС‡РµРЅРёСЏ РЎРѕР»РЅС†Р°. Р—Р°С‰РёС‚РёС‚Рµ СЃРµР±СЏ РѕС‚ СЃРѕР»РЅРµС‡РЅС‹С… РѕР¶РѕРіРѕРІ! РџРѕРґСЂРѕР±РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РЅР° <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>СЃС‚СЂР°РЅРёС†Рµ РЈР¤-РёРЅРґРµРєСЃР° <#TOWN2></a>.</div>
+<div class="hint hidden" id="geomhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">РџРѕРєР°Р·Р°С‚РµР»СЊ РіРµРѕРјР°РіРЅРёС‚РЅРѕР№ Р°РєС‚РёРІРЅРѕСЃС‚Рё РЎРѕР»РЅС†Р° Рё РїСЂРѕРіРЅРѕР· РјР°РіРЅРёС‚РЅС‹С… Р±СѓСЂСЊ РЅР° С€РёСЂРѕС‚Рµ Рі. <#TOWN>. <a href="<#SERVERURL>/faq.htm#geomagn" target=_blank>РџРѕРґСЂРѕР±РЅРµРµ...</a></div>
 <div id="doc4" class="yui-t5">
 <#TEMPLATE ru_adw728x90_ru>
    <div id="hd">
      <div id="onhd">
       <div>	
-       <div id="logo"><a href="<#SERVERURL>"><img src="<#IMGBASE>/logo.png" width="277" height="96" alt="Магнитные бури <#TOWN2>"></a></div>
+       <div id="logo"><a href="<#SERVERURL>"><img src="<#IMGBASE>/logo.png" width="277" height="96" alt="РњР°РіРЅРёС‚РЅС‹Рµ Р±СѓСЂРё <#TOWN2>"></a></div>
 	<#TEMPLATE ru_menu_ru>
 	</div>
      </div>
@@ -74,14 +74,14 @@ tbody tr:hover{ background:#f4f6ff; }
 	 		width="10" height="46" class="corner"/>
    		</div>
 			<div class="city_content">
-		    	<h1 style="border-right:0">Поллиноз <#TOWN2></h1>
+		    	<h1 style="border-right:0">РџРѕР»Р»РёРЅРѕР· <#TOWN2></h1>
         		<div class="serchcontent">
 					 		<div class="searchform frc" id="searchform">
 								<div class="left-input l">
 									<div class="right-input r">
 										<div class="img" id="searchform_img"></div>							 
 										<div class="fill-input c">  			
-							 				<input class="search grey" type="text" value="поиск погоды" onload="this.value = 'поиск погоды'" onfocus="setSuggest(this, 'searchform', 'searchform_img', 'поиск погоды')">
+							 				<input class="search grey" type="text" value="РїРѕРёСЃРє РїРѕРіРѕРґС‹" onload="this.value = 'РїРѕРёСЃРє РїРѕРіРѕРґС‹'" onfocus="setSuggest(this, 'searchform', 'searchform_img', 'РїРѕРёСЃРє РїРѕРіРѕРґС‹')">
 										</div> 			 
 									</div>   
 								</div> 				
@@ -101,19 +101,19 @@ tbody tr:hover{ background:#f4f6ff; }
 	 				width="9" height="31" class="corner" />
    			</div>
    			<div class="block_title main_container_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Календарь аллергика <#TOWN2> на сегодня и завтра" ></div>
- 			 		<div class="title"><b>АЛЛЕРГЕНЫ</b></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="РљР°Р»РµРЅРґР°СЂСЊ Р°Р»Р»РµСЂРіРёРєР° <#TOWN2> РЅР° СЃРµРіРѕРґРЅСЏ Рё Р·Р°РІС‚СЂР°" ></div>
+ 			 		<div class="title"><b>РђР›Р›Р•Р Р“Р•РќР«</b></div>
  			 		<div class="top_link">
 	      		  		<ul>
-		          			<li><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>Почасовой</b></a></li>
-		          			<li><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>На 3 дня</b></a></li>
-		          			<li><a href="<#SERVERURL>/frc/<#INDEX>.htm"><b>На 14 дней</b></a></li>
+		          			<li><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>РџРѕС‡Р°СЃРѕРІРѕР№</b></a></li>
+		          			<li><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>РќР° 3 РґРЅСЏ</b></a></li>
+		          			<li><a href="<#SERVERURL>/frc/<#INDEX>.htm"><b>РќР° 14 РґРЅРµР№</b></a></li>
 						<#MONTHLINK ru_monthlinkt_ru>
-		          			<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
-<!--		          			<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>-->
+		          			<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>РЎР°РјРѕС‡СѓРІСЃС‚РІРёРµ</b></a></li>
+<!--		          			<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>РђРіСЂРѕ</b></a></li>-->
 <!--						<#TEMPLATECLIMAT ru_climatlinkt_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>-->
 						<#GEOMAGNLINK ru_geomagnlinkt_ru>
-	          				<li class="last"><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
+	          				<li class="last"><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>РЈР¤-РёРЅРґРµРєСЃ</b></a></li>
  			 		</div>
    			</div>
    			<div class="round_right">
@@ -123,17 +123,17 @@ tbody tr:hover{ background:#f4f6ff; }
 			</div>
 			<div class="block_content">
 		    	<div id="frc_content_weather" style="padding-top:0px;">
-<div style="margin:5px 0px 15px 5px;"><b>Внимание!</b> Сервис находится в стадии тестирования. Замечания и предложения <a href="/guestbook.htm" target=_blank>отправляйте</a> разработчикам. Ознакомьтесь, пожалуйста, с <a href=#limitations>ограничениями ответственности</a>.</div>
+<div style="margin:5px 0px 15px 5px;"><b>Р’РЅРёРјР°РЅРёРµ!</b> РЎРµСЂРІРёСЃ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃС‚Р°РґРёРё С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ. Р—Р°РјРµС‡Р°РЅРёСЏ Рё РїСЂРµРґР»РѕР¶РµРЅРёСЏ <a href="/guestbook.htm" target=_blank>РѕС‚РїСЂР°РІР»СЏР№С‚Рµ</a> СЂР°Р·СЂР°Р±РѕС‚С‡РёРєР°Рј. РћР·РЅР°РєРѕРјСЊС‚РµСЃСЊ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, СЃ <a href=#limitations>РѕРіСЂР°РЅРёС‡РµРЅРёСЏРјРё РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё</a>.</div>
 <section>
     <table>
         <thead>
         <tr>
-            <th class="column13">Дата</th>
-            <th class="column10">Деревья</th>
-            <th class="column10">Злаки</th>
-            <th class="column10">Травы</th>
-            <th class="column13">Самочувствие</th>
-            <th class="column43">Описание</th>
+            <th class="column13">Р”Р°С‚Р°</th>
+            <th class="column10">Р”РµСЂРµРІСЊСЏ</th>
+            <th class="column10">Р—Р»Р°РєРё</th>
+            <th class="column10">РўСЂР°РІС‹</th>
+            <th class="column13">РЎР°РјРѕС‡СѓРІСЃС‚РІРёРµ</th>
+            <th class="column43">РћРїРёСЃР°РЅРёРµ</th>
         </tr>
         </thead>
         <tbody>
@@ -173,16 +173,16 @@ tbody tr:hover{ background:#f4f6ff; }
     </table>
 </section>
 
-					<div style="margin:15px 0 10px 5px;"><b>Условные обозначения:</b></div>
+					<div style="margin:15px 0 10px 5px;"><b>РЈСЃР»РѕРІРЅС‹Рµ РѕР±РѕР·РЅР°С‡РµРЅРёСЏ:</b></div>
 					<div class="legend">
-						<div class="legbar" style="border-color:#56BB5C;"></div><div class="leglabel">Нет цветения наблюдаемых аллергенов соответствующей группы (деревья, злаки, сорные травы)</div>
-						<div class="legbar" style="border-color:#ffd600;"></div><div class="leglabel">Цетение аллергенов начинается или завершается (названия аллергенов указаны в описании)</div>
-						<div class="legbar" style="border-color:#ff7777;"></div><div class="leglabel">Ожидается пыление аллергенов (список аллергенов указан справа в комментарии)</div>
-						<div class="legbar" style="border-color:#56BB5C; background: #ccffcf;"></div><div class="leglabel">Погодные факторы благоприятны для снижения концентрации пыльцы</div>
-						<div class="legbar" style="border-color:#ffd600; background: #ffee95;"></div><div class="leglabel">Погодные факторы неблагоприятны для снижения концентрации пыльцы</div>
-						<div class="legbar" style="border-color:#ff7777; background:#ffcacb;"></div><div class="leglabel">Погодные факторы усугубляют возможные аллергические реакции</div>
+						<div class="legbar" style="border-color:#56BB5C;"></div><div class="leglabel">РќРµС‚ С†РІРµС‚РµРЅРёСЏ РЅР°Р±Р»СЋРґР°РµРјС‹С… Р°Р»Р»РµСЂРіРµРЅРѕРІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµР№ РіСЂСѓРїРїС‹ (РґРµСЂРµРІСЊСЏ, Р·Р»Р°РєРё, СЃРѕСЂРЅС‹Рµ С‚СЂР°РІС‹)</div>
+						<div class="legbar" style="border-color:#ffd600;"></div><div class="leglabel">Р¦РµС‚РµРЅРёРµ Р°Р»Р»РµСЂРіРµРЅРѕРІ РЅР°С‡РёРЅР°РµС‚СЃСЏ РёР»Рё Р·Р°РІРµСЂС€Р°РµС‚СЃСЏ (РЅР°Р·РІР°РЅРёСЏ Р°Р»Р»РµСЂРіРµРЅРѕРІ СѓРєР°Р·Р°РЅС‹ РІ РѕРїРёСЃР°РЅРёРё)</div>
+						<div class="legbar" style="border-color:#ff7777;"></div><div class="leglabel">РћР¶РёРґР°РµС‚СЃСЏ РїС‹Р»РµРЅРёРµ Р°Р»Р»РµСЂРіРµРЅРѕРІ (СЃРїРёСЃРѕРє Р°Р»Р»РµСЂРіРµРЅРѕРІ СѓРєР°Р·Р°РЅ СЃРїСЂР°РІР° РІ РєРѕРјРјРµРЅС‚Р°СЂРёРё)</div>
+						<div class="legbar" style="border-color:#56BB5C; background: #ccffcf;"></div><div class="leglabel">РџРѕРіРѕРґРЅС‹Рµ С„Р°РєС‚РѕСЂС‹ Р±Р»Р°РіРѕРїСЂРёСЏС‚РЅС‹ РґР»СЏ СЃРЅРёР¶РµРЅРёСЏ РєРѕРЅС†РµРЅС‚СЂР°С†РёРё РїС‹Р»СЊС†С‹</div>
+						<div class="legbar" style="border-color:#ffd600; background: #ffee95;"></div><div class="leglabel">РџРѕРіРѕРґРЅС‹Рµ С„Р°РєС‚РѕСЂС‹ РЅРµР±Р»Р°РіРѕРїСЂРёСЏС‚РЅС‹ РґР»СЏ СЃРЅРёР¶РµРЅРёСЏ РєРѕРЅС†РµРЅС‚СЂР°С†РёРё РїС‹Р»СЊС†С‹</div>
+						<div class="legbar" style="border-color:#ff7777; background:#ffcacb;"></div><div class="leglabel">РџРѕРіРѕРґРЅС‹Рµ С„Р°РєС‚РѕСЂС‹ СѓСЃСѓРіСѓР±Р»СЏСЋС‚ РІРѕР·РјРѕР¶РЅС‹Рµ Р°Р»Р»РµСЂРіРёС‡РµСЃРєРёРµ СЂРµР°РєС†РёРё</div>
 					</div>
-					<div style="margin-left:6px; margin-bottom:10px;">Примечание: в настоящее время выдается прогноз по следующим аллергенам: <b>ольха, орешник, ива, береза, клен, дуб, липа, злаковые, полынь, лебеда, подорожник.</b></div>
+					<div style="margin-left:6px; margin-bottom:10px;">РџСЂРёРјРµС‡Р°РЅРёРµ: РІ РЅР°СЃС‚РѕСЏС‰РµРµ РІСЂРµРјСЏ РІС‹РґР°РµС‚СЃСЏ РїСЂРѕРіРЅРѕР· РїРѕ СЃР»РµРґСѓСЋС‰РёРј Р°Р»Р»РµСЂРіРµРЅР°Рј: <b>РѕР»СЊС…Р°, РѕСЂРµС€РЅРёРє, РёРІР°, Р±РµСЂРµР·Р°, РєР»РµРЅ, РґСѓР±, Р»РёРїР°, Р·Р»Р°РєРѕРІС‹Рµ, РїРѕР»С‹РЅСЊ, Р»РµР±РµРґР°, РїРѕРґРѕСЂРѕР¶РЅРёРє.</b></div>
 
 		    	</div>
 			</div>
@@ -209,8 +209,8 @@ tbody tr:hover{ background:#f4f6ff; }
 	 				width="9" height="31" class="corner"/>
    			</div>
    			<div class="block_title left_contener_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Каллендарь аллергика <#TOWN2> - интересное обо всем" width="26" height="26"></div>
- 			 		<div class="title"><b>ИНТЕРЕСНОЕ</b></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="РљР°Р»Р»РµРЅРґР°СЂСЊ Р°Р»Р»РµСЂРіРёРєР° <#TOWN2> - РёРЅС‚РµСЂРµСЃРЅРѕРµ РѕР±Рѕ РІСЃРµРј" width="26" height="26"></div>
+ 			 		<div class="title"><b>РРќРўР•Р Р•РЎРќРћР•</b></div>
    			</div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_top_right.png"
@@ -242,8 +242,8 @@ tbody tr:hover{ background:#f4f6ff; }
 	 				width="9" height="31" class="corner"/>
    			</div>
    			<div class="block_title center_container_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Народная погода <#TOWN2>" width="26" height="26"></div>
- 			 		<div class="title"><b>АЛЛЕРГИЯ НА ПЫЛЬЦУ РАСТЕНИЙ <#TOWN2></b></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="РќР°СЂРѕРґРЅР°СЏ РїРѕРіРѕРґР° <#TOWN2>" width="26" height="26"></div>
+ 			 		<div class="title"><b>РђР›Р›Р•Р Р“РРЇ РќРђ РџР«Р›Р¬Р¦РЈ Р РђРЎРўР•РќРР™ <#TOWN2></b></div>
    			</div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_top_right.png"
@@ -312,8 +312,8 @@ tbody tr:hover{ background:#f4f6ff; }
 		 				/>
 	   			</div>
 	   			<div class="block_title" style="width:222px;">
-	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Прогноз аллергии <#TOWN2>"></div>
-	 			 		<div class="title"><b>РЕКЛАМА</b></div>
+	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="РџСЂРѕРіРЅРѕР· Р°Р»Р»РµСЂРіРёРё <#TOWN2>"></div>
+	 			 		<div class="title"><b>Р Р•РљР›РђРњРђ</b></div>
 	   			</div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_top_right.png"
@@ -348,8 +348,8 @@ tbody tr:hover{ background:#f4f6ff; }
 	 				width="9" height="31" class="corner"/>
    			</div>
    			<div class="block_title" style="width:222px;">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Расписание аллергии <#TOWN2> - астрономические данные"></div>
- 			 		<div class="title"><b>АСТРОНОМИЯ</b></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Р Р°СЃРїРёСЃР°РЅРёРµ Р°Р»Р»РµСЂРіРёРё <#TOWN2> - Р°СЃС‚СЂРѕРЅРѕРјРёС‡РµСЃРєРёРµ РґР°РЅРЅС‹Рµ"></div>
+ 			 		<div class="title"><b>РђРЎРўР РћРќРћРњРРЇ</b></div>
    			</div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_top_right.png"
@@ -362,16 +362,16 @@ tbody tr:hover{ background:#f4f6ff; }
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
 			      <div class="data" style="width:190px;">
-			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_dolgota.png) no-repeat"><div id="astro_dolgota" class="text_inf">Долгота дня: <#DAYLENGTH></div></div>
-			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Восход: <#SUNRISE></div></div>
-			        <div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Заход: <#SUNSET></div></div>
+			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_dolgota.png) no-repeat"><div id="astro_dolgota" class="text_inf">Р”РѕР»РіРѕС‚Р° РґРЅСЏ: <#DAYLENGTH></div></div>
+			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Р’РѕСЃС…РѕРґ: <#SUNRISE></div></div>
+			        <div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Р—Р°С…РѕРґ: <#SUNSET></div></div>
 			       </div>
 			      <div class="icon" style="background: url(<#IMGBASE>/astro_moon.gif);" ></div>
 			      <div class="data">
-			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_moon_day.png) no-repeat"><div id="astro_dolgota" class="text_inf"><#MOONDAY>-й лунный день</div></div>
+			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_moon_day.png) no-repeat"><div id="astro_dolgota" class="text_inf"><#MOONDAY>-Р№ Р»СѓРЅРЅС‹Р№ РґРµРЅСЊ</div></div>
 			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_dolgota.png) no-repeat"><div id="astro_phase" class="text_inf"><#MOONNPHASE></div></div>
-			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Восход: <#MOONRISE></div></div>
-			       	<div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Заход: <#MOONSET></div></div>
+			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Р’РѕСЃС…РѕРґ: <#MOONRISE></div></div>
+			       	<div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Р—Р°С…РѕРґ: <#MOONSET></div></div>
 			       </div>
 			    </div>
 		      	</div>
@@ -397,7 +397,7 @@ tbody tr:hover{ background:#f4f6ff; }
 		 				/>
 	   			</div>
 	   			<div class="block_title" style="width:222px;">
-	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Прогноз аллергии <#TOWN2> - все погодные сервисы на Метеонове" width="26" height="26" ></div>
+	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="РџСЂРѕРіРЅРѕР· Р°Р»Р»РµСЂРіРёРё <#TOWN2> - РІСЃРµ РїРѕРіРѕРґРЅС‹Рµ СЃРµСЂРІРёСЃС‹ РЅР° РњРµС‚РµРѕРЅРѕРІРµ" width="26" height="26" ></div>
 	 			 		<div class="title"><b><#TOWN16></b></div>
 	   			</div>
 	   			<div class="round_right">
@@ -409,18 +409,18 @@ tbody tr:hover{ background:#f4f6ff; }
 				</div>
 				<div class="block_content" style="width:100%;">
 					<div class="content" style="width:215px;">
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода по часам <#TOWN3>">Прогноз погоды по часам</a></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода на 3 дня <#TOWN3>">Погода на 3 дня для занятых</a></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/pro/<#INDEX>.htm" title="Подробный профессиональный прогноз погоды <#TOWN3> на неделю">Прогноз для специалистов</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'prohint', true, 250);" onmouseout="showHint(this, 'prohint', false, 250);"></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="РџРѕРіРѕРґР° РїРѕ С‡Р°СЃР°Рј <#TOWN3>">РџСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РїРѕ С‡Р°СЃР°Рј</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="РџРѕРіРѕРґР° РЅР° 3 РґРЅСЏ <#TOWN3>">РџРѕРіРѕРґР° РЅР° 3 РґРЅСЏ РґР»СЏ Р·Р°РЅСЏС‚С‹С…</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/pro/<#INDEX>.htm" title="РџРѕРґСЂРѕР±РЅС‹Р№ РїСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅС‹Р№ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ <#TOWN3> РЅР° РЅРµРґРµР»СЋ">РџСЂРѕРіРЅРѕР· РґР»СЏ СЃРїРµС†РёР°Р»РёСЃС‚РѕРІ</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'prohint', true, 250);" onmouseout="showHint(this, 'prohint', false, 250);"></div></div>
 						<#MONTHLINK ru_monthlinkr_ru>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/auto/<#INDEX>.htm" title="Погода <#TOWN3> на 3 дня для автомобилистов">Прогноз для водителей</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'autohint', true, 250);" onmouseout="showHint(this, 'autohint', false, 250);"></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/agro/<#INDEX>.htm" title="Погода <#TOWN3> на 5 дней для дачников и сельхозпроизводителей">Агропрогноз погоды</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'agrohint', true, 250);" onmouseout="showHint(this, 'agrohint', false, 250);"></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="Погода <#TOWN3> на 14 дней для метеозависимых людей">Для метеочувствительных</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/auto/<#INDEX>.htm" title="РџРѕРіРѕРґР° <#TOWN3> РЅР° 3 РґРЅСЏ РґР»СЏ Р°РІС‚РѕРјРѕР±РёР»РёСЃС‚РѕРІ">РџСЂРѕРіРЅРѕР· РґР»СЏ РІРѕРґРёС‚РµР»РµР№</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'autohint', true, 250);" onmouseout="showHint(this, 'autohint', false, 250);"></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/agro/<#INDEX>.htm" title="РџРѕРіРѕРґР° <#TOWN3> РЅР° 5 РґРЅРµР№ РґР»СЏ РґР°С‡РЅРёРєРѕРІ Рё СЃРµР»СЊС…РѕР·РїСЂРѕРёР·РІРѕРґРёС‚РµР»РµР№">РђРіСЂРѕРїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'agrohint', true, 250);" onmouseout="showHint(this, 'agrohint', false, 250);"></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="РџРѕРіРѕРґР° <#TOWN3> РЅР° 14 РґРЅРµР№ РґР»СЏ РјРµС‚РµРѕР·Р°РІРёСЃРёРјС‹С… Р»СЋРґРµР№">Р”Р»СЏ РјРµС‚РµРѕС‡СѓРІСЃС‚РІРёС‚РµР»СЊРЅС‹С…</a></div></div>
 						<#GEOMAGNLINK ru_geomagnlinkr_ru>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" title="Индекс ультрафиолетового излучения Солнца <#TOWN3>">Индекс УФ-излучения</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'uvihint', true, 250);" onmouseout="showHint(this, 'uvihint', false, 250);"></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/map.htm?fi=<#FIF>&la=<#LAF>&type=mc_TMP_2_m_above_ground" target=_blank title="Карты погоды в регионе города <#TOWN>"><b>Карты погоды</b></a></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/infogra.htm?fi=<#FIF>&la=<#LAF>&vl=4&zoom=6"><b>Инфографика осадков</b></a></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="Нормальное атмосферное девление <#TOWN3>"><b>Атмосферное давление</b></a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" title="РРЅРґРµРєСЃ СѓР»СЊС‚СЂР°С„РёРѕР»РµС‚РѕРІРѕРіРѕ РёР·Р»СѓС‡РµРЅРёСЏ РЎРѕР»РЅС†Р° <#TOWN3>">РРЅРґРµРєСЃ РЈР¤-РёР·Р»СѓС‡РµРЅРёСЏ</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'uvihint', true, 250);" onmouseout="showHint(this, 'uvihint', false, 250);"></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/map.htm?fi=<#FIF>&la=<#LAF>&type=mc_TMP_2_m_above_ground" target=_blank title="РљР°СЂС‚С‹ РїРѕРіРѕРґС‹ РІ СЂРµРіРёРѕРЅРµ РіРѕСЂРѕРґР° <#TOWN>"><b>РљР°СЂС‚С‹ РїРѕРіРѕРґС‹</b></a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/infogra.htm?fi=<#FIF>&la=<#LAF>&vl=4&zoom=6"><b>РРЅС„РѕРіСЂР°С„РёРєР° РѕСЃР°РґРєРѕРІ</b></a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="РќРѕСЂРјР°Р»СЊРЅРѕРµ Р°С‚РјРѕСЃС„РµСЂРЅРѕРµ РґРµРІР»РµРЅРёРµ <#TOWN3>"><b>РђС‚РјРѕСЃС„РµСЂРЅРѕРµ РґР°РІР»РµРЅРёРµ</b></a></div></div>
 						<#TEMPLATECLIMAT ru_climatlinkr_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
 					</div>
 				</div>
@@ -447,8 +447,8 @@ tbody tr:hover{ background:#f4f6ff; }
 		 				/>
 	   			</div>
 	   			<div class="block_title" style="width:222px;">
-	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - погодный информер" width="26" height="26" ></div>
-	 			 		<div class="title"><b>ИНФОРМЕР</b></div>
+	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="РџРѕРіРѕРґР° <#TOWN2> - РїРѕРіРѕРґРЅС‹Р№ РёРЅС„РѕСЂРјРµСЂ" width="26" height="26" ></div>
+	 			 		<div class="title"><b>РРќР¤РћР РњР•Р </b></div>
 	   			</div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_top_right.png"
@@ -478,7 +478,7 @@ tbody tr:hover{ background:#f4f6ff; }
                                                 document.getElementsByTagName("head")[0].appendChild(script);
                                         </script>
                         </div>
-          <div align="center" style="margin-top: 10px;"><a href="<#SERVERURL>/informer/?index=<#INDEX>">Установите погоду на сайт</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'infhint', true, 200);" onmouseout="showHint(this, 'infhint', false, 200);"></div>
+          <div align="center" style="margin-top: 10px;"><a href="<#SERVERURL>/informer/?index=<#INDEX>">РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїРѕРіРѕРґСѓ РЅР° СЃР°Р№С‚</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'infhint', true, 200);" onmouseout="showHint(this, 'infhint', false, 200);"></div>
       </div>
 				<div class="block_bottom">
 
@@ -504,8 +504,8 @@ tbody tr:hover{ background:#f4f6ff; }
 		 				/>
 	   			</div>
 	   			<div class="block_title" style="width:222px;">
-	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Прогноз для аллергиков <#TOWN2>"></div>
-	 			 		<div class="title"><b>РЕКЛАМА</b></div>
+	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="РџСЂРѕРіРЅРѕР· РґР»СЏ Р°Р»Р»РµСЂРіРёРєРѕРІ <#TOWN2>"></div>
+	 			 		<div class="title"><b>Р Р•РљР›РђРњРђ</b></div>
 	   			</div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_top_right.png"
@@ -538,8 +538,8 @@ tbody tr:hover{ background:#f4f6ff; }
 	 				width="9" height="31" class="corner"/>
    			</div>
    			<div class="block_title"  style="width:222px">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Расписание магнитных бурь <#TOWN2> - контактная информация"></div>
- 			 		<div class="title"><b>КОНТАКТЫ</b></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Р Р°СЃРїРёСЃР°РЅРёРµ РјР°РіРЅРёС‚РЅС‹С… Р±СѓСЂСЊ <#TOWN2> - РєРѕРЅС‚Р°РєС‚РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ"></div>
+ 			 		<div class="title"><b>РљРћРќРўРђРљРўР«</b></div>
    			</div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_top_right.png"
@@ -549,10 +549,10 @@ tbody tr:hover{ background:#f4f6ff; }
 			<div class="block_content ie">
       			<div class="content">
 					<div class="contacts">
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/about.htm">О проекте</a></div></div>
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/faq.htm">Частые вопросы</a></div></div>
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="mailto:korolkow@meteonova.ru">Руководитель</a></div></div>
-						<div class="contact_last"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/guestbook.htm">Гостевая книга</a></div></div>
+						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/about.htm">Рћ РїСЂРѕРµРєС‚Рµ</a></div></div>
+						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/faq.htm">Р§Р°СЃС‚С‹Рµ РІРѕРїСЂРѕСЃС‹</a></div></div>
+						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="mailto:korolkow@meteonova.ru">Р СѓРєРѕРІРѕРґРёС‚РµР»СЊ</a></div></div>
+						<div class="contact_last"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/guestbook.htm">Р“РѕСЃС‚РµРІР°СЏ РєРЅРёРіР°</a></div></div>
 					</div>
   		    	</div>
 			</div>
@@ -610,8 +610,8 @@ tbody tr:hover{ background:#f4f6ff; }
 		 				/>
 	   			</div>
 	   			<div class="block_title" style="width:222px;">
-	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Прогноз аллергии <#TOWN2> - Новости от наших партнеров"></div>
-	 			 		<div class="title"><b>НОВОСТИ</b></div>
+	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="РџСЂРѕРіРЅРѕР· Р°Р»Р»РµСЂРіРёРё <#TOWN2> - РќРѕРІРѕСЃС‚Рё РѕС‚ РЅР°С€РёС… РїР°СЂС‚РЅРµСЂРѕРІ"></div>
+	 			 		<div class="title"><b>РќРћР’РћРЎРўР</b></div>
 	   			</div>
 	   			<div class="round_right">
 		 				<img src="/images/block_top_right.png"
@@ -679,12 +679,12 @@ setInterval(pageUpdate,1800000);
 					o: 'suggest',
 					tpl: '<div id="%id%" onmouseover = "suggest.mouseOver(null, this)" onclick = "suggest.mouseClick()">%name%<span class="dc">%mun_name%%d_name%%c_name%</span></div>',
 		 			nulltpl: '<div class="discript" id="discript" onClick = "suggest.mouseClick()"><span class="e"><a id="err_a" href="/mgfind.htm?%input.val%">%input.val%</a></span></div>',
-					tplc: '<div class="discript"><span class="c"><a href="/search/?req=listcountries">Страны:</a></span></div>',
-					tplmu: '<div class="discript"><span class="d">Районы:</span></div>',
-					tpld: '<div class="discript"><span class="d">Области:</span></div>',
-					tplt: '<div class="discript"><span class="t">Города:</span></div>',
-					tpla: '<div class="discript"><span class="d">Аэропорты:</span></div>',
-					tpl_allsearch: 'Все результаты'					
+					tplc: '<div class="discript"><span class="c"><a href="/search/?req=listcountries">РЎС‚СЂР°РЅС‹:</a></span></div>',
+					tplmu: '<div class="discript"><span class="d">Р Р°Р№РѕРЅС‹:</span></div>',
+					tpld: '<div class="discript"><span class="d">РћР±Р»Р°СЃС‚Рё:</span></div>',
+					tplt: '<div class="discript"><span class="t">Р“РѕСЂРѕРґР°:</span></div>',
+					tpla: '<div class="discript"><span class="d">РђСЌСЂРѕРїРѕСЂС‚С‹:</span></div>',
+					tpl_allsearch: 'Р’СЃРµ СЂРµР·СѓР»СЊС‚Р°С‚С‹'					
 				},
 				{
 					parent: parent,
