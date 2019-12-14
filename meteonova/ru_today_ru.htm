@@ -13,6 +13,7 @@
 <!-- endinject -->
 <!-- inject:js -->
 <!-- endinject -->
+	<#TEMPLATE ru_navstyles_ru>
 </head>
 <body onload="tleft=-999;">
 <div class="suggest" id="suggest"></div>
@@ -31,7 +32,6 @@
 <div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
 <div class="hint hidden" id="gusthint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Скорость порывов приземного ветра. <a href="<#SERVERURL>/faq.htm#gust">Подробнее...</a></div>
 <div id="doc4" class="yui-t5">
-<#TEMPLATE ru_adw728x90_ru>
    <div id="hd">
      <div id="onhd">
       <div>	
@@ -40,6 +40,7 @@
 	</div>
      </div>
    </div>
+	<#TEMPLATE ru_adw728x90_ru>
 <div>
 <div id="bd">
 	<div id="yui-main">
@@ -69,26 +70,25 @@
    		</div>
     </div>
 
-
-  <div class="main_container">
+		<div class="main_container">
 			<div class="block_content">
-		    	<div id="frc_content_weather" style="padding-top:0px; height:24px; left:18px; color:#3b55c5;">
-			 <b><a href="/list/countries/">Все страны</a> › <a href="/list/countries/<#COUNTRYNAMEEN>"><#COUNTRYNAME></a> › <a href="/list/regions/<#REGIONINDEX>"><#REGIONNAME></a> › <a href="/weather/<#INDEX>-<#TOWNEN_>.htm">Погода <#TOWN2></a></b>
-			<!--<div style="float:right; margin-right:15px; color:#3b55c5;"><a href=#><b>Избранное</b></a> &#9660; </div>-->
-		    	</div>
+				<div style="color:#3b55c5; padding: 8px 8px 0 16px">
+					<b><a href="/list/countries/">Все страны</a> › <a href="/list/countries/<#COUNTRYNAMEEN>"><#COUNTRYNAME></a> › <a href="/list/regions/<#REGIONINDEX>"><#REGIONNAME></a> › <a href="/weather/<#INDEX>-<#TOWNEN_>.htm">Погода <#TOWN2></a></b>
+					<!--<div style="float:right; margin-right:15px; color:#3b55c5;"><a href=#><b>Избранное</b></a> &#9660; </div>-->
+				</div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner" />
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner" />
-   			</div>
+				<div class="round_left">
+					<img src="<#IMGBASE>/block_bt_left.png"
+						 width="9" height="14" class="corner" />
+				</div>
+				<div class="block_bt main_container_title_width"></div>
+				<div class="round_right">
+					<img src="<#IMGBASE>/block_bt_right.png"
+						 width="9" height="14" class="corner" />
+				</div>
 			</div>
-	  </div>
+		</div>
  	  <div class="main_container">
   		<div class="left_container">
 
@@ -177,43 +177,23 @@
   		</div>
   </div>
 
-
-			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_top_left.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
-   			<div class="block_title main_container_title_width">
- 			 		<div class="top_link bar tp">
-	      		  		<ul>
-	          				<li class="active"><b>Погода</b></li>
-	          				<li><a href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"><b>Аллергия</b></a></li>
-		          			<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
-		          			<li><a href="<#SERVERURL>/pro/<#INDEX>.htm"><b>Профи</b></a></li>
-		          			<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>
-	          				<li><a href="<#SERVERURL>/auto/<#INDEX>.htm"><b>Авто</b></a></li>
+		<div class="main_container">
+			<div class="block_top" style="margin-bottom: 8px; width: 100%">
+				<div class="bar tp">
+					<ul>
+						<li class="active"><b>Погода</b></li>
+						<li><a href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"><b>Аллергия</b></a></li>
+						<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
+						<li><a href="<#SERVERURL>/pro/<#INDEX>.htm"><b>Профи</b></a></li>
+						<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>
+						<li><a href="<#SERVERURL>/auto/<#INDEX>.htm"><b>Авто</b></a></li>
 						<#TEMPLATECLIMAT ru_climatlinkt_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
 						<#GEOMAGNLINK ru_geomagnlinkt_ru>
-	          				<li><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
-	    		  		</ul>
- 			 		</div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_top_right.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
+						<li><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
+					</ul>
+				</div>
 			</div>
-			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
-			</div>
+		</div>
 
 
   <div class="main_container">
@@ -244,7 +224,7 @@
    			</div>
 			</div>
 			<div class="block_content">
-		    	<div id="frc_content_weather" style="padding-top:0px; height:345px;">
+		    	<div id="frc_content_weather">
 			       <table border="0" cellspacing="0" cellpadding="0" width="97%">
                                 <tr>
 		    		 <td valign="top"><table border="0"  cellspacing="0" cellpadding="0" style="margin-top:3px;">
@@ -482,21 +462,17 @@
 			    </div>
       	</div>
 			</div>
-			<div class="block_top ie">
 			<div class="block_bottom ie">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
-   			<div class="block_bt left_contener_title_width"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
+				<div class="round_left">
+					<img src="<#IMGBASE>/block_bt_left.png"
+						 width="9" height="14" class="corner"/>
+				</div>
+				<div class="block_bt left_contener_title_width"></div>
+				<div class="round_right">
+					<img src="<#IMGBASE>/block_bt_right.png"
+						 width="9" height="14" class="corner"/>
+				</div>
 			</div>
-
-
-		</div>
   	</div>
   <div class="center_container">
 			<div class="block_top" style="z-index:-1;">

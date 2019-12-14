@@ -93,6 +93,28 @@ var data = [
             '../js/dancer.min.js',
             '../js/novaspeak.js'
         ]
+    },
+    {
+        tpl: 'ru_entry_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/scroll2.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js'
+        ]
     }
 ]
 
@@ -119,7 +141,7 @@ gulp.task('build_dev', gulp.series('addCss', async function () {
         return gulp.src(page.tpl+'.*')
             .pipe(inject(gulp.src(page.css), {
                 transform: function (filepath) {
-                    return '<link rel="stylesheet" type="text/css" href="/css' +
+                    return '<link rel="stylesheet" type="text/css" href="<#CSSBASE>' +
                         filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
                 }
                 }))
@@ -134,7 +156,7 @@ gulp.task('build_dev', gulp.series('addCss', async function () {
 }))
 
 gulp.task('d', gulp.series('build_dev', async function () {
-    gulp.src('build/dev/*.htm         ').pipe(gulpSSH.dest('/home/nova/dev/meteonova'))
+    gulp.src('build/dev/*.htm').pipe(gulpSSH.dest('/home/nova/dev/meteonova'))
 }))
 
 //gulp.task('prod', gulp.series('build_prod', async function () {

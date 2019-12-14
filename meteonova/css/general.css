@@ -116,10 +116,10 @@ a.map_tab.checked {
 }
 
 .top_link {
-    top: 6px;
-    margin-right: 5px;
+    margin-top: 8px;
+    margin-right: -3px;
     float: right;
-    position: relative
+    position: relative;
 }
 
 .top_link,
@@ -218,7 +218,6 @@ a.map_tab.checked {
 #frc_content_weather {
     margin: 8px 15px 0;
     height: 100%;
-    padding-bottom: 8px;
     position: relative;
 }
 
