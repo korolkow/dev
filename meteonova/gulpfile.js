@@ -3,8 +3,9 @@
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
     inject = require('gulp-inject'),
-    convertEncoding = require('gulp-convert-encoding'),
-    gulpSSH = require('gulp-ssh')
+    //convertEncoding = require('gulp-convert-encoding'),
+    gulpSSH = require('gulp-ssh'),
+    replace = require('gulp-string-replace');
 
 var gulpSSH = new gulpSSH({
     ignoreErrors: false,
@@ -46,11 +47,9 @@ var data = [
             '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
-            '../js/scroll2.js',
             '../js/dancer.min.js',
             '../js/novaspeak.js',
             '../js/svgchart.js',
-            '../js/scroll2.js',
             '../js/slider.js'
         ]
     },
@@ -89,7 +88,7 @@ var data = [
             '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
-            '../js/scroll2.js',
+            '../js/svgchart.js',
             '../js/dancer.min.js',
             '../js/novaspeak.js'
         ]
@@ -111,9 +110,31 @@ var data = [
             '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
-            '../js/scroll2.js',
             '../js/dancer.min.js',
             '../js/novaspeak.js'
+        ]
+    },
+    {
+        tpl: 'ru_hourly_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/svgchart.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/slider.js'
         ]
     }
 ]
@@ -147,10 +168,15 @@ gulp.task('build_dev', gulp.series('addCss', async function () {
                 }))
             .pipe(inject(gulp.src(page.js), {
                 transform: function (filepath) {
-                    return '<script type="text/javascript" src="/js' +
+                    return '<script type="text/javascript" src="<#JSBASE>' +
                         filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
                 }
             }))
+            .pipe(replace('style="width:222px;"', ''))
+            .pipe(replace('style="width:222px"', ''))
+            .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
+            .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
+            .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
             .pipe(gulp.dest('build/dev'));
     })
 }))

@@ -32,6 +32,9 @@
 <div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
 <div class="hint hidden" id="gusthint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Скорость порывов приземного ветра. <a href="<#SERVERURL>/faq.htm#gust">Подробнее...</a></div>
 <div id="doc4" class="yui-t5">
+	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/today/<#INDEX>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
+	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/today/<#INDEX>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
+
    <div id="hd">
      <div id="onhd">
       <div>	
@@ -225,19 +228,20 @@
 			</div>
 			<div class="block_content">
 		    	<div id="frc_content_weather">
-			       <table border="0" cellspacing="0" cellpadding="0" width="97%">
+					<div class="frc_wrapper">
+			       		<table border="0" cellspacing="0" cellpadding="0" width="100%">
                                 <tr>
 		    		 <td valign="top"><table border="0"  cellspacing="0" cellpadding="0" style="margin-top:3px;">
 		    			<tr><td class="date sign">Дата</td></tr>
 		    			<tr><td class="tod sign">Время суток</td></tr>
 		    			<tr><td class="phenom sign">Облачность<br>Явления</td></tr>
 		    			<tr><td class="hum sign">Осадки, мм за 3 ч</td></tr>
-		    			<tr><td class="hum sign">Давление, мм рт.ст.&nbsp;</td></tr>
-		    			<tr><td class="temper sign">Температура, &deg;C</td></tr>
-		    			<tr><td class="hum sign">Влажность, %</td></tr>
-		    			<tr><td class="wind sign">Ветер, метр/с</td></tr>
+		    			<tr><td class="hum sign">Давление, мм<img class="graph-icon" src="<#IMGBASE>/icons/graph_black.gif" width="19" height="13" border="0" alt="График хода давления" title="График хода давления"></td></tr>
+		    			<tr><td class="temper sign">Температура<img class="graph-icon" src="<#IMGBASE>/icons/graph_bred.gif" width="19" height="13" border="0" alt="График хода температуры" title="График хода температуры"></td></tr>
+		    			<tr><td class="hum sign">Влажность, %<img class="graph-icon" src="<#IMGBASE>/icons/graph_green.gif" width="19" height="13" border="0" alt="График хода влажности" title="График хода влажности"></td></tr>
+		    			<tr><td class="wind sign">Ветер, метр/с<img class="graph-icon" src="<#IMGBASE>/icons/graph_orange.gif" width="19" height="13" border="0" alt="График направления и скорости ветра" title="График направления и скорости ветра"></td></tr>
 		    			<tr><td class="hum sign">Порывы ветра&nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'gusthint', true, 300);" onmouseout="showHint(this, 'gusthint', false, 300);"></td></tr>
-		    			<tr><td class="hum sign">Комфорт,&deg;C&nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'heathint', true, 300);" onmouseout="showHint(this, 'heathint', false, 300);"></td></tr>
+		    			<tr><td class="hum sign">Комфорт,&deg;C&nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'heathint', true, 300);" onmouseout="showHint(this, 'heathint', false, 300);"> <img class="graph-icon" src="<#IMGBASE>/icons/graph_bred.gif" width="19" height="13" border="0" alt="График хода температуры комфорта" title="График хода температуры комфорта"></td></tr>
 <!--		    			<tr><td class="hum sign">УФ-Индекс &nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'uvihint', true, 300);" onmouseout="showHint(this, 'uvihint', false, 300);"></td></tr>-->
 		    		 </table></td>
 				 <td></td>
@@ -266,6 +270,7 @@
 				 <td></td>
 		              </tr>
     			     </table>
+					</div>
 		    	</div>
 			</div>
 			<div class="block_bottom">
@@ -405,7 +410,7 @@
    			</div>
 			</div>
 			<div class="block_content ie">
-		      	<div class="content" style="margin:8px 0 0 15px;">
+		      	<div class="content">
 			  	<div id="astro_date" class="title3"><b>Температура воды</b>&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'waterhint', true, 250);" onmouseout="showHint(this, 'waterhint', false, 250);"></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/water_icon.gif);"></div>
@@ -443,7 +448,7 @@
    			</div>
 			</div>
 			<div class="block_content ie">
-      	<div class="content" style="margin:8px 0 0 15px;">
+      	<div class="content">
 		  	 <div id="astro_date" class="title3"><b><#ASTRODATE3></b></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
@@ -701,7 +706,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - Реклама" width="26" height="26" ></div>
 	 			 		<div class="title"><b>РЕКЛАМА</b></div>
 	   			</div>
@@ -724,7 +729,7 @@
 		 				 />
 
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -740,7 +745,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2>" width="26" height="26" ></div>
 	 			 		<div class="title"><b><#TOWN16></b></div>
 	   			</div>
@@ -775,7 +780,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -791,7 +796,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Список ближайших к городу <#TOWN> аэропортов" width="26" height="26" ></div>
 	 			 		<div class="title"><b>АЭРОПОРТЫ</b></div>
 	   			</div>
@@ -816,7 +821,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -832,7 +837,7 @@
 	 				width="9" height="31" class="corner"
 	 				 />
    			</div>
-   			<div class="block_title" style="width:222px;">
+   			<div class="block_title" >
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт""></div>
  			 		<div class="title"><b>ИНФОРМЕР</b></div>
    			</div>
@@ -872,7 +877,7 @@
 	 				width="9" height="14" class="corner"
 	 				 />
    			</div>
-   			<div class="block_bt" style="width:222px"></div>
+   			<div class="block_bt" ></div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_bt_right.png"
 	 				width="9" height="14" class="corner"
@@ -887,7 +892,7 @@
 	 				width="9" height="31" class="corner"
 	 				 />
    			</div>
-   			<div class="block_title" style="width:222px;">
+   			<div class="block_title" >
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - установите себе на сайт информер с прогнозом погоды" width="26" height="26" ></div>
  			 		<div class="title"><b>РЕКЛАМА</b></div>
    			</div>
@@ -906,7 +911,7 @@
    			<div class="round_left">
 	 		  	<img src="<#IMGBASE>/block_bt_left.png"	width="9" height="14" class="corner" />
    			</div>
-   			<div class="block_bt" style="width:222px"></div>
+   			<div class="block_bt" ></div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_bt_right.png" width="9" height="14" class="corner" />
    			</div>
@@ -917,7 +922,7 @@
  
 		 		  	<img src="<#IMGBASE>/block_top_left.png"	width="9" height="31" class="corner"	 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Понравилась смотреть погоду на Метенонве? Сделаем общение удобнее!" width="26" height="26" ></div>
 	 			 		<div class="title"><b>ПОНРАВИЛСЯ САЙТ?</b></div>
 	   			</div>
@@ -948,7 +953,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -965,7 +970,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Есть вопрос? Напишите нам!" width="26" height="26" ></div>
 	 			 		<div class="title"><b>КОНТАКТЫ</b></div>
 	   			</div>
@@ -993,7 +998,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -1014,7 +1019,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Новости о погоде и стихии от ФОБОС" width="26" height="26" ></div>
 	 			 		<div class="title"><b>НОВОСТИ</b></div>
 	   			</div>
@@ -1026,7 +1031,7 @@
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:220px;">
+					<div class="content" >
 					 <#FOBOSNEWSNOVA 28>
 					</div>
 				</div>
@@ -1037,7 +1042,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -1240,6 +1245,244 @@ setInterval(pageUpdate,1800000);
 				}
 			);
 	}
+    var svg_chart = new svgChart({
+        svg: createSvg($('#frc_content_weather0'), 40),
+        datasets: [
+            {
+                'dataset': [
+                    {
+                        values: (function() {
+                            var arr = [];
+                            $('#frc_content_weather0 .weather_td tr:nth-child(5) td').each(function(){
+                                var val = parseInt($(this).html());
+                                arr.push((val !== NaN ? val: -1000));
+                            })
+                            arr = addFirstAndLastValues(arr); //костыль по дабывлению -1 и n+1 значения для графика
+                            return arr;
+                        })(),
+                        color: '#3b3b3b',
+                        fill: {
+                            show: true,
+                            color: '#3b3b3b',
+                            opacity: 0.1
+                        }
+                    }
+                ],
+                show: false
+            },
+            {
+                'dataset': [
+                    {
+                        values: (function() {
+                            var arr = [];
+                            $('#frc_content_weather0 .weather_td tr:nth-child(6) td').each(function(){
+                                var val = parseInt($(this).html());
+                                arr.push((val !== NaN ? val: -1000));
+                            })
+                            arr = addFirstAndLastValues(arr); //костыль по дабывлению -1 и n+1 значения для графика
+                            return arr;
+                        })(),
+                        color: '#bb2322',
+                        fill: {
+                            show: true,
+                            color: '#bb2322',
+                            opacity: 0.1
+                        }
+                    }
+                ],
+                show: true
+            },
+            {
+                'dataset': [
+                    {
+                        values: (function() {
+                            var arr = [];
+                            $('#frc_content_weather0 .weather_td tr:nth-child(7) td').each(function(){
+                                var val = parseInt($(this).html());
+                                arr.push((val !== NaN ? val: -1000));
+                            });
+                            arr = addFirstAndLastValues(arr); //костыль по дабывлению -1 и n+1 значения для графика
+                            return arr;
+                        })(),
+                        color: '#28972E',
+                        fill: {
+                            show: true,
+                            color: '#28972E',
+                            opacity: 0.1
+                        }
+                    }
+                ],
+                show: false
+            },
+            {
+                'dataset': [
+                    {
+                        values:(function() {
+                            var arr = [];
+                            $('#frc_content_weather0 .weather_td tr:nth-child(8) td').each(function () {
+                                var val = $(this).html();
+                                var res = val.match(/\d{1,2}/gi);
+                                if (res !== null) {
+                                    arr.push(res.reduce(function(total, a) {return total + parseInt(a)}) / res.length);
+                                }
+                                else arr.push(0);
+                            });
+                            arr = addFirstAndLastValues(arr);
+                            return arr;
+                        })(),
+                        color: '#ff8000',
+                        fill: {
+                            show: true,
+                            color: '#ff8000',
+                            opacity: 0.1
+                        }
+                    },
+                    {
+                        type: 'wind_direction',
+                        values: $('#frc_content_weather0 .weather_td tr:nth-child(8) td').map(function () {
+                            var arr = ['С', 'С-В', 'В', 'Ю-В', 'Ю', 'Ю-З', 'З', 'С-З'];
+                            var val = $(this).html();
+                            var res = val.match(/^([\S]{1}-[\S]{1}|[\S]{1})/gi);
+                            var angle = -1;
+                            if (res !== null) {
+                                $.each(arr, function(index, item) {
+                                    if (item == res[0]) angle = index * 45;
+                                })
+                            }
+                            return angle;
+                        }),
+                        path: '<g class="%class%" transform="translate(%x%, 4) rotate(%angle% 6 8)"  stroke="none" stroke-width="1" ' +
+                        'fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">\n' +
+                        '<path d="M7,1 L7,17" id="Path" stroke="#666666" stroke-width="2"></path>\n' +
+                        '<polyline stroke="#666666" stroke-width="2" points="13 11 7 17 1 11"></polyline>\n' +
+                        '</g>'
+                    }
+                ],
+                show: false
+            },
+            {
+                'dataset': [
+                    {
+                        values: (function() {
+                            var arr = [];
+                            $('#frc_content_weather0 .weather_td tr:nth-child(8) td').each(function(){
+                                var val = parseInt($(this).html());
+                                arr.push((val !== NaN ? val: -1000));
+                            });
+                            arr = addFirstAndLastValues(arr); //костыль по дабывлению -1 и n+1 значения для графика
+                            return arr;
+                        })(),
+                        color: '#bb2322',
+                        fill: {
+                            show: true,
+                            color: '#bb2322',
+                            opacity: 0.1
+                        }
+                    }
+                ],
+                show: false
+            },
+            {
+                'dataset': [
+                    {
+                        values: (function() {
+                            var arr = [];
+                            $('#frc_content_weather0 .weather_td tr:nth-child(10) td').each(function(){
+                                var val = parseInt($(this).html());
+                                arr.push((val !== NaN ? val: -1000));
+                            });
+                            arr = addFirstAndLastValues(arr); //костыль по дабывлению -1 и n+1 значения для графика
+                            return arr;
+                        })(),
+                        color: '#bb2322',
+                        fill: {
+                            show: true,
+                            color: '#bb2322',
+                            opacity: 0.1
+                        }
+                    }
+                ],
+                show: false
+            },
+        ]
+    });
+
+    svg_chart.draw();
+
+    function createSvg(insertIn, height) {
+        insertIn.css('position', 'relative');
+        var svg = $('<svg class="graphic" width="' + insertIn.width() + '" height="' + height + '">');
+        svg.css({
+            'position': 'absolute',
+            'display': 'block'
+        });
+        insertIn.prepend(svg);
+        return svg;
+    }
+
+    function showGraphic (datasetIndex) {
+        svg_chart.opt.datasets = svg_chart.opt.datasets.map(function(item) {
+            item.show = false;
+            return item;
+        });
+        datasetIndex = datasetIndex-4;
+        svg_chart.opt.datasets[datasetIndex].show = true;
+        svg_chart.draw();
+        var top  = 0;
+        switch (datasetIndex) {
+            case 0:
+                top = 174;
+                break;
+            case 1:
+                top = 215;
+                break;
+            case 2:
+                top = 240;
+                break;
+            case 3:
+                top = 281;
+                break;
+            case 4:
+                top = 331;
+                break;
+            default: top = 331;
+        }
+        svg_chart.opt.svg.css('top', top);
+    }
+
+    $('.sign')
+        .unbind('mouseover')
+        .bind('mouseover', function() {
+            $('.sign').css('background', 'transparent');
+            var index = $(this).index('.sign');
+            if ((index >= 4 && index < 8) || index  === 9) {
+                $('.sign').css('padding', 0);
+                $(this).css({
+                    'background': '#eef1fd',
+                    'padding': '20px 0'
+                });
+                $('.weather_td table').each(function() {
+                    $(this).find('tr').find('td').css('padding-bottom', 0);
+                    $(this).find('tr').eq(index).find('td').css('padding-bottom', 40);
+                });
+                showGraphic(index);
+            }
+        })
+        .unbind('mouseout')
+        .bind('mouseout', function() {
+            $(this).css('background', 'transparent');
+        })
+
+    $('.temper.sign').trigger('mouseover');
+
+    function addFirstAndLastValues(dataset) {
+        if (dataset[0] > dataset[1]) dataset.unshift(dataset[0]+1);
+        else dataset.unshift(dataset[0]-1);
+        var len = dataset.length;
+        if (dataset[len-2] > dataset[len-1]) dataset.push(dataset[len-1]-1)
+        else  dataset.push(dataset[len-1]+1);
+        return dataset;
+    }
 	</script>
 
 </body>

@@ -40,7 +40,7 @@
 <div id="doc4" class="yui-t5">
 
 <div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/frc/<#INDEX>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
-<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/frc/<#INDEX>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
+<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/today/<#INDEX>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
 
    <div id="hd">
      <div id="onhd">
@@ -187,23 +187,23 @@
 			</div>
   		</div>
   </div>
-<div class="main_container">
-		<div class="block_top" style="margin-bottom: 8px; width: 100%">
-			<div class="bar tp">
-				<ul>
-					<li class="active"><b>Погода</b></li>
-					<li><a href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"><b>Аллергия</b></a></li>
-					<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
-					<li><a href="<#SERVERURL>/pro/<#INDEX>.htm"><b>Профи</b></a></li>
-					<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>
-					<li><a href="<#SERVERURL>/auto/<#INDEX>.htm"><b>Авто</b></a></li>
-				<#TEMPLATECLIMAT ru_climatlinkt_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
-				<#GEOMAGNLINK ru_geomagnlinkt_ru>
-					<li><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+		<div class="main_container">
+				<div class="block_top" style="margin-bottom: 8px; width: 100%">
+					<div class="bar tp">
+	      		  		<ul>
+	          				<li class="active"><b>Погода</b></li>
+	          				<li><a href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"><b>Аллергия</b></a></li>
+		          			<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
+		          			<li><a href="<#SERVERURL>/pro/<#INDEX>.htm"><b>Профи</b></a></li>
+		          			<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>
+	          				<li><a href="<#SERVERURL>/auto/<#INDEX>.htm"><b>Авто</b></a></li>
+						<#TEMPLATECLIMAT ru_climatlinkt_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
+						<#GEOMAGNLINK ru_geomagnlinkt_ru>
+	          				<li><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
+	    		  		</ul>
+ 			 		</div>
+				</div>
+   			</div>
   <div class="main_container">
 
  			<#TEMPLATEFORCOUNTRY ru_bantyres_ru "Russia,Ukraine,Belarus,Kazakhstan,Azerbaijan,Moldova,Latvia,Lithuania,Estonia">
@@ -254,7 +254,7 @@
 				 <td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_left_top"><img src="<#IMGBASE>/arrows_left.gif" border="0" width="9" height="144" onmouseover="this.src='<#IMGBASE>/arrows_left_over.gif';" onmouseout="this.src='<#IMGBASE>/arrows_left.gif';"></div></td></tr><tr><td valign=bottom><div id="arrow_right_bottom"><img src="<#IMGBASE>/arrows_right.gif" border="0" width="9" height="144" onmouseover="this.src='<#IMGBASE>/arrows_right_over.gif';" onmouseout="this.src='<#IMGBASE>/arrows_right.gif';"></div></td></tr></table></td>
 		    		 <td align="center">
 						 <div id="frc_cont" style="height: 352px; overflow:hidden;">
-							 <div class="frc_wrapper" style="height: 500px; overflow: auto">
+							 <div class="frc_wrapper" style="height: 386px; overflow: auto">
 								 <table border="0" cellspacing="0" cellpadding="0">
 		    			<tr><td id="frc_content_weather0">
 						<table border="0" cellspacing="0" cellpadding="0">
@@ -592,7 +592,7 @@
    			</div>
 			</div>
 			<div class="block_content ie">
-		      	<div class="content" style="margin:8px 0 0 15px;">
+		      	<div class="content">
 			  	<div id="astro_date" class="title3"><b>Температура воды</b>&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'waterhint', true, 250);" onmouseout="showHint(this, 'waterhint', false, 250);"></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/water_icon.gif);"></div>
@@ -630,7 +630,7 @@
    			</div>
 			</div>
 			<div class="block_content ie">
-      	<div class="content" style="margin:8px 0 0 15px;">
+      	<div class="content">
 		  	 <div id="astro_date" class="title3"><b><#ASTRODATE3></b></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
@@ -854,7 +854,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - Реклама" width="26" height="26" ></div>
 	 			 		<div class="title"><b>РЕКЛАМА</b></div>
 	   			</div>
@@ -877,7 +877,7 @@
 		 				 />
 
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -898,7 +898,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2>" width="26" height="26" ></div>
 	 			 		<div class="title"><b><#TOWN16></b></div>
 	   			</div>
@@ -935,7 +935,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="<#IMGBASE>/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -951,7 +951,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Список ближайших к городу <#TOWN> аэропортов" width="26" height="26" ></div>
 	 			 		<div class="title"><b>АЭРОПОРТЫ</b></div>
 	   			</div>
@@ -976,7 +976,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="/images/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -992,7 +992,7 @@
 	 				width="9" height="31" class="corner"
 	 				 />
    			</div>
-   			<div class="block_title" style="width:222px;">
+   			<div class="block_title" >
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт""></div>
  			 		<div class="title"><b>ИНФОРМЕР</b></div>
    			</div>
@@ -1032,7 +1032,7 @@
 	 				width="9" height="14" class="corner"
 	 				 />
    			</div>
-   			<div class="block_bt" style="width:222px"></div>
+   			<div class="block_bt" ></div>
    			<div class="round_right">
 	 				<img src="/images/block_bt_right.png"
 	 				width="9" height="14" class="corner"
@@ -1047,7 +1047,7 @@
 	 				width="9" height="31" class="corner"
 	 				 />
    			</div>
-   			<div class="block_title" style="width:222px;">
+   			<div class="block_title" >
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - установите себе на сайт информер с прогнозом погоды" width="26" height="26" ></div>
  			 		<div class="title"><b>РЕКЛАМА</b></div>
    			</div>
@@ -1068,7 +1068,7 @@
 	 				width="9" height="14" class="corner"
 	 				 />
    			</div>
-   			<div class="block_bt" style="width:222px"></div>
+   			<div class="block_bt" ></div>
    			<div class="round_right">
 	 				<img src="<#IMGBASE>/block_bt_right.png"
 	 				width="9" height="14" class="corner"
@@ -1083,7 +1083,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Понравилась смотреть погоду на Метенонве? Сделайте общение удобнее!" width="26" height="26" ></div>
 	 			 		<div class="title"><b>ПОНРАВИЛСЯ САЙТ?</b></div>
 	   			</div>
@@ -1115,7 +1115,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="/images/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -1132,7 +1132,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Есть вопрос? Напишите нам!" width="26" height="26" ></div>
 	 			 		<div class="title"><b>КОНТАКТЫ</b></div>
 	   			</div>
@@ -1160,7 +1160,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="/images/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -1181,7 +1181,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Новости о погоде и стихии от ФОБОС" width="26" height="26" ></div>
 	 			 		<div class="title"><b>НОВОСТИ</b></div>
 	   			</div>
@@ -1192,8 +1192,8 @@
 
 	   			</div>
 				</div>
-				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:220px;">
+				<div class="block_content">
+					<div class="content" >
 					 <#FOBOSNEWSNOVA 17>
 					</div>
 				</div>
@@ -1204,7 +1204,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="/images/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -1220,7 +1220,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Интересное о здоровье" width="26" height="26" ></div>
 	 			 		<div class="title"><b>ИНТЕРЕСНО</b></div>
 	   			</div>
@@ -1232,7 +1232,7 @@
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:220px;">
+					<div class="content" >
  					 <#FOBOSNEWSNOVA 12 RIGHT InterestingNews>
 					</div>
 				</div>
@@ -1243,7 +1243,7 @@
 		 				width="9" height="14" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="block_bt" ></div>
 	   			<div class="round_right">
 		 				<img src="/images/block_bt_right.png"
 		 				width="9" height="14" class="corner"
@@ -1423,28 +1423,6 @@ var audio = new mnovaAudio({
 	player_button: $('.player_button'),
 });
 audio._load('<#SERVERURL>/speech/forecast_<#INDEX>_'+numFRC);
-
-var scrolling = new Scroll({
-	leftBtns: ['arrow_left_top', 'arrow_left_bottom'],
-	rightBtns: ['arrow_right_top', 'arrow_right_bottom'],
-	scrollObjId: 'frc_cont',
-	delta: 51,
-	step: {normal: 5, touch: 25},
-	doLeft: function(obj, delta){
-	  if (obj) {
-	  	if (obj.scrollLeft-delta>=0) obj.scrollLeft = obj.scrollLeft-delta;
-	  	else obj.scrollLeft = 0;
-	  	updateForecastBg(Math.round(obj.scrollLeft/obj.scrollWidth*6));
-	  }
-	},
-	doRight: function(obj, delta){
-	  if (obj) {
-	  	var maxWidth = obj.scrollWidth - obj.offsetWidth;
-	  	if (maxWidth> obj.scrollLeft) obj.scrollLeft = obj.scrollLeft+delta;
-	  	updateForecastBg(Math.round(obj.scrollLeft/obj.scrollWidth*6));
-	  }
-	}
-});
 
 function updateForecast_audio() {
 	if(typeof audio != 'undefined') {
@@ -1698,8 +1676,6 @@ setInterval(pageUpdate,1800000);
     $('.temper.sign').trigger('mouseover');
 
     function addFirstAndLastValues(dataset) {
-        console.log(dataset.push);
-        console.log([dataset[0], dataset[1]]);
         if (dataset[0] > dataset[1]) dataset.unshift(dataset[0]+1);
         else dataset.unshift(dataset[0]-1);
 

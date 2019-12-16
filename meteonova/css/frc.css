@@ -204,7 +204,13 @@
     color: #3b55c5;
     font-size: 13px;
     font-weight: 400;
-    text-align: left
+    text-align: left;
+    position: relative;
+}
+
+.graph-icon {
+    position: absolute;
+    right: 16px;
 }
 
 #delim {

@@ -20,7 +20,6 @@ A:VISITED {
     position: relative;
     font-size: 16px;
     float: left;
-    padding-left: 4px;
     margin-top: 8px;
     white-space: nowrap;
     overflow: hidden;
@@ -66,7 +65,8 @@ h2 b {
 }
 
 .content {
-    margin: 8px 15px 0
+    padding: 8px 15px 0;
+    box-sizing: border-box;
 }
 
 .under_text {
@@ -80,8 +80,10 @@ h2 b {
 }
 
 .block_title {
+    box-sizing: border-box;
     color: #3b55c5;
-    position: relative
+    position: relative;
+    padding: 0 15px;
 }
 
 #dropDownTList td {
@@ -117,7 +119,6 @@ a.map_tab.checked {
 
 .top_link {
     margin-top: 8px;
-    margin-right: -3px;
     float: right;
     position: relative;
 }

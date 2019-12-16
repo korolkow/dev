@@ -78,7 +78,7 @@ div#logo {
     line-height: 24px;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    margin: 10px 0 0 6px;
+    margin-top: 10px;
     max-width: 336px;
     height: 24px;
     white-space: nowrap;
@@ -114,14 +114,35 @@ div#logo {
     width: 240px;
     position: relative
 }
+
+.right_main .block_title {
+    width: 240px;
+}
+
+.right_main .block_bt {
+    width: 240px;
+}
+
+.right_block {
+    width: 240px;
+}
+
+.right_block .block_title {
+    width: 240px;
+}
+
+.right_block .block_bt {
+    width: 240px;
+}
+
 .left_contener_title_width {
-    width: 170px
+    width: 188px
 }
 .center_container_title_width {
-    width: 514px
+    width: 532px
 }
 .main_container_title_width {
-    width: 710px
+    width: 728px;
 }
 .top_title {
     font-size: 22px;
