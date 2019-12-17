@@ -32,8 +32,8 @@
 <div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
 <div class="hint hidden" id="gusthint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Скорость порывов приземного ветра. <a href="<#SERVERURL>/faq.htm#gust">Подробнее...</a></div>
 <div id="doc4" class="yui-t5">
-	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/today/<#INDEX>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
-	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/today/<#INDEX>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
+	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/today/<#INDEX>-<#TOWNEN_>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
+	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/today/<#INDEX>-<#TOWNEN_>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
 
    <div id="hd">
      <div id="onhd">

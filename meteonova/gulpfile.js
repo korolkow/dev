@@ -136,6 +136,95 @@ var data = [
             '../js/novaspeak.js',
             '../js/slider.js'
         ]
+    },
+    {
+        tpl: 'ru_tomorrow_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/svgchart.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_simple3_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js'
+        ]
+    },
+    {
+        tpl: 'ru_10days_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_month_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/animate.js',
+            '../js/svgchart.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/slider.js'
+        ]
     }
 ]
 

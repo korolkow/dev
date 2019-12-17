@@ -9,17 +9,17 @@
 <meta name="Classification" content="Сайт о погоде <#TOWN3> почасовой прогноз"> 
 <meta name="Document-state" content="Dynamic">
 <link rel="canonical" href="https://www.meteonova.ru/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm"/>
-	<!-- inject:css -->
-	<!-- endinject -->
-	<!-- inject:js -->
-	<!-- endinject -->
+<!-- inject:css -->
+<!-- endinject -->
+<!-- inject:js -->
+<!-- endinject -->
 <#TEMPLATE ru_navstyles_ru>
 </head>
 <body onload="tleft=-999;">
 <div class="suggest" id="suggest"></div>
 <div id="doc4" class="yui-t5">
-	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/hourly/<#INDEX>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
-	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/hourly/<#INDEX>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
+	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
+	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
    <div id="hd">
      <div id="onhd">
       <div>	
@@ -128,7 +128,7 @@
    			</div>
 			</div>
 			<div class="block_content">
-		    	<div id="frc_content_weather" style="height:371px;">
+		    	<div id="frc_content_weather" style="height:372px;">
 			       <table border="0" cellspacing="0" cellpadding="0">
                                 <tr>
 		    		 <td valign="top"><table border="0"  cellspacing="0" cellpadding="0" style="margin-top:3px;">
@@ -136,7 +136,7 @@
 		    			<tr><td class="tod sign">Время суток</td></tr>
 		    			<tr><td class="phenom sign">Облачность<br>Явления</td></tr>
 		    			<tr><td class="hum sign">Осадки, мм за 1 час</td></tr>
-						 <tr><td class="hum sign">Давление, мм<img class="graph-icon" src="<#IMGBASE>/icons/graph_black.gif" width="19" height="13" border="0" alt="График хода давления" title="График хода давления"></td></tr>
+                         <tr><td class="hum sign">Давление, мм<img class="graph-icon" src="<#IMGBASE>/icons/graph_black.gif" width="19" height="13" border="0" alt="График хода давления" title="График хода давления"></td></tr>
 						 <tr><td class="temper sign">Температура<img class="graph-icon" src="<#IMGBASE>/icons/graph_bred.gif" width="19" height="13" border="0" alt="График хода температуры" title="График хода температуры"></td></tr>
 						 <tr><td class="hum sign">Влажность, %<img class="graph-icon" src="<#IMGBASE>/icons/graph_green.gif" width="19" height="13" border="0" alt="График хода влажности" title="График хода влажности"></td></tr>
 						 <tr><td class="wind sign">Ветер, метр/с<img class="graph-icon" src="<#IMGBASE>/icons/graph_orange.gif" width="19" height="13" border="0" alt="График направления и скорости ветра" title="График направления и скорости ветра"></td></tr>
@@ -146,7 +146,7 @@
 		    		 </table></td>
 									<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_left_top"><img src="<#IMGBASE>/arrows_left.gif" border="0" width="9" height="144" onmouseover="this.src='<#IMGBASE>/arrows_left_over.gif';" onmouseout="this.src='<#IMGBASE>/arrows_left.gif';"></div></td></tr></table></td>
 		    		 <td align="center">
-						 <div id="frc_cont" style="overflow:hidden;">
+						 <div id="frc_cont" style="height: 380px; overflow:hidden;">
 						 	<div class="frc_wrapper" style="height: 380px; overflow: auto">
 							 	<table border="0" cellspacing="0" cellpadding="0">
 		    			<tr><td id="frc_content_weather0">
