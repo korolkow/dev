@@ -212,6 +212,39 @@ var data = [
             '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/svgchart.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_allergy_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/dropdownlist.css',
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js'
+        ]
+    },
+    {
+        tpl: 'ru_med_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
@@ -219,10 +252,43 @@ var data = [
             '../js/jquery-1.11.1.min.js',
             '../js/utils.js',
             '../js/dropdownlist.js',
-            '../js/animate.js',
-            '../js/svgchart.js',
-            '../js/dancer.min.js',
-            '../js/novaspeak.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_agro_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_auto_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
             '../js/slider.js'
         ]
     }

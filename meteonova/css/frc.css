@@ -1,5 +1,6 @@
 .weather_td {
     width: 50px;
+    max-width: 50px;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff
 }

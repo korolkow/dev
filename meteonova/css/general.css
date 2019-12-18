@@ -621,6 +621,10 @@ td {
     width: 100%
 }
 
+.astro_inf .icon {
+    display: block;
+}
+
 .astro_inf,
 .data {
     position: relative
@@ -651,6 +655,11 @@ td {
 .text_bg_last {
     width: 140px;
     position: relative
+}
+
+.astro_inf .text_bg,
+.astro_inf .text_bg_last {
+    width: 126px;
 }
 
 .favorites {

@@ -1410,6 +1410,7 @@ function updateForecastBg(n)
 {
     if(numFRC==n) return;
     numFRC=n;
+
     if (document.getElementById("blog_text")) document.getElementById("blog_text").innerHTML=document.getElementById("frc_text_"+numFRC).innerHTML;
     checkFrcTopLink();
     updateForecast_audio();

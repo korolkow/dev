@@ -1,5 +1,5 @@
 <!DOCTYPE html><#TEMPLATE ru_definitions_ru><#INITASTRO>
-<html>
+<html lang="ru">
 <head>
 <title>МЕТЕОНОВА - Прогноз аллергии на пыльцу и цветение <#TOWN2> - поллиноз, аллергический ринит, кашель и конъюнктивит</title>
 <meta http-equiv="Content-Type" content="text/html; charset=<#ENCODING>">
@@ -10,10 +10,12 @@
 <meta name="Document-state" content="Dynamic">
 <!--<base href="<#SERVERURL>/allergy.htm">-->
 <link rel="canonical" href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"/>
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/meteonova.auto.min.css">
-<script type="text/javascript" src="<#JSBASE>/meteonova.auto.min.js" charset = "utf-8"></script>
+<!-- inject:css -->
+<!-- endinject -->
+<!-- inject:js -->
+<!-- endinject -->
 <style>
-#frc_content_weather { padding-top:10px; position:relative; width:100%; float:left; padding:0 2%; box-sizing:border-box; left:0;}
+#frc_content_weather {box-sizing:border-box;}
 .date{ background-color:transparent; border-right:0; font-weight:normal;}
 section { color:#3b55c5; background:#fff;}
 table { width: 100%; background-color:#fff; border-collapse:collapse; }
@@ -55,7 +57,6 @@ tbody tr:hover{ background:#f4f6ff; }
 <div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
 <div class="hint hidden" id="geomhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Показатель геомагнитной активности Солнца и прогноз магнитных бурь на широте г. <#TOWN>. <a href="<#SERVERURL>/faq.htm#geomagn" target=_blank>Подробнее...</a></div>
 <div id="doc4" class="yui-t5">
-<#TEMPLATE ru_adw728x90_ru>
    <div id="hd">
      <div id="onhd">
       <div>	
@@ -64,6 +65,7 @@ tbody tr:hover{ background:#f4f6ff; }
 	</div>
      </div>
    </div>
+	<#TEMPLATE ru_adw728x90_ru>
 <div>
 <div id="bd">
 	<div id="yui-main">
@@ -357,7 +359,7 @@ tbody tr:hover{ background:#f4f6ff; }
    			</div>
 			</div>
 			<div class="block_content ie">
-      	<div class="content" style="margin:8px 0 0 15px;">
+      	<div class="content">
 		  	 <div id="astro_date" class="title3"><b><#ASTRODATE3></b></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
@@ -621,7 +623,7 @@ tbody tr:hover{ background:#f4f6ff; }
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:210px;">
+					<div class="content">
 					 <#FOBOSNEWSNOVA 28>
 					</div>
 				</div>

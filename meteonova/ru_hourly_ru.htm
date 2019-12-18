@@ -144,7 +144,7 @@
 						 <tr><td class="hum sign">Комфорт,&deg;C&nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'heathint', true, 300);" onmouseout="showHint(this, 'heathint', false, 300);"><img class="graph-icon" src="<#IMGBASE>/icons/graph_bred.gif" width="19" height="13" border="0" alt="График хода температуры комфорта" title="График хода температуры комфорта"></td></tr>
 <!--		    			<tr><td class="hum sign">УФ-Индекс &nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'uvihint', true, 300);" onmouseout="showHint(this, 'uvihint', false, 300);"></td></tr>-->
 		    		 </table></td>
-									<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_left_top"><img src="<#IMGBASE>/arrows_left.gif" border="0" width="9" height="144" onmouseover="this.src='<#IMGBASE>/arrows_left_over.gif';" onmouseout="this.src='<#IMGBASE>/arrows_left.gif';"></div></td></tr></table></td>
+									<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_left_top"></div></td></tr></table></td>
 		    		 <td align="center">
 						 <div id="frc_cont" style="height: 380px; overflow:hidden;">
 						 	<div class="frc_wrapper" style="height: 380px; overflow: auto">
@@ -185,14 +185,12 @@
 								 <#TEMPLATEPREDICT ru_novafrch_ru C30>
 							</tr>
 						</table>
-						
-
 					</td></tr>
 		    		     </table>
 							</div>
 						 </div>
 					 </td>
-					<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_right_top"><img src="<#IMGBASE>/arrows_right2.gif" border="0" width="9" height="144" onmouseover="this.src='<#IMGBASE>/arrows_right2_over.gif'; goLeft();" onmouseout="this.src='<#IMGBASE>/arrows_right2.gif'; stopAutoScroll();"></div></td></tr></table></td>
+					<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_right_top"></div></td></tr></table></td>
 		              </tr>
     			     </table>
 		    	</div>
@@ -1085,16 +1083,10 @@ function loadScript(js) {
 
 loadScript(mapScripts.shift());
 
-function updateForecast(n)
-{
-if (typeof scrolling != 'undefined') scrolling.jump(numFRC, n);
-numFRC = n; 
-}
 
-function updateForecastBg(n)
-{
-if(numFRC==n) return;
-numFRC=n;
+function updateForecastBg(n) {
+	if(numFRC==n) return;
+	numFRC=n;
 //if (document.getElementById("blog_text")) document.getElementById("blog_text").innerHTML=document.getElementById("frc_text_"+numFRC).innerHTML;
 //checkFrcTopLink(); 
 //updateForecast_audio();
