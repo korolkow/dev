@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     rename = require('gulp-rename'),
     inject = require('gulp-inject'),
+    prettify = require('gulp-html-prettify'),
     //convertEncoding = require('gulp-convert-encoding'),
     gulpSSH = require('gulp-ssh'),
     replace = require('gulp-string-replace');
@@ -29,22 +30,29 @@ var css = [
     '../css/map.css'
 ]
 
+var commonScripts = {
+    css: [
+        '../css/reset-fonts-grids_990.css',
+        '../css/block.css',
+        '../css/general.css',
+        '../css/mosg_990.css',
+    ],
+    js: [
+        '../js/jquery-1.11.1.min.js',
+        '../js/utils.js',
+    ]
+};
+
 var data = [
     {
         tpl: 'ru_novatown2_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/dancer.min.js',
@@ -56,36 +64,23 @@ var data = [
     {
         tpl: 'ru_profi_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js'
         ]
     },
     {
         tpl: 'ru_today_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/config.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/svgchart.js',
@@ -96,18 +91,12 @@ var data = [
     {
         tpl: 'ru_entry_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/dancer.min.js',
@@ -117,18 +106,12 @@ var data = [
     {
         tpl: 'ru_hourly_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/svgchart.js',
@@ -140,18 +123,12 @@ var data = [
     {
         tpl: 'ru_tomorrow_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/svgchart.js',
@@ -163,18 +140,12 @@ var data = [
     {
         tpl: 'ru_simple3_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/dancer.min.js',
@@ -184,18 +155,12 @@ var data = [
     {
         tpl: 'ru_10days_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/animate.js',
             '../js/dancer.min.js',
@@ -206,16 +171,10 @@ var data = [
     {
         tpl: 'ru_month_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/svgchart.js',
             '../js/slider.js'
@@ -224,33 +183,21 @@ var data = [
     {
         tpl: 'ru_allergy_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/dropdownlist.css',
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js'
         ]
     },
     {
         tpl: 'ru_med_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css',
             '../css/dropdownlist.css',
             '../css/ol3.css',
             '../css/map.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/slider.js'
         ]
@@ -258,13 +205,36 @@ var data = [
     {
         tpl: 'ru_agro_ru',
         css: [
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+        ],
+        js: [
+            '../js/dropdownlist.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_auto_ru',
+        css: [
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/dropdownlist.js',
+            '../js/slider.js'
+        ]
+    },
+    {
+        tpl: 'ru_avia_ru',
+        css: [
             '../css/reset-fonts-grids_990.css',
             '../css/block.css',
             '../css/general.css',
             '../css/mosg_990.css',
-            '../css/frc.css',
-            '../css/agro.css',
-            '../css/dropdownlist.css',
+            '../css/frc.css'
         ],
         js: [
             '../js/jquery-1.11.1.min.js',
@@ -274,22 +244,35 @@ var data = [
         ]
     },
     {
-        tpl: 'ru_auto_ru',
+        tpl: 'ru_uvindex_ru',
         css: [
             '../css/reset-fonts-grids_990.css',
             '../css/block.css',
             '../css/general.css',
             '../css/mosg_990.css',
-            '../css/frc.css',
-            '../css/dropdownlist.css',
-            '../css/ol3.css',
-            '../css/map.css'
+            '../css/dropdownlist.css'
         ],
         js: [
             '../js/jquery-1.11.1.min.js',
             '../js/utils.js',
             '../js/dropdownlist.js',
-            '../js/slider.js'
+            '../js/chart.min.js'
+        ]
+    },
+    {
+        tpl: 'ru_geomagn_ru',
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/dropdownlist.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/chart.min.js'
         ]
     }
 ]
@@ -314,14 +297,16 @@ gulp.task('addCss', function () {
 
 gulp.task('build_dev', gulp.series('addCss', async function () {
     return data.map(function(page) {
+        var injectCss = commonScripts.css.concat(page.css);
+        var injectJs = commonScripts.js.concat(page.js);
         return gulp.src(page.tpl+'.*')
-            .pipe(inject(gulp.src(page.css), {
+            .pipe(inject(gulp.src(injectCss), {
                 transform: function (filepath) {
                     return '<link rel="stylesheet" type="text/css" href="<#CSSBASE>' +
                         filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
                 }
                 }))
-            .pipe(inject(gulp.src(page.js), {
+            .pipe(inject(gulp.src(injectJs), {
                 transform: function (filepath) {
                     return '<script type="text/javascript" src="<#JSBASE>' +
                         filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
@@ -332,6 +317,7 @@ gulp.task('build_dev', gulp.series('addCss', async function () {
             .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
+            .pipe(prettify())
             .pipe(gulp.dest('build/dev'));
     })
 }))
