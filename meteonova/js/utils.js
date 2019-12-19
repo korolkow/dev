@@ -1,4 +1,4 @@
-﻿////Graphics///
+////Graphics///
 
 function setPreloaderPict(parentId,preloaderId,preloaderStyle){
   var div = document.createElement("div");

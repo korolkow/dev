@@ -30,6 +30,18 @@ var css = [
     '../css/map.css'
 ]
 
+var js = [
+    '../js/jquery-1.11.1.min.js',
+    '../js/utils.js',
+    '../js/dropdownlist.js',
+    '../js/animate.js',
+    '../js/dancer.min.js',
+    '../js/novaspeak.js',
+    '../js/svgchart.js',
+    '../js/slider.js',
+    '../js/chart.min.js'
+]
+
 var commonScripts = {
     css: [
         '../css/reset-fonts-grids_990.css',
@@ -295,7 +307,14 @@ gulp.task('addCss', function () {
         .pipe(gulpSSH.dest('/home/nova/dev/meteonova/css'))
 })
 
-gulp.task('build_dev', gulp.series('addCss', async function () {
+gulp.task('addJs', function () {
+    return gulp.src(js)
+        .pipe(rename({dirname: ''}))
+        .pipe(gulp.dest('js/'))
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/js'))
+})
+
+gulp.task('build_dev', gulp.series(['addCss', 'addJs'], async function () {
     return data.map(function(page) {
         var injectCss = commonScripts.css.concat(page.css);
         var injectJs = commonScripts.js.concat(page.js);
