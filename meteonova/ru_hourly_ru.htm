@@ -146,8 +146,8 @@
 		    		 </table></td>
 									<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_left_top"></div></td></tr></table></td>
 		    		 <td align="center">
-						 <div id="frc_cont" style="height: 380px; overflow:hidden;">
-						 	<div class="frc_wrapper" style="height: 380px; overflow: auto">
+						 <div id="frc_cont" style="height: 378px; overflow:hidden;">
+						 	<div class="frc_wrapper" style="height: 388px; overflow: auto">
 							 	<table border="0" cellspacing="0" cellpadding="0">
 		    			<tr><td id="frc_content_weather0">
 						<table border="0" cellspacing="0" cellpadding="0">
@@ -353,51 +353,7 @@
 			</div>
 
 
-			<div class="block_top ie">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_top_left.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
-   			<div class="block_title left_contener_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - астрономические данные" width="26" height="26"></div>
- 			 		<div class="title"><b>АСТРОНОМИЯ</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_top_right.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
-			</div>
-			<div class="block_content ie">
-      	<div class="content"s>
-		  	 <div id="astro_date" class="title3"><b><#ASTRODATE3></b></div>
-			    <div class="astro_inf">
-			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
-			      <div class="data">
-			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_dolgota.png) no-repeat"><div id="astro_dolgota" class="text_inf">Долгота дня: <#DAYLENGTH></div></div>
-			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Восход: <#SUNRISE></div></div>
-			        <div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Заход: <#SUNSET></div></div>
-			       </div>
-			      <div class="icon" style="background: url(<#IMGBASE>/astro_moon.gif);" ></div>
-			      <div class="data">
-			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_moon_day.png) no-repeat"><div id="astro_dolgota" class="text_inf"><#MOONDAY>-й лунный день</div></div>
-			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_dolgota.png) no-repeat"><div id="astro_phase" class="text_inf"><#MOONNPHASE></div></div>
-			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Восход: <#MOONRISE></div></div>
-			       	<div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Заход: <#MOONSET></div></div>
-			       </div>
-			    </div>
-      	</div>
-			</div>
-			<div class="block_bottom ie">
-				<div class="round_left">
-					<img src="<#IMGBASE>/block_bt_left.png"
-						 width="9" height="14" class="corner"/>
-				</div>
-				<div class="block_bt left_contener_title_width"></div>
-				<div class="round_right">
-					<img src="<#IMGBASE>/block_bt_right.png"
-						 width="9" height="14" class="corner"/>
-				</div>
-			</div>
+			<#TEMPLATE ru_astro_ru>
   	</div>
   <div class="center_container">
 			<div class="block_top" style="z-index:-1;">
@@ -544,40 +500,7 @@
 	 				width="9" height="14" class="corner"/>
    			</div>
 			</div>
-
-
-			<div class="block_top" style="z-index:-1;">
-	   			<div class="round_left">
-		 		  	<img src="<#IMGBASE>/block_top_left_2.png"
-		 				width="9" height="16" class="corner"
-		 				 />
-	   			</div>
-	   			<div class="block_title_2 center_container_title_width"></div>
-	   			<div class="round_right">
-		 				<img src="<#IMGBASE>/block_top_right_2.png"
-		 				width="9" height="16" class="corner"
-		 				 />
-
-	   			</div>
-			</div>
-			<div class="block_content_2" align="center"  style="width:100%;">
 				<#TEMPLATE ru_yah_ru>
-			</div>
-			<div class="block_bottom">
-
-	   			<div class="round_left">
-		 		  	<img src="<#IMGBASE>/block_bt_left.png"
-		 				width="9" height="14" class="corner"
-		 				 />
-	   			</div>
-	   			<div class="block_bt center_container_title_width"></div>
-	   			<div class="round_right">
-		 				<img src="<#IMGBASE>/block_bt_right.png"
-		 				width="9" height="14" class="corner"
-		 				 />
-	   			</div>
-			</div>
-
 		</div>
   </div>
 </div>
@@ -727,7 +650,7 @@
 	 				 />
    			</div>
    			<div class="block_title" >
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт""></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт"></div>
  			 		<div class="title"><b>ИНФОРМЕР</b></div>
    			</div>
    			<div class="round_right">
@@ -740,7 +663,7 @@
 			<div class="block_content" style="width:100%;">
                         <div align="center" style="position: relative; margin:10px 0 0 0;">
                                         <div style="position: absolute; top: 0; left: 20px; width: 200px; height: 80px; z-index: 1000">
-                                                <a href="/informer" style="display: block; height: 80px;"></a>
+											<a href="/informer" style="display: block; height: 80px;"></a>
                                         </div>
                                         <a style="display: block; width: 200px; height: 90px; position: relative; border: 0; padding: 0; margin: 0; text-decoration: none;" id="meteonova_inf_200_80_<#INDEX>" href="//www.meteonova.ru"></a>
                                         <script type="text/javascript">

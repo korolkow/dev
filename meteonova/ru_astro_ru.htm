@@ -1,14 +1,58 @@
-<#INITASTRO>
-<table border=0 width="100%" cellspacing=0 cellpadding=1>
-<tr>
-<td width="50%" bgcolor=#FFFFFF>&nbsp;<b>Солнце <#ASTRODATE></b>
-<table width=100% cellspacing=1 cellpadding=1><tr><td align=center bgcolor=#FFF0F0>Восход</td><td align=center bgcolor=#F0FFF0>Заход</td><td align=center bgcolor=#FFFFF0>Долгота</td></tr>
-<tr><td align=center bgcolor=#FFF0F0><b><#SUNRISE></b></td><td align=center bgcolor=#F0FFF0><b><#SUNSET></b></td><td align=center bgcolor=#FFFFF0><b><#DAYLENGTH></b></td></tr></table></td>
-</tr>
-</table>
-</td>
-</tr>
-<tr>
-<td width="100%" valign="top">
-<table width=100% cellspacing=1 cellpadding=1><tr><td><img width=40 height=40 alt="Фаза луны" src="<#MOONIMG>"></td>
-<td valign=top>Фаза луны: <b><#MOONPHASE></b>%<br>Азимут: <b><#MOONAZIMUTH>&deg;</b></td></tr></table>
+<div class="block_top ie">
+    <div class="block_title left_contener_title_width">
+        <div class="icon">
+            <img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - астрономические данные" width="26" height="26">
+        </div>
+        <div class="title"><b>АСТРОНОМИЯ</b>
+        </div>
+    </div>
+</div>
+<div class="block_content ie">
+    <div class="content">
+        <div id="astro_date" class="title3"><b><#ASTRODATE3></b>
+        </div>
+        <div class="astro_inf">
+            <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
+            <div class="data">
+                <div class="text_bg astro_dolgota">
+                    <div class="text_inf">Долгота дня:
+                        <#DAYLENGTH>
+                    </div>
+                </div>
+                <div class="text_bg astro_vosxod">
+                    <div class="text_inf">Восход:
+                        <#SUNRISE>
+                    </div>
+                </div>
+                <div class="text_bg_last astro_zaxod">
+                    <div class="text_inf">Заход:
+                        <#SUNSET>
+                    </div>
+                </div>
+            </div>
+            <div class="icon" style="background: url(<#IMGBASE>/astro_moon.gif);"></div>
+            <div class="data">
+                <div class="text_bg astro_dolgota">
+                    <div class="text_inf">
+                        <#MOONDAY>-й лунный день</div>
+                </div>
+                <div class="text_bg astro_phase">
+                    <div class="text_inf">
+                        <#MOONNPHASE>
+                    </div>
+                </div>
+                <div class="text_bg astro_vosxod">
+                    <div class="text_inf">Восход:
+                        <#MOONRISE>
+                    </div>
+                </div>
+                <div class="text_bg_last astro_zaxod">
+                    <div class="text_inf">Заход:
+                        <#MOONSET>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="block_bottom ie"></div>

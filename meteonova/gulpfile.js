@@ -1,6 +1,6 @@
 'use strict'
 
-var gulp = require('gulp'),
+var {src, dest, series, parallel} = require('gulp'),
     rename = require('gulp-rename'),
     inject = require('gulp-inject'),
     cssbeautify = require('gulp-cssbeautify'),
@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     cssnano = require('gulp-cssnano'),
     beautify = require('gulp-jsbeautifier'),
     uglify = require('gulp-uglifyjs'),
+    concat = require('gulp-concat'),
+    merge = require('merge-stream'),
     prettify = require('gulp-html-prettify'),
     //convertEncoding = require('gulp-convert-encoding'),
     gulpSSH = require('gulp-ssh'),
@@ -247,15 +249,9 @@ var data = [
     {
         tpl: 'ru_avia_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/frc.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/slider.js'
         ]
@@ -263,15 +259,9 @@ var data = [
     {
         tpl: 'ru_uvindex_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/dropdownlist.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/chart.min.js'
         ]
@@ -279,17 +269,27 @@ var data = [
     {
         tpl: 'ru_geomagn_ru',
         css: [
-            '../css/reset-fonts-grids_990.css',
-            '../css/block.css',
-            '../css/general.css',
-            '../css/mosg_990.css',
             '../css/dropdownlist.css'
         ],
         js: [
-            '../js/jquery-1.11.1.min.js',
-            '../js/utils.js',
             '../js/dropdownlist.js',
             '../js/chart.min.js'
+        ]
+    },
+    {
+        tpl: 'ru_novageo_ru',
+        css: [
+            '../css/frc.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+
+        ],
+        js: [
+            '../js/dropdownlist.js',
+            '../js/novaspeak.js',
+            '../js/svgchart.js',
+            '../js/slider.js'
         ]
     }
 ]
@@ -305,31 +305,104 @@ var dt = new Date()
 dt = dt.getFullYear() + '' + addZero(dt.getMonth() + 1) + '' + addZero(dt.getDate()) + '' + addZero(dt.getHours()) +
     '' + addZero(dt.getMinutes())
 
-gulp.task('addCss', function () {
-    return gulp.src(css)
+function cssMinify(cb) {
+    data.map(function(page) {
+        var injectCss = commonScripts.css.concat(page.css);
+        return src(injectCss)
+            .pipe(rename({ dirname: '' }))
+            .pipe(cssbeautify())
+            .pipe(cssconcat('meteonova.' + page.tpl + '.min.css'))
+            .pipe(cssnano())
+            .pipe(dest('build/prod/css/'))
+    })
+    cb();
+}
+
+function jsMinify(cb) {
+    data.map(function(page) {
+        var injectJs = commonScripts.js.concat(page.js);
+        return src(injectJs)
+            .pipe(rename({ dirname: '' }))
+            .pipe(beautify())
+            .pipe(concat('meteonova.' + page.tpl + '.min.js'))
+            .pipe(uglify())
+            .pipe(dest('build/prod/js/'))
+    })
+    cb();
+}
+
+function cssDest(cb) {
+    src('build/prod/css/*.*.min.css')
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/css/'))
+    cb();
+}
+
+function jsDest(cb) {
+    src('build/prod/js/*.*.min.js')
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/js/'))
+    cb();
+}
+
+function htmlDest(cb) {
+    src('build/prod/template/*.htm')
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
+    cb();
+}
+
+
+function publishHTML(cb) {
+    data.map(function(page) {
+        return src(page.tpl+'.*')
+            .pipe(inject(src('build/prod/css/meteonova.' + page.tpl + '.min.css'), {
+                transform: function (filepath) {
+                    return '<link rel="stylesheet" type="text/css" href="<#CSSBASE>' +
+                        filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
+                }
+            }))
+            .pipe(inject(src('build/prod/js/meteonova.' + page.tpl + '.min.js'), {
+                transform: function (filepath) {
+                    return '<script type="text/javascript" src="<#JSBASE>' +
+                        filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
+                }
+            }))
+            .pipe(replace('style="width:222px;"', ''))
+            .pipe(replace('style="width:222px"', ''))
+            .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
+            .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
+            .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
+            //.pipe(prettify())
+            .pipe(dest('build/prod/template/'))
+    })
+    cb();
+}
+
+function addCss(cb) {
+    src(css)
         .pipe(rename({dirname: ''}))
         .pipe(cssbeautify())
         .pipe(gulpSSH.dest('/home/nova/dev/meteonova/css'))
-})
+    cb();
+}
 
-gulp.task('addJs', function () {
-    return gulp.src(js)
+function addJs(cb) {
+    src(js)
         .pipe(rename({dirname: ''}))
         .pipe(gulpSSH.dest('/home/nova/dev/meteonova/js'))
-})
+    cb();
+}
 
-gulp.task('build_dev', gulp.series(['addCss', 'addJs'], async function () {
-    return data.map(function(page) {
+function publishDevHTML(cb) {
+    data.map(function(page) {
         var injectCss = commonScripts.css.concat(page.css);
         var injectJs = commonScripts.js.concat(page.js);
-        return gulp.src(page.tpl+'.*')
-            .pipe(inject(gulp.src(injectCss), {
+        return src(page.tpl+'.*')
+            .pipe(inject(src(injectCss), {
                 transform: function (filepath) {
                     return '<link rel="stylesheet" type="text/css" href="<#CSSBASE>' +
                         filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
                 }
-                }))
-            .pipe(inject(gulp.src(injectJs), {
+            }))
+            .pipe(inject(src(injectJs), {
                 transform: function (filepath) {
                     return '<script type="text/javascript" src="<#JSBASE>' +
                         filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
@@ -340,68 +413,32 @@ gulp.task('build_dev', gulp.series(['addCss', 'addJs'], async function () {
             .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
-            .pipe(prettify())
-            .pipe(gulp.dest('build/dev'));
+            //.pipe(rename(function (path) {
+                //path.basename ='ru_mn2_dsk_' + path.basename.replace(/^(ru_)/g,'');
+            //}))
+            .pipe(dest('build/dev/template/'));
     })
-}))
+    cb();
+}
 
-gulp.task('d', gulp.series('build_dev', async function () {
-    gulp.src('build/dev/*.htm').pipe(gulpSSH.dest('/home/nova/dev/meteonova'))
-}))
+function htmlDevDest(cb) {
+    src('build/dev/template/*.htm')
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
+    cb();
+}
 
+exports.prod = series(
+    cssMinify,
+    cssDest,
+    jsMinify,
+    jsDest,
+    publishHTML,
+    htmlDest
+);
 
-gulp.task('addCssMin', function () {
-    return data.map(function(page) {
-        var injectCss = commonScripts.css.concat(page.css);
-        return gulp.src(injectCss)
-            .pipe(rename({dirname: ''}))
-            .pipe(cssbeautify())
-            .pipe(cssconcat('meteonova.'+ page.tpl +'.min.css'))
-            .pipe(cssnano())
-            .pipe(gulpSSH.dest('/home/nova/dev/meteonova/css'))
-    })
-})
-
-gulp.task('addJsMin', function () {
-    return data.map(function(page) {
-        var inject = commonScripts.js.concat(page.js);
-        return gulp.src(inject)
-            .pipe(rename({ dirname: '' }))
-            .pipe(beautify())
-            .pipe(concat('meteonova.'+ page.tpl +'.min.js'))
-            .pipe(uglify())
-            .pipe(gulpSSH.dest('/home/nova/dev/meteonova/js'))
-    })
-})
-
-gulp.task('build_prod', gulp.series(['addCssMin', 'addJsMin'], async function () {
-    return data.map(function(page) {
-        var injectCss = commonScripts.css.concat(page.css);
-        var injectJs = commonScripts.js.concat(page.js);
-        return gulp.src(page.tpl+'.*')
-            .pipe(inject(gulp.src(injectCss), {
-                transform: function (filepath) {
-                    return '<link rel="stylesheet" type="text/css" href="<#CSSBASE>' +
-                        filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
-                }
-            }))
-            .pipe(inject(gulp.src(injectJs), {
-                transform: function (filepath) {
-                    return '<script type="text/javascript" src="<#JSBASE>' +
-                        filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
-                }
-            }))
-            .pipe(replace('style="width:222px;"', ''))
-            .pipe(replace('style="width:222px"', ''))
-            .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
-            .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
-            .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
-            .pipe(prettify())
-            .pipe(gulp.dest('build/dev'));
-    })
-}))
-
-gulp.task('prod', gulp.series('build_prod', async function () {
-    //gulp.src('build/prod/*.html').pipe(gulp.dest('/'))
-}))
-
+exports.dev = series(
+    addCss,
+    addJs,
+    publishDevHTML,
+    htmlDevDest
+);
