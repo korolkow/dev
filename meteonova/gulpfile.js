@@ -63,7 +63,7 @@ var commonScripts = {
     ]
 };
 
-var data = [
+var dynamic_files = [
     {
         tpl: 'ru_novatown2_ru',
         css: [
@@ -288,6 +288,352 @@ var data = [
     }
 ]
 
+var static_files = [
+    {
+        task: 'main',
+        tpls: ['../templates/main/index.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+            '../css/mgfind.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/citysearch.js'
+        ],
+        extname: '.html',
+        path: '/'
+    },
+    {
+        task: 'list',
+        tpls: ['../templates/list/_list.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+            '../css/mgfind.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/dropdownlist.js',
+        ],
+        extname: '.php',
+        path: '/'
+    },
+    {
+        task: 'search',
+        tpls: ['../templates/search/_search.tpl', '../templates/search/allsearch.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+            '../css/mgfind.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/dropdownlist.js',
+        ],
+        extname: '.php',
+        path: '/'
+    },
+    {
+        task: 'map',
+        tpls: ['../templates/map/map.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/vdrop.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/jquery.vdrop.min.js',
+            '../js/ol3_1.js',
+            '../js/openlayers.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'infogra',
+        tpls: ['../templates/infogra/infogra.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/dropdownlist.css',
+            '../css/ol3.css',
+            '../css/map.css',
+            '../css/infogra.css'
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/amcharts/amcharts.js',
+             '../js/amcharts/radar.js',
+             '../js/amcharts/themes/light.js',
+             '../js/ol3_1.js',
+             '../js/openlayers.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'informers',
+        tpls: ['../templates/informers/index.tpl', '../templates/informers/html.tpl', '../templates/informers/htmlsp.tpl', '../templates/informers/png.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/bootstrap-select.min.css',
+            '../css/typeaheadjs.css',
+            '../css/bootstrap-colorpicker.min.css',
+            '../css/inf.css'
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/jquery-ui.min.js',
+            '../js/bootstrap/bootstrap-colorpicker.min.js',
+            '../js/typeahead.jquery.min.js',
+            '../js/bootstrap/bootstrap-select.js',
+            '../js/bootstrap/bootstrap.js',
+
+            //domain=='dev'?'../js/constructor.js':dest_paths[domain]+'/informer/html/js/constructor.js', добавить в коде обязательно
+            '../js/engine.js'
+        ],
+        extname: '.php',
+        path: '/informer'
+    },
+    {
+        task: 'mgfind',
+        tpls: ['../templates/mgfind/mgfind.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+            '../css/mgfind.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/mgfind.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'icq',
+        tpls: ['../templates/icq/icq.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/frc.css',
+            '../css/agro.css',
+            '../css/dropdownlist.css',
+            '../css/mgfind.css',
+            '../css/ol3.css',
+            '../css/map.css'
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/dancer.min.js',
+             '../js/novaspeak.js'
+        ],
+        extname: '.htm',
+        path: '/fan'
+    },
+    {
+        task: 'telegram',
+        tpls: ['../templates/telegram/telegram.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/telegram.css',
+            '../css/stars.css',
+            '../css/simplePagination.css',
+            '../css/owl.carousel.css',
+            '../css/owl.theme.default.css'
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/jquery.barrating.min.js',
+             '../js/jquery.simplePagination.js',
+             '../js/owl.carousel.min.js'
+        ],
+        extname: '.htm',
+        path: '/fan'
+    },
+    {
+        task: 'facebook',
+        tpls: ['../templates/facebook/facebook.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/telegram.css',
+            '../css/stars.css',
+            '../css/simplePagination.css',
+            '../css/owl.carousel.css',
+            '../css/owl.theme.default.css'
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/jquery.barrating.min.js',
+             '../js/jquery.simplePagination.js',
+             '../js/owl.carousel.min.js'
+        ],
+        extname: '.htm',
+        path: '/fan'
+    },
+    {
+        task: 'fan',
+        tpls: ['../templates/fan/fan.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+            '../css/telegram.css',
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/dancer.min.js',
+             '../js/novaspeak.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'guestbook',
+        tpls: ['../templates/guestbook/guestbook.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+        ],
+        js: [
+             '../js/guestbook.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'faq',
+        tpls: ['../templates/faq/faq.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/citysearch.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'about',
+        tpls: ['../templates/about/about.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/citysearch.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    },
+    {
+        task: 'privacepolicy',
+        tpls: ['../templates/privacy/agreement.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+        ],
+        js: [
+            '../js/jquery-1.11.1.min.js',
+            '../js/utils.js',
+            '../js/dropdownlist.js',
+            '../js/dancer.min.js',
+            '../js/novaspeak.js',
+            '../js/citysearch.js'
+        ],
+        extname: '.htm',
+        path: '/'
+    }
+    /*{
+        task: 'avia_search',
+        tpls: ['../templates/avia/index.tpl'],
+        css: [
+            '../css/reset-fonts-grids_990.css',
+            '../css/block.css',
+            '../css/general.css',
+            '../css/mosg_990.css',
+        ],
+        js: [
+             '../js/jquery-1.11.1.min.js',
+             '../js/mgfind.js'
+        ],
+        extname: '.htm',
+        path: '/avia-search'
+    }*/
+];
+
+
+
 function addZero (i) {
     if (i < 10) {
         i = '0' + i
@@ -300,7 +646,7 @@ dt = dt.getFullYear() + '' + addZero(dt.getMonth() + 1) + '' + addZero(dt.getDat
     '' + addZero(dt.getMinutes())
 
 function cssMinify() {
-    var css = data.map(function(page) {
+    var css = dynamic_files.map(function(page) {
         var injectCss = commonScripts.css.concat(page.css);
         return src(injectCss)
             .pipe(rename({ dirname: '' }))
@@ -314,7 +660,7 @@ function cssMinify() {
 }
 
 function jsMinify() {
-    var js = data.map(function(page) {
+    var js = dynamic_files.map(function(page) {
         var injectJs = commonScripts.js.concat(page.js);
         return src(injectJs)
             .pipe(rename({ dirname: '' }))
@@ -328,7 +674,7 @@ function jsMinify() {
 }
 
 function prod() {
-    var html = data.map(function(page) {
+    var html = dynamic_files.map(function(page) {
         return src(page.tpl+'.*')
             .pipe(inject(src('build/prod/css/meteonova.' + page.tpl + '.min.css'), {
                 transform: function (filepath) {
@@ -366,8 +712,8 @@ function addJs() {
         .pipe(gulpSSH.dest('/home/nova/dev/meteonova/js'))
 }
 
-function dev(cb) {
-    var html = data.map(function(page) {
+function dev() {
+    var html = dynamic_files.map(function(page) {
         var injectCss = commonScripts.css.concat(page.css);
         var injectJs = commonScripts.js.concat(page.js);
         return src(page.tpl+'.*')
@@ -397,7 +743,34 @@ function dev(cb) {
     return stream.pipe(dest('build/dev/templates/')).pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
 }
 
-var dev = gulp.series(gulp.series(addCss, addJs), dev)
+function statics() {
+    var data = {
+        tpl_path: 'templates_'+domain,
+        domain: domain,
+        _domain: domain === 'ua'?'_'+domain:'',
+        sub_domain: (sub_domain === 'dev'?sub_domain:''),
+        defindex: domain === 'ua'?33345:27612,
+        country_name: domain === 'ua'?'Украины':'России',
+        country_id: domain === 'ua'?198:156,
+        lat: domain === 'ua'?50.4:55.8,
+        lng: domain === 'ua'?30.5:37.6,
+        defcity: domain === 'ua'?'Киев':'Москва',
+        defcity_en: domain === 'ua'?'Kiev':'Moscow',
+        defcity_r: domain === 'ua'?'Киева':'Москвы'
+    };
+
+    if (sub_domain == 'dev') domain = 'dev';
+
+    var html = static_files.map(function(data) {
+
+    })
+    return src('./')
+}
+
+var domain = 'ru',
+    sub_domain = 'dev';
+
+var dev = gulp.series(gulp.series(addCss, addJs, statics), dev)
 var prod = gulp.series(gulp.series(cssMinify, jsMinify), prod)
 
 module.exports = {
