@@ -10,8 +10,10 @@
 <base href="<#SERVERURL>/avia.htm">
 <link rel="alternate" media="only screen and (max-width: 640px)" href="<#MSERVERURL>/avia/<#INDEXAVIA>.htm" >
 <!-- inject:css -->
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/meteonova.ru_avia_ru.min.css?201912261615">
 <!-- endinject -->
 <!-- inject:js -->
+<script type="text/javascript" src="<#JSBASE>/meteonova.ru_avia_ru.min.js?201912261615" charset = "utf-8"></script>
 <!-- endinject -->
 </head>
 <body>
@@ -47,19 +49,13 @@
 	<div id="yui-main">
 	<div class="yui-b">
       <div class="block_city" style="border-radius: 4px;">
-   		<div class="round_left">
-	 		<img src="<#IMGBASE>/city_left.png"
-	 		width="10" height="46" class="corner"/>
-   		</div>
+   		
 			<div class="city_content">
 				<div id="city_name" class="city_name" style="color: #fff;">Погода по аэропорту <#TOWN></div>
 		    	<div class="other_city"><a style="margin: 15px 0 0 15px" href="<#SERVERURL>/avia/"><font color="#8ca2fe"><b>Другой аэропорт</b></font></a></div>
 
 			</div>
-   		<div class="round_right">
-	 		<img src="<#IMGBASE>/city_right.png"
-	 		width="10" height="46" class="corner"/>
-   		</div>
+   		
     </div>
 		<!--div class="main_container">
 			<div class="block_top" style="margin-bottom: 8px; width: 100%">
@@ -80,19 +76,13 @@
 		</div-->
   <div class="main_container">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_top_left.png"
-	 				width="9" height="31" class="corner" />
-   			</div>
+   			
    			<div class="block_title main_container_title_width">
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Авиа прогноз погоды по аэропорту <#TOWN>" ></div>
  			 		<div class="title"><b>АВИАПРОГНОЗ</b></div>
 
    			</div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_top_right.png"
-	 				width="9" height="31" class="corner" />
-   			</div>
+   			
 			</div>
 			<div class="block_content">
 		    	<div id="frc_content_weather">
@@ -156,15 +146,9 @@
 		    	</div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner" />
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner" />
-   			</div>
+   			
+   			
+   			
 			</div>
   </div>
   <div id="ban_500" style="float:left; width:728px; height:90px; padding-bottom:8px; position: relative;">
@@ -174,18 +158,12 @@
   		<div class="left_container">
 			<#TEMPLATE ru_astro_ru>
 			<div class="block_top ie">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_top_left.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
+   			
    			<div class="block_title left_contener_title_width">
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Авиа прогноз погоды по аэропорту <#TOWN> - Контактная информация"></div>
  			 		<div class="title"><b>КОНТАКТЫ</b></div>
    			</div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_top_right.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
+   			
 			</div>
 			<div class="block_content ie">
       	<div class="content">
@@ -197,80 +175,45 @@
       	</div>
 			</div>
 			<div class="block_bottom ie">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
-   			<div class="block_bt left_contener_title_width"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
+   			
+   			
+   			
 			</div>
   	</div>
   <div class="center_container">
 
 
 			<div class="block_top" style="z-index:-1;">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_top_left.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
+   			
    			<div class="block_title center_container_title_width">
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Авиа прогноз погоды по аэропорту <#TOWN> - Народные приметы"></div>
  			 		<div class="title"><b>НАРОДНЫЕ ПРИМЕТЫ И ПРАЗДНИКИ</b></div>
    			</div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_top_right.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
+   			
 			</div>
 			<div class="block_content">
 	      			<div class="content"><#PRIMET></div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
-   			<div class="block_bt center_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
+   			
+   			
+   			
 			</div>
 
 
 			<div class="block_top">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_top_left_2.png"
-		 				width="9" height="16" class="corner"
-		 				/>
-	   			</div>
+	   			
 	   			<div class="block_title_2 center_container_title_width"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right_2.png"
-		 				width="9" height="16" class="corner"
-		 				/>
-
-	   			</div>
+	   			
 			</div>
 			<div class="block_content_2" align="center"  style="width:100%;">
 				<#TEMPLATE ru_yah_ru>
 			</div>
 			<div class="block_bottom">
 
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
-	   			<div class="block_bt center_container_title_width"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
+	   			
+	   			
+	   			
 			</div>
 
 		</div>
@@ -281,22 +224,12 @@
   	 <div class="right_main">
 
 				<div class="block_top">
-	   			<div class="round_left">
-
-		 		  	<img src="<#IMGBASE>/block_top_left.png"
-		 				width="9" height="31" class="corner"
-		 				/>
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26" alt="Авиа прогноз погоды по аэропорту <#TOWN> - Реклама"></div>
 	 			 		<div class="title"><b>РЕКЛАМА</b></div>
 	   			</div>
-	   			<div class="round_right">
-		 				<img src="<#IMGBASE>/block_top_right.png"
-		 				width="9" height="31" class="corner"
-		 				/>
-
-	   			</div>
+	   			
 				</div>
 
 
@@ -304,32 +237,18 @@
 					<#TEMPLATE ru_ban240_ru>
 				</div></div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="<#IMGBASE>/block_bt_left.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="<#IMGBASE>/block_bt_right.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
+	   			
+	   			
+	   			
 				</div>
 
 			<div class="block_top ie">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_top_left.png"
-	 				width="9" height="31" class="corner"/>
-   			</div>
-   			<div class="block_title" style="width:222px">
+   			
+   			<div class="block_title" >
  				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Температура воды <#TOWN2>" width="26" height="26"></div>
  			 		<div class="title"><b>ВОДОЕМЫ</b></div>
    			</div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_top_right.png" width="9" height="31" class="corner"/>
-   			</div>
+   			
 			</div>
 			<div class="block_content ie">
 		      	<div class="content">
@@ -343,36 +262,20 @@
 		      	</div>
 			</div>
 			<div class="block_bottom ie">
-   			<div class="round_left">
-	 		  	<img src="<#IMGBASE>/block_bt_left.png"
-	 				width="9" height="14" class="corner" />
-   			</div>
-   			<div class="block_bt" style="width:222px"></div>
-   			<div class="round_right">
-	 				<img src="<#IMGBASE>/block_bt_right.png"
-	 				width="9" height="14" class="corner"/>
-   			</div>
+   			
+   			
+   			
 			</div>
 
 
 
 				<div class="block_top">
-	   			<div class="round_left">
- 
-		 		  	<img src="/images/block_top_left.png"
-		 				width="9" height="31" class="corner"
-		 				/>
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Понравилась погода <#TOWN2> на Метенонве? Сделайте общение удобнее!" width="26" height="26" ></div>
 	 			 		<div class="title"><b>ПОНРАВИЛСЯ САЙТ?</b></div>
 	   			</div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right.png"
-		 				width="9" height="31" class="corner"
-		 				/>
- 
-	   			</div>
+	   			
 				</div>
 				<div class="block_content" style="width:100%;">
 					<div class="content">
@@ -390,17 +293,9 @@
 				</div>
 				<div class="block_bottom">
  
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
+	   			
+	   			
+	   			
 				</div>
 
 		</div>
@@ -408,22 +303,12 @@
 </div>
 <div class="right_block">
 				<div class="block_top">
-	   			<div class="round_left">
- 
-		 		  	<img src="/images/block_top_left.png"
-		 				width="9" height="31" class="corner"
-		 				/>
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			
+	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Авиа прогноз погоды по аэропорту <#TOWN> - Новости в Россиии и мире от ФОБОС"></div>
 	 			 		<div class="title"><b>НОВОСТИ</b></div>
 	   			</div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right.png"
-		 				width="9" height="31" class="corner"
-		 				/>
- 
-	   			</div>
+	   			
 				</div>
 				<div class="block_content" style="width:100%;">
 					<div class="content">
@@ -432,17 +317,9 @@
 				</div>
 				<div class="block_bottom">
  
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png"
-		 				width="9" height="14" class="corner"
-		 				/>
-	   			</div>
+	   			
+	   			
+	   			
 				</div>
 
 </div>
