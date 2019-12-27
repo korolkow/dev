@@ -65,7 +65,7 @@ var commonScripts = {
 
 var dynamic_files = [
     {
-        tpl: 'ru_novatown2_ru',
+        tpl: 'ru_mn2_dsk_novatown2_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -81,7 +81,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_profi_ru',
+        tpl: 'ru_mn2_dsk_profi_ru',
         css: [
             '../css/dropdownlist.css',
             '../css/ol3.css',
@@ -92,7 +92,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_today_ru',
+        tpl: 'ru_mn2_dsk_today_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -107,7 +107,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_entry_ru',
+        tpl: 'ru_mn2_dsk_entry_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -121,7 +121,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_hourly_ru',
+        tpl: 'ru_mn2_dsk_hourly_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -137,7 +137,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_tomorrow_ru',
+        tpl: 'ru_mn2_dsk_tomorrow_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -153,7 +153,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_simple3_ru',
+        tpl: 'ru_mn2_dsk_simple3_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -167,7 +167,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_10days_ru',
+        tpl: 'ru_mn2_dsk_10days_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -182,7 +182,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_month_ru',
+        tpl: 'ru_mn2_dsk_month_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -194,7 +194,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_allergy_ru',
+        tpl: 'ru_mn2_dsk_allergy_ru',
         css: [
             '../css/dropdownlist.css',
         ],
@@ -203,7 +203,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_med_ru',
+        tpl: 'ru_mn2_dsk_med_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -216,7 +216,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_agro_ru',
+        tpl: 'ru_mn2_dsk_agro_ru',
         css: [
             '../css/frc.css',
             '../css/agro.css',
@@ -228,7 +228,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_auto_ru',
+        tpl: 'ru_mn2_dsk_auto_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -241,7 +241,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_avia_ru',
+        tpl: 'ru_mn2_dsk_avia_ru',
         css: [
             '../css/frc.css'
         ],
@@ -251,7 +251,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_uvindex_ru',
+        tpl: 'ru_mn2_dsk_uvindex_ru',
         css: [
             '../css/dropdownlist.css'
         ],
@@ -261,7 +261,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_geomagn_ru',
+        tpl: 'ru_mn2_dsk_geomagn_ru',
         css: [
             '../css/dropdownlist.css'
         ],
@@ -271,7 +271,7 @@ var dynamic_files = [
         ]
     },
     {
-        tpl: 'ru_novageo_ru',
+        tpl: 'ru_mn2_dsk_novageo_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -664,9 +664,9 @@ function jsMinify() {
         var injectJs = commonScripts.js.concat(page.js);
         return src(injectJs)
             .pipe(rename({ dirname: '' }))
-            //.pipe(beautify())
+            .pipe(beautify())
             .pipe(concat('meteonova.' + page.tpl + '.min.js'))
-            //.pipe(uglify())
+            .pipe(uglify())
     })
     var stream = merge2();
     stream.add(js);
@@ -734,14 +734,21 @@ function dev() {
             .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
-            //.pipe(rename(function (path) {
-                //path.basename ='ru_mn2_dsk_' + path.basename.replace(/^(ru_)/g,'');
-            //}))
     })
     var stream = merge2();
     stream.add(html);
     return stream.pipe(dest('build/dev/templates/')).pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
 }
+
+/*function renameAllTemplates() {
+    return src('*.htm')
+        .pipe(replace(/ru_/gm, 'ru_mn2_dsk_'))
+        .pipe(rename(function (path) {
+            path.basename ='ru_mn2_dsk_' + path.basename.replace(/^(ru_)/g,'');
+        }))
+        .pipe(dest('./'))
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
+}*/
 
 function statics() {
     var data = {
@@ -770,7 +777,7 @@ function statics() {
 var domain = 'ru',
     sub_domain = 'dev';
 
-var dev = gulp.series(gulp.series(addCss, addJs, statics), dev)
+var dev = gulp.series(gulp.series(addCss, addJs), dev)
 var prod = gulp.series(gulp.series(cssMinify, jsMinify), prod)
 
 module.exports = {
