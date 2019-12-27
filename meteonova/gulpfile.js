@@ -737,7 +737,7 @@ function dev() {
     })
     var stream = merge2();
     stream.add(html);
-    return stream.pipe(dest('build/dev/templates/')).pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
+    return stream.pipe(dest('./')).pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
 }
 
 /*function renameAllTemplates() {
