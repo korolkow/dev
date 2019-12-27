@@ -1,60 +1,33 @@
 <!DOCTYPE html><#TEMPLATE ru_mn2_dsk_definitions_ru>
 <html lang="ru">
 <head>
-<title>МЕТЕОНОВА - погода на завтра <#TOWN2> - погода на сутки, график погоды в <#TOWN>, <#REGIONNAME>, <#COUNTRYNAME></title>
-<!--<base href="<#SERVERURL>/tomorrow.htm">-->
+<title>МЕТЕОНОВА - почасовая погода <#TOWN3> на сегодня по часам подробно. Почасовой прогноз погоды <#TOWN> на сегодя и завтра. <#FRCPUBTIME></title>
 <meta http-equiv="Content-Type" content="text/html; charset=<#ENCODING>">
-<meta name="description" content="Погода <#TOWN2> на завтра. Прогноз погоды на завтра <#TOWN2>, <#REGIONNAME>, <#COUNTRYNAME>, за <#FRCPUBTIME>">
+<meta name="description" content="Почасовая погода <#TOWN2> сегодня и завтра. Температура <#TOWN3> по часам. Точный и подробный почасовой прогноз погоды <#TOWN2>, <#REGIONNAME>, <#COUNTRYNAME>, за <#FRCPUBTIME>">
+<meta name="keywords" content="почасовая погода погоды фактическая сейчас сегодня завтра прогноз <#TOWN> <#TOWN3> <#REGIONNAME> <#COUNTRYNAME> какая будет точный прогноз голос робот карта буря вода восход заход солнце фаза луна опасное явление температура осадки ветер влажность давление комфорт weather forecast wetter pogoda <#TOWNEN> <#REGIONNAMEEN>">
 <meta name="Category" content="Справки, Погода">
-<meta name="Classification" content="Погода <#TOWN2> на завтра"> 
+<meta name="Classification" content="Сайт о погоде <#TOWN3> почасовой прогноз"> 
 <meta name="Document-state" content="Dynamic">
-<link rel="canonical" href="https://www.meteonova.ru/tomorrow/<#INDEX>-<#TOWNEN_>.htm"/>
+<link rel="canonical" href="https://www.meteonova.ru/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm"/>
 <!-- inject:css -->
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/frc.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/ol3.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/map.css?201912271410">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/meteonova.ru_mn2_dsk_hourly_ru.min.css?201912271414">
 <!-- endinject -->
 <!-- inject:js -->
-<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/utils.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/slider.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/svgchart.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dancer.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/novaspeak.js?201912271410" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/meteonova.ru_mn2_dsk_hourly_ru.min.js?201912271414" charset = "utf-8"></script>
 <!-- endinject -->
 <#TEMPLATE ru_mn2_dsk_navstyles_ru>
 </head>
 <body onload="tleft=-999;">
 <div class="suggest" id="suggest"></div>
-<div class="hint hidden" id="heathint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);"><b>Комфорт</b> - это температура по ощущению одетого по сезону человека, выходящего на улицу. <a target=_blank href="<#SERVERURL>/faq.htm#comfort">Подробнее...</a></div>
-<div class="hint hidden" id="snowhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Оценка средней высоты снежного покрова <#TOWN2>. <a target=_blank href="<#SERVERURL>/faq.htm#snow">Подробнее...</a></div>
-<div class="hint hidden" id="agrohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Подробный прогноз погоды для садоводов и огродников в окресностях</div>
-<div class="hint hidden" id="autohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз неблагоприятных погодных явлений для автомобилистов</div>
-<div class="hint hidden" id="aviahint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз погоды по аэропортам, ближайшим к городу <b><#TOWN></b>. Оценка неблагоприятных для полетов погодных явлений, прогноз задержек вылетов по метеоусловиям.</div>
-<div class="hint hidden" id="s3hint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Наглядный погоды <#TOWN3> на 3 дня</div>
-<div class="hint hidden" id="prohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Более подробные данные о состоянии атмосферы, поверхности и почвы</div>
-<div class="hint hidden" id="medhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Медицинский прогноз погоды <#TOWN3> для метеочувствительных людей с заболеваниями сердечно-сосудистой системы и дыхательных путей. <a href="<#SERVERURL>/faq.htm#med" target=_blank>Подробнее...</a></div>
-<div class="hint hidden" id="infhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Создали свой сайт и хотите повысить его информативность и привлекательность? <a href="/informer/?index=<#INDEX>" target=_blank>Установите</a> погодный информер!</div>
-<div class="hint hidden" id="geomhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Показатель геомагнитной активности Солнца и прогноз магнитных бурь на широте г. <#TOWN>. <a href="<#SERVERURL>/faq.htm#geomagn" target=_blank>Подробнее...</a></div>
-<div class="hint hidden" id="waterhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Оцена температуры воды в водоемах около г. <#TOWN>. <a href="<#SERVERURL>/faq.htm#water" target=_blank>Подробнее...</a></div>
-<div class="hint hidden" id="firehint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Оценка класса пожароопасности лесов около г. <#TOWN> (от 1 до 5). <a href="<#SERVERURL>/faq.htm#fire" target=_blank>Подробнее...</a></div>
-<div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
-<div class="hint hidden" id="gusthint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Скорость порывов приземного ветра. <a href="<#SERVERURL>/faq.htm#gust">Подробнее...</a></div>
 <div id="doc4" class="yui-t5">
-	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/tomorrow/<#INDEX>-<#TOWNEN_>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
-	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/tomorrow/<#INDEX>-<#TOWNEN_>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
+	<div class="notice_mobile" id="notice_mobile"><a href="https://m.meteonova.ru/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" onclick="setCookie('mobile',1,30)">Перейти на мобильную версию</a><div class="close" onclick="setCookie('mobile',0,30); var el=document.getElementById('notice_mobile'); el.parentNode.removeChild(el); document.body.className = document.body.className.replace(/\bwith_notice_mobile\b/g, '');">&#10005;</div></div>
+	<script> if(window.mobilecheck && window.mobilecheck()) { if(getCookie("mobile")=="1") { document.location.href='https://m.meteonova.ru/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm'; } else if(getCookie("mobile")=="") { document.getElementById('notice_mobile').style.display="block"; document.body.className += "with_notice_mobile";}}</script>
    <div id="hd">
      <div id="onhd">
       <div>	
-       <div id="logo"><a href="<#SERVERURL>"><img src="<#IMGBASE>/logo.png" alt="Погода <#TOWN2> на Метеонове" width="277" height="96" border="0"></a></div>
+       <div id="logo"><a href="<#SERVERURL>"><img src="<#IMGBASE>/logo.png" alt="Почасовой прогноз погоды <#TOWN2> на Метеонове" width="277" height="96" border="0"></a></div>
 	<#TEMPLATE ru_mn2_dsk_menu_ru>
-	</div>
+      </div>
      </div>
    </div>
 	<#TEMPLATE ru_mn2_dsk_adw728x90_ru>
@@ -65,8 +38,7 @@
       <div class="block_city" style="height:46px;">
    		
 			<div class="city_content">
-		    	<h1>Погода <#TOWN2> на завтра</h1>
-<!--	    	        <div class="other_city"><a href="<#SERVERURL>/search/"><font color="#8ca2fe"><b>Другой город</b></font></a></div>-->
+		    	<h1>Почасовой прогноз <#TOWN2></h1>
         		<div class="serchcontent">
 					 		<div class="searchform frc" id="searchform">
 								<div class="left-input l">
@@ -95,110 +67,60 @@
    			
 			</div>
 	  </div>
- 	  <div class="main_container">
-  		<div class="left_container">
 
-			<div class="block_top ie">
-   				
-   				<div class="block_title left_contener_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> - фото Метеоновы" width="26" height="26" ></div>
- 			 		<div class="title"><b>МЕТЕОНОВА</b></div>
-   				</div>
+ 			<#TEMPLATEFORCOUNTRY ru_mn2_dsk_bantyres_ru "Russia,Ukraine,Belarus,Kazakhstan,Azerbaijan,Moldova,Latvia,Lithuania,Estonia">
+<!-- 			<TEMPLATEFORCOUNTRY ru_mn2_dsk_banagro_ru "Russia,Ukraine,Belarus,Kazakhstan,Moldova,Latvia,Lithuania,Estonia">-->
+<!-- 			<TEMPLATEFORCOUNTRY ru_mn2_dsk_banfiremap_ru "Russia,Ukraine,Belarus,Kazakhstan,Moldova,Latvia,Lithuania,Estonia">-->
 
-   				
+		<div class="main_container">
+			<div class="block_top" style="margin-bottom: 8px; width: 100%">
+				<div class="bar tp">
+					<ul>
+						<li class="active"><b>Погода</b></li>
+						<li><a href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"><b>Аллергия</b></a></li>
+						<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
+						<li><a href="<#SERVERURL>/pro/<#INDEX>.htm"><b>Профи</b></a></li>
+						<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>
+						<li><a href="<#SERVERURL>/auto/<#INDEX>.htm"><b>Авто</b></a></li>
+						<#TEMPLATECLIMAT ru_mn2_dsk_climatlinkt_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
+						<#GEOMAGNLINK ru_mn2_dsk_geomagnlinkt_ru>
+						<li><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
+					</ul>
+				</div>
 			</div>
-
-
-<div class="block_content ie" style="height:160px">
-	<div class="jessie-block">
-		<div class="container-wrapper">
-			<div class="jessie"><div class="player_button"><span></span></div></div>																
 		</div>
-	</div>					
-</div>
 
-			<div class="block_bottom ie">
-
-   				
-   			
-   				
-			</div>
-  		</div>
-
-  		<div class="center_container">
+  <div class="main_container">
 			<div class="block_top">
    			
-   			<div class="block_title center_container_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода <#TOWN2> на завтра - блог Метеоновы" width="26" height="26" ></div>
- 			 		<div class="title"><b>БЛОГ МЕТЕОНОВЫ</b></div>
-
+   			<div class="block_title main_container_title_width">
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Прогноз погоды <#TOWN2>" width="26" height="26" ></div>
+ 			 		<div class="title"><b>ПОЧАСОВОЙ</b></div>
+ 			 		<div class="top_link">
+	      		  		<ul>
+		          			<li class="active"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>Почасовой</b></a></li>
+		          			<li><a href="<#SERVERURL>/today/<#INDEX>-<#TOWNEN_>.htm"><b>Сегодня</b></a></li>
+		          			<li><a href="<#SERVERURL>/tomorrow/<#INDEX>-<#TOWNEN_>.htm"><b>Завтра</b></a></li>
+		          			<li><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>3 дня</b></a></li>
+		          			<li><a href="<#SERVERURL>/week/<#INDEX>-<#TOWNEN_>.htm"><b>Неделя</b></a></li>
+		          			<li><a href="<#SERVERURL>/10days/<#INDEX>-<#TOWNEN_>.htm"><b>10 дней</b></a></li>
+		          			<li><a href="<#SERVERURL>/frc/<#INDEX>.htm"><b>14 дней</b></a></li>
+						<#MONTHLINK ru_mn2_dsk_monthlinkt_ru>
+	    		  		</ul>
+ 			 		</div>
    			</div>
    			
 			</div>
-
-			<div class="block_content" style="height:160px">
-	 		 <div class="content">
-     			<h2 id="blog_title">Погода на завтра <#TOWN2> (<#REGIONNAME> <#COUNTRYNAME>)</h2>
-     			<div id="blog_text" class="text">Здесь Вы можете посмотреть, какая погода будет завтра <#TOWN2>, а также получить точный прогноз погоды, графики и карты погоды <#TOWN2>. Вы услышите, какая погода <#TOWN2> и ожидается завтра утром, днем, вечером и ночью. Оставайтесь с Метеоновой!<br></div>
-			<div>Прогноз погоды <span id="frcupd"></span> <img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'updhint', true, 250);" onmouseout="showHint(this, 'updhint', false, 250);"></div>
-	     		 </div>
-			</div>
-
-			<div class="block_bottom">
-   			
-   			
-   			
-			</div>
-  		</div>
-  </div>
-<div class="main_container">
-	<div class="block_top" style="margin-bottom: 8px; width: 100%">
-		<div class="bar tp">
-			<ul>
-				<li class="active"><b>Погода</b></li>
-				<li><a href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"><b>Аллергия</b></a></li>
-				<li><a href="<#SERVERURL>/med/<#INDEX>.htm"><b>Самочувствие</b></a></li>
-				<li><a href="<#SERVERURL>/pro/<#INDEX>.htm"><b>Профи</b></a></li>
-				<li><a href="<#SERVERURL>/agro/<#INDEX>.htm"><b>Агро</b></a></li>
-				<li><a href="<#SERVERURL>/auto/<#INDEX>.htm"><b>Авто</b></a></li>
-				<#TEMPLATECLIMAT ru_mn2_dsk_climatlinkt_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
-				<#GEOMAGNLINK ru_mn2_dsk_geomagnlinkt_ru>
-				<li><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"><b>УФ-индекс</b></a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-  <div class="main_container">
-	  <div class="block_top">
-		  
-		  <div class="block_title main_container_title_width">
-			  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Прогноз погоды <#TOWN2>" width="26" height="26" ></div>
-			  <div class="title"><b>ПОЧАСОВОЙ</b></div>
-			  <div class="top_link">
-				  <ul>
-					  <li class="active"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>Почасовой</b></a></li>
-					  <li><a href="<#SERVERURL>/today/<#INDEX>-<#TOWNEN_>.htm"><b>Сегодня</b></a></li>
-					  <li><a href="<#SERVERURL>/tomorrow/<#INDEX>-<#TOWNEN_>.htm"><b>Завтра</b></a></li>
-					  <li><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm"><b>3 дня</b></a></li>
-					  <li><a href="<#SERVERURL>/week/<#INDEX>-<#TOWNEN_>.htm"><b>Неделя</b></a></li>
-					  <li><a href="<#SERVERURL>/10days/<#INDEX>-<#TOWNEN_>.htm"><b>10 дней</b></a></li>
-					  <li><a href="<#SERVERURL>/frc/<#INDEX>.htm"><b>14 дней</b></a></li>
-					  <#MONTHLINK ru_mn2_dsk_monthlinkt_ru>
-				  </ul>
-			  </div>
-		  </div>
-		  
-	  </div>
 			<div class="block_content">
-		    	<div id="frc_content_weather" style="padding-top:0px;">
-			       <table border="0" cellspacing="0" cellpadding="0" width="100%">
+		    	<div id="frc_content_weather">
+			       <table border="0" cellspacing="0" cellpadding="0">
                                 <tr>
 		    		 <td valign="top"><table border="0"  cellspacing="0" cellpadding="0" style="margin-top:3px;">
 		    			<tr><td class="date sign">Дата</td></tr>
 		    			<tr><td class="tod sign">Время суток</td></tr>
 		    			<tr><td class="phenom sign">Облачность<br>Явления</td></tr>
-		    			<tr><td class="hum sign">Осадки, мм за 3 ч</td></tr>
-						 <tr><td class="hum sign">Давление, мм<img class="graph-icon" src="<#IMGBASE>/icons/graph_black.gif" width="19" height="13" border="0" alt="График хода давления" title="График хода давления"></td></tr>
+		    			<tr><td class="hum sign">Осадки, мм за 1 час</td></tr>
+                         <tr><td class="hum sign">Давление, мм<img class="graph-icon" src="<#IMGBASE>/icons/graph_black.gif" width="19" height="13" border="0" alt="График хода давления" title="График хода давления"></td></tr>
 						 <tr><td class="temper sign">Температура<img class="graph-icon" src="<#IMGBASE>/icons/graph_bred.gif" width="19" height="13" border="0" alt="График хода температуры" title="График хода температуры"></td></tr>
 						 <tr><td class="hum sign">Влажность, %<img class="graph-icon" src="<#IMGBASE>/icons/graph_green.gif" width="19" height="13" border="0" alt="График хода влажности" title="График хода влажности"></td></tr>
 						 <tr><td class="wind sign">Ветер, метр/с<img class="graph-icon" src="<#IMGBASE>/icons/graph_orange.gif" width="19" height="13" border="0" alt="График направления и скорости ветра" title="График направления и скорости ветра"></td></tr>
@@ -206,33 +128,53 @@
 						 <tr><td class="hum sign">Комфорт,&deg;C&nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'heathint', true, 300);" onmouseout="showHint(this, 'heathint', false, 300);"><img class="graph-icon" src="<#IMGBASE>/icons/graph_bred.gif" width="19" height="13" border="0" alt="График хода температуры комфорта" title="График хода температуры комфорта"></td></tr>
 <!--		    			<tr><td class="hum sign">УФ-Индекс &nbsp;&nbsp;<img src="<#IMGBASE>/hints/help_icon.gif" width="14" height="11" onmouseover="showHint(this, 'uvihint', true, 300);" onmouseout="showHint(this, 'uvihint', false, 300);"></td></tr>-->
 		    		 </table></td>
-				 <td></td>
+									<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_left_top"></div></td></tr></table></td>
 		    		 <td align="center">
-						 <div id="frc_cont" style="overflow:hidden;">
-							 <div class="frc_wrapper" style="height: 372px; overflow: auto">
-								<table border="0" cellspacing="0" cellpadding="0">
-									<tr><td id="frc_content_weather0">
-										<table border="0" cellspacing="0" cellpadding="0">
-											<tr>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 M15>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 M12>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 M9>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 M6>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 M3>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 M0>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 P3>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 P6>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 P9>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 P12>
-												 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch2_ru D2 P15>
-											</tr>
-										</table>
-									</td></tr>
-								</table>
-							 </div>
+						 <div id="frc_cont" style="height: 380px; overflow:hidden;">
+						 	<div class="frc_wrapper" style="height: 398px; overflow: auto">
+							 	<table border="0" cellspacing="0" cellpadding="0">
+		    			<tr><td id="frc_content_weather0">
+						<table border="0" cellspacing="0" cellpadding="0">
+							<tr>	 <#SETCURPREDICT>				
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C0>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C1>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C2>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C3>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C4>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C5>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C6>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C7>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C8>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C9>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C10>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C11>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C12>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C13>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C14>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C15>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C16>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C17>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C18>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C19>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C20>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C21>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C22>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C23>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C24>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C25>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C26>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C27>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C28>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C29>
+								 <#TEMPLATEPREDICT ru_mn2_dsk_novafrch_ru C30>
+							</tr>
+						</table>
+					</td></tr>
+		    		     </table>
+							</div>
 						 </div>
 					 </td>
-				 <td></td>
+					<td><table border=0 cellpadding=0 cellspacing=0 height=300><tr><td valign=top><div id="arrow_right_top"></div></td></tr></table></td>
 		              </tr>
     			     </table>
 		    	</div>
@@ -272,8 +214,30 @@
    			
    			
 			</div>
-
-
+<!--
+			<div class="block_top ie">
+   			
+   			<div class="block_title left_contener_title_width">
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Солнечное облучение <#TOWN2>" width="26" height="26"></div>
+ 			 		<div class="title"><b>УЛЬТРАФИОЛЕТ</b></div>
+   			</div>
+   			
+			</div>
+			<div class="block_content ie">
+		      	<div class="content">
+				<div class="autoinformer">
+ 					<div>Опасность <b>солнечных ожогов</b> кожи и глаз</div>
+						<UVINFORMER>
+					<div><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm">Прогноз УФ-излучения Солнца по часам</a></div>
+				</div>
+		      	</div>
+			</div>
+			<div class="block_bottom ie">
+   			
+   			
+   			
+			</div>
+-->
 			<div class="block_top ie">
    			
    			<div class="block_title left_contener_title_width">
@@ -288,30 +252,6 @@
  					<div>Предупреждения для <b>метеочувствительных</b></div>
 						<#MEDINFORMER>
 					<div><a href="<#SERVERURL>/med/<#INDEX>.htm">Подробно на 14 дней</a></div>
-				</div>
-		      	</div>
-			</div>
-			<div class="block_bottom ie">
-   			
-   			
-   			
-			</div>
-
-
-			<div class="block_top ie">
-   			
-   			<div class="block_title left_contener_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода  <#TOWN2> для метеочувствительных" width="26" height="26"></div>
- 			 		<div class="title"><b>ВЫЛЕТЫ</b></div>
-   			</div>
-   			
-			</div>
-			<div class="block_content ie">
-		      	<div class="content">
-				<div class="autoinformer">
- 					<div>Оценка возможных <b>задержек авиарейсов по метеоусловиям</b> на ближайшие сутки</div>
-						<#AVIAINFORMER>
-					<div><a href="<#SERVERURL>/avia/?id=<#INDEX>&town=<#TOWNEC>&req=showaero" target=_blank">Подробный авиапрогноз</a></div>
 				</div>
 		      	</div>
 			</div>
@@ -360,8 +300,7 @@
 			</div>
 			<div class="block_content">
 	      			<div class="content">
-					<#FOBOSNEWSNOVA 6 CENTER SelectedNews>
-					<div style="clear:both; left-margin:3px">Хотите разместить здесь свои новости? <a href="mailto:korolkow@meteonova.ru">Напишите нам</a></div>
+					<#FOBOSNEWSNOVA 4 CENTER SelectedNews>
 				</div>
 			</div>
 			<div class="block_bottom">
@@ -421,27 +360,7 @@
    			
 			</div>
 
-<!--
-			<div class="block_top" style="z-index:-1;">
-   			
-   			<div class="block_title center_container_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Информация о прогнозе погоды <#TOWN2>" width="26" height="26"></div>
- 			 		<div class="title"><b>О ПРОГНОЗЕ ПОГОДЫ <#TOWN16></b></div>
-   			</div>
-   			
-			</div>
 
-			<div class="block_content">
-	      			<div class="content">Прогноз погоды <#TOWN2> составляется на основе комплексного анализа результатов нескольких глобальных моделей погоды. Каждая модель учитывается с необходимым весом для достижения макимальной точности прогнозов. Ряд дополнительных метеопараметров вычисляется с использованием авторских методик разработчиков прогнозов погоды. Кроме того, для уточнения прогноза <#TOWN2> на ближайшие сутки используется корректирующий механизм, поэтому наш прогноз <#TOWN2> на завтра самый точный.</div>
-			</div>
-
-			<div class="block_bottom">
-   			
-   			
-   			
-			</div>
-
--->
 			<div class="block_top" style="z-index:-1;">
    			
    			<div class="block_title center_container_title_width">
@@ -461,23 +380,7 @@
    			
    			
 			</div>
-
-
-			<div class="block_top" style="z-index:-1;">
-	   			
-	   			<div class="block_title_2 center_container_title_width"></div>
-	   			
-			</div>
-			<div class="block_content_2" align="center"  style="width:100%;">
 				<#TEMPLATE ru_mn2_dsk_yah_ru>
-			</div>
-			<div class="block_bottom">
-
-	   			
-	   			
-	   			
-			</div>
-
 		</div>
   </div>
 </div>
@@ -517,17 +420,19 @@
 				<div class="block_content" style="width:100%;">
 					<div class="content" style="width:215px;">
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода по часам <#TOWN3>">Прогноз погоды по часам</a></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода на 3 дня <#TOWN3>">Краткий прогноз на 3 дня</a></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/pro/<#INDEX>.htm" title="Подробный профессиональный прогноз погоды <#TOWN3> на неделю">Подробный прогноз неделю</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'prohint', true, 250);" onmouseout="showHint(this, 'prohint', false, 250);"></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/frc/<#INDEX>.htm" title="Подробный прогноз погоды <#TOWN3> на 14 дней">Прогноз погоды на 14 дней</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/today/<#INDEX>-<#TOWNEN_>.htm" title="Погода <#TOWN2> сегодня">Погода сегодня</a> и <a href="<#SERVERURL>/tomorrow/<#INDEX>-<#TOWNEN_>.htm" title="Погода <#TOWN2> завтра">завтра</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода на 3 дня <#TOWN3>">Погода на 3 дня для занятых</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/pro/<#INDEX>.htm" title="Подробный профессиональный прогноз погоды <#TOWN3> на неделю">Прогноз для специалистов</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'prohint', true, 250);" onmouseout="showHint(this, 'prohint', false, 250);"></div></div>
 						<#MONTHLINK ru_mn2_dsk_monthlinkr_ru>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/auto/<#INDEX>.htm" title="Погода <#TOWN3> на 3 дня для автомобилистов">Прогноз для водителей</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'autohint', true, 250);" onmouseout="showHint(this, 'autohint', false, 250);"></div></div>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/agro/<#INDEX>.htm" title="Погода <#TOWN3> на 5 дней для дачников и сельхозпроизводителей">Агропрогноз погоды</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'agrohint', true, 250);" onmouseout="showHint(this, 'agrohint', false, 250);"></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="Погода <#TOWN3> на 14 дней для метеочувствительных людей">Медицинский прогноз</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'medhint', true, 250);" onmouseout="showHint(this, 'medhint', false, 250);"></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="Погода <#TOWN3> на 14 дней для метеозависимых людей">Для метеочувствительных</a></div></div>
+						<#TEMPLATEFORCOUNTRY ru_mn2_dsk_allergylinkr_ru "Russia,Ukraine,Belarus,Latvia,Lithuania,Estonia">
 						<#GEOMAGNLINK ru_mn2_dsk_geomagnlinkr_ru>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" title="Индекс ультрафиолетового излучения Солнца <#TOWN3>">Индекс УФ-излучения</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'uvihint', true, 250);" onmouseout="showHint(this, 'uvihint', false, 250);"></div></div>
-						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/map.htm?fi=<#FIF>&la=<#LAF>&type=mc_TMP_2_m_above_ground&step=1" target=_blank title="Карты погоды в регионе города <#TOWN>">Карты погоды</a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/map.htm?fi=<#FIF>&la=<#LAF>&type=mc_TMP_2_m_above_ground" target=_blank title="Карты погоды в регионе города <#TOWN>"><b>Карты погоды</b></a></div></div>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/infogra.htm?fi=<#FIF>&la=<#LAF>&vl=4&zoom=6"><b>Инфографика осадков</b></a></div></div>
+						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/med/<#INDEX>.htm" title="Нормальное атмосферное девление <#TOWN3>"><b>Атмосферное давление</b></a></div></div>
 						<#TEMPLATECLIMAT ru_mn2_dsk_climatlinkr_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
 					</div>
 				</div>
@@ -566,7 +471,7 @@
 
    			
    			<div class="block_title" >
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт""></div>
+ 				  <div class="icon"><img src="<#IMGBASE>/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт"></div>
  			 		<div class="title"><b>ИНФОРМЕР</b></div>
    			</div>
    			
@@ -574,7 +479,7 @@
 			<div class="block_content" style="width:100%;">
                         <div align="center" style="position: relative; margin:10px 0 0 0;">
                                         <div style="position: absolute; top: 0; left: 20px; width: 200px; height: 80px; z-index: 1000">
-                                                <a href="/informer" style="display: block; height: 80px;"></a>
+											<a href="/informer" style="display: block; height: 80px;"></a>
                                         </div>
                                         <a style="display: block; width: 200px; height: 90px; position: relative; border: 0; padding: 0; margin: 0; text-decoration: none;" id="meteonova_inf_200_80_<#INDEX>" href="//www.meteonova.ru"></a>
                                         <script type="text/javascript">
@@ -632,11 +537,8 @@
 					<div class="favorites">
 						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/frc/<#INDEX>.htm" onclick="if(navigator.appName=='Netscape'){ MakeStartFF('<#SERVERURL>/frc/<#INDEX>.htm'); } else if(navigator.appName!='Opera' && navigator.appName!='Google Chrome') {this.style.behavior='url(#default#homepage)'; this.setHomePage('<#SERVERURL>/frc/<#INDEX>.htm'); return false;} else {window.open('<#SERVERURL>/faq.htm#home', 'newwindow');}">Сделать стартовой</a></div></div>
 						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a rel="sidebar" title="Погода <#TOWN2> на Метеонове" onclick="javascript:window.external.AddFavorite('<#SERVERURL>/frc/<#INDEX>.htm', 'Погода <#TOWN2> на Метеонове');  return false;" href="<#SERVERURL>/frc/<#INDEX>.htm">Добавить в Избранное</a></div></div>
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/wap.htm">Приложения iOS и Android</a></div></div>
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/fan/gadget.htm">Виджет для Vista и Win 7</a></div></div>
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/fan/tray.htm">Погодный трей для Win XP</a></div></div>
+						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="https://m.meteonova.ru/android/">Приложение для Android</a></div></div>
 						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/fan.htm">Виджеты для браузеров</a></div></div>
-						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/icq.htm">Прогноз погоды по ICQ</a></div></div>
 						<div class="contact"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/informer/index.php?index=<#INDEX>">Информеры для сайтов</a></div></div>
 						<div class="contact_last"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/rss/<#INDEX>.xml">Экпорт погоды в RSS</a></div></div>
 					</div>
@@ -691,8 +593,8 @@
 	   			
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content">
-					 <#FOBOSNEWSNOVA 28>
+					<div class="content" >
+					 <#FOBOSNEWSNOVA 26>
 					</div>
 				</div>
 				<div class="block_bottom">
@@ -729,12 +631,26 @@
 <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script><script type="text/javascript">try { var yaCounter53149 = new Ya.Metrika({id:53149, clickmap:true, accurateTrackBounce:true, webvisor:true,type:1});} catch(e) { }</script><noscript><div><img src="//mc.yandex.ru/watch/53149?cnt-class=1" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </div>
 </div>
-
 </div>
 
-<div id="frc_text_0" class="nodsp"><#FRCT0></div>
+<div class="hint hidden" id="heathint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);"><b>Комфорт</b> - это температура по ощущению одетого по сезону человека, выходящего на улицу. <a target=_blank href="<#SERVERURL>/faq.htm#comfort">Подробнее...</a></div>
+<div class="hint hidden" id="snowhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Оценка средней высоты снежного покрова <#TOWN2>. <a target=_blank href="<#SERVERURL>/faq.htm#snow">Подробнее...</a></div>
+<div class="hint hidden" id="agrohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Подробный прогноз погоды для садоводов и огродников в окресностях</div>
+<div class="hint hidden" id="autohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз неблагоприятных погодных явлений для автомобилистов</div>
+<div class="hint hidden" id="aviahint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз погоды по аэропортам, ближайшим к городу <b><#TOWN></b>. Оценка неблагоприятных для полетов погодных явлений, прогноз задержек вылетов по метеоусловиям.</div>
+<div class="hint hidden" id="s3hint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Наглядный погоды <#TOWN3> на 3 дня</div>
+<div class="hint hidden" id="prohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Более подробные данные о состоянии атмосферы, поверхности и почвы</div>
+<div class="hint hidden" id="medhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Медицинский прогноз погоды <#TOWN3> для метеочувствительных людей с заболеваниями сердечно-сосудистой системы и дыхательных путей. <a href="<#SERVERURL>/faq.htm#med" target=_blank>Подробнее...</a></div>
+<div class="hint hidden" id="infhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Создали свой сайт и хотите повысить его информативность и привлекательность? <a href="/informer/?index=<#INDEX>" target=_blank>Установите</a> погодный информер!</div>
+<div class="hint hidden" id="geomhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Показатель геомагнитной активности Солнца и прогноз магнитных бурь на широте г. <#TOWN>. <a href="<#SERVERURL>/faq.htm#geomagn" target=_blank>Подробнее...</a></div>
+<div class="hint hidden" id="waterhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Оцена температуры воды в водоемах около г. <#TOWN>. <a href="<#SERVERURL>/faq.htm#water" target=_blank>Подробнее...</a></div>
+<div class="hint hidden" id="firehint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Оценка класса пожароопасности лесов около г. <#TOWN> (от 1 до 5). <a href="<#SERVERURL>/faq.htm#fire" target=_blank>Подробнее...</a></div>
+<div class="hint hidden" id="uvihint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Индекс ультрафиолетового излучения Солнца. Защитите себя от солнечных ожогов! Подробная информация на <a href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm" target=_blank>странице УФ-индекса <#TOWN2></a>.</div>
+<div class="hint hidden" id="gusthint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Скорость порывов приземного ветра. <a href="<#SERVERURL>/faq.htm#gust">Подробнее...</a></div>
+<div class="hint hidden" id="allergyhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Прогноз пыления основных растений-аллергенов на территории средней полосы России и СНГ, а также влияния погодных условий на самочувствие больных поллинозом.</div>
 
 <script language="JavaScript">
+var CurPlayFRC=-1;
 var townindex=<#INDEX>;
 var geosuffix="<#GEOSUFFIX>";
 var state=<#REGIONINDEX>;
@@ -744,11 +660,13 @@ var precTime=new Date(<#PRECTIME>);
 var lat=<#FIF>;
 var lng=<#LAF>;
 
-function updateForecastBg(n)
-{
-if (document.getElementById("blog_text")) document.getElementById("blog_text").innerHTML=document.getElementById("frc_text_0").innerHTML;
-updateForecast_audio();
-}
+var strlocation=new String(document.location);
+var reg=/#\d{1}/;
+var numFRC=reg.exec(strlocation);
+var reg=/\d{1}/;
+numFRC=reg.exec(numFRC);
+strlocation=null;
+if (numFRC==null) numFRC=0;
 
 function decOfNum(number, titles)  
 {  
@@ -776,20 +694,6 @@ else
  res=res+" назад"; 
 }
 return res;
-}
-
-var audio = new mnovaAudio({
-	js: 'js/dancer',
-	jessie: $('.jessie'),
-	player_button: $('.player_button'), 
-});
-audio._load('<#SERVERURL>/speech/forecast_<#INDEX>_0');
-
-function updateForecast_audio() {
-	if(typeof audio != 'undefined') {
-		audio._load('<#SERVERURL>/speech/forecast_<#INDEX>_'+numFRC);
-		audio.player_button.trigger('click tap');
-	}
 }
 
 function renderMap() {
@@ -847,22 +751,16 @@ function loadScript(js) {
 
 loadScript(mapScripts.shift());
 
-function updateForecast(n)
-{
-if (typeof scrolling != 'undefined') scrolling.jump(numFRC, n);
-numFRC = n; 
-}
 
-function updateForecastBg(n)
-{
-if(numFRC==n) return;
-numFRC=n;
-if (document.getElementById("blog_text")) document.getElementById("blog_text").innerHTML=document.getElementById("frc_text_"+numFRC).innerHTML;
+function updateForecastBg(n) {
+	if(numFRC==n) return;
+	numFRC=n;
+//if (document.getElementById("blog_text")) document.getElementById("blog_text").innerHTML=document.getElementById("frc_text_"+numFRC).innerHTML;
 //checkFrcTopLink(); 
 //updateForecast_audio();
 }
 
-n=0; numFRC=999; updateForecastBg(n);
+n=numFRC; numFRC=999; updateForecastBg(n);
 </script>
 
 <script>
@@ -1138,6 +1036,13 @@ setInterval(pageUpdate,1800000);
         return dataset;
     }
 
+    $('.frc_wrapper').drags({
+        btn_left: $('#arrow_left_top'),
+        btn_right: $('#arrow_right_top'),
+        delta: 51,
+        drag_content: $('#frc_content_weather0')
+    });
 	</script>
+
 </body>
 </html>

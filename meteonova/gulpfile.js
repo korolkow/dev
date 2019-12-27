@@ -696,7 +696,9 @@ function prod() {
     })
     var stream = merge2();
     stream.add(html);
-    return stream.pipe(dest('build/prod/templates/')).pipe(dest('./'))
+    return stream
+        .pipe(dest('./prod/'))
+        //.pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
 }
 
 function addCss() {
@@ -737,7 +739,10 @@ function dev() {
     })
     var stream = merge2();
     stream.add(html);
-    return stream.pipe(dest('./')).pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
+    return stream
+        .pipe(dest('build/dev/templates/'))
+        .pipe(dest('./'))
+        .pipe(gulpSSH.dest('/home/nova/dev/meteonova/'))
 }
 
 /*function renameAllTemplates() {
@@ -777,10 +782,10 @@ function statics() {
 var domain = 'ru',
     sub_domain = 'dev';
 
-var dev = gulp.series(gulp.series(addCss, addJs), dev)
+//var dev = gulp.series(gulp.series(addCss, addJs), dev)
 var prod = gulp.series(gulp.series(cssMinify, jsMinify), prod)
 
 module.exports = {
-    dev: dev,
+    //dev: dev,
     prod: prod
 }
