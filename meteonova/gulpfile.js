@@ -65,7 +65,7 @@ var commonScripts = {
 
 var dynamic_files = [
     {
-        tpl: 'ru_mn2_dsk_novatown2_ru',
+        tpl: 'ru_mn2_dsk_frc14_ru',
         css: [
             '../css/frc.css',
             '../css/dropdownlist.css',
@@ -656,7 +656,8 @@ function cssMinify() {
     })
     var stream = merge2();
     stream.add(css);
-    return stream.pipe(dest('build/prod/css/')).pipe(gulpSSH.dest('/home/nova/current/css/'))
+    return stream
+        .pipe(dest('./prod/css/')).pipe(gulpSSH.dest('/home/nova/current/css/'))
 }
 
 function jsMinify() {
@@ -670,19 +671,21 @@ function jsMinify() {
     })
     var stream = merge2();
     stream.add(js);
-    return stream.pipe(dest('build/prod/js/')).pipe(gulpSSH.dest('/home/nova/current/js/'))
+    return stream
+        .pipe(dest('./prod/js/'))
+        .pipe(gulpSSH.dest('/home/nova/current/js/'))
 }
 
 function prod() {
     var html = dynamic_files.map(function(page) {
         return src(page.tpl+'.*')
-            .pipe(inject(src('build/prod/css/meteonova.' + page.tpl + '.min.css'), {
+            .pipe(inject(src('prod/css/meteonova.' + page.tpl + '.min.css'), {
                 transform: function (filepath) {
                     return '<link rel="stylesheet" type="text/css" href="<#CSSBASE>' +
                         filepath.replace(/(.+\/css)/, '') + '?' + dt + '">'
                 }
             }))
-            .pipe(inject(src('build/prod/js/meteonova.' + page.tpl + '.min.js'), {
+            .pipe(inject(src('prod/js/meteonova.' + page.tpl + '.min.js'), {
                 transform: function (filepath) {
                     return '<script type="text/javascript" src="<#JSBASE>' +
                         filepath.replace(/(.+\/js)/, '') + '?' + dt + '" charset = "utf-8"></script>'
