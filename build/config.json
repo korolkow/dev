@@ -1,0 +1,528 @@
+{
+    "commonDefScripts": {
+        "css": [
+            "../css/v2/reset-fonts-grids_990.css",
+            "../css/v2/block.css",
+            "../css/v2/general.css",
+            "../css/v2/mosg_990.css"
+        ],
+        "js": [
+            "../js/jquery-1.11.1.min.js",
+            "../js/utils.js"
+        ]
+    },
+    "commonScripts": {
+        "css": [
+            "../css/frc.css",
+            "../css/v2/agro.css",
+            "../css/dropdownlist.css",
+            "../css/mgfind.css",
+            "../css/ol3.css",
+            "../css/map.css",
+            "../css/vdrop.css",
+            "../css/infogra.css",
+            "../css/bootstrap-select.min.css",
+            "../css/typeaheadjs.css",
+            "../css/bootstrap-colorpicker.min.css",
+            "../css/inf.css",
+            "../css/telegram.css",
+            "../css/stars.css",
+            "../css/simplePagination.css",
+            "../css/owl.carousel.css",
+            "../css/owl.theme.default.css"
+        ],
+        "js": [
+            "../js/jquery-1.11.1.min.js",
+            "../js/utils.js",
+            "../js/dancer.min.js",
+            "../js/novaspeak.js",
+            "../js/citysearch.js",
+            "../js/dropdownlist.js",
+            "../js/jquery.vdrop.min.js",
+            "../js/ol3_1.js",
+            "../js/openlayers.js",
+            "../js/amcharts/amcharts.js",
+            "../js/amcharts/radar.js",
+            "../js/amcharts/themes/light.js",
+            "../js/bootstrap/bootstrap-colorpicker.min.js",
+            "../js/typeahead.jquery.min.js",
+            "../js/bootstrap/bootstrap-select.js",
+            "../js/bootstrap/bootstrap.js",
+            "../js/engine.js",
+            "../js/mgfind.js",
+            "../js/jquery.barrating.min.js",
+            "../js/jquery.simplePagination.js",
+            "../js/owl.carousel.min.js",
+            "../js/slider.js",
+            "../js/svgchart.js",
+            "../js/chart.min.js"
+        ]
+    },
+    "static_files" : [
+        {
+            "name": "index",
+            "tpls": [ "../templates/main/index.tpl" ],
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/mgfind.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js",
+                "../js/citysearch.js"
+            ],
+            "extname": ".html",
+            "path": "/"
+        },
+        {
+            "name": "list",
+            "tpls": [ "../templates/list/_list.tpl" ],
+            "css": [
+                "../css/dropdownlist.css",
+                "../css/mgfind.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js"
+            ],
+            "extname": ".php",
+            "path": "/"
+        },
+        {
+            "name": "search",
+            "tpls": [ "../templates/search/_search.tpl", "../templates/search/allsearch.tpl" ],
+            "css": [
+                "../css/dropdownlist.css",
+                "../css/mgfind.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js"
+            ],
+            "extname": ".php",
+            "path": "/"
+        },
+        {
+            "name": "map",
+            "tpls": [ "../templates/map/map.tpl" ],
+            "css": [
+                "../css/vdrop.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/jquery.vdrop.min.js",
+                "../js/ol3_1.js",
+                "../js/openlayers.js"
+            ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "infogra",
+            "tpls": [ "../templates/infogra/infogra.tpl" ],
+            "css": [
+                "../css/ol3.css",
+                "../css/map.css",
+                "../css/infogra.css"
+            ],
+            "js": [
+                "../js/amcharts/amcharts.js",
+                "../js/amcharts/radar.js",
+                "../js/amcharts/themes/light.js",
+                "../js/ol3_1.js",
+                "../js/openlayers.js"
+            ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "informers",
+            "task": "informers",
+            "tpls": [
+                "../templates/informers/index.tpl",
+                "../templates/informers/html.tpl",
+                "../templates/informers/htmlsp.tpl",
+                "../templates/informers/png.tpl" ],
+            "css": [
+                "../css/bootstrap-select.min.css",
+                "../css/typeaheadjs.css",
+                "../css/bootstrap-colorpicker.min.css",
+                "../css/inf.css"
+            ],
+            "js": [
+                "../js/bootstrap/bootstrap-colorpicker.min.js",
+                "../js/typeahead.jquery.min.js",
+                "../js/bootstrap/bootstrap-select.js",
+                "../js/bootstrap/bootstrap.js",
+                "../js/engine.js"
+            ],
+            "extname": ".php",
+            "path": "/informer"
+        },
+        {
+            "name": "mgfind",
+            "tpls": [ "../templates/mgfind/mgfind.tpl" ],
+            "css": [
+                "../css/dropdownlist.css",
+                "../css/mgfind.css"
+            ],
+            "js": [
+                "../js/mgfind.js"
+            ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "icq",
+            "tpls": [ "../templates/icq/icq.tpl" ],
+            "css": [
+                "../css/dropdownlist.css"
+            ],
+            "js": [
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ],
+            "extname": ".htm",
+            "path": "/fan"
+        },
+        {
+            "name": "telegram",
+            "tpls": [ "../templates/telegram/telegram.tpl" ],
+            "css": [
+                "../css/telegram.css",
+                "../css/stars.css",
+                "../css/simplePagination.css",
+                "../css/owl.carousel.css",
+                "../css/owl.theme.default.css"
+            ],
+            "js": [
+                "../js/jquery.barrating.min.js",
+                "../js/jquery.simplePagination.js",
+                "../js/owl.carousel.min.js"
+            ],
+            "extname": ".htm",
+            "path": "/fan"
+        },
+        {
+            "name": "facebook",
+            "tpls": [ "../templates/facebook/facebook.tpl" ],
+            "css": [
+                "../css/telegram.css",
+                "../css/stars.css",
+                "../css/simplePagination.css",
+                "../css/owl.carousel.css",
+                "../css/owl.theme.default.css"
+            ],
+            "js": [
+                "../js/jquery.barrating.min.js",
+                "../js/jquery.simplePagination.js",
+                "../js/owl.carousel.min.js"
+            ],
+            "extname": ".htm",
+            "path": "/fan"
+        },
+        {
+            "name": "fan",
+            "tpls": [ "../templates/fan/fan.tpl" ],
+            "css": [
+                "../css/telegram.css"
+            ],
+            "js": [
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "guestbook",
+            "tpls": [ "../templates/guestbook/guestbook.tpl" ],
+            "js": [
+                "../js/guestbook.js"
+            ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "faq",
+            "tpls": [ "../templates/faq/faq.tpl" ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "about",
+            "tpls": [ "../templates/about/about.tpl" ],
+            "extname": ".htm",
+            "path": "/"
+        },
+        {
+            "name": "agreement",
+            "tpls": [ "../templates/privacy/agreement.tpl" ],
+            "extname": ".htm",
+            "path": "/"
+        }
+    ],
+    "dynamic_files": [
+        {
+            "name": "frc14",
+            "tpl": "../meteonova/ru_mn2_dsk_frc14_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js",
+                "../js/svgchart.js"
+            ]
+        },
+        {
+            "name": "profi",
+            "tpl": "../meteonova/ru_mn2_dsk_profi_ru",
+            "css": [
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "today",
+            "tpl": "../meteonova/ru_mn2_dsk_today_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js",
+                "../js/svgchart.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ]
+        },
+        {
+            "name": "entry",
+            "tpl": "../meteonova/ru_mn2_dsk_entry_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ]
+        },
+        {
+            "name": "hourly",
+            "tpl": "../meteonova/ru_mn2_dsk_hourly_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/svgchart.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js",
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "tomorrow",
+            "tpl": "../meteonova/ru_mn2_dsk_tomorrow_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js",
+                "../js/svgchart.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ]
+        },
+        {
+            "name": "simple3",
+            "tpl": "../meteonova/ru_mn2_dsk_simple3_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ]
+        },
+        {
+            "name": "10days",
+            "tpl": "../meteonova/ru_mn2_dsk_10days_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js"
+            ]
+        },
+        {
+            "name": "month",
+            "tpl": "../meteonova/ru_mn2_dsk_month_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js",
+                "../js/svgchart.js"
+            ]
+        },
+        {
+            "name": "allergy",
+            "tpl": "../meteonova/ru_mn2_dsk_allergy_ru",
+            "css": [
+                "../css/dropdownlist.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "med",
+            "tpl": "../meteonova/ru_mn2_dsk_med_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "agro",
+            "tpl": "../meteonova/ru_mn2_dsk_agro_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/agro.css",
+                "../css/dropdownlist.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "auto",
+            "tpl": "../meteonova/ru_mn2_dsk_auto_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "avia",
+            "tpl": "../meteonova/ru_mn2_dsk_avia_ru",
+            "css": [
+                "../css/frc.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js"
+            ]
+        },
+        {
+            "name": "uvindex",
+            "tpl": "../meteonova/ru_mn2_dsk_uvindex_ru",
+            "css": [
+                "../css/dropdownlist.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js",
+                "../js/chart.min.js"
+            ]
+        },
+        {
+            "name": "geomagn",
+            "tpl": "../meteonova/ru_mn2_dsk_geomagn_ru",
+            "css": [
+                "../css/dropdownlist.css"
+            ],
+            "js": [
+                "../js/dropdownlist.js",
+                "../js/chart.min.js"
+            ]
+        },
+        {
+            "name": "novageo",
+            "tpl": "../meteonova/ru_mn2_dsk_novageo_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js",
+                "../js/novaspeak.js",
+                "../js/svgchart.js"
+            ]
+        }
+    ],
+    "dev_static": {
+        "tpl_path": "templates_ru",
+        "domain": "ru",
+        "_domain": "",
+        "sub_domain": "dev",
+        "defindex": 27612,
+        "country_name": "России",
+        "country_id": 156,
+        "lat": 55.8,
+        "lng": 37.6,
+        "defcity": "Москва",
+        "defcity_en": "Moscow",
+        "defcity_r": "Москвы"
+    },
+    "destination": {
+        "dev": "/home/nova/dev",
+        "prod": "/home/nova/dev"
+    }
+}
