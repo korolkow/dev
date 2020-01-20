@@ -1,0 +1,32 @@
+					<div id="yandex_rtb_R-A-53149-5"></div>
+					<script type="text/javascript">
+					    (function(w, d, n, s, t) {
+					        w[n] = w[n] || [];
+					        w[n].push(function() {
+					            Ya.Context.AdvManager.render({
+					                blockId: "R-A-53149-5",
+					                renderTo: "yandex_rtb_R-A-53149-5",
+					                horizontalAlign: false,
+					                async: true,
+									bg_color: 'FFFFFF',
+									charset:'windows-1251',
+									format: 'direct',
+									font_size: 0.9,
+									type: 'flat',
+									limit: 6,
+									title_font_size: 2,
+									title_color: '990000',
+									url_color: '0000CC',
+									text_color: '000000',
+									hover_color: '0066FF',
+									favicon: true                
+					            });
+					        });
+							t = d.documentElement.firstChild;
+							s = d.createElement("script");
+							s.type = "text/javascript";
+							s.src = "//an.yandex.ru/system/context.js";
+							s.setAttribute("async", "true");
+							t.insertBefore(s, t.firstChild);
+					    })(this, this.document, "yandexContextAsyncCallbacks");
+					</script>				

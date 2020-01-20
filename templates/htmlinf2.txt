@@ -1,0 +1,22 @@
+<#SETSERVERURL http://www.meteonova.ru>function meteonova_jsondata_<#INDEXM>()
+{ return { 
+ "forecasts": [
+ {"index":"<#INDEX>","name":"<#TOWN>","name_2":"<#TOWN2>","latitude":"<#FIF>","longitude":"<#LAF>","href": "<#SERVERURL>/frc/<#INDEX>.htm",
+  "forecast": [
+	 <#SYNOP ru_json_synop_ru ru_json_cur_ru>,
+	 <#TEMPLATEPREDICT ru_json_frc_ru 12>,
+	 <#TEMPLATEPREDICT ru_json_frc_ru 18>,
+	 <#TEMPLATEPREDICT ru_json_frc_ru 24>,
+	 <#TEMPLATEPREDICT ru_json_frc_ru 30>
+              ],
+  "forecast3": [
+	 {"day":"<#SDAYD1>","month":"<#SMOND1>","year":"<#SYERD1>","weekday":"<#WDAYD1>","t":{"value":"<#TEMMD1>","units":"C"},"tn":{"value":"<#TEMMB1>","units":"C"},"wd":{"value":"<#WINRD1>","units":"румб"},"ws":{"value":"<#WIFFD1>","units":"м/с"},"phenomena":{"cl":"<#CLOCD1>","pr":"<#PRCND1>"},"pic":"<#STDND1><#WEAPD1>_<#WEAQD1>","descr":"<#NALTD1>"},
+	 {"day":"<#SDAYD2>","month":"<#SMOND2>","year":"<#SYERD2>","weekday":"<#WDAYD2>","t":{"value":"<#TEMMD2>","units":"C"},"tn":{"value":"<#TEMMB2>","units":"C"},"wd":{"value":"<#WINRD2>","units":"румб"},"ws":{"value":"<#WIFFD2>","units":"м/с"},"phenomena":{"cl":"<#CLOCD2>","pr":"<#PRCND2>"},"pic":"<#STDND2><#WEAPD2>_<#WEAQD2>","descr":"<#NALTD2>"},
+	 {"day":"<#SDAYD3>","month":"<#SMOND3>","year":"<#SYERD3>","weekday":"<#WDAYD3>","t":{"value":"<#TEMMD3>","units":"C"},"tn":{"value":"<#TEMMB3>","units":"C"},"wd":{"value":"<#WINRD3>","units":"румб"},"ws":{"value":"<#WIFFD3>","units":"м/с"},"phenomena":{"cl":"<#CLOCD3>","pr":"<#PRCND3>"},"pic":"<#STDND3><#WEAPD3>_<#WEAQD3>","descr":"<#NALTD3>"}
+              ]
+
+  }
+ ],
+ <#TEMPLATE currencytemplate>
+ }
+}

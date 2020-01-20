@@ -1,0 +1,5 @@
+<#SETSEPARATORS ".." ", ">
+<div class="frcinf">
+<div><a href="http://www.meteonova.ru/frc/<#INDEX>.htm"><#TOWN></a></div>
+<table border="0"><tr><td><img src="http://informer.meteonova.ru/html/icons/set2/d<#HIMGD1>.png" alt="<#NALTD1>" title="<#NALTD1>"></td><td valign="center">&nbsp;&nbsp;<b><#TEMMD1> &deg;C</b>, <#PREMD1> μμ, <#RWEMD1>%, <#WINDD1> μ/ρ</td></tr></table>
+</div>

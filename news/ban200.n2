@@ -1,0 +1,1 @@
+<script language=JavaScript> document.write('<sc'+'ript src="http://a.meteonova.ru/show.php?pl=1&bt=20&scr=1&rw=1&ref='+escape(document.location.href)+'&ac='+ Math.round(Math.random()*100000)+'"></sc'+'ript>'); </script>

@@ -1,0 +1,44 @@
+.br-theme-css-stars .br-widget {
+  height: 28px;
+  white-space: nowrap;
+}
+.br-theme-css-stars .br-widget a {
+  text-decoration: none;
+  height: 18px;
+  width: 18px;
+  float: left;
+  font-size: 23px;
+  margin-right: 5px;
+}
+.br-theme-css-stars .br-widget a:after {
+  content: "\2605";
+  color: #d2d2d2;
+}
+.br-theme-css-stars .br-widget a.br-active:after {
+  color: #EDB867;
+}
+.br-theme-css-stars .br-widget a.br-selected:after {
+  color: #ff9a00;
+}
+.br-theme-css-stars .br-widget .br-current-rating {
+  display: none;
+}
+.br-theme-css-stars .br-readonly a {
+  cursor: default;
+}
+
+.review .br-theme-css-stars .br-widget a {
+  text-decoration: none;
+  height: 12px;
+  width: 12px;
+  float: left;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.review .br-theme-css-stars .br-widget a.br-active:after {
+  color: #b8b8b8;
+}
+.review .br-theme-css-stars .br-widget a.br-selected:after {
+  color: #464646;
+} 

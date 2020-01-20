@@ -1,0 +1,341 @@
+<html>
+<head>
+	<?PHP
+	$town=$_GET["town"];
+	$id=$_GET["id"];
+	$req=$_GET["req"];
+
+	if (!$town) {
+		print "<title>МЕТЕОНОВА - погода по аэропортам, авиапрогноз. Прогноз задержек вылетов по метеоусловиям</title>";
+	} else {
+		print "<title>МЕТЕОНОВА - погода по аэропортам около города \"$town\"</title>";
+	}
+?>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="description" content="Погода по аэропортам, прогноз задержек вылетов по метеоусловиям">
+<meta name="keywords" content="погода, прогноз, аэропорт, авиабилет, задержка вылета по метеоусловиям">
+<!-- inject:css -->
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/reset-fonts-grids_990.css?d=20170425">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/block.css?d=20170425">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/general.css?d=20170425">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/mosg_990.css?d=20170425">
+<!-- endinject -->
+<!-- inject:js -->
+<script type="text/javascript" src="http://dev.meteonova.ru/js/jquery-1.11.1.min.js?d=20170425" charset = "utf-8"></script>
+<script type="text/javascript" src="http://dev.meteonova.ru/js/dancer.min.js?d=20170425" charset = "utf-8"></script>
+<script type="text/javascript" src="http://dev.meteonova.ru/js/novaspeak.js?d=20170425" charset = "utf-8"></script>
+<!-- endinject -->
+</head>
+<body>
+<div id="doc4" class="yui-t5">
+   <div id="hd">
+     <div id="onhd">
+      <div>
+       <div id="logo"><img src="/images/logo.png" width="277" height="96"></div>
+	      <div id="mainmenu">
+	      	<ul>
+	          <li><a href="//www.meteonova.ru" title="Погода на Метеонове: прогноз погоды по городам России и Мира">Главная</a></li>
+	          <li class="line"></li>
+	          <li><a href="/news/" title="Все последние погодные новости от Центра Фобос">Новости</a></li>
+	          <li class="line"></li>
+	          <li><a href="/klimat/" title="Климатические обзоры по городам и регионам">Климат</a></li>
+	          <li class="line"></li>
+	          <li><a href="/map.htm" title="Интерактивные погодные карты">Карты</a></li>
+	          <li class="line"></li>
+	          <li><a href="/search/" title="Поиск погоды по городам и странам">Поиск</a></li>
+	          <li class="line"></li>
+	          <li><a href="/informer/" title="Установите прогноз погоды себе на сайт">Информер</a></li>
+	          <li class="line"></li>
+	          <li><a href="/fan.htm" title="Установите прогноз погоды себе на компьютер">Виджеты</a></li>
+	          <li class="line"></li>
+	          <li><a href="/wap.htm" title="Погода на Метеонове - мобильные версии и мобильные приложения">Mobile</a></li>
+	          <li class="line"></li>
+	          <li><a href="/icq.htm" title="Погодный ICQ-робот">ICQ</a>
+				<script type="text/javascript">new Image().src = "http://counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) +  ";" +Math.random();</script><img src="http://news.meteonova.ru/cgi-bin/mmcount3.dll?config=nova&fgcolor=000000&bgcolor=000000&fs=13" border="0" width="1" height="1">
+	         	</li>
+	    	</ul>
+	      </div>
+      </div>
+     </div>
+   </div>
+<div>
+<div id="bd">
+	<div id="yui-main">
+	<div class="yui-b">
+	  <div class="main_container">
+  		<div class="left_container">
+
+			<div class="block_top ie">
+   				<div class="round_left">
+	 		  	<img src="/images/block_top_left.png"
+	 				width="9" height="31" class="corner">
+   				</div>
+   				<div class="block_title left_contener_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+ 			 		<div class="title"><b>МЕТЕОНОВА</b></div>
+   				</div>
+
+   				<div class="round_right">
+	 				<img src="/images/block_top_right.png"
+	 				width="9" height="31" class="corner"
+	 				onLoad="transparent(this)" />
+   				</div>
+			</div>
+
+				<div class="block_content ie">
+					<div class="jessie-block">
+						<div class="container-wrapper">
+							<div class="jessie"><div class="player_button"><span></span></div></div>																
+						</div>
+					</div>					
+				</div>
+
+			<div class="block_bottom ie">
+
+   				<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png"
+	 				width="9" height="14" class="corner"
+	 				onLoad="transparent(this)" />
+   				</div>
+   			<div class="block_bt left_contener_title_width"></div>
+   				<div class="round_right">
+	 				<img src="/images/block_bt_right.png"
+	 				width="9" height="14" class="corner"
+	 				onLoad="transparent(this)" />
+   				</div>
+			</div>
+  		</div>
+  		<div class="center_container">
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner">
+   			</div>
+   			<div class="block_title center_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+ 			 		<div class="title"><b>ПОГОДА ПО АЭРОПОРТАМ</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner">
+   			</div>
+			</div>
+
+			<div class="block_content" style="height:198px">
+				<div class="content">
+     			<div id="blog_text" class="text" style="height:180px">
+     				<p style="padding-bottom:3px;"><b>Представляю вашему вниманию прогноз погоды по аэропортам.</b></p>
+     				<p style="padding-bottom:3px;">Собираетесь в путешествие или в деловую поездку, а может планируете встречу родных или партнеров в аэропорте? Хотите быть в курсе возможных задержек рейсов из-за неблагоприятных погодных явлений? Тогда этот сервис непременно Вам пригодится!</p>
+     				<p style="padding-bottom:4px;">По названию города или аэропорта найдите точки отправления, назначения и транзита, чтобы определить возможные риски задержек вылетов и посадки по метеоусловиям. Кроме того, Вы можете всегда получить прогноз по ближайшим к вашему городу аэропортам, нажав на ссылку "Погода по аэропортам" на странице с прогнозом погоды по выбранному городу.</p>
+				<div id="blog_link" class="under_text" style="margin-top: 5px"></div>
+     			</div>
+     		</div>
+			</div>
+
+			<div class="block_bottom">
+   			<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner">
+   			</div>
+   			<div class="block_bt center_container_title_width"></div>
+   			<div class="round_right">
+	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner">
+   			</div>
+			</div>
+  		</div>
+  </div>
+  <div class="main_container">
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner">
+   			</div>
+   			<div class="block_title main_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+ 			 		<div class="title"><b>ПОИСК ПО ГОРОДАМ И АЭРОПОРТАМ</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner">
+   			</div>
+			</div>
+			<div class="block_content">
+				  <?PHP require("engine.inc"); ?>
+			</div>
+			<div class="block_bottom">
+   			<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner">
+   			</div>
+   			<div class="block_bt main_container_title_width"></div>
+   			<div class="round_right">
+	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner">
+   			</div>
+			</div>
+  </div>
+  <div class="main_container">
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
+   			</div>
+   			<div class="block_title main_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+ 			 		<div class="title"><b>ОГРАНИЧЕНИЯ</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner">
+   			</div>
+			</div>
+			<div class="block_content">
+		    	<div class="content">
+		        	<div style="position:relative;">
+                    	<p style="padding-bottom:4px;">Сервис работает в полностью автоматическом режиме на основе данных моделей погоды. Информация не проходит контроль со стороны профессиональных метеорологов, поэтому возможны ошибки. Информация предоставляется «как есть», без каких-либо гарантий и обязательств со стороны владельцев сервиса.</p>
+                    	<p style="padding-bottom:4px;"><b>Данные о задержках по метеоусловиям явялются оценкой возможных погодных явлений, влияющих на полеты. Информацию о фактических задержках рейсов смотрите на табло аэропортов.</b></p>
+       	    		<p style="padding-bottom:4px;">Информация с данного сайта носит консультативный характер и не может быть использована как официальный источник данных о погоде при планировании мероприятий, связанных с риском материальных потерь или человеческих жертв, а также при выяснении обстоятельств проишествий в суде или выдачи справок в страховые компании для возмещения ущерба.</p>
+                	<p style="padding-bottom:4px;">Владельцы сайта не несут ответственности за возможные убытки имуществу или здоровью, возникшие в результате использования информации с настоящего сайта. Для получения официальных справок, обращайтесь в государственные органы Росгидромета на местах или в Гидрометцентр России в Москве.</p>
+		        	</div>
+			    </div>
+			</div>
+			<div class="block_bottom">
+   			<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner">
+   			</div>
+   			<div class="block_bt main_container_title_width"></div>
+   			<div class="round_right">
+	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner">
+   			</div>
+			</div>
+  </div>
+</div>
+</div>
+	<div class="yui-b">
+  	 <div class="right_main">
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner">
+   			</div>
+   			<div class="block_title" style="width:222px">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+ 			 		<div class="title"><b>РЕКЛАМА</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner">
+   			</div>
+			</div>
+				<div class="block_content"><?PHP require("../ban240x400.php"); ?></div>
+				<div class="block_bottom">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner">
+	   			</div>
+	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="round_right">
+		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner">
+	   			</div>
+				</div>
+				<div class="block_top">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner">
+	   			</div>
+	   			<div class="block_title" style="width:222px;">
+	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+	 			 		<div class="title"><b>КОНТАКТЫ</b></div>
+	   			</div>
+	   			<div class="round_right">
+		 				<img src="/images/block_top_right.png" width="9" height="31" class="corner">
+	   			</div>
+				</div>
+				<div class="block_content" style="width:100%;">
+      				<div class="content">
+					<div class="contacts">
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/about.htm">О проекте</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/faq.htm">Частые вопросы</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="mailto:korolkow@meteonova.ru">Руководитель</a></div></div>
+						<div class="contact_last"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/guestbook.htm">Гостевая книга</a></div></div>
+					</div>
+			      	</div>
+				</div>
+				<div class="block_bottom">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner">
+	   			</div>
+	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="round_right">
+		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner">
+	   			</div>
+				</div>
+			</div>
+	</div>
+</div>
+<div class="right_block">
+					<div class="block_top">
+		   			<div class="round_left">
+	
+			 		  	<img src="/images/block_top_left.png"
+			 				width="9" height="31" class="corner"
+			 				 />
+		   			</div>
+		   			<div class="block_title" style="width:222px;">
+		 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Все новости о погоде на Метеонове" ></div>
+		 			 		<div class="title"><b>НОВОЕ О ПОГОДЕ</b></div>
+		   			</div>
+		   			<div class="round_right">
+			 				<img src="/images/block_top_right.png"
+			 				width="9" height="31" class="corner"
+			 				 />
+	
+		   			</div>
+					</div>
+					<div class="block_content" style="width:100%;">
+						<div class="content">
+							<script language="Javascript" src="http://www.meteonova.ru/newsheaders/5.js"></script>
+						</div>
+					</div>
+					<div class="block_bottom">
+	
+		   			<div class="round_left">
+			 		  	<img src="/images/block_bt_left.png"
+			 				width="9" height="14" class="corner"
+			 				 />
+		   			</div>
+		   			<div class="block_bt" style="width:222px"></div>
+		   			<div class="round_right">
+			 				<img src="/images/block_bt_right.png"
+			 				width="9" height="14" class="corner"
+			 				 />
+		   			</div>
+					</div>
+</div>
+  <div id="ft" role="contentinfo">
+      <div class="copyright">Copyright &copy; 2009-2017, Метеосистемы</div>
+      <div class="counters">
+    <noindex>
+        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?41.11" border="0" width="31" height="31" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a></div>
+    </noindex>
+      </div>
+  </div>
+
+<!-- Google.Analytics counter -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22957370-1']);
+  _gaq.push(['_setDomainName', '.meteonova.ru']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<!-- Yandex.Metrika counter --><script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script><script type="text/javascript">try { var yaCounter53149 = new Ya.Metrika({id:53149, clickmap:true, accurateTrackBounce:true, webvisor:true,type:1});} catch(e) { }</script><noscript><div><img src="//mc.yandex.ru/watch/53149?cnt-class=1" style="position:absolute; left:-9999px;" alt="" /></div></noscript><!-- /Yandex.Metrika counter -->
+</div>
+</div>
+<script language="JavaScript">
+	(function() {
+		try {
+			var audio = new mnovaAudio({
+				js: 'js/dancer',
+				jessie: $('.jessie'),
+				player_button: $('.player_button'), 
+			});
+			audio._load('//www.meteonova.ru/sounds/avia');
+		}
+		catch(err) {}
+	}();
+</script>
+</body>
+</html>

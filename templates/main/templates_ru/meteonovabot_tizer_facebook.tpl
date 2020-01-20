@@ -1,0 +1,1 @@
+<a class="ban-tizer facebook" href="/fan/facebook.htm">Метеонова в Facebook</a>

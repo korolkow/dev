@@ -1,0 +1,385 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<title>Метеонова: Мегапоиск по всем городам мира, прогноз погоды по любой точке планеты</title>
+
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/reset-fonts-grids_990.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/block.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/general.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/mosg_990.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/frc.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/agro.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/dropdownlist.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/mgfind.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/ol3.css?d=201801181904">
+<link rel="stylesheet" type="text/css" href="http://dev.meteonova.ru/css/map.css?d=201801181904">
+
+
+<script type="text/javascript" src="http://dev.meteonova.ru/js/jquery-1.11.1.min.js?d=201801181904" charset = "utf-8"></script>
+<script type="text/javascript" src="http://dev.meteonova.ru/js/mgfind.js?d=201801181904" charset = "utf-8"></script>
+
+</head>
+<body>
+<div id="doc4" class="yui-t5">
+   <div id="hd">
+     <div id="onhd">
+       <div id="logo"><a href="//www.meteonova.ru"><img src="/images/logo.png" width="277" height="96" border="0" alt="МЕТЕОНОВА - прогноз погоды голосом" ></a></div>
+	      <div id="mainmenu">
+	      	<ul>
+	          <li><a href="//www.meteonova.ru" title="Погода на Метеонове: прогноз погоды по городам России и Мира">Главная</a></li>
+	          <li class="line"></li>
+	          <li><a href="/news/" title="Все последние погодные новости от Центра Фобос">Новости</a></li>
+	          <li class="line"></li>
+	          <li><a href="/klimat/" title="Климатические обзоры по городам и регионам">Климат</a></li>
+	          <li class="line"></li>
+	          <li><a href="/map.htm" title="Интерактивные погодные карты">Карты</a></li>
+	          <li class="line"></li>
+	          <li><a href="/infogra.htm">Инфографика</a></li>
+	          <li class="line"></li>	          
+	          <li><a href="/search/" title="Поиск погоды по городам и странам">Поиск</a></li>
+	          <li class="line"></li>
+	          <li><a href="/informer/" title="Установите прогноз погоды себе на сайт">Информер</a></li>
+	          <li class="line"></li>
+	          <li><a href="/fan.htm" title="Установите прогноз погоды себе на компьютер">Приложения</a>
+				<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) +  ";" +Math.random();</script><img src="//www.meteovesti.ru/cgi-bin/mmcount3.dll?config=nova&fgcolor=000000&bgcolor=000000&fs=13" border="0" width="1" height="1">	          	
+	          </li>
+	    	</ul>
+	      </div>
+     </div>
+   </div>
+<div id="bd" style="float: none;">
+	<div id="yui-main">
+	<div class="yui-b">
+  <div class="main_container">
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png"
+	 				width="9" height="31" class="corner"
+	 				 />
+   			</div>
+   			<div class="block_title main_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  ></div>
+ 			 		<div class="title"><b>МЕГАПОИСК ПО ВСЕМ ГОРОДАМ МИРА</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png"
+	 				width="9" height="31" class="corner"
+	 				 />
+   			</div>
+			</div>
+			<div class="block_content">
+			  <div class="content">
+					<div class="title2">Поиск погоды по любой точке планеты</div>
+					<div class="search_form">
+						<form action="" name="search">
+							<input type="search" class="_search" placeholder="Введите полное название населенного пункта">
+							<div style="position: absolute; right: 0; top: 0; cursor: pointer">
+								<a href="#" class="search-button"><span class="title-button">Найти</span></a>
+							</div>
+						</form>
+						<div class="search-result"></div>
+						<a href="#" class="search-button more" style="display: none;"><span class="underline-dotted">Найти ещё</span></a>						
+					</div>					
+					<div class="title2" id="titleres">Что такое Мегапоиск?</div>
+								    	<div id="res">&nbsp;Наш проект обладает мощным <a href="/search/"><b>встроенным поиском</b></a> по 43,000 городов из 200 стран мира, 12000 городов - в России. Вы можете воспользоваться встроенным поиском с большинства страниц сайта, набрав первые несколько букв в поле поиска.
+											Однако бывают случаи, когда необходимо получить погоду по небольшому отдаленному населенному пункту или аэропорту, которого нет в нешей базе городов. В этом случае на помощь приходит Мегапоиск.<br>
+											&nbsp;<b>Мегапоиск</b> - это технология поиска географических координат населенного пункта, основанная на OpenStreetMap Geocoder. Фактически это технология предоставления прогноза по произвольным географическим корординатам. Имейте ввиду, однако, что прогноз, полученный с использованием Мегапоиска, не имеет привязки к стране и региону, поэтому
+											часть сервисов, например, "Погодный информер" будут для него недоступны. В этой связи рекомендуется сначала <a href="/search/"><b>поискать</b></a> требуемый или ближайший к нему более крупный город в базе Метеоновы и только если Вы не нашли город в нашей базе, можно попробовать отыскать его средствами Мегапоиска.<br>
+											&nbsp;<b>Погода по карте</b> - эта технология позволяет получить прогноз по любой точке на карте, даже если там нет топонимических объектов. Просто телескопизируйте карту до нужной точки и щелкните по ней мышкой.<br>
+											&nbsp;По всем интересующим вопросам обращайтесь к <a href="mailto:korolkow@meteonova.ru"><b>Руководителью проекта</b></a>.
+										</div>
+	      </div>
+      </div>
+			<div class="block_bottom">
+   			<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png"
+	 				width="9" height="14" class="corner"
+	 				 />
+   			</div>
+   			<div class="block_bt main_container_title_width"></div>
+   			<div class="round_right">
+	 				<img src="/images/block_bt_right.png"
+	 				width="9" height="14" class="corner"
+	 				 />
+   			</div>
+			</div>
+  </div>
+  <div class="main_container">
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png"
+	 				width="9" height="31" class="corner"
+	 				 />
+   			</div>
+   			<div class="block_title main_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  ></div>
+ 			 		<div class="title"><b>МЕГАПОИСК ПО КАРТЕ МИРА</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png"
+	 				width="9" height="31" class="corner"
+	 				 />
+   			</div>
+			</div>
+			<div class="block_content">
+			  <div class="content">
+				   <div class="title2">Увеличьте и прокрутите карту к нужной точке, щелкните в нее для получения прогноза</div>
+								<div class="map-wrapper" style="width: 100%">
+									<div id="map" class="map"></div>
+									<div id="popup" class="ol-popup">
+										<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+										<div id="popup-content"></div>
+									</div>																		
+								</div>
+		      </div>
+		      </div>
+			<div class="block_bottom">
+   			<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png"
+	 				width="9" height="14" class="corner"
+	 				 />
+   			</div>
+   			<div class="block_bt main_container_title_width"></div>
+   			<div class="round_right">
+	 				<img src="/images/block_bt_right.png"
+	 				width="9" height="14" class="corner"
+	 				 />
+   			</div>
+			</div>
+  </div>
+</div>
+</div>
+	<div class="yui-b">
+  	 <div class="right_main">
+				<div class="block_top">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_top_left.png"
+		 				width="9" height="31" class="corner"
+		 				 />
+	   			</div>
+	   			<div class="block_title" style="width:222px;">
+	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  ></div>
+	 			 		<div class="title"><b>РЕКЛАМА</b></div>
+	   			</div>
+	   			<div class="round_right">
+		 				<img src="/images/block_top_right.png"
+		 				width="9" height="31" class="corner"
+		 				 />
+	   			</div>
+				</div>
+
+
+				<div class="block_content">
+					<?php if (file_exists("ban240x400.php")) 
+						require("ban240x400.php"); 
+					?>
+				</div>
+				<div class="block_bottom">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_bt_left.png"
+		 				width="9" height="14" class="corner"
+		 				 />
+	   			</div>
+	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="round_right">
+		 				<img src="/images/block_bt_right.png"
+		 				width="9" height="14" class="corner"
+		 				 />
+	   			</div>
+				</div>
+			<div class="block_top">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_top_left.png"
+		 				width="9" height="31" class="corner"
+		 				 />
+	   			</div>
+	   			<div class="block_title" style="width:222px;">
+	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  ></div>
+	 			 		<div class="title"><b>НОВОСТИ</b></div>
+	   			</div>
+	   			<div class="round_right">
+		 				<img src="/images/block_top_right.png"
+		 				width="9" height="31" class="corner"
+		 				 />
+	   			</div>
+				</div>
+				<div class="block_content" style="width:100%">
+					<div class="content" style="width:210px;">
+						<script language="Javascript" src="//www.meteonova.ru/newsheaders/4.js"></script>
+					</div>
+				</div>
+				<div class="block_bottom">
+	   			<div class="round_left">
+		 		  	<img src="/images/block_bt_left.png"
+		 				width="9" height="14" class="corner"
+		 				 />
+	   			</div>
+	   			<div class="block_bt" style="width:222px"></div>
+	   			<div class="round_right">
+		 				<img src="/images/block_bt_right.png"
+		 				width="9" height="14" class="corner"
+		 				 />
+	   			</div>
+				</div>
+			<div class="block_top">
+   			<div class="round_left">
+	 		  	<img src="/images/block_top_left.png"
+	 				width="9" height="31" class="corner"
+	 				 />
+   			</div>
+   			<div class="block_title" style="width:222px;">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  ></div>
+ 			 		<div class="title"><b>КОНТАКТЫ</b></div>
+   			</div>
+   			<div class="round_right">
+	 				<img src="/images/block_top_right.png"
+	 				width="9" height="31" class="corner"
+	 				 />
+   			</div>
+			</div>
+			<div class="block_content" style="width:240px">
+      	<div class="content">
+					<div class="contacts">
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11" ></div><div class="apun_link"><a href="about.htm">О проекте</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11" ></div><div class="apun_link"><a href="mailto:korolkow@korolkow.ru">Руководитель</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11" ></div><div class="apun_link"><a href="stat.htm">Статистика</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11" ></div><div class="apun_link"><a href="guestbook.htm">Гостевая книга</a></div></div>
+					</div>
+      	</div>
+			</div>
+			<div class="block_bottom">
+   			<div class="round_left">
+	 		  	<img src="/images/block_bt_left.png"
+	 				width="9" height="14" class="corner"
+	 				 />
+   			</div>
+   			<div class="block_bt" style="width:222px;"></div>
+   			<div class="round_right">
+	 				<img src="/images/block_bt_right.png"
+	 				width="9" height="14" class="corner"
+	 				 />
+   			</div>
+			</div>
+			</div>
+	</div>
+  <div id="ft" role="contentinfo">
+      <div class="copyright"><span>Copyright &copy; 2009-2018, Метеосистемы</span></div>
+      <div class="counters">
+    <noindex>
+        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?41.11" border="0" width="31" height="31" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a></div>
+    </noindex>
+      </div>
+  </div>
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22957370-1']);
+  _gaq.push(['_setDomainName', '.meteonova.ru']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script><script type="text/javascript">try { var yaCounter53149 = new Ya.Metrika({id:53149, clickmap:true, accurateTrackBounce:true, webvisor:true,type:1});} catch(e) { }</script><noscript><div><img src="//mc.yandex.ru/watch/53149?cnt-class=1" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</div>
+</div>
+<script type="text/javascript">
+	 $(document).ready(function() { 
+			$('input').focus().mgSearch({
+				resultblock: $('.search-result'),
+				f: $('form[name=search]'),
+				more_btn: $('.search-button.more'),
+				goto: '/frcgeo'
+			});
+
+			$('a.search-button').bind('click', function(e){
+				e.preventDefault();
+				$('form[name=search]').submit();
+			});
+			
+      		var container = document.getElementById('popup');
+      		var content = document.getElementById('popup-content');
+      		var closer = document.getElementById('popup-closer');
+			
+			function getParameterByName(name) {
+		    	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+		    	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		        results = regex.exec(location.search);
+		    	return results === null ? null : decodeURIComponent(results[1].replace(/\+/g, " "));
+			}
+			
+			function setOverlay() {
+				var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ ({
+					element: container,
+					autoPan: true,
+					autoPanAnimation: {
+					  duration: 250
+					}
+				}));
+				return overlay;
+			}
+			
+			function renderMap() {
+				var overlay = setOverlay();
+				var map = new Map({
+					lat: parseFloat(getParameterByName('fi')) || (typeof lat != 'undefined'?lat:55.8),
+					lng: parseFloat(getParameterByName('la')) || (typeof lng != 'undefined'?lng:37.6),
+					zoom: 8,
+					minZoom: 2,
+					maxZoom: 20,
+					target: 'map',
+					overlays: [overlay]
+				});    
+				map.render();
+				
+				map.map.on('singleclick', function(e) {
+					container.style.visibility = "visible";
+					var coordinate = e.coordinate;
+					var new_coordinate = ol.proj.transform(coordinate, 'EPSG:3857', 'EPSG:4326');
+					while (new_coordinate[0] > 180)
+						new_coordinate[0] = new_coordinate[0] = new_coordinate[0]-360;
+					while (new_coordinate[0] < -180) new_coordinate[0] = new_coordinate[0]+360;
+
+					content.innerHTML = 'Загружаю данные...';
+					var self = this;
+					overlay.setPosition(coordinate);
+					$(content).mgSearch({
+						resultblock: $('#popup-content'),
+						lat: new_coordinate[1] || 55.8,
+						lon: new_coordinate[0] || 37.6,
+						zoom: 11,
+						goto: '/frcgeo'		
+					});
+				});
+				
+				closer.onclick = function() {
+					overlay.setPosition(undefined);
+					closer.blur();
+					return false;
+				};				
+			}
+			
+			var mapScripts = ['/js/ol3_1.js', '/js/openlayers.js'];
+			function loadScript(js) {
+				if (typeof js == 'undefined') return; 
+				var script = document.createElement('script');
+				script.src = js;
+				script.async = true;
+				script.onload = function() {
+					if (mapScripts.length == 0) {
+						renderMap();
+					}
+					loadScript(mapScripts.shift());
+				}
+				document.head.appendChild(script);
+			}
+			loadScript(mapScripts.shift());			
+	  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <circle fill="#ff6666" id="svg_3" r="19" cy="60.162575" cx="60" class="st5"/>
+  <circle fill="#ff3535" id="svg_4" r="19" cy="82.162575" cx="81" class="st5"/>
+  <circle fill="#ff3535" id="svg_5" r="19" cy="64.162575" cx="43" class="st5"/>
+  <circle fill="#ff3535" id="svg_6" r="19" cy="43.162575" cx="59" class="st5"/>
+  <circle fill="#a04646" id="svg_7" r="19" cy="60.162575" cx="59" class="st6"/>
+  <circle fill="#ff3535" id="svg_8" r="19" cy="53.162575" cx="85" class="st5"/>
+  <circle fill="#a04646" id="svg_9" r="19" cy="62.162575" cx="73" class="st6"/>
+  <circle fill="#ff3535" id="svg_10" r="19" cy="84.162575" cx="55" class="st5"/>
+  <circle fill="#a04646" id="svg_11" r="19" cy="72.162575" cx="60" class="st6"/>
+  <circle id="svg_12" r="2.1875" cy="60.1875" cx="58.6875"/>
+  <circle id="svg_13" r="2.1875" cy="58.1875" cx="67.6875"/>
+  <circle id="svg_14" r="2.1875" cy="72.1875" cx="65.6875"/>
+  <circle id="svg_15" r="2.1875" cy="68.1875" cx="57.6875"/>
+  <circle id="svg_16" r="2.1875" cy="66.1875" cx="71.6875"/>
+ </g>
+</svg>

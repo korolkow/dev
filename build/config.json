@@ -168,7 +168,9 @@
             "tpls": [ "../templates/mgfind/mgfind.tpl" ],
             "css": [
                 "../css/dropdownlist.css",
-                "../css/mgfind.css"
+                "../css/mgfind.css",
+                "../css/ol3.css"
+
             ],
             "js": [
                 "../js/mgfind.js"

@@ -1,0 +1,14 @@
+<#SETSERVERURL http://www.meteonova.ru>function meteonova_jsondata_<#INDEXM>()
+{ return { 
+ "forecasts": [
+ {"index":"<#INDEX>","name":"<#TOWN>","name_2":"<#TOWN2>","latitude":"<#FIF>","longitude":"<#LAF>","href": "<#SERVERURL>/med/<#INDEX>.htm",
+  "forecast": [
+	 <#SYNOP ru_json_synop_ru ru_json_cur_ru>
+         ],
+  "danger": [
+	 <#MEDINFORMERJSON>
+         ]
+  }
+ ]
+ }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="ru">
+<head>
+<title>Новости на Метеонове - <#NEWSTITLE></title>
+<META http-equiv=Content-Type content='text/html charset=utf-8'>
+<meta property="og:title" content="<#NEWSTITLE>">
+<meta property="og:description" content="<#NEWSTITLE description="1">">
+<meta property="og:image" content="//www.meteonova.ru/news/pictures/<#ITEMNUMBER>.jpg">
+<meta name="description" content="<#NEWSTITLE description="1">" />
+<link rel="stylesheet" type="text/css" href="/css/v2/reset-fonts-grids_990.css?d=202001101621">
+<link rel="stylesheet" type="text/css" href="/css/v2/block.css?d=202001101621">
+<link rel="stylesheet" type="text/css" href="/css/v2/general.css?d=202001101621">
+<link rel="stylesheet" type="text/css" href="/css/v2/mosg_990.css?d=202001101621">
+<style>
+h1,h2 {font-size:20px; margin:8px; padding:0; margin-left:0; color:#1f2298; float:none; font-weight:bold;}
+</style>
+<script type="text/javascript" src="/js/engine.js"></script>
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/js/dancer.min.js"></script>
+<script type="text/javascript" src="/js/novaspeak.js"></script>
+<script language="JavaScript">
+function ciw(img){ if(img.width>500) img.width=500;}
+</script>
+</head>
+
+<body>
+<script language="Javascript">
+ if(document.location.host.indexOf("news.meteonova")>=0) document.location.replace("//www.meteonova.ru/news/news.n2"+document.location.search);
+</script>
+<div class="hint hidden" id="autohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Погода по автодорогам, оценка опасных погодных явлений для водителей.</div>
+<div class="hint hidden" id="aviahint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Погода по аэропортам, прогноз задержек вылетов по метеоусловиям.</div>
+<div class="hint hidden" id="infhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Создали свой сайт и хотите повысить его информативность и привлекательность? Установите погодный информер!</div>
+<div class="hint hidden" id="mghint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">В нашей базе более <b>11000</b> городов по России и миру, но бывает так, что нужно получить погоду по отдаленной точке. <b><a href="/mgfind.htm">Мегапоиск</a></b> - позволяет найти на карте любой населенный пункт по его названию и/или координатам и получить погоду в той точке, где это необходимо.</div>
+<div class="hint hidden" id="prohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Более подробные данные о состоянии атмосферы, поверхности и почвы.</div>
+<div class="hint hidden" id="agrohint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Подробный прогноз погоды для садоводов и огродников.</div>
+<div class="hint hidden" id="medhint" onmouseover="setTimeoutHint(this, true);" onmouseout="setTimeoutHint(this, false);">Медицинский прогноз погоды для метеочувствительных людей.</div>
+<div id="doc4" class="yui-t5">
+   <div id="hd">
+     <div id="onhd">
+      <div>	
+       <div id="logo"><a href="/"><img src="/images/logo.png" width="277" height="96" border="0"></a></div>
+	      <div id="mainmenu">
+			<ul>
+	          <li><a href="/"  title="Прогноз погоды голосом">Главная</a></li>
+	          <li class="line"></li>
+	          <li><a href="/news/" title="Самые интересные новости о природе и погоде">Новости</a></li>
+	          <li class="line"></li>
+	          <li><a href="/informer/" title="Установите прогноз погоды себе на сайт">Информер</a></li>
+	          <li class="line"></li>
+	          <li><a href="/search/" title="Поиск погоды">Поиск</a></li>
+	          <li class="line"></li>
+	          <li><a href="/map.htm" title="Погодные карты">Карты</a></li>
+	          <li class="line"></li>
+	          <li><a href="/fan.htm" title="Установите прогноз погоды себе на компьютер">Виджеты</a></li>
+	          <li class="line"></li>
+	          <li><a href="/wap.htm" title="Прогноз погоды от Метеоновы в Вашем мобильном">Mobile</a></li>
+	          <li class="line"></li>
+	          <li><a href="/icq.htm" title="Прогноз погоды по ICQ">ICQ</a><#TEMPLATE name="counters"></li>
+	    	</ul>
+	      </div>
+      </div>
+     </div>
+   </div>
+	<#TEMPLATE name="adw728x90">
+<div>
+<div id="bd" style="float: none;">
+	<div id="yui-main">
+	<div class="yui-b">
+<div class="yui-g">
+  <div class="main_container">
+  		<div class="left_container">
+			<div class="block_top ie">
+   			<div class="block_title left_contener_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+ 			 		<div class="title"><b>МЕТЕОНОВА</b></div>
+   			</div>
+			</div>
+
+<div class="block_content ie">
+	<div class="jessie-block">
+		<div class="container-wrapper">
+			<div class="jessie"><div class="player_button"><span></span></div></div>																
+		</div>
+	</div>					
+</div>
+			<div class="block_bottom ie">
+			</div>
+			<div class="block_top ie">
+   			<div class="block_title left_contener_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+ 			 		<div class="title"><b>ЛЕНТА</b></div>
+   			</div>
+			</div>
+			<div class="block_content ie">
+      	<div class="content">
+			<#LENTARUBRIC count="10" mntizer="1" hot="1">
+      	</div>
+			</div>
+			<div class="block_bottom ie">
+			</div>
+  	</div>
+  <div class="center_container">
+			<div class="block_top">
+   			<div class="block_title center_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+ 			 		<div class="title"><b>НОВОСТИ</b></div>
+   			</div>
+			</div>
+			<div class="block_content">
+		      	<div class="content">
+				 <#NOVASHORTNEWS>
+		      	</div>
+<!--
+		      	<div class="content" style="margin-top:20px;">
+                          <# TEMPLATE name="video_inpage">
+			</div>
+-->
+		      	<div class="content" style="margin-top:20px; margin-left:12px;">
+                          <#TEMPLATE name="yandex_bottom">
+			</div>
+			</div>
+			<div class="block_bottom">
+			</div>
+			<div class="block_top">
+   			<div class="block_title center_container_title_width">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"></div>
+ 			 		<div class="title"><b>ЧТО ЕЩЕ ПОЧИТАТЬ?</b></div>
+   			</div>
+			</div>
+			<div class="block_content">
+		      	<div class="content">
+				<#LENTARUBRIC count="6" hot="1" selected="1" mnbigtizer="1" all="1">
+		      	</div>
+<!--
+		      	<div class="content" style="margin-top:20px; margin-left:12px;">
+                          <script type="text/javascript">yandex_partner_id = 53149;yandex_site_bg_color = 'FFFFFF';yandex_site_charset = 'windows-1251';yandex_ad_format = 'direct';yandex_font_size = 0.9;yandex_direct_type = 'flat';yandex_direct_limit = 3;yandex_direct_title_font_size = 2;yandex_direct_title_color = '990000';yandex_direct_url_color = '0000CC';yandex_direct_text_color = '000000';yandex_direct_hover_color = '0066FF';yandex_direct_favicon = true;document.write('<sc'+'ript type="text/javascript" src="http://an.yandex.ru/system/context.js"></sc'+'ript>');</script>
+			</div>
+
+-->
+			</div>
+			<div class="block_bottom">
+			</div>
+			</div>
+<!--		</div>-->
+  </div>
+  </div>
+</div>
+</div>
+	<div class="yui-b">
+  	 <div class="right_main">
+
+			<div class="block_top">
+   			<div class="block_title" >
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+ 			 		<div class="title"><b>РЕКЛАМА</b></div>
+   			</div>
+			</div>
+	   	        <div class="block_content">
+				<div id="ban_240">
+					<#TEMPLATE name="adw240x400">
+				</div>
+			</div>
+			<div class="block_bottom">
+			</div>
+
+			<div>
+			     <#FORECAST url="http://gen3.meteonova.ru:8002/cgi-bin/nova.dll?template=ru_novamaininf_ru&lang=ru1251&index=" index="fromcookies">
+			</div>
+
+			<div class="block_top">
+   			<div class="block_title" >
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+ 			 		<div class="title"><b>КОНТАКТЫ</b></div>
+   			</div>
+			</div>
+			<div class="block_content">
+      	<div class="content">
+					<div class="contacts">
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/news/export/meteonova.xml">Экспорт новостей</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/about.htm">О проекте</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="mailto:korolkow@meteonova.ru">Руководитель</a></div></div>
+						<div class="contact"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="http://www.fobos.tv">Центр Фобос</a></div></div>
+						<div class="contact_last"><div class="apun"><img src="/images/apun.png" width="11" height="11"></div><div class="apun_link"><a href="/guestbook.htm">Гостевая книга</a></div></div>
+					</div>
+      	</div>
+			</div>
+			<div class="block_bottom">
+			</div>
+
+
+			<div class="block_top">
+   			<div class="block_title">
+ 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+ 			 		<div class="title"><b>РЕКЛАМА</b></div>
+   			</div>
+			</div>
+
+	   	        <div class="block_content">
+				<div>
+				<#TEMPLATE name="adw240x400">
+				</div>
+			</div>
+			<div class="block_bottom">
+			</div>
+
+		 </div>
+	</div>
+
+</div>
+
+	<div id="ft" role="contentinfo">
+   		<div class="copyright">Copyright &copy; 2009-2020, Метеосистемы</div>
+   		<div class="counters">
+   			<div class="counter"><a href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?42.11" border="0" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a><img src="//www.meteovesti.ru/cgi-bin/mmcount3.dll?config=nova&fgcolor=000000&bgcolor=000000&fs=13" border="0" width="1" height="1"></div>
+   		</div>
+ 	</div>
+</div>
+</div>
+<script language="JavaScript">
+ var audio = new mnovaAudio({js: 'js/dancer',jessie: $('.jessie'),player_button: $('.player_button'), }); 
+ audio._load('//www.meteonova.ru/speaknews/f'+newsid);
+</script>
+</html>

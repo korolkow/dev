@@ -1,0 +1,16 @@
+<#SETSERVERURL //www.meteonova.ru>function meteonova_jsondata_<#INDEXM>()
+{ return { 
+ "forecasts": [
+ {"index":"<#INDEX>","name":"<#TOWN>","latitude":"<#FIF>","longitude":"<#LAF>","href": "<#SERVERURL>/frc/<#INDEX>.htm",
+  "forecast": [
+	 <#SYNOP en_json_synop_en en_json_cur_en>,
+	 <#TEMPLATEPREDICT en_json_frc_en 12>,
+	 <#TEMPLATEPREDICT en_json_frc_en 18>,
+	 <#TEMPLATEPREDICT en_json_frc_en 24>,
+	 <#TEMPLATEPREDICT en_json_frc_en 30>
+              ]
+  }
+ ],
+ <#TEMPLATE currencytemplate>
+ }
+}
