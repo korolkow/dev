@@ -166,7 +166,7 @@
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%">
-					<div class="content" style="width:210px;">
+					<div class="content">
 						<script language="Javascript" src="//www.meteonova.ru/newsheaders/4.js"></script>
 					</div>
 				</div>

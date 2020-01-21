@@ -63,13 +63,13 @@
 			var searchname = $o.val().charAt(0).toUpperCase() + $o.val().substr(1);
  			$.each(data, function(index) {
  				var $div = $('<div class="item" style="width:100%; margin-bottom: 7px; white-space: nowrap;">');
- 				if (this.class === "place") {
+ 				if (this.class === "place" && (this.osm_type === "relation" || this.osm_type === "node")) {
                     try {
                         if (this.type === "village" ||
                             this.type === "hamlet" || this.type === "city" || this.type === "town" ||
                             this.type === "suburb") {
                             $div.html(this.display_name.replace(/\S+(-?)+\S+/, function (name) {
-                            	name = name.substring(0, name.length - 1)
+                            	name = name.substring(0, name.length - 1);
                                 return '<a href="' + opt.goto + '/?fi=' + this.lat + '&la=' + this.lon + '&title=' +
                                    encodeURI(name) + '"><span style="font-weight: 600">' + name + '</span></a>'
 

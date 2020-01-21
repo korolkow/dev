@@ -157,20 +157,19 @@ D.write('<div style="visibility:hidden;height:0px;left:-1000px;position:absolute
 		        	<div class="serchcontent_searchpage" style="width:100% !important">
 		        	  <div class="top_search">
 		        		<div id="search_text" class="search_text gray">
-				 		<div class="searchform w-300" id="searchform3">
+				 		<div class="searchform" id="searchform3">
 							<div class= "left-input l"> 
 							<div class= "right-input r">
 								<div class="img gray" id="searchform_img3"></div>							 
 								<div class= "fill-input c">  			
-					 				<input class="search" type="text" value="поиск" onload="this.value = 'поиско погоды'" onfocus="setSuggest(this, 'searchform3', 'searchform_img3', 'поиск погоды')">
+					 				<input class="search" type="text" placeholder="поиск погоды - введите название населенного пункта" onload="this.value = 'поиск погоды - введите название населенного пункта'" onfocus="setSuggest(this, 'searchform3', 'searchform_img3', 'поиск погоды - введите название населенного пункта')">
 								</div> 			 
 							</div>   
 							</div> 				
-				 		</div>	 							          		
-			          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="\mgfind.htm">Мегапоиск</a>
-			          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="\list\">Все страны</a>
+				 		</div>
 			       			</div>
 			 			</div>
+						<div style="margin-top: 8px;"><a href="\mgfind.htm">Мегапоиск</a>&nbsp;&nbsp;&nbsp;<a href="\list\">Все страны</a></div>
 		        	 </div>
 					<?php echo $list->pushString;?>
            		</div>

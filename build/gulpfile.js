@@ -14,7 +14,8 @@ const {src, dest, series, parallel} = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglifyjs'),
     imagemin = require('gulp-imagemin'),
-    merge2 = require('merge2');
+    merge2 = require('merge2'),
+    path = require("path");
 
 var gulpSSH = require('gulp-ssh');
 
@@ -44,7 +45,12 @@ function copyDefCssSctipts() {
 }
 
 function copyCssSctipts() {
-    return src(config.commonScripts.css).pipe(gulpSSH.dest(savepath + '/css/'))
+    return src(config.commonScripts.css)
+        .pipe(rename(function (path) {
+            if (path.basename ==='mgfind' || path.basename ==='dropdownlist')
+                path.dirname = '../css/v2'
+        }))
+        .pipe(gulpSSH.dest(savepath + '/css/'))
 }
 
 function copyJsSctipts() {
@@ -167,6 +173,7 @@ function buildStaticPages() {
             .pipe(replace('windows-1251', 'utf-8'))
             .pipe(replace('style="width:222px;"', ''))
             .pipe(replace('style="width:222px"', ''))
+            .pipe(replace('img width="70"', 'img width="90"'))
             .pipe(replace(/<div.(class="block_bt.*").*>.*<\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
@@ -219,6 +226,7 @@ function buildDinamicPages() {
             }))
             .pipe(replace('style="width:222px;"', ''))
             .pipe(replace('style="width:222px"', ''))
+            .pipe(replace('img width="70"', 'img width="90"'))
             .pipe(replace(/<div.(class="block_bt.*").*><\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"\/images\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))
             .pipe(replace(/<div class="round_(left|right)">\s*<img\s+src=\"<#IMGBASE>\/.*.png\"\s*.*(class="corner")\s*\/*>\s*<\/div>/gm, ''))

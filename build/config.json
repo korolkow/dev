@@ -15,8 +15,8 @@
         "css": [
             "../css/frc.css",
             "../css/v2/agro.css",
-            "../css/dropdownlist.css",
-            "../css/mgfind.css",
+            "../css/v2/dropdownlist.css",
+            "../css/v2/mgfind.css",
             "../css/ol3.css",
             "../css/map.css",
             "../css/vdrop.css",
@@ -64,8 +64,8 @@
             "tpls": [ "../templates/main/index.tpl" ],
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
-                "../css/mgfind.css",
+                "../css/v2/dropdownlist.css",
+                "../css/v2/mgfind.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -82,8 +82,8 @@
             "name": "list",
             "tpls": [ "../templates/list/_list.tpl" ],
             "css": [
-                "../css/dropdownlist.css",
-                "../css/mgfind.css"
+                "../css/v2/dropdownlist.css",
+                "../css/v2/mgfind.css"
             ],
             "js": [
                 "../js/dropdownlist.js"
@@ -95,8 +95,8 @@
             "name": "search",
             "tpls": [ "../templates/search/_search.tpl", "../templates/search/allsearch.tpl" ],
             "css": [
-                "../css/dropdownlist.css",
-                "../css/mgfind.css"
+                "../css/v2/dropdownlist.css",
+                "../css/v2/mgfind.css"
             ],
             "js": [
                 "../js/dropdownlist.js"
@@ -109,7 +109,7 @@
             "tpls": [ "../templates/map/map.tpl" ],
             "css": [
                 "../css/vdrop.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -167,8 +167,8 @@
             "name": "mgfind",
             "tpls": [ "../templates/mgfind/mgfind.tpl" ],
             "css": [
-                "../css/dropdownlist.css",
-                "../css/mgfind.css",
+                "../css/v2/dropdownlist.css",
+                "../css/v2/mgfind.css",
                 "../css/ol3.css"
 
             ],
@@ -182,7 +182,7 @@
             "name": "icq",
             "tpls": [ "../templates/icq/icq.tpl" ],
             "css": [
-                "../css/dropdownlist.css"
+                "../css/v2/dropdownlist.css"
             ],
             "js": [
                 "../js/dancer.min.js",
@@ -274,7 +274,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_frc14_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -290,7 +290,7 @@
             "name": "profi",
             "tpl": "../meteonova/ru_mn2_dsk_profi_ru",
             "css": [
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -303,7 +303,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_today_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -319,7 +319,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_entry_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -334,7 +334,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_hourly_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -351,7 +351,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_tomorrow_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -368,7 +368,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_simple3_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -383,7 +383,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_10days_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -399,7 +399,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_month_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css"
+                "../css/v2/dropdownlist.css"
             ],
             "js": [
                 "../js/slider.js",
@@ -411,7 +411,7 @@
             "name": "allergy",
             "tpl": "../meteonova/ru_mn2_dsk_allergy_ru",
             "css": [
-                "../css/dropdownlist.css"
+                "../css/v2/dropdownlist.css"
             ],
             "js": [
                 "../js/dropdownlist.js"
@@ -422,7 +422,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_med_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -437,7 +437,7 @@
             "css": [
                 "../css/frc.css",
                 "../css/agro.css",
-                "../css/dropdownlist.css"
+                "../css/v2/dropdownlist.css"
             ],
             "js": [
                 "../js/slider.js",
@@ -449,7 +449,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_auto_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
@@ -473,7 +473,7 @@
             "name": "uvindex",
             "tpl": "../meteonova/ru_mn2_dsk_uvindex_ru",
             "css": [
-                "../css/dropdownlist.css"
+                "../css/v2/dropdownlist.css"
             ],
             "js": [
                 "../js/dropdownlist.js",
@@ -484,7 +484,7 @@
             "name": "geomagn",
             "tpl": "../meteonova/ru_mn2_dsk_geomagn_ru",
             "css": [
-                "../css/dropdownlist.css"
+                "../css/v2/dropdownlist.css"
             ],
             "js": [
                 "../js/dropdownlist.js",
@@ -496,7 +496,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_novageo_ru",
             "css": [
                 "../css/frc.css",
-                "../css/dropdownlist.css",
+                "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"
 

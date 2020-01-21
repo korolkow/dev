@@ -87,12 +87,10 @@ div#logo {
 }
 
 .city_content h1 {
-    line-height: 24px;
+    line-height: 57px;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
-    margin-top: 10px;
     max-width: 336px;
-    height: 24px;
     white-space: nowrap;
     overflow-x: hidden;
     text-overflow: ellipsis
@@ -183,8 +181,6 @@ h1 {
 h1 {
     font-size: 20px;
     font-weight: 400;
-    margin: 10px 0 0 6px;
-    border-right: 2px solid #fff
 }
 
 .city_name_print {
@@ -285,9 +281,9 @@ h1 {
 
 .serchcontent_searchpage {
     width: 222px;
-    height: 35px;
     position: relative;
-    z-index: 2
+    margin-bottom: 18px;
+    z-index: 2;
 }
 
 .search_line {

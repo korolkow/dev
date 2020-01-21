@@ -160,8 +160,8 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 										<div class="left-input l">
 											<div class="right-input r">
 												<div class="img" id="searchform_img"></div>
-												<div class="fill-input c" style="width:98%">
-													<input class="search grey" type="text" value="поиск погоды" onload="this.value = 'поиск погоды'" onfocus="setSuggest(this, 'searchform', 'searchform_img', 'поиск погоды')">
+												<div class="fill-input c">
+													<input class="search grey" type="text" placeholder="поиск погоды - введите название населенного пункта" onload="this.value = 'поиск погоды - введите название населенного пункта'" onfocus="setSuggest(this, 'searchform', 'searchform_img', 'поиск погоды - введите название населенного пункта')">
 												</div>
 											</div>
 										</div>

@@ -1,6 +1,6 @@
 .search_form{
     position:relative;
-    margin-bottom:10px
+    margin-bottom: 8px
 }
 .search-button{
     padding:7px 14px;
@@ -26,13 +26,19 @@ input._search{
     padding:0 0 0 8px;
     background: #eef1fd;
     font-size:15px;
-    border:1px solid #3A55E0;
+    border: 0;
     border-radius: 4px;
     color: #3a55c5;;
     outline:0;
     box-sizing:border-box;
     -webkit-appearance:none
 }
+
+::placeholder {
+    color: #839fff;
+    opacity: 1;
+}
+
 .search-result{
     margin-top:10px;
     overflow: hidden;

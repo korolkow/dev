@@ -75,7 +75,6 @@ h2 b {
 
 .search_text {
     color: #8ca2fe;
-    float: left;
     position: relative
 }
 
@@ -1414,11 +1413,9 @@ button {
 }
 
 .other_city {
-    top: -3px;
+    display: none;
     position: relative
 }
-/*# sourceMappingURL=general.css.map */
-
 
 .graph-line, .graph-circle, .graph-rect, .graph-title, .graph-path {
     display: none;

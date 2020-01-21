@@ -258,23 +258,23 @@ D.write('<div style="visibility:hidden;height:0px;left:-1000px;position:absolute
 			<div class="block_content">
 		    	<div class="content">
 			   		<div class="title2">Поиск по первым буквам названия страны, города или аэропорта</div>
-		        	<div class="serchcontent_searchpage" style="width:100% !important">
-		        	  <div class="top_search">
-		        		<div id="search_text" class="search_text gray">
-				 		<div class="searchform w-300" id="searchform3">
-							<div class= "left-input l"> 
-							<div class= "right-input r">
-								<div class="img gray" id="searchform_img3"></div>							 
-								<div class= "fill-input c">  			
-					 				<input class="search" type="text" value="поиск" onload="this.value = 'поиско погоды'" onfocus="setSuggest(this, 'searchform3', 'searchform_img3', 'поиск погоды')">
-								</div> 			 
-							</div>   
-							</div> 				
-				 		</div>	 							          		
-			          		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="\mgfind.htm">Мегапоиск</a>
-			       			</div>
-			 			</div>
-		        	 </div>
+					<div class="serchcontent_searchpage" style="width:100% !important">
+						<div class="top_search">
+							<div id="search_text" class="search_text gray">
+								<div class="searchform" id="searchform3">
+									<div class= "left-input l">
+										<div class= "right-input r">
+											<div class="img gray" id="searchform_img3"></div>
+											<div class= "fill-input c">
+												<input class="search" type="text" placeholder="поиск погоды - введите название населенного пункта" onload="this.value = 'поиск погоды - введите название населенного пункта'" onfocus="setSuggest(this, 'searchform3', 'searchform_img3', 'поиск погоды - введите название населенного пункта')">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div style="margin-top: 8px;"><a href="\mgfind.htm">Мегапоиск</a></div>
+					</div>
 				<div class="title2"><?php echo $list->breadcrumbs;?></div><table width=100% border=0 cellspacing=0 cellpadding=0 style="table-layout: fixed;"><tr valign=top><?php echo $list->pushString;?></td></tr></table>
 				<?php echo $list->citiesLink;?> 
            		</div>
