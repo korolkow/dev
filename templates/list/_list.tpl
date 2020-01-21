@@ -37,7 +37,6 @@ class ProcList {
     	if (count($pathTokens) == 0) {
     		$this->pathTokens[0] = 'countries';	
     	}
-    	var_dump($pathTokens);
 		foreach($pathTokens as $key => $value) {
 			$this->pathTokens[0] = $key;
 			$this->pathTokens[1] = explode('/',  $value);
@@ -51,7 +50,6 @@ class ProcList {
   	function getList() {
 		$style = '';
   		if (count($this->pathTokens)>0 && $this->pathTokens[0] !=='' ) {
-  			var_dump($this->pathTokens[0]);
   			switch ($this->pathTokens[0]) {
   				case "countries":
   					$this->add(
@@ -61,7 +59,6 @@ class ProcList {
 				break;
 				case "country":
   					$this->title = "Список областей/районов по стране";
-  					var_dump($this->pathTokens[2]);
 					if (isset($this->pathTokens[2]) && $this->pathTokens[2] == 'airports') {
 						$this->title = "Список аэропортов по";
 							$this->add(
