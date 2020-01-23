@@ -24,16 +24,16 @@ header("Pragma: no-cache");
  </script>
 <body>
 <div id="doc4" class="yui-t5">
-<?PHP 
-	if (file_exists('google_top728x90.php' ))
-		require("google_top728x90.php");
-?>
    <div id="hd">
      <div id="onhd">
        <div id="logo"><a href="//www.meteonova.<%= domain %>"><img src="images/logo.png" width="277" height="96" border="0" ></a></div>
 			@@include('../menu/<%= tpl_path %>/index.tpl')
      </div>
    </div>
+	<?PHP
+	if (file_exists('google_top728x90.php' ))
+		require("google_top728x90.php");
+?>
 <div id="bd" style="float: none;">
 	<div id="yui-main">
 	<div class="yui-b">

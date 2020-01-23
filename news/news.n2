@@ -8,9 +8,10 @@
 <meta property="og:image" content="//www.meteonova.ru/news/pictures/<#ITEMNUMBER>.jpg">
 <meta name="description" content="<#NEWSTITLE description="1">" />
 <link rel="stylesheet" type="text/css" href="/css/v2/reset-fonts-grids_990.css?d=202001101621">
-<link rel="stylesheet" type="text/css" href="/css/v2/block.css?d=202001101621">
-<link rel="stylesheet" type="text/css" href="/css/v2/general.css?d=202001101621">
-<link rel="stylesheet" type="text/css" href="/css/v2/mosg_990.css?d=202001101621">
+<link rel="stylesheet" type="text/css" href="/css/v2/block.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/general.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/mosg_990.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/frc.css">
 <style>
 h1,h2 {font-size:20px; margin:8px; padding:0; margin-left:0; color:#1f2298; float:none; font-weight:bold;}
 </style>

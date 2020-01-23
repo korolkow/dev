@@ -158,7 +158,8 @@
                 "../js/typeahead.jquery.min.js",
                 "../js/bootstrap/bootstrap-select.js",
                 "../js/bootstrap/bootstrap.js",
-                "../js/engine.js"
+                "../js/engine.js",
+                "../informer/html/js/constructor.js"
             ],
             "extname": ".php",
             "path": "/informer"
@@ -379,6 +380,23 @@
             ]
         },
         {
+            "name": "week",
+            "tpl": "../meteonova/ru_mn2_dsk_week_ru",
+            "css": [
+                "../css/frc.css",
+                "../css/v2/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
+            ],
+            "js": [
+                "../js/slider.js",
+                "../js/dropdownlist.js",
+                "../js/dancer.min.js",
+                "../js/novaspeak.js",
+                "../js/svgchart.js"
+            ]
+        },
+        {
             "name": "10days",
             "tpl": "../meteonova/ru_mn2_dsk_10days_ru",
             "css": [
@@ -525,6 +543,6 @@
     },
     "destination": {
         "dev": "/home/nova/dev",
-        "prod": "/home/nova/dev"
+        "prod": "/home/nova/current"
     }
 }

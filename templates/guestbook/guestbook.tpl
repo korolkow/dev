@@ -196,7 +196,7 @@
 		 				width="9" height="31" class="corner"
 		 				 />
 	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title" style="width:240px;">
 	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  ></div>
 	 			 		<div class="title"><b>РЕКЛАМА</b></div>
 	   			</div>

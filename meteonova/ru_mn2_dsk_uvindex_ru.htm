@@ -11,17 +11,17 @@
 <base href="<#SERVERURL>/uvindex.htm">
 <link rel="canonical" href="<#SERVERURL>/uv-index/<#INDEX>-<#TOWNEN_>.htm"/>
 <!-- inject:css -->
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271410">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271343">
 <!-- endinject -->
 <!-- inject:js -->
-<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/utils.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/chart.min.js?201912271410" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/utils.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/chart.min.js?201912271343" charset = "utf-8"></script>
 <!-- endinject -->
 <style>
 canvas { display: block; width: 700px; height: 420px; margin: 1px auto; }
@@ -368,7 +368,7 @@ var bar_chart = new Chart(bar_ctx, {
    			
 			</div>
 			<div class="block_content ie">
-      	<div class="content" style="margin:8px 0 0 15px;">
+      	<div class="content">
 		  	 <div id="astro_date" class="title3"><b><#ASTRODATE3></b></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
@@ -402,8 +402,8 @@ var bar_chart = new Chart(bar_ctx, {
 	   			</div>
 	   			
 				</div>
-				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:215px;">
+				<div class="block_content">
+					<div class="content">
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода по часам <#TOWN3>">Прогноз погоды по часам</a></div></div>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/today/<#INDEX>-<#TOWNEN_>.htm" title="Погода <#TOWN2> сегодня">Погода сегодня</a> и <a href="<#SERVERURL>/tomorrow/<#INDEX>-<#TOWNEN_>.htm" title="Погода <#TOWN2> завтра">завтра</a></div></div>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода на 3 дня <#TOWN3>">Погода на 3 дня для занятых</a></div></div>

@@ -221,10 +221,9 @@ html {
     opacity: .8
 }   
 .timelabel {
-    bottom: 18px;
+    bottom: 17px;
     left: 0;
     border-radius: 0 4px 0 0;
-    height: 1.1em;
     line-height: 1em;
     position: absolute;
     padding: 4px;

@@ -56,7 +56,7 @@
    </div>
     <?PHP require("../topline.php"); ?>
 <div>
-<div id="bd">
+<div id="bd" style="float: none;">
 	<div id="yui-main">
 	<div class="yui-b">
   <div class="main_container">

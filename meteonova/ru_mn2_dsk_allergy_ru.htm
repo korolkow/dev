@@ -11,16 +11,16 @@
 <!--<base href="<#SERVERURL>/allergy.htm">-->
 <link rel="canonical" href="<#SERVERURL>/allergy/<#INDEX>-<#TOWNEN_>.htm"/>
 <!-- inject:css -->
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271410">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271343">
 <!-- endinject -->
 <!-- inject:js -->
-<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/utils.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271410" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/utils.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271343" charset = "utf-8"></script>
 <!-- endinject -->
 <style>
 #frc_content_weather {box-sizing:border-box;}
@@ -98,6 +98,19 @@ tbody tr:hover{ background:#f4f6ff; }
 			</div>
    		
     </div>
+		<div class="main_container">
+			<div class="block_content">
+				<div style="color:#3b55c5; padding: 8px 8px 0 16px">
+					<b><a href="/list/countries/">Все страны</a> › <a href="/list/countries/<#COUNTRYNAMEEN>"><#COUNTRYNAME></a> › <a href="/list/regions/<#REGIONINDEX>"><#REGIONNAME></a> › <a href="/weather/<#INDEX>-<#TOWNEN_>.htm">Погода <#TOWN2></a></b>
+					<!--<div style="float:right; margin-right:15px; color:#3b55c5;"><a href=#><b>Избранное</b></a> &#9660; </div>-->
+				</div>
+			</div>
+			<div class="block_bottom">
+
+
+
+			</div>
+		</div>
   <div class="main_container">
 			<div class="block_top">
    			
@@ -288,7 +301,7 @@ tbody tr:hover{ background:#f4f6ff; }
 		  	 <div id="astro_date" class="title3"><b><#ASTRODATE3></b></div>
 			    <div class="astro_inf">
 			      <div class="icon" style="background: url(<#IMGBASE>/astro.gif);"></div>
-			      <div class="data" style="width:190px;">
+			      <div class="data">
 			       	<div class="text_bg" style="background: url(<#IMGBASE>/astro_dolgota.png) no-repeat"><div id="astro_dolgota" class="text_inf">Долгота дня: <#DAYLENGTH></div></div>
 			        <div class="text_bg" style="background: url(<#IMGBASE>/astro_vosxod.png) no-repeat"><div id="astro_vosxod" class="text_inf">Восход: <#SUNRISE></div></div>
 			        <div class="text_bg_last" style="background: url(<#IMGBASE>/astro_zaxod.png) no-repeat"><div id="astro_zaxod" class="text_inf">Заход: <#SUNSET></div></div>
@@ -318,8 +331,8 @@ tbody tr:hover{ background:#f4f6ff; }
 	   			</div>
 	   			
 				</div>
-				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:215px;">
+				<div class="block_content">
+					<div class="content">
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/hourly/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода по часам <#TOWN3>">Прогноз погоды по часам</a></div></div>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/3days/<#INDEX>-pogoda-<#TOWNEN_>.htm" title="Погода на 3 дня <#TOWN3>">Погода на 3 дня для занятых</a></div></div>
 						<div style="width:100%; margin-bottom:6px;"><div class="apun"><img src="<#IMGBASE>/apun.png" width="11" height="11"></div><div class="apun_link"><a href="<#SERVERURL>/pro/<#INDEX>.htm" title="Подробный профессиональный прогноз погоды <#TOWN3> на неделю">Прогноз для специалистов</a>&nbsp;<img src="<#IMGBASE>/hints/help_icon_mini.gif" width="10" height="11" onmouseover="showHint(this, 'prohint', true, 250);" onmouseout="showHint(this, 'prohint', false, 250);"></div></div>

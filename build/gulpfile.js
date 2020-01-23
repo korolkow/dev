@@ -120,7 +120,7 @@ function buildStaticPages() {
         if (typeof item.css !== "undefined") css = css.concat(item.css);
         var js = config.commonDefScripts.js;
         if (typeof item.js !== "undefined") js = js.concat(item.js);
-        if (item.task === 'informers') {
+        if (item.name === 'informers') {
             if (isProd()) {
                 js = js.concat([ '../informer/html/js/constructor.js' ])
             }
@@ -144,7 +144,7 @@ function buildStaticPages() {
                             var str = '';
                             if (isProd()) {
                                 str += '<link rel="stylesheet" type="text/css" href="/css/v2/meteonova.min.css">';
-                                str += '<link rel="stylesheet" type="text/css" href="/css' +
+                                if (typeof item.css !== "undefined") str += '<link rel="stylesheet" type="text/css" href="/css' +
                                     filepath.replace(/(.+\/css\/v2)/, '') + '">';
                             }
                             else {
@@ -270,8 +270,8 @@ function setProdDeployPath(cb) {
     cb();
 }
 
-var dev = gulp.series(copyfiles,  setDevDeployPath, copyDefCssSctipts, copyCssSctipts, copyJsSctipts, buildStaticPages, deployStaticPages, buildDinamicPages)
-var prod = gulp.series(copyfiles,  setProdDeployPath, copyDefCssSctipts, copyJsSctipts, cssProdBuilder, jsProdBuilder, buildStaticPages, deployStaticPages, buildDinamicPages)
+var dev = gulp.series(copyfiles, setDevDeployPath, copyDefCssSctipts, copyCssSctipts, copyJsSctipts, buildStaticPages, deployStaticPages, buildDinamicPages)
+var prod = gulp.series(copyfiles, setProdDeployPath, copyDefCssSctipts, copyJsSctipts, cssProdBuilder, jsProdBuilder, buildStaticPages, deployStaticPages, buildDinamicPages)
 
 module.exports = {
     dev: dev,
