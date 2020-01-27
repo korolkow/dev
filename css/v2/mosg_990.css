@@ -181,6 +181,10 @@ h1 {
 h1 {
     font-size: 20px;
     font-weight: 400;
+    line-height: 28px;
+}
+
+.city_name {
     line-height: 57px;
 }
 

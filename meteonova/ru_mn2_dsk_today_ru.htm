@@ -10,22 +10,22 @@
 <meta name="Document-state" content="Dynamic">
 <link rel="canonical" href="https://www.meteonova.ru/today/<#INDEX>-<#TOWNEN_>.htm"/>
 <!-- inject:css -->
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/frc.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/ol3.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/map.css?201912271410">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/frc.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/ol3.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/map.css?201912271343">
 <!-- endinject -->
 <!-- inject:js -->
-<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/utils.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/svgchart.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dancer.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/novaspeak.js?201912271410" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/utils.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/svgchart.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/dancer.min.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/novaspeak.js?201912271343" charset = "utf-8"></script>
 <!-- endinject -->
 	<#TEMPLATE ru_mn2_dsk_navstyles_ru>
 </head>
@@ -705,15 +705,7 @@
 
 
 </div>
-  <div id="ft" role="contentinfo">
-      <div class="copyright">Copyright &copy; 2009-2019, Метеосистемы</div>
-      <div class="counters">
-    <noindex>
-        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?41.11" border="0" width="31" height="31" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a></div>
-    </noindex>
-      </div>
-  </div>
-
+<#TEMPLATE ru_mn2_dsk_footer_ru>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -976,7 +968,7 @@ setInterval(pageUpdate,1800000);
                                 var val = $(this).html();
                                 var res = val.match(/\d{1,2}/gi);
                                 if (res !== null) {
-                                    arr.push(res.reduce(function(total, a) {return total + parseInt(a)}) / res.length);
+                                    arr.push(res.reduce(function(total, a) {return total + parseInt(a)}, 0) / res.length);
                                 }
                                 else arr.push(0);
                             });

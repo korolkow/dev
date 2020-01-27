@@ -1,7 +1,7 @@
 <!DOCTYPE html><#TEMPLATE ru_mn2_dsk_definitions_ru>
 <html lang="ru">
 <head>
-<title>МЕТЕОНОВА 2020 - погода <#TOWN3> на 14 дней, самый точный прогноз погоды <#TOWN3> на 14 дней для <#FULLTOWNNAME>, подготовлен <#FRCPUBTIME></title>
+<title>МЕТЕОНОВА - погода <#TOWN3> на 14 дней, самый точный прогноз погоды <#TOWN3> на 14 дней для <#FULLTOWNNAME>, подготовлен <#FRCPUBTIME></title>
 <base href="<#SERVERURL>/frc.htm">
 <meta http-equiv="Content-Type" content="text/html; charset=<#ENCODING>">
 <meta name="description" content="Точная погода <#TOWN2>, самый точный прогноз погоды <#TOWN2> на 14 дней (<#TOWN>, <#REGIONNAME>, <#COUNTRYNAME>) с голосовым сопровождением робота синоптика, <#TOWN> - реальная погода, фактическая погода, прогноз погоды на 14 дней 2019 года, <#TOWN>, <#REGIONNAME>, <#COUNTRYNAME> за <#FRCPUBTIME>">
@@ -12,23 +12,23 @@
 <link rel="canonical" href="<#SERVERURL>/frc/<#INDEX>.htm">
 <link rel="alternate" media="only screen and (max-width: 640px)" href="<#MSERVERURL>/frc/<#INDEX>.htm">
 <!-- inject:css -->
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/frc.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/ol3.css?201912271410">
-<link rel="stylesheet" type="text/css" href="<#CSSBASE>/map.css?201912271410">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/reset-fonts-grids_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/block.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/general.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/mosg_990.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/frc.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/dropdownlist.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/ol3.css?201912271343">
+<link rel="stylesheet" type="text/css" href="<#CSSBASE>/map.css?201912271343">
 <!-- endinject -->
 <!-- inject:js -->
-<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/utils.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/slider.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/dancer.min.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/novaspeak.js?201912271410" charset = "utf-8"></script>
-<script type="text/javascript" src="<#JSBASE>/svgchart.js?201912271410" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/jquery-1.11.1.min.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/utils.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/slider.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/dropdownlist.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/dancer.min.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/novaspeak.js?201912271343" charset = "utf-8"></script>
+<script type="text/javascript" src="<#JSBASE>/svgchart.js?201912271343" charset = "utf-8"></script>
 <!-- endinject -->
 <#TEMPLATE ru_mn2_dsk_navstyles_ru>
 </head>
@@ -858,15 +858,8 @@
 				</div>
 
 </div>
-  <div id="ft" role="contentinfo">
-      <div class="copyright">Copyright &copy; 2009-2020, Метеосистемы</div>
-      <div class="counters">
-    <noindex>
-        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?41.11" border="0" width="31" height="31" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a></div>
-    </noindex>
-      </div>
-  </div>
 
+<#TEMPLATE ru_mn2_dsk_footer_ru>
 
 <script type="text/javascript">
   var _gaq = _gaq || [];
@@ -1152,7 +1145,7 @@ setInterval(pageUpdate,1800000);
                                 var val = $(this).html();
                                 var res = val.match(/\d{1,2}/gi);
                                 if (res !== null) {
-                                    arr.push(res.reduce(function(total, a) {return total + parseInt(a)}) / res.length);
+                                    arr.push(res.reduce(function(total, a) {return total + parseInt(a)}, 0) / res.length);
                                 }
                                 else arr.push(0);
                             });
