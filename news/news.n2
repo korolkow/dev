@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="ru">
+<html lang="ru"><#UTF8>
 <head>
 <title>Новости на Метеонове - <#NEWSTITLE></title>
 <META http-equiv=Content-Type content='text/html charset=utf-8'>
@@ -44,7 +44,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			<ul>
 	          <li><a href="/"  title="Прогноз погоды голосом">Главная</a></li>
 	          <li class="line"></li>
-	          <li><a href="/news/" title="Самые интересные новости о природе и погоде">Новости</a></li>
+				<li><a href="/interesting/" title="Интересные статьи о красоте и здоровье">Интересное</a></li>
 	          <li class="line"></li>
 	          <li><a href="/informer/" title="Установите прогноз погоды себе на сайт">Информер</a></li>
 	          <li class="line"></li>
@@ -94,7 +94,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			</div>
 			<div class="block_content ie">
       	<div class="content">
-			<#LENTARUBRIC count="10" mntizer="1" hot="1">
+			<#LENTARUBRIC count="16" mntizer="1" hot="1">
       	</div>
 			</div>
 			<div class="block_bottom ie">
@@ -109,7 +109,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			</div>
 			<div class="block_content">
 		      	<div class="content">
-				 <#NOVASHORTNEWS>
+					<#NOVASHORTNEWS>
 		      	</div>
 <!--
 		      	<div class="content" style="margin-top:20px;">
@@ -117,7 +117,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			</div>
 -->
 		      	<div class="content" style="margin-top:20px; margin-left:12px;">
-                          <#TEMPLATE name="yandex_bottom">
+					<#TEMPLATE name="yandex_bottom">
 			</div>
 			</div>
 			<div class="block_bottom">
@@ -130,7 +130,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			</div>
 			<div class="block_content">
 		      	<div class="content">
-				<#LENTARUBRIC count="6" hot="1" selected="1" mnbigtizer="1" all="1">
+					<#LENTARUBRIC count="10" hot="1" from="16" mnbigtizer="1" all="1">
 		      	</div>
 <!--
 		      	<div class="content" style="margin-top:20px; margin-left:12px;">
@@ -165,8 +165,22 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			</div>
 
 			<div>
-			     <#FORECAST url="http://gen3.meteonova.ru:8002/cgi-bin/nova.dll?template=ru_novamaininf_ru&lang=ru1251&index=" index="fromcookies">
+				<#FORECAST url="http://gen3.meteonova.ru:8002/cgi-bin/nova.dll?template=ru_novamaininf_ru&lang=ru1251&index=" index="fromcookies">
 			</div>
+		 <div class="block_top">
+			 <div class="block_title" >
+				 <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
+				 <div class="title"><b>ПАРТНЕРЫ</b></div>
+			 </div>
+		 </div>
+
+		 <div class="block_content">
+			 <div>
+				 <#TEMPLATE name="infox_v">
+			 </div>
+		 </div>
+		 <div class="block_bottom">
+		 </div>
 
 			<div class="block_top">
    			<div class="block_title" >
@@ -198,7 +212,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 
 	   	        <div class="block_content">
 				<div>
-				<#TEMPLATE name="adw240x400">
+					<#TEMPLATE name="adw240x400">
 				</div>
 			</div>
 			<div class="block_bottom">
@@ -212,7 +226,7 @@ function ciw(img){ if(img.width>500) img.width=500;}
 	<div id="ft" role="contentinfo">
    		<div class="copyright">Copyright &copy; 2009-2020, Метеосистемы</div>
    		<div class="counters">
-   			<div class="counter"><a href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?42.11" border="0" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a><img src="//www.meteovesti.ru/cgi-bin/mmcount3.dll?config=nova&fgcolor=000000&bgcolor=000000&fs=13" border="0" width="1" height="1"></div>
+   			<div class="counter"><a href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?45.10" border="0" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a><img src="//www.meteovesti.ru/cgi-bin/mmcount3.dll?config=nova&fgcolor=000000&bgcolor=000000&fs=13" border="0" width="1" height="1"></div>
    		</div>
  	</div>
 </div>

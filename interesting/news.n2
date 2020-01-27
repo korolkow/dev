@@ -29,8 +29,6 @@ h1,h2 {font-size:20px; margin:8px; padding:0; margin-left:0; color:#1f2298; floa
 			<ul>
 	          <li><a href="/" title="Погода на Метеонове: прогноз погоды по городам России и Мира">Главная</a></li>
 	          <li class="line"></li>
-	          <li><a href="/interesting/" title="Интересное о красоте и здоровье">Интересное</a></li>
-	          <li class="line"></li>
 	          <li><a href="/news/" title="Интересные факты о человеке и окружающей среде">Новости</a></li>
 	          <li class="line"></li>
 	          <li><a href="/search/" title="Поиск погоды по городам и странам">Поиск</a></li>
