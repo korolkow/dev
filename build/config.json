@@ -154,6 +154,7 @@
                 "../css/inf.css"
             ],
             "js": [
+                "../js/jquery-ui.min.js",
                 "../js/bootstrap/bootstrap-colorpicker.min.js",
                 "../js/typeahead.jquery.min.js",
                 "../js/bootstrap/bootstrap-select.js",

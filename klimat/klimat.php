@@ -109,7 +109,28 @@ document.write('<sc'+'ript type="text/javascript" src="//pagead2.googlesyndicati
    			</div>
 			</div>
 				<div class="block_content">
-<?php require("http://gen3.meteonova.ru:8002/cgi-bin/nova.dll?template=klimatrgntemplate&state=".$id."&lang=ru1251&populationlimit=10"); ?>
+<div id="forecast_ajax"><p><img src="/images/ajax-miniloader.gif"/> Идет расчет прогнозов погоды...</p></div>
+    <script>
+      (function() {
+          var interval = null;
+          var request = new XMLHttpRequest();
+          request.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("forecast_ajax").innerHTML = request.responseText;
+                  interval = setInterval(function () {
+                      if (typeof postProcessForecast === 'function') {
+                          postProcessForecast();
+                          clearInterval(interval);
+                      }
+                  }, 200);
+              }
+          };
+          request.open("GET", "//www.meteonova.ru/klimatrgn/<?php echo $id;?>", true);
+          request.send();
+      })();
+    </script>
+
+<!--php require("http://gen4.meteonova.ru:8012/cgi-bin/nova.dll?template=klimatrgntemplate&state=".$id."&lang=ru&populationlimit=10&maxpredict=51"); -->
 				</div>
 				<div class="block_bottom">
 				</div>

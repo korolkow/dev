@@ -1,5 +1,5 @@
 <?php
- function upr($s){ return strtr($s, "абвгдеёжзийклмнопрстуфхцчшщъыьэюя","АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩљЫЬЭЮЯ"); }
+ function upr($s){ return strtr($s, "абвгдеёжзийклмнопрстуфхцчшщъыьэюя","АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"); }
 ?>
 <html lang="ru">
 <head>
@@ -162,8 +162,26 @@ document.write('<sc'+'ript type="text/javascript" src="//pagead2.googlesyndicati
    			</div>
 			</div>
 				<div class="block_content">
-<?php require("http://gen3.meteonova.ru:8002/cgi-bin/nova.dll?template=klimatcaptemplate&index=27612&lang=ru1251"); ?>
-
+<div id="forecast_ajax"><p><img src="/images/ajax-miniloader.gif"/> Идет расчет прогнозов погоды...</p></div>
+    <script>
+      (function() {
+          var interval = null;
+          var request = new XMLHttpRequest();
+          request.onreadystatechange = function () {
+              if (this.readyState == 4 && this.status == 200) {
+                  document.getElementById("forecast_ajax").innerHTML = request.responseText;
+                  interval = setInterval(function () {
+                      if (typeof postProcessForecast === 'function') {
+                          postProcessForecast();
+                          clearInterval(interval);
+                      }
+                  }, 200);
+              }
+          };
+          request.open("GET", "//www.meteonova.ru/klimatcap/", true);
+          request.send();
+      })();
+    </script>
 				</div>
 				<div class="block_bottom">
 				</div>
