@@ -456,7 +456,9 @@
             "css": [
                 "../css/frc.css",
                 "../css/agro.css",
-                "../css/v2/dropdownlist.css"
+                "../css/v2/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
             ],
             "js": [
                 "../js/slider.js",
