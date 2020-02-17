@@ -1437,6 +1437,7 @@ button {
     color: #666;
     position: absolute;
     opacity: 0.8;
+    cursor: pointer;
     z-index: 10000;
 }
 
@@ -1563,7 +1564,9 @@ button {
 .ban-tizer.telegram:before {
     content: "";
     background: url(/images/telegram.svg) no-repeat;
-    background-size: 28px auto;
+    background-size: 42px auto;
+    left: 0;
+    top: 0px;
 }
 
 .ban-tizer.facebook {
@@ -1574,7 +1577,9 @@ button {
 .ban-tizer.facebook:before {
     content: "";
     background: url(/images/facebook-messenger.svg) no-repeat;
-    background-size: 28px auto;
+    background-size: 38px auto;
+    top: 3px;
+    left: 3px;
 }
 
 .ban-tizer.android {

@@ -33,6 +33,7 @@
         ],
         "js": [
             "../js/jquery-1.11.1.min.js",
+            "../js/jquery.mousewheel.min.js",
             "../js/utils.js",
             "../js/dancer.min.js",
             "../js/novaspeak.js",
@@ -281,6 +282,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/dancer.min.js",
@@ -341,6 +343,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/svgchart.js",
                 "../js/dancer.min.js",
@@ -358,6 +361,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/svgchart.js",
@@ -390,6 +394,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/dancer.min.js",
@@ -407,6 +412,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/dancer.min.js",
@@ -421,6 +427,7 @@
                 "../css/v2/dropdownlist.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/svgchart.js"
@@ -446,6 +453,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -461,6 +469,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -475,6 +484,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -486,6 +496,7 @@
                 "../css/frc.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -523,6 +534,7 @@
 
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/novaspeak.js",

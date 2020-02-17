@@ -272,7 +272,8 @@
 					minZoom: 2,
 					maxZoom: 20,
 					target: 'map',
-					overlays: [overlay]
+					overlays: [overlay],
+                    mouseWheelZoom: true
 				});    
 				map.render();
 				

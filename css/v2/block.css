@@ -159,6 +159,19 @@ img.corner {
     background-color: #fff0f0
 }
 
+.autoinformer .apun_link {
+    white-space: nowrap;
+}
+
+.autoinformer .apun_link a {
+    max-width: 114px;
+    display: inline-block;
+    vertical-align: bottom;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .newsmid ul {
     list-style: none outside none;
     margin: 0;
