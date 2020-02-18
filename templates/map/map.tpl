@@ -64,9 +64,10 @@ header("Pragma: no-cache");
 									<div class="legends">
 										<div class="legmini"></div>            
 									</div>    
+
+							</div>
+							<div class="map-wrapper"  style="height: 48px; background: #344fa8">
 									<div id="progress"></div>
-							</div>								
-							<div class="map-wrapper" style="margin-top: 30px; height: 24px">
 									<div id="timeline-wrapper">
 										<div class="play-button">  
 											<a class="play-button paused" href="#">
@@ -76,7 +77,7 @@ header("Pragma: no-cache");
 											    <div class="triangle-2"></div>
 											</a>
 										</div>									     
-										<div class="timeline" style="width:97%"></div>
+										<div class="timeline"></div>
 										<div class="clear"></div>     
 									</div>
 							</div>
