@@ -91,7 +91,8 @@
 									<div id="popup" class="ol-popup">
 										<a href="#" id="popup-closer" class="ol-popup-closer"></a>
 										<div id="popup-content"></div>
-									</div>																		
+									</div>
+									<div id="mouse-position"></div>
 								</div>
 		      </div>
 		      </div>
@@ -262,19 +263,30 @@
 				}));
 				return overlay;
 			}
+
+			function setMousePosition() {
+                return new ol.control.MousePosition({
+                    coordinateFormat: ol.coordinate.createStringXY(2),
+                    projection: 'EPSG:4326',
+                    className: 'custom-mouse-position',
+                    target: document.getElementById('mouse-position'),
+                    undefinedHTML: '&nbsp;'
+                });
+            }
 			
 			function renderMap() {
-				var overlay = setOverlay();
-				var map = new Map({
-					lat: parseFloat(getParameterByName('fi')) || (typeof lat != 'undefined'?lat:<%= lat %>),
-					lng: parseFloat(getParameterByName('la')) || (typeof lng != 'undefined'?lng:<%= lng %>),
-					zoom: 8,
-					minZoom: 2,
-					maxZoom: 20,
-					target: 'map',
-					overlays: [overlay],
-                    mouseWheelZoom: true
-				});    
+				var overlay = setOverlay(),
+				    map = new Map({
+                        lat: parseFloat(getParameterByName('fi')) || (typeof lat != 'undefined'?lat:<%= lat %>),
+                        lng: parseFloat(getParameterByName('la')) || (typeof lng != 'undefined'?lng:<%= lng %>),
+                        zoom: 8,
+                        minZoom: 2,
+                        maxZoom: 20,
+                        target: 'map',
+                        overlays: [overlay],
+                        mouseWheelZoom: true,
+                        mousePositionControl: setMousePosition()
+				    });
 				map.render();
 				
 				map.map.on('singleclick', function(e) {

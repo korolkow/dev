@@ -463,7 +463,7 @@
             "tpl": "../meteonova/ru_mn2_dsk_agro_ru",
             "css": [
                 "../css/frc.css",
-                "../css/agro.css",
+                "../css/v2/agro.css",
                 "../css/v2/dropdownlist.css",
                 "../css/ol3.css",
                 "../css/map.css"

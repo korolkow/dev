@@ -63,8 +63,7 @@ header("Pragma: no-cache");
 									<div id="map" class="map"></div> 									
 									<div class="legends">
 										<div class="legmini"></div>            
-									</div>    
-									<div id="mouse-position"></div>
+									</div>
 							</div>
 							<div class="map-wrapper"  style="height: 48px; background: #344fa8">
 									<div id="progress"></div>
@@ -179,14 +178,6 @@ header("Pragma: no-cache");
 		} 
 	}
 
-	var mousePositionControl = new ol.control.MousePosition({
-		coordinateFormat: ol.coordinate.createStringXY(2),
-		projection: 'EPSG:4326',
-		className: 'custom-mouse-position',
-		target: document.getElementById('mouse-position'),
-		undefinedHTML: '&nbsp;'
-    });
-
 	var _lat = parseFloat(getParameterByName('fi')) || (typeof lat != 'undefined'?lat:<%= lat %>),
 		_lng = parseFloat(getParameterByName('la')) || (typeof lng != 'undefined'?lng:<%= lng %>),
 		map = new Map({
@@ -203,7 +194,6 @@ header("Pragma: no-cache");
 			type: type,
 			summertime: 0,
 			progressbar: new Progress(document.getElementById('progress')),
-            mousePositionControl: mousePositionControl,
 			timeline: new Timeline(
 				$('.timeline'),
 				{summertime: 0, timeshift: -999, predict: 6, step: step, count: 20, maptype: type, display: 'block', select_hours: $('select[name="hours"]')}

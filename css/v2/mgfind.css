@@ -102,3 +102,17 @@ input._search{
 .ol-popup-closer:after{
     content:"x"
 }
+
+#mouse-position {
+    position: absolute;
+    bottom: 0;
+    padding: 6px;
+    line-height: 20px;
+    background-color: rgba(0,60,136,.5);
+    color: #fff;
+    left: 50%;
+    width: 130px;
+    margin-left: -65px;
+    text-align: center;
+    border-radius: 2px 2px 0 0;
+}

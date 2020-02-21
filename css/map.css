@@ -290,16 +290,3 @@ html {
     width: 162px;
     display: inline-block;
 }
-
-#mouse-position {
-    position: absolute;
-    bottom: 17px;
-    padding: 6px;
-    line-height: 20px;
-    background-color: rgba(0,60,136,.5);
-    color: #fff;
-    left: 50%;
-    width: 130px;
-    margin-left: -65px;
-    text-align: center;
-}
