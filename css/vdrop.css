@@ -1,8 +1,6 @@
 .vDrop {
   position: relative;
-  margin-bottom: 10px;
-  margin-right: 22px;
-  height: 46px;
+  height: 36px;
   color: #FFF;  
 }
 .vDrop select {
@@ -19,7 +17,7 @@
   top: 0;
   left: 0;
   padding: 6px 6px;
-  width: 268px;
+  width: 302px;
   height: 36px;
   line-height: 20px;
   background-color: rgba(0,60,136,.5);
@@ -46,11 +44,11 @@
 }
 
 .step .vDrop .vClicker {
-    width: 120px;
+    width: 138px;
 }
 
 .hours .vDrop .vClicker {
-    width: 150px;
+    width: 162px;
 }
 
 .vDrop .vClicker.open {
@@ -113,12 +111,13 @@
   position: absolute;
   top: 39px;
   left: 0;
-  width: 288px;
+  width: 302px;
   max-height: 476px;
   overflow-y: scroll;
   margin: 0;
   padding: 0;
   list-style: none;
+  opacity: 0.9;
 }
 .step .vDrop ul {
     width: 138px;
@@ -126,19 +125,19 @@
 }
 
 .hours .vDrop ul {
-    width: 169px;
+    width: 162px;
 }
 
 .vDrop ul li.optgroup span {
   display: block;
-  padding: 5px;
+  padding: 5px 0 5px 9px;
   background: #f2f2f2;
   font-size: 14px;
   font-weight: bold;
   color: #3b7494;
 }
 .vDrop ul li.optgroup ~ .option a {
-  padding-left: 20px;
+  padding-left: 9px;
 }
 .vDrop ul li a {
   display: block;

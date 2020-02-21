@@ -1,11 +1,14 @@
 <?php
 if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 ?> 
-<html>
+<html lang="ru">
 <head>
 <?php include("$id-headers.php"); ?>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-<link rel="stylesheet" type="text/css" href="/css/meteonova.about.min.css?d=201802021946">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/css/v2/reset-fonts-grids_990.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/block.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/general.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/mosg_990.css">
 <script type="text/javascript" src="/js/engine.js"></script>
 <style>
  h1 {font: bold 20px Arial; color: #1f2298; margin-bottom:12px; margin-top:24px;  float: none;}
@@ -16,30 +19,27 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 </head>
 <body>
 <div id="doc4" class="yui-t5">
-<?PHP 
-	if (file_exists('../topline.php' ))	require("../topline.php");
-?> 
    <div id="hd">
      <div id="onhd">
       <div>
-<div id="logo"><a href="//www.meteonova.ru"><img src="/images/logo.png" width="277" height="96" border="0" alt="МЕТЕОНОВА - прогноз погоды голосом" ></a></div>
+<div id="logo"><a href="//www.meteonova.ru"><img src="/images/logo.png" width="277" height="96" border="0" alt="РњР•РўР•РћРќРћР’Рђ - РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РіРѕР»РѕСЃРѕРј" ></a></div>
 	      <div id="mainmenu">
 	      	<ul>
-	          <li><a href="//www.meteonova.ru" title="Погода на Метеонове: прогноз погоды по городам России и Мира">Главная</a></li>
+	          <li><a href="//www.meteonova.ru" title="РџРѕРіРѕРґР° РЅР° РњРµС‚РµРѕРЅРѕРІРµ: РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РїРѕ РіРѕСЂРѕРґР°Рј Р РѕСЃСЃРёРё Рё РњРёСЂР°">Р“Р»Р°РІРЅР°СЏ</a></li>
 	          <li class="line"></li>
-	          <li><a href="/news/" title="Все последние погодные новости от Центра Фобос">Новости</a></li>
+	          <li><a href="/news/" title="Р’СЃРµ РїРѕСЃР»РµРґРЅРёРµ РїРѕРіРѕРґРЅС‹Рµ РЅРѕРІРѕСЃС‚Рё РѕС‚ Р¦РµРЅС‚СЂР° Р¤РѕР±РѕСЃ">РќРѕРІРѕСЃС‚Рё</a></li>
+                <li class="line"></li>
+                <li><a href="/interesting/" title="Р’СЃРµ РїРѕСЃР»РµРґРЅРёРµ РїРѕРіРѕРґРЅС‹Рµ РЅРѕРІРѕСЃС‚Рё РѕС‚ Р¦РµРЅС‚СЂР° Р¤РѕР±РѕСЃ">РРЅС‚РµСЂРµСЃРЅРѕРµ</a></li>
 	          <li class="line"></li>
-	          <li><a href="/klimat/" title="Климатические обзоры по городам и регионам">Климат</a></li>
+	          <li><a href="/klimat/" title="РљР»РёРјР°С‚РёС‡РµСЃРєРёРµ РѕР±Р·РѕСЂС‹ РїРѕ РіРѕСЂРѕРґР°Рј Рё СЂРµРіРёРѕРЅР°Рј">РљР»РёРјР°С‚</a></li>
 	          <li class="line"></li>
-	          <li><a href="/map.htm" title="Интерактивные погодные карты">Карты</a></li>
-	          <li class="line"></li>
-	          <li><a href="/infogra.htm">Инфографика</a></li>
+	          <li><a href="/map.htm" title="РРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ РїРѕРіРѕРґРЅС‹Рµ РєР°СЂС‚С‹">РљР°СЂС‚С‹</a></li>
 	          <li class="line"></li>	          
-	          <li><a href="/search/" title="Поиск погоды по городам и странам">Поиск</a></li>
+	          <li><a href="/search/" title="РџРѕРёСЃРє РїРѕРіРѕРґС‹ РїРѕ РіРѕСЂРѕРґР°Рј Рё СЃС‚СЂР°РЅР°Рј">РџРѕРёСЃРє</a></li>
 	          <li class="line"></li>
-	          <li><a href="/informer/" title="Установите прогноз погоды себе на сайт">Информер</a></li>
+	          <li><a href="/informer/" title="РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ СЃРµР±Рµ РЅР° СЃР°Р№С‚">РРЅС„РѕСЂРјРµСЂ</a></li>
 	          <li class="line"></li>
-	          <li><a href="/fan.htm" title="Установите прогноз погоды себе на компьютер">Приложения</a>
+	          <li><a href="/fan.htm" title="РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ СЃРµР±Рµ РЅР° РєРѕРјРїСЊСЋС‚РµСЂ">РџСЂРёР»РѕР¶РµРЅРёСЏ</a>
 				<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) +  ";" +Math.random();</script>
 	          </li>
 	    	</ul>
@@ -47,21 +47,18 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
       </div>
      </div>
    </div>
-<div>
+    <?PHP
+    if (file_exists('../topline.php' ))	require("../topline.php");
+    ?>
+    <div>
 <div id="bd">
 	<div id="yui-main">
 	<div class="yui-b">
   <div class="main_container">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-   			</div>
    			<div class="block_title main_container_title_width">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>ВЫРАЩИВАЕМ ОВОЩИ САМОСТОЯТЕЛЬНО</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>Р’Р«Р РђР©РР’РђР•Рњ РћР’РћР©Р РЎРђРњРћРЎРўРћРЇРўР•Р›Р¬РќРћ</b></div>
    			</div>
 			</div>
 			<div class="block_content">
@@ -73,44 +70,24 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 			    </div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-   			</div>
 			</div>
   </div>
   <div class="main_container">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner"  >
-   			</div>
    			<div class="block_title main_container_title_width">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>КАКИЕ ОВОЩИ МОЖНО ВЫРАСТИТЬ В СРЕДНЕЙ ПОЛОСЕ РОССИИ?</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>РљРђРљРР• РћР’РћР©Р РњРћР–РќРћ Р’Р«Р РђРЎРўРРўР¬ Р’ РЎР Р•Р”РќР•Р™ РџРћР›РћРЎР• Р РћРЎРЎРР?</b></div>
    			</div>
 			</div>
 			<div class="block_content">
 		    	<div class="content">
 		        	<div style="position:relative;">
-						<h3>Изучите методы, способы и технологии выращивания овощей</h3>
+						<h3>РР·СѓС‡РёС‚Рµ РјРµС‚РѕРґС‹, СЃРїРѕСЃРѕР±С‹ Рё С‚РµС…РЅРѕР»РѕРіРёРё РІС‹СЂР°С‰РёРІР°РЅРёСЏ РѕРІРѕС‰РµР№</h3>
 						<?php include("linklist2.php"); ?>
 		        	</div>
 			    </div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-   			</div>
 			</div>
   </div>
 </div>
@@ -118,15 +95,9 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 	<div class="yui-b">
   	 <div class="right_main">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-   			</div>
-   			<div class="block_title" style="width:222px">
+   			<div class="block_title">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>РЕКЛАМА</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>Р Р•РљР›РђРњРђ</b></div>
    			</div>
 			</div>
 				<div class="block_content">
@@ -135,24 +106,11 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 					?>						
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 				<div class="block_top">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title">
 	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
-	 			 		<div class="title"><b>ВСЕ ОВОЩИ</b></div>
-	   			</div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+	 			 		<div class="title"><b>Р’РЎР• РћР’РћР©Р</b></div>
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
@@ -161,63 +119,31 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 						</div>
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 				<div class="block_top">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title">
 	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
-	 			 		<div class="title"><b>КОНТАКТЫ</b></div>
-	   			</div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+	 			 		<div class="title"><b>РљРћРќРўРђРљРўР«</b></div>
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:210px; margin-left:-5px;">
-						<p style="padding-bottom:4px;"><a href="mailto:korolkow@meteonova.ru" target="_blank">Электронная почта</a></p>
-						<p style="padding-bottom:4px;"><a href="/guestbook.htm">Гостевая книга</a></p>
+					<div class="content">
+						<p style="padding-bottom:4px;"><a href="mailto:korolkow@meteonova.ru" target="_blank">Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°</a></p>
+						<p style="padding-bottom:4px;"><a href="/guestbook.htm">Р“РѕСЃС‚РµРІР°СЏ РєРЅРёРіР°</a></p>
 						<p style="padding-bottom:4px;">+7 (499) 390-55-16</p>
 						<p style="padding-bottom:0px;">+7 (925) 184-08-55</p>
 					</div>
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 			</div>
 	</div>
 </div>
 <div class="right_block">
 					<div class="block_top">
-		   			<div class="round_left">
-	
-			 		  	<img src="/images/block_top_left.png"
-			 				width="9" height="31" class="corner"
-			 				 />
-		   			</div>
-		   			<div class="block_title" style="width:222px;">
-		 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Все новости о погоде на Метеонове" ></div>
-		 			 		<div class="title"><b>НОВОЕ О ПОГОДЕ</b></div>
-		   			</div>
-		   			<div class="round_right">
-			 				<img src="/images/block_top_right.png"
-			 				width="9" height="31" class="corner"
-			 				 />
-	
+		   			<div class="block_title">
+		 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Р’СЃРµ РЅРѕРІРѕСЃС‚Рё Рѕ РїРѕРіРѕРґРµ РЅР° РњРµС‚РµРѕРЅРѕРІРµ" ></div>
+		 			 		<div class="title"><b>РќРћР’РћР• Рћ РџРћР“РћР”Р•</b></div>
 		   			</div>
 					</div>
 					<div class="block_content" style="width:100%;">
@@ -226,25 +152,13 @@ if(isset($_GET['id'])) $id=$_GET['id']; else $id=1;
 						</div>
 					</div>
 					<div class="block_bottom">
-	
-		   			<div class="round_left">
-			 		  	<img src="/images/block_bt_left.png"
-			 				width="9" height="14" class="corner"
-			 				 />
-		   			</div>
-		   			<div class="block_bt" style="width:222px"></div>
-		   			<div class="round_right">
-			 				<img src="/images/block_bt_right.png"
-			 				width="9" height="14" class="corner"
-			 				 />
-		   			</div>
 					</div>
 </div>
 	  <div id="ft" role="contentinfo">
-	      <div class="copyright"><span>Copyright &copy; 2009-2018, Метеосистемы</span></div>
+	      <div class="copyright"><span>Copyright &copy; 2009-2020, РњРµС‚РµРѕСЃРёСЃС‚РµРјС‹</span></div>
 	      <div class="counters">
 	    <noindex>
-	        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?41.11" border="0" width="31" height="31" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a></div>
+	        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?45.10" border="0" width="31" height="31" alt="" title="LiveInternet: РїРѕРєР°Р·Р°РЅРѕ С‡РёСЃР»Рѕ РїСЂРѕСЃРјРѕС‚СЂРѕРІ Р·Р° 24 С‡Р°СЃР°, РїРѕСЃРµС‚РёС‚РµР»РµР№ Р·Р° 24 С‡Р°СЃР° Рё Р·Р° СЃРµРіРѕРґРЅСЏ"/></a></div>
 	    </noindex>
 	      </div>
 	  </div>

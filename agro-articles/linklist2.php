@@ -5,81 +5,81 @@
 </style>
 <div class="tdiv">
 <a href="/agro-articles/1-Vyraschivanie-tomatov.htm"><img src="pictures/1t.jpg"/></a>
-<a href="/agro-articles/1-Vyraschivanie-tomatov.htm">Выращивание томатов</a>
+<a href="/agro-articles/1-Vyraschivanie-tomatov.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ С‚РѕРјР°С‚РѕРІ</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/2-Vyraschivanie-pertsa.htm"><img src="pictures/2t.jpg"/></a>
-<a href="/agro-articles/2-Vyraschivanie-pertsa.htm">Выращивание перца</a>
+<a href="/agro-articles/2-Vyraschivanie-pertsa.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РїРµСЂС†Р°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/3-Vyraschivanie-ogurtsov.htm"><img src="pictures/3t.jpg"/></a>
-<a href="/agro-articles/3-Vyraschivanie-ogurtsov.htm">Выращивание огурцов</a>
+<a href="/agro-articles/3-Vyraschivanie-ogurtsov.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РѕРіСѓСЂС†РѕРІ</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/4-Vyraschivanie-kapusty.htm"><img src="pictures/4t.jpg"/></a>
-<a href="/agro-articles/4-Vyraschivanie-kapusty.htm">Выращивание капусты</a>
+<a href="/agro-articles/4-Vyraschivanie-kapusty.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РєР°РїСѓСЃС‚С‹</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/5-Vyraschivanie-repy.htm"><img src="pictures/5t.jpg"/></a>
-<a href="/agro-articles/5-Vyraschivanie-repy.htm">Выращивание репы</a>
+<a href="/agro-articles/5-Vyraschivanie-repy.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СЂРµРїС‹</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/6-Vyraschivanie-redky.htm"><img src="pictures/6t.jpg"/></a>
-<a href="/agro-articles/6-Vyraschivanie-redky.htm">Выращивание редьки</a>
+<a href="/agro-articles/6-Vyraschivanie-redky.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СЂРµРґСЊРєРё</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/7-Vyraschivanie-redisa.htm"><img src="pictures/7t.jpg"/></a>
-<a href="/agro-articles/7-Vyraschivanie-redisa.htm">Выращивание редиса</a>
+<a href="/agro-articles/7-Vyraschivanie-redisa.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СЂРµРґРёСЃР°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/8-Vyraschivanie-tykvy.htm"><img src="pictures/8t.jpg"/></a>
-<a href="/agro-articles/8-Vyraschivanie-tykvy.htm">Выращивание тыквы</a>
+<a href="/agro-articles/8-Vyraschivanie-tykvy.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ С‚С‹РєРІС‹</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/9-Vyraschivanie-kabachkov.htm"><img src="pictures/9t.jpg"/></a>
-<a href="/agro-articles/9-Vyraschivanie-kabachkov.htm">Выращивание кабачков</a>
+<a href="/agro-articles/9-Vyraschivanie-kabachkov.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РєР°Р±Р°С‡РєРѕРІ</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/10-Vyraschivanie-patissonov.htm"><img src="pictures/10t.jpg"/></a>
-<a href="/agro-articles/10-Vyraschivanie-patissonov.htm">Выращивание патиссонов</a>
+<a href="/agro-articles/10-Vyraschivanie-patissonov.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РїР°С‚РёСЃСЃРѕРЅРѕРІ</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/11-Vyraschivanie-morkovy.htm"><img src="pictures/11t.jpg"/></a>
-<a href="/agro-articles/11-Vyraschivanie-morkovy.htm">Выращивание моркови</a>
+<a href="/agro-articles/11-Vyraschivanie-morkovy.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РјРѕСЂРєРѕРІРё</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/12-Vyraschivanie-chesnoka.htm"><img src="pictures/12t.jpg"/></a>
-<a href="/agro-articles/12-Vyraschivanie-chesnoka.htm">Выращивание чеснока</a>
+<a href="/agro-articles/12-Vyraschivanie-chesnoka.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ С‡РµСЃРЅРѕРєР°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/13-Vyraschivanie-luka.htm"><img src="pictures/13t.jpg"/></a>
-<a href="/agro-articles/13-Vyraschivanie-luka.htm">Выращивание лука</a>
+<a href="/agro-articles/13-Vyraschivanie-luka.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ Р»СѓРєР°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/14-Vyraschivanie-svekly.htm"><img src="pictures/14t.jpg"/></a>
-<a href="/agro-articles/14-Vyraschivanie-svekly.htm">Выращивание свеклы</a>
+<a href="/agro-articles/14-Vyraschivanie-svekly.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СЃРІРµРєР»С‹</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/15-Vyraschivanie-goroha.htm"><img src="pictures/15t.jpg"/></a>
-<a href="/agro-articles/15-Vyraschivanie-goroha.htm">Выращивание гороха</a>
+<a href="/agro-articles/15-Vyraschivanie-goroha.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РіРѕСЂРѕС…Р°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/16-Vyraschivanie-salata.htm"><img src="pictures/16t.jpg"/></a>
-<a href="/agro-articles/16-Vyraschivanie-salata.htm">Выращивание салата</a>
+<a href="/agro-articles/16-Vyraschivanie-salata.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СЃР°Р»Р°С‚Р°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/17-Vyraschivanie-petrushki.htm"><img src="pictures/17t.jpg"/></a>
-<a href="/agro-articles/17-Vyraschivanie-petrushki.htm">Выращивание петрушки</a>
+<a href="/agro-articles/17-Vyraschivanie-petrushki.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РїРµС‚СЂСѓС€РєРё</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/18-Vyraschivanie-ukropa.htm"><img src="pictures/18t.jpg"/></a>
-<a href="/agro-articles/18-Vyraschivanie-ukropa.htm">Выращивание укропа</a>
+<a href="/agro-articles/18-Vyraschivanie-ukropa.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СѓРєСЂРѕРїР°</a>
 </div>
 <div class="tdiv">
 <a href="/agro-articles/19-Vyraschivanie-seldereya.htm"><img src="pictures/19t.jpg"/></a>
-<a href="/agro-articles/19-Vyraschivanie-seldereya.htm">Выращивание сельдерея</a>
+<a href="/agro-articles/19-Vyraschivanie-seldereya.htm">Р’С‹СЂР°С‰РёРІР°РЅРёРµ СЃРµР»СЊРґРµСЂРµСЏ</a>
 </div>
 
 <div class="tdiv" style="width:100%; margin-top:12px;">
-<a href="/agro-articles/">Выращивание овощей, общая информация</b>
+<a href="/agro-articles/">Р’С‹СЂР°С‰РёРІР°РЅРёРµ РѕРІРѕС‰РµР№, РѕР±С‰Р°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</b>
 </div>

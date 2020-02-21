@@ -3,6 +3,7 @@
 <head>
 <title>Новости на Метеонове - <#NEWSTITLE></title>
 <META http-equiv=Content-Type content='text/html charset=utf-8'>
+<meta http-equiv="Cache-Control" content="max-age=3600, must-revalidate">
 <meta property="og:title" content="<#NEWSTITLE>">
 <meta property="og:description" content="<#NEWSTITLE description="1">">
 <meta property="og:image" content="//www.meteonova.ru/news/pictures/<#ITEMNUMBER>.jpg">
@@ -165,10 +166,34 @@ function ciw(img){ if(img.width>500) img.width=500;}
 			</div>
 			<div class="block_bottom">
 			</div>
+			 <div id="ajax_current_weather"></div>
+			 <div id="current_weather">
+				 <div class="block_top current_weather">
+					 <div class="block_title">
+						 <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Погода от Метеоновы - рекламные материалы"></div>
+						 <div class="title" style="width: 180px;"><b>ПОГОДА</b></div>
+					 </div>
+				 </div>
+				 <div class="block_content" style="height: 339px;">
+					 <div class="content weather"></div>
+				 </div>
+				 <div class="block_bottom"></div>
+			 </div>
 
-			<div>
-				<#FORECAST url="http://gen3.meteonova.ru:8002/cgi-bin/nova.dll?template=ru_novamaininf_ru&lang=ru1251&index=" index="fromcookies">
-			</div>
+			<script>
+				(function() {
+					var request = new XMLHttpRequest();
+					request.onreadystatechange = function () {
+						if (this.readyState == 4 && this.status == 200) {
+							document.getElementById("current_weather").setAttribute("style", "display: none");
+							document.getElementById("ajax_current_weather").innerHTML = request.responseText;
+						}
+					};
+					request.open("GET", "//www.meteonova.ru/maininformer/-1", true);
+					request.send();
+				})();
+			</script>
+
 		 <div class="block_top">
 			 <div class="block_title" >
 				 <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>

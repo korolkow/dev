@@ -473,9 +473,32 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 </div>
 	<div class="yui-b">
   	 <div class="right_main">
-<?php
-	include('http://gen5.meteonova.ru:8050/cgi-bin/nova5.dll?template=ru_mn2_dsk_maininf_ru&lang=ru&index='.$index.'&devmode=1&devtplbase=dev_templates_new');
-?>
+		 <div id="ajax_current_weather"></div>
+		 <div id="current_weather">
+			 <div class="block_top current_weather">
+				 <div class="block_title">
+					 <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Погода от Метеоновы - рекламные материалы"></div>
+					 <div class="title" style="width: 180px;"><b>ПОГОДА</b></div>
+				 </div>
+			 </div>
+			 <div class="block_content" style="height: 339px;">
+				 <div class="content weather"></div>
+			 </div>
+			 <div class="block_bottom"></div>
+		 </div>
+		<script>
+            (function() {
+                var request = new XMLHttpRequest();
+                request.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("current_weather").setAttribute("style", "display: none");
+                        document.getElementById("ajax_current_weather").innerHTML = request.responseText;
+                    }
+                };
+                request.open("GET", "//www.meteonova.ru/maininformer/" + townindex, true);
+                request.send();
+            })();
+		</script>
 @@include('<%= tpl_path %>/meteonovabot_tizer.tpl')
 @@include('<%= tpl_path %>/meteonovabot_tizer_facebook.tpl')
 @@include('<%= tpl_path %>/meteonova_android_tizer.tpl')

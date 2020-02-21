@@ -178,9 +178,9 @@
    			</div>
   <div class="main_container">
 
- 			<#TEMPLATEFORCOUNTRY ru_mn2_dsk_bantyres_ru "Russia,Ukraine,Belarus,Kazakhstan,Azerbaijan,Moldova,Latvia,Lithuania,Estonia">
-<!-- 			<TEMPLATEFORCOUNTRY ru_mn2_dsk_banagro_ru "Russia,Ukraine,Belarus,Kazakhstan,Moldova,Latvia,Lithuania,Estonia">-->
-<!-- 			<TEMPLATEFORCOUNTRY ru_mn2_dsk_banfiremap_ru "Russia,Ukraine,Belarus,Kazakhstan,Moldova,Latvia,Lithuania,Estonia">-->
+ 			<#TEMPLATEFORCOUNTRY ru_mn2_dsk_banner_tyres_ru "Russia,Ukraine,Belarus,Kazakhstan,Azerbaijan,Moldova,Latvia,Lithuania,Estonia">
+			<#TEMPLATEFORCOUNTRY ru_mn2_dsk_banner_agro_ru "Russia,Ukraine,Belarus,Kazakhstan,Moldova,Latvia,Lithuania,Estonia">
+			<#TEMPLATEFORCOUNTRY ru_mn2_dsk_banner_firemap_ru "Russia,Ukraine,Belarus,Kazakhstan,Moldova,Latvia,Lithuania,Estonia">
 
 			<div class="block_top">
    			
@@ -447,30 +447,7 @@
    			
    			
 			</div>
-
-
-			<div class="block_top ie">
-   			
-   			<div class="block_title left_contener_title_width">
- 				  <div class="icon"><img src="<#IMGBASE>/icon.png" alt="Погода  <#TOWN2> для метеочувствительных" width="26" height="26"></div>
- 			 		<div class="title"><b>ВЫЛЕТЫ</b></div>
-   			</div>
-   			
-			</div>
-			<div class="block_content ie">
-		      	<div class="content">
-				<div class="autoinformer">
- 					<div>Оценка возможных <b>задержек авиарейсов по метеоусловиям</b> на ближайшие сутки</div>
-						<#AVIAINFORMER>
-					<div><a href="<#SERVERURL>/avia/?id=<#INDEX>&town=<#TOWNEC>&req=showaero" target=_blank">Подробный авиапрогноз</a></div>
-				</div>
-		      	</div>
-			</div>
-			<div class="block_bottom ie">
-   			
-   			
-   			
-			</div>
+			<#TEMPLATE ru_mn2_dsk_aviainformer_ru>
 
 			<div class="block_top ie">
    			
@@ -666,45 +643,12 @@
 						<#TEMPLATECLIMAT ru_mn2_dsk_climatlinkr_ru 2 5 14 16 18 23 24 25 26 31 32 33 34 36 38 42 43 47 50 52 54 55 56 59 61 63 64 66 69 71 72 74 76>
 					</div>
 				</div>
-				<div class="block_bottom">
-
-	   			
-	   			
-	   			
-				</div>
-
-
-				<div class="block_top">
-	   			
-	   			<div class="block_title" >
-	 				  <div class="icon"><img src="/images/icon.png" alt="Список ближайших к городу <#TOWN> аэропортов" width="26" height="26" ></div>
-	 			 		<div class="title"><b>АЭРОПОРТЫ</b></div>
-	   			</div>
-	   			
-				</div>
-				<div class="block_content" style="width:100%;">
-					<div class="content">
-					<div class="favorites">
-						<#AEROLIST DESKTOP>
-					</div>
-					</div>
-				</div>
-				<div class="block_bottom">
-
-	   			
-	   			
-	   			
-				</div>
-
-
+				<div class="block_bottom"></div>
 			<div class="block_top">
-
-   			
    			<div class="block_title" >
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26"  alt="Установите прогноз погоды <#TOWN3> себе на сайт""></div>
  			 		<div class="title"><b>ИНФОРМЕР</b></div>
    			</div>
-   			
 			</div>
 			<div class="block_content" style="width:100%;">
                         <div align="center" style="position: relative; margin:10px 0 0 0;">
@@ -776,22 +720,12 @@
 					</div>
 					</div>
 				</div>
-				<div class="block_bottom">
-
-	   			
-	   			
-	   			
-				</div>
-
-
-
+				<div class="block_bottom"></div>
 				<div class="block_top">
-	   			
 	   			<div class="block_title" >
 	 				  <div class="icon"><img src="/images/icon.png" alt="Есть вопрос? Напишите нам!" width="26" height="26" ></div>
 	 			 		<div class="title"><b>КОНТАКТЫ</b></div>
 	   			</div>
-	   			
 				</div>
 				<div class="block_content" style="width:100%;">
 					<div class="content">

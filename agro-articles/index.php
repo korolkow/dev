@@ -1,10 +1,13 @@
 <html>
-<head>
-<title>Метеонова - выращиваем овощи самостоятельно: дома, в теплице, в открытом грунте</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
-<meta name="description" content="Как вырастить овощи самостоятельно на приусадебном участке?">
-<meta name="keywords" content="вырастить овощи самостоятельно дача агро агропрогноз помидоры томаты перец огурцы капуста белокочанная цветная репа редька редис  тыква каьачки патиссоны морковь сельдерей петрушка пастернак укроп свекла горох  фасоль бобы лук чеснок шпинат дайкон">
-<link rel="stylesheet" type="text/css" href="/css/meteonova.about.min.css?d=201802021946">
+<head lang="ru">
+<title>РњРµС‚РµРѕРЅРѕРІР° - РІС‹СЂР°С‰РёРІР°РµРј РѕРІРѕС‰Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ: РґРѕРјР°, РІ С‚РµРїР»РёС†Рµ, РІ РѕС‚РєСЂС‹С‚РѕРј РіСЂСѓРЅС‚Рµ</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="РљР°Рє РІС‹СЂР°СЃС‚РёС‚СЊ РѕРІРѕС‰Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ РЅР° РїСЂРёСѓСЃР°РґРµР±РЅРѕРј СѓС‡Р°СЃС‚РєРµ?">
+<meta name="keywords" content="РІС‹СЂР°СЃС‚РёС‚СЊ РѕРІРѕС‰Рё СЃР°РјРѕСЃС‚РѕСЏС‚РµР»СЊРЅРѕ РґР°С‡Р° Р°РіСЂРѕ Р°РіСЂРѕРїСЂРѕРіРЅРѕР· РїРѕРјРёРґРѕСЂС‹ С‚РѕРјР°С‚С‹ РїРµСЂРµС† РѕРіСѓСЂС†С‹ РєР°РїСѓСЃС‚Р° Р±РµР»РѕРєРѕС‡Р°РЅРЅР°СЏ С†РІРµС‚РЅР°СЏ СЂРµРїР° СЂРµРґСЊРєР° СЂРµРґРёСЃ  С‚С‹РєРІР° РєР°СЊР°С‡РєРё РїР°С‚РёСЃСЃРѕРЅС‹ РјРѕСЂРєРѕРІСЊ СЃРµР»СЊРґРµСЂРµР№ РїРµС‚СЂСѓС€РєР° РїР°СЃС‚РµСЂРЅР°Рє СѓРєСЂРѕРї СЃРІРµРєР»Р° РіРѕСЂРѕС…  С„Р°СЃРѕР»СЊ Р±РѕР±С‹ Р»СѓРє С‡РµСЃРЅРѕРє С€РїРёРЅР°С‚ РґР°Р№РєРѕРЅ">
+<link rel="stylesheet" type="text/css" href="/css/v2/reset-fonts-grids_990.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/block.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/general.css">
+<link rel="stylesheet" type="text/css" href="/css/v2/mosg_990.css">
 <script type="text/javascript" src="/js/engine.js"></script>
 <style>
  h1 {font: bold 20px Arial; color: #1f2298; margin-bottom:12px; margin-top:24px;  float: none;}
@@ -15,30 +18,27 @@
 </head>
 <body>
 <div id="doc4" class="yui-t5">
-<?PHP 
-	if (file_exists('../topline.php' ))	require("../topline.php");
-?> 
    <div id="hd">
      <div id="onhd">
       <div>
-<div id="logo"><a href="//www.meteonova.ru"><img src="/images/logo.png" width="277" height="96" border="0" alt="МЕТЕОНОВА - прогноз погоды голосом" ></a></div>
+<div id="logo"><a href="//www.meteonova.ru"><img src="/images/logo.png" width="277" height="96" border="0" alt="РњР•РўР•РћРќРћР’Рђ - РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РіРѕР»РѕСЃРѕРј" ></a></div>
 	      <div id="mainmenu">
 	      	<ul>
-	          <li><a href="//www.meteonova.ru" title="Погода на Метеонове: прогноз погоды по городам России и Мира">Главная</a></li>
+	          <li><a href="//www.meteonova.ru" title="РџРѕРіРѕРґР° РЅР° РњРµС‚РµРѕРЅРѕРІРµ: РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ РїРѕ РіРѕСЂРѕРґР°Рј Р РѕСЃСЃРёРё Рё РњРёСЂР°">Р“Р»Р°РІРЅР°СЏ</a></li>
 	          <li class="line"></li>
-	          <li><a href="/news/" title="Все последние погодные новости от Центра Фобос">Новости</a></li>
+	          <li><a href="/news/" title="Р’СЃРµ РїРѕСЃР»РµРґРЅРёРµ РїРѕРіРѕРґРЅС‹Рµ РЅРѕРІРѕСЃС‚Рё РѕС‚ Р¦РµРЅС‚СЂР° Р¤РѕР±РѕСЃ">РќРѕРІРѕСЃС‚Рё</a></li>
+                <li class="line"></li>
+                <li><a href="/interesting/" title="Р’СЃРµ РїРѕСЃР»РµРґРЅРёРµ РїРѕРіРѕРґРЅС‹Рµ РЅРѕРІРѕСЃС‚Рё РѕС‚ Р¦РµРЅС‚СЂР° Р¤РѕР±РѕСЃ">РРЅС‚РµСЂРµСЃРЅРѕРµ</a></li>
 	          <li class="line"></li>
-	          <li><a href="/klimat/" title="Климатические обзоры по городам и регионам">Климат</a></li>
+	          <li><a href="/klimat/" title="РљР»РёРјР°С‚РёС‡РµСЃРєРёРµ РѕР±Р·РѕСЂС‹ РїРѕ РіРѕСЂРѕРґР°Рј Рё СЂРµРіРёРѕРЅР°Рј">РљР»РёРјР°С‚</a></li>
 	          <li class="line"></li>
-	          <li><a href="/map.htm" title="Интерактивные погодные карты">Карты</a></li>
-	          <li class="line"></li>
-	          <li><a href="/infogra.htm">Инфографика</a></li>
+	          <li><a href="/map.htm" title="РРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ РїРѕРіРѕРґРЅС‹Рµ РєР°СЂС‚С‹">РљР°СЂС‚С‹</a></li>
 	          <li class="line"></li>	          
-	          <li><a href="/search/" title="Поиск погоды по городам и странам">Поиск</a></li>
+	          <li><a href="/search/" title="РџРѕРёСЃРє РїРѕРіРѕРґС‹ РїРѕ РіРѕСЂРѕРґР°Рј Рё СЃС‚СЂР°РЅР°Рј">РџРѕРёСЃРє</a></li>
 	          <li class="line"></li>
-	          <li><a href="/informer/" title="Установите прогноз погоды себе на сайт">Информер</a></li>
+	          <li><a href="/informer/" title="РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ СЃРµР±Рµ РЅР° СЃР°Р№С‚">РРЅС„РѕСЂРјРµСЂ</a></li>
 	          <li class="line"></li>
-	          <li><a href="/fan.htm" title="Установите прогноз погоды себе на компьютер">Приложения</a>
+	          <li><a href="/fan.htm" title="РЈСЃС‚Р°РЅРѕРІРёС‚Рµ РїСЂРѕРіРЅРѕР· РїРѕРіРѕРґС‹ СЃРµР±Рµ РЅР° РєРѕРјРїСЊСЋС‚РµСЂ">РџСЂРёР»РѕР¶РµРЅРёСЏ</a>
 				<script type="text/javascript">new Image().src = "//counter.yadro.ru/hit?r" + escape(document.referrer) + ((typeof(screen)=="undefined")?"" : ";s"+screen.width+"*"+screen.height+"*" + (screen.colorDepth?screen.colorDepth:screen.pixelDepth)) + ";u"+escape(document.URL) +  ";" +Math.random();</script>
 	          </li>
 	    	</ul>
@@ -46,111 +46,78 @@
       </div>
      </div>
    </div>
-<div>
+    <?PHP
+    if (file_exists('../topline.php' ))	require("../topline.php");
+    ?>
+    <div>
 <div id="bd">
 	<div id="yui-main">
 	<div class="yui-b">
   <div class="main_container">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-   			</div>
+   			
    			<div class="block_title main_container_title_width">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>ВЫРАЩИВАЕМ ОВОЩИ САМОСТОЯТЕЛЬНО</b></div>
+ 			 		<div class="title"><b>Р’Р«Р РђР©РР’РђР•Рњ РћР’РћР©Р РЎРђРњРћРЎРўРћРЇРўР•Р›Р¬РќРћ</b></div>
    			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
-   			</div>
+   			
 			</div>
 			<div class="block_content">
 		    	<div class="content">
 		        	<div style="position:relative;">
-						<h1>Выращивание овощей</h1>
+						<h1>Р’С‹СЂР°С‰РёРІР°РЅРёРµ РѕРІРѕС‰РµР№</h1>
 						<img src="pictures/vegetables.jpg" style="width:400px; float:left; margin: 8px 8px 8px 0;"/>
-                    	<p style="padding-bottom:4px;">Зачем это нужно, спросите Вы: ведь свежие овощи и зелень можно купить круглый код в любом супермаркете или магазине у дома. Но большинство людей конечно задумывается о современных методах выращивания овощей на гидропонике и понимает, что подобные способы и технологии выгодны только сельхозпроизводителям со специальным оборудованием и особыми методами быстрой выгонки и дозревания. Хотим ли мы есть такие овощи, или лушим решением было бы вырастить их на даче или даже дома, а потом качественно законсервировать? Ведь если ваши летние овощи действительно богаты витаминамии и микроэлементами, то и пользы от них может быть больше, чем от тепличных свежих, но выращенных зимой!</p>
-        	    		<p style="padding-bottom:4px;">В этом разделе содержатся полезные рекомендации по выращиаванию таких поулярных в средней полосе России овощей как томаты, перец, огурцы, капуста, репа, редька, редис и дакон, лук, чеснок, тыква, кабачки, патиссоны, морковь, петрушка, сельдерей и многие другие. В зависимости от требований растений к условиям природной среды, температуре и влажности воздуха и почвы, технологии выращивания заметно отличаются.</p>
-	                	<p style="padding-bottom:4px;">Выберите нужный овощ из списка ниже, чтобы получить рекомендации по способам выращивания.</p>
+                    	<p style="padding-bottom:4px;">Р—Р°С‡РµРј СЌС‚Рѕ РЅСѓР¶РЅРѕ, СЃРїСЂРѕСЃРёС‚Рµ Р’С‹: РІРµРґСЊ СЃРІРµР¶РёРµ РѕРІРѕС‰Рё Рё Р·РµР»РµРЅСЊ РјРѕР¶РЅРѕ РєСѓРїРёС‚СЊ РєСЂСѓРіР»С‹Р№ РєРѕРґ РІ Р»СЋР±РѕРј СЃСѓРїРµСЂРјР°СЂРєРµС‚Рµ РёР»Рё РјР°РіР°Р·РёРЅРµ Сѓ РґРѕРјР°. РќРѕ Р±РѕР»СЊС€РёРЅСЃС‚РІРѕ Р»СЋРґРµР№ РєРѕРЅРµС‡РЅРѕ Р·Р°РґСѓРјС‹РІР°РµС‚СЃСЏ Рѕ СЃРѕРІСЂРµРјРµРЅРЅС‹С… РјРµС‚РѕРґР°С… РІС‹СЂР°С‰РёРІР°РЅРёСЏ РѕРІРѕС‰РµР№ РЅР° РіРёРґСЂРѕРїРѕРЅРёРєРµ Рё РїРѕРЅРёРјР°РµС‚, С‡С‚Рѕ РїРѕРґРѕР±РЅС‹Рµ СЃРїРѕСЃРѕР±С‹ Рё С‚РµС…РЅРѕР»РѕРіРёРё РІС‹РіРѕРґРЅС‹ С‚РѕР»СЊРєРѕ СЃРµР»СЊС…РѕР·РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏРј СЃРѕ СЃРїРµС†РёР°Р»СЊРЅС‹Рј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј Рё РѕСЃРѕР±С‹РјРё РјРµС‚РѕРґР°РјРё Р±С‹СЃС‚СЂРѕР№ РІС‹РіРѕРЅРєРё Рё РґРѕР·СЂРµРІР°РЅРёСЏ. РҐРѕС‚РёРј Р»Рё РјС‹ РµСЃС‚СЊ С‚Р°РєРёРµ РѕРІРѕС‰Рё, РёР»Рё Р»СѓС€РёРј СЂРµС€РµРЅРёРµРј Р±С‹Р»Рѕ Р±С‹ РІС‹СЂР°СЃС‚РёС‚СЊ РёС… РЅР° РґР°С‡Рµ РёР»Рё РґР°Р¶Рµ РґРѕРјР°, Р° РїРѕС‚РѕРј РєР°С‡РµСЃС‚РІРµРЅРЅРѕ Р·Р°РєРѕРЅСЃРµСЂРІРёСЂРѕРІР°С‚СЊ? Р’РµРґСЊ РµСЃР»Рё РІР°С€Рё Р»РµС‚РЅРёРµ РѕРІРѕС‰Рё РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ Р±РѕРіР°С‚С‹ РІРёС‚Р°РјРёРЅР°РјРёРё Рё РјРёРєСЂРѕСЌР»РµРјРµРЅС‚Р°РјРё, С‚Рѕ Рё РїРѕР»СЊР·С‹ РѕС‚ РЅРёС… РјРѕР¶РµС‚ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ, С‡РµРј РѕС‚ С‚РµРїР»РёС‡РЅС‹С… СЃРІРµР¶РёС…, РЅРѕ РІС‹СЂР°С‰РµРЅРЅС‹С… Р·РёРјРѕР№!</p>
+        	    		<p style="padding-bottom:4px;">Р’ СЌС‚РѕРј СЂР°Р·РґРµР»Рµ СЃРѕРґРµСЂР¶Р°С‚СЃСЏ РїРѕР»РµР·РЅС‹Рµ СЂРµРєРѕРјРµРЅРґР°С†РёРё РїРѕ РІС‹СЂР°С‰РёР°РІР°РЅРёСЋ С‚Р°РєРёС… РїРѕСѓР»СЏСЂРЅС‹С… РІ СЃСЂРµРґРЅРµР№ РїРѕР»РѕСЃРµ Р РѕСЃСЃРёРё РѕРІРѕС‰РµР№ РєР°Рє С‚РѕРјР°С‚С‹, РїРµСЂРµС†, РѕРіСѓСЂС†С‹, РєР°РїСѓСЃС‚Р°, СЂРµРїР°, СЂРµРґСЊРєР°, СЂРµРґРёСЃ Рё РґР°РєРѕРЅ, Р»СѓРє, С‡РµСЃРЅРѕРє, С‚С‹РєРІР°, РєР°Р±Р°С‡РєРё, РїР°С‚РёСЃСЃРѕРЅС‹, РјРѕСЂРєРѕРІСЊ, РїРµС‚СЂСѓС€РєР°, СЃРµР»СЊРґРµСЂРµР№ Рё РјРЅРѕРіРёРµ РґСЂСѓРіРёРµ. Р’ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚СЂРµР±РѕРІР°РЅРёР№ СЂР°СЃС‚РµРЅРёР№ Рє СѓСЃР»РѕРІРёСЏРј РїСЂРёСЂРѕРґРЅРѕР№ СЃСЂРµРґС‹, С‚РµРјРїРµСЂР°С‚СѓСЂРµ Рё РІР»Р°Р¶РЅРѕСЃС‚Рё РІРѕР·РґСѓС…Р° Рё РїРѕС‡РІС‹, С‚РµС…РЅРѕР»РѕРіРёРё РІС‹СЂР°С‰РёРІР°РЅРёСЏ Р·Р°РјРµС‚РЅРѕ РѕС‚Р»РёС‡Р°СЋС‚СЃСЏ.</p>
+	                	<p style="padding-bottom:4px;">Р’С‹Р±РµСЂРёС‚Рµ РЅСѓР¶РЅС‹Р№ РѕРІРѕС‰ РёР· СЃРїРёСЃРєР° РЅРёР¶Рµ, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёС‚СЊ СЂРµРєРѕРјРµРЅРґР°С†РёРё РїРѕ СЃРїРѕСЃРѕР±Р°Рј РІС‹СЂР°С‰РёРІР°РЅРёСЏ.</p>
 		        	</div>
 			    </div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-   			</div>
+   			
 			</div>
   </div>
   <div class="main_container">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-   			</div>
    			<div class="block_title main_container_title_width">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>МЕТОДИКА ОЦЕНКИ СРОКОВ ВЫСАДКИ СЕМЯН И РАССАДЫ ОВОЩЕЙ</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>РњР•РўРћР”РРљРђ РћР¦Р•РќРљР РЎР РћРљРћР’ Р’Р«РЎРђР”РљР РЎР•РњРЇРќ Р Р РђРЎРЎРђР”Р« РћР’РћР©Р•Р™</b></div>
    			</div>
 			</div>
 			<div class="block_content">
 		    	<div class="content">
 		        	<div style="position:relative;">
-						<h2>Зачем нужен прогноз посадки овощей</h2>
-                    	<p style="padding-bottom:4px;">Как известно, растения, возделываемые на приусадебных участках, могут быть теплолюбивыми и холодостойкими для данной климатической полосы. Так, семена капусты могут прорастать уже при +2 градусах, а для некоторых сортов тыквы необходимо, чтобы почва прогрелась до +14. Кроме того, даже кратковременные заморозки могут быть губительны для всходов теплолюбивых растений, другие же переносят кратковременные понижения температуры до -6.</p>
-        	    		<p style="padding-bottom:4px;">В весенний период многие садоводы задаются вопросом, не настало ли время посадки рассады или семян тех или иных растений? Ведь если ошибиться, то можно не получить хорошего урожая.</p>
-	                	<p style="padding-bottom:8px;">Время высадки зависит прежде всего от температур почвы и поверхности земли, а также их прогноза на несколько дней вперед, чтобы можно было избежать влияния возвратов холодов.</p>
-						<h3>Как мы считаем</h3>
-                    	<p style="padding-bottom:4px;">Для оценки подоходящих условий высадки семян и рассады овощей мы определяем минимальные температуры поверхности почвы, температуры почвы в верхнем слое и температуры почвы в среднем слое на ближайшие 10 дней, и, если все они оказываются выше пороговых значений для определенной культуры, то такую культуру мы рекомендуем к посадке (напротив названия овоща появляется метка <span style="color:#090"><b>можно</b></span>). Конечно, такой подход не гарантирует возможных возвратов холодов более чем через 10 дней, но позволяет дать общую оценку состояния почвы. </p>
-						<p style="padding-bottom:4px;">Если земля холоднее, чем нужно, менее чем на 2 градуса, для растения устанавливается метка <span style="color:#cc8000"><b>скоро</b></span>, то есть, скоро почва прогреется до нужного значения, и пора готовиться к посадке.<p>
-						<p style="padding-bottom:8px;">Если же почва холоднее положенной для посева семян или высадки рассады более чем на 2 градуса, то выставляется метка <span style="color:#900"><b>рано</b></span>. Это значит, что условия для посадки пока неблагоприятные. В северных регионах некоторые овощи нельзя возделывать из-за коротктого вегетационного сезона. Если время высадки слишком позднее, можно не успеть получить урожай. Для опредения пригодности к возделыванию, следует к дате разрешенной посадки прибавить продолжительность вегетационного сезона для конкретноо овоща (есть в описании выращивания), и если его завершение приходится на период заморозков или морозов, высевать такую кльтуру в данном климате нельзя.</p>
-						<h3>Ограничения ответственности</h3>
-                    	<p style="padding-bottom:4px;">Вся приведенная в разеделе информация носит ознакомительный характер и предоставляется "как есть", без каких-либо гарантий. Администрация сервиса не несет ответственности за возможные убытки или жертвы, связанные с использованием сведений данного раздела.</p>
+						<h2>Р—Р°С‡РµРј РЅСѓР¶РµРЅ РїСЂРѕРіРЅРѕР· РїРѕСЃР°РґРєРё РѕРІРѕС‰РµР№</h2>
+                    	<p style="padding-bottom:4px;">РљР°Рє РёР·РІРµСЃС‚РЅРѕ, СЂР°СЃС‚РµРЅРёСЏ, РІРѕР·РґРµР»С‹РІР°РµРјС‹Рµ РЅР° РїСЂРёСѓСЃР°РґРµР±РЅС‹С… СѓС‡Р°СЃС‚РєР°С…, РјРѕРіСѓС‚ Р±С‹С‚СЊ С‚РµРїР»РѕР»СЋР±РёРІС‹РјРё Рё С…РѕР»РѕРґРѕСЃС‚РѕР№РєРёРјРё РґР»СЏ РґР°РЅРЅРѕР№ РєР»РёРјР°С‚РёС‡РµСЃРєРѕР№ РїРѕР»РѕСЃС‹. РўР°Рє, СЃРµРјРµРЅР° РєР°РїСѓСЃС‚С‹ РјРѕРіСѓС‚ РїСЂРѕСЂР°СЃС‚Р°С‚СЊ СѓР¶Рµ РїСЂРё +2 РіСЂР°РґСѓСЃР°С…, Р° РґР»СЏ РЅРµРєРѕС‚РѕСЂС‹С… СЃРѕСЂС‚РѕРІ С‚С‹РєРІС‹ РЅРµРѕР±С…РѕРґРёРјРѕ, С‡С‚РѕР±С‹ РїРѕС‡РІР° РїСЂРѕРіСЂРµР»Р°СЃСЊ РґРѕ +14. РљСЂРѕРјРµ С‚РѕРіРѕ, РґР°Р¶Рµ РєСЂР°С‚РєРѕРІСЂРµРјРµРЅРЅС‹Рµ Р·Р°РјРѕСЂРѕР·РєРё РјРѕРіСѓС‚ Р±С‹С‚СЊ РіСѓР±РёС‚РµР»СЊРЅС‹ РґР»СЏ РІСЃС…РѕРґРѕРІ С‚РµРїР»РѕР»СЋР±РёРІС‹С… СЂР°СЃС‚РµРЅРёР№, РґСЂСѓРіРёРµ Р¶Рµ РїРµСЂРµРЅРѕСЃСЏС‚ РєСЂР°С‚РєРѕРІСЂРµРјРµРЅРЅС‹Рµ РїРѕРЅРёР¶РµРЅРёСЏ С‚РµРјРїРµСЂР°С‚СѓСЂС‹ РґРѕ -6.</p>
+        	    		<p style="padding-bottom:4px;">Р’ РІРµСЃРµРЅРЅРёР№ РїРµСЂРёРѕРґ РјРЅРѕРіРёРµ СЃР°РґРѕРІРѕРґС‹ Р·Р°РґР°СЋС‚СЃСЏ РІРѕРїСЂРѕСЃРѕРј, РЅРµ РЅР°СЃС‚Р°Р»Рѕ Р»Рё РІСЂРµРјСЏ РїРѕСЃР°РґРєРё СЂР°СЃСЃР°РґС‹ РёР»Рё СЃРµРјСЏРЅ С‚РµС… РёР»Рё РёРЅС‹С… СЂР°СЃС‚РµРЅРёР№? Р’РµРґСЊ РµСЃР»Рё РѕС€РёР±РёС‚СЊСЃСЏ, С‚Рѕ РјРѕР¶РЅРѕ РЅРµ РїРѕР»СѓС‡РёС‚СЊ С…РѕСЂРѕС€РµРіРѕ СѓСЂРѕР¶Р°СЏ.</p>
+	                	<p style="padding-bottom:8px;">Р’СЂРµРјСЏ РІС‹СЃР°РґРєРё Р·Р°РІРёСЃРёС‚ РїСЂРµР¶РґРµ РІСЃРµРіРѕ РѕС‚ С‚РµРјРїРµСЂР°С‚СѓСЂ РїРѕС‡РІС‹ Рё РїРѕРІРµСЂС…РЅРѕСЃС‚Рё Р·РµРјР»Рё, Р° С‚Р°РєР¶Рµ РёС… РїСЂРѕРіРЅРѕР·Р° РЅР° РЅРµСЃРєРѕР»СЊРєРѕ РґРЅРµР№ РІРїРµСЂРµРґ, С‡С‚РѕР±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РёР·Р±РµР¶Р°С‚СЊ РІР»РёСЏРЅРёСЏ РІРѕР·РІСЂР°С‚РѕРІ С…РѕР»РѕРґРѕРІ.</p>
+						<h3>РљР°Рє РјС‹ СЃС‡РёС‚Р°РµРј</h3>
+                    	<p style="padding-bottom:4px;">Р”Р»СЏ РѕС†РµРЅРєРё РїРѕРґРѕС…РѕРґСЏС‰РёС… СѓСЃР»РѕРІРёР№ РІС‹СЃР°РґРєРё СЃРµРјСЏРЅ Рё СЂР°СЃСЃР°РґС‹ РѕРІРѕС‰РµР№ РјС‹ РѕРїСЂРµРґРµР»СЏРµРј РјРёРЅРёРјР°Р»СЊРЅС‹Рµ С‚РµРјРїРµСЂР°С‚СѓСЂС‹ РїРѕРІРµСЂС…РЅРѕСЃС‚Рё РїРѕС‡РІС‹, С‚РµРјРїРµСЂР°С‚СѓСЂС‹ РїРѕС‡РІС‹ РІ РІРµСЂС…РЅРµРј СЃР»РѕРµ Рё С‚РµРјРїРµСЂР°С‚СѓСЂС‹ РїРѕС‡РІС‹ РІ СЃСЂРµРґРЅРµРј СЃР»РѕРµ РЅР° Р±Р»РёР¶Р°Р№С€РёРµ 10 РґРЅРµР№, Рё, РµСЃР»Рё РІСЃРµ РѕРЅРё РѕРєР°Р·С‹РІР°СЋС‚СЃСЏ РІС‹С€Рµ РїРѕСЂРѕРіРѕРІС‹С… Р·РЅР°С‡РµРЅРёР№ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРЅРѕР№ РєСѓР»СЊС‚СѓСЂС‹, С‚Рѕ С‚Р°РєСѓСЋ РєСѓР»СЊС‚СѓСЂСѓ РјС‹ СЂРµРєРѕРјРµРЅРґСѓРµРј Рє РїРѕСЃР°РґРєРµ (РЅР°РїСЂРѕС‚РёРІ РЅР°Р·РІР°РЅРёСЏ РѕРІРѕС‰Р° РїРѕСЏРІР»СЏРµС‚СЃСЏ РјРµС‚РєР° <span style="color:#090"><b>РјРѕР¶РЅРѕ</b></span>). РљРѕРЅРµС‡РЅРѕ, С‚Р°РєРѕР№ РїРѕРґС…РѕРґ РЅРµ РіР°СЂР°РЅС‚РёСЂСѓРµС‚ РІРѕР·РјРѕР¶РЅС‹С… РІРѕР·РІСЂР°С‚РѕРІ С…РѕР»РѕРґРѕРІ Р±РѕР»РµРµ С‡РµРј С‡РµСЂРµР· 10 РґРЅРµР№, РЅРѕ РїРѕР·РІРѕР»СЏРµС‚ РґР°С‚СЊ РѕР±С‰СѓСЋ РѕС†РµРЅРєСѓ СЃРѕСЃС‚РѕСЏРЅРёСЏ РїРѕС‡РІС‹. </p>
+						<p style="padding-bottom:4px;">Р•СЃР»Рё Р·РµРјР»СЏ С…РѕР»РѕРґРЅРµРµ, С‡РµРј РЅСѓР¶РЅРѕ, РјРµРЅРµРµ С‡РµРј РЅР° 2 РіСЂР°РґСѓСЃР°, РґР»СЏ СЂР°СЃС‚РµРЅРёСЏ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РјРµС‚РєР° <span style="color:#cc8000"><b>СЃРєРѕСЂРѕ</b></span>, С‚Рѕ РµСЃС‚СЊ, СЃРєРѕСЂРѕ РїРѕС‡РІР° РїСЂРѕРіСЂРµРµС‚СЃСЏ РґРѕ РЅСѓР¶РЅРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ, Рё РїРѕСЂР° РіРѕС‚РѕРІРёС‚СЊСЃСЏ Рє РїРѕСЃР°РґРєРµ.<p>
+						<p style="padding-bottom:8px;">Р•СЃР»Рё Р¶Рµ РїРѕС‡РІР° С…РѕР»РѕРґРЅРµРµ РїРѕР»РѕР¶РµРЅРЅРѕР№ РґР»СЏ РїРѕСЃРµРІР° СЃРµРјСЏРЅ РёР»Рё РІС‹СЃР°РґРєРё СЂР°СЃСЃР°РґС‹ Р±РѕР»РµРµ С‡РµРј РЅР° 2 РіСЂР°РґСѓСЃР°, С‚Рѕ РІС‹СЃС‚Р°РІР»СЏРµС‚СЃСЏ РјРµС‚РєР° <span style="color:#900"><b>СЂР°РЅРѕ</b></span>. Р­С‚Рѕ Р·РЅР°С‡РёС‚, С‡С‚Рѕ СѓСЃР»РѕРІРёСЏ РґР»СЏ РїРѕСЃР°РґРєРё РїРѕРєР° РЅРµР±Р»Р°РіРѕРїСЂРёСЏС‚РЅС‹Рµ. Р’ СЃРµРІРµСЂРЅС‹С… СЂРµРіРёРѕРЅР°С… РЅРµРєРѕС‚РѕСЂС‹Рµ РѕРІРѕС‰Рё РЅРµР»СЊР·СЏ РІРѕР·РґРµР»С‹РІР°С‚СЊ РёР·-Р·Р° РєРѕСЂРѕС‚РєС‚РѕРіРѕ РІРµРіРµС‚Р°С†РёРѕРЅРЅРѕРіРѕ СЃРµР·РѕРЅР°. Р•СЃР»Рё РІСЂРµРјСЏ РІС‹СЃР°РґРєРё СЃР»РёС€РєРѕРј РїРѕР·РґРЅРµРµ, РјРѕР¶РЅРѕ РЅРµ СѓСЃРїРµС‚СЊ РїРѕР»СѓС‡РёС‚СЊ СѓСЂРѕР¶Р°Р№. Р”Р»СЏ РѕРїСЂРµРґРµРЅРёСЏ РїСЂРёРіРѕРґРЅРѕСЃС‚Рё Рє РІРѕР·РґРµР»С‹РІР°РЅРёСЋ, СЃР»РµРґСѓРµС‚ Рє РґР°С‚Рµ СЂР°Р·СЂРµС€РµРЅРЅРѕР№ РїРѕСЃР°РґРєРё РїСЂРёР±Р°РІРёС‚СЊ РїСЂРѕРґРѕР»Р¶РёС‚РµР»СЊРЅРѕСЃС‚СЊ РІРµРіРµС‚Р°С†РёРѕРЅРЅРѕРіРѕ СЃРµР·РѕРЅР° РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРѕ РѕРІРѕС‰Р° (РµСЃС‚СЊ РІ РѕРїРёСЃР°РЅРёРё РІС‹СЂР°С‰РёРІР°РЅРёСЏ), Рё РµСЃР»Рё РµРіРѕ Р·Р°РІРµСЂС€РµРЅРёРµ РїСЂРёС…РѕРґРёС‚СЃСЏ РЅР° РїРµСЂРёРѕРґ Р·Р°РјРѕСЂРѕР·РєРѕРІ РёР»Рё РјРѕСЂРѕР·РѕРІ, РІС‹СЃРµРІР°С‚СЊ С‚Р°РєСѓСЋ РєР»СЊС‚СѓСЂСѓ РІ РґР°РЅРЅРѕРј РєР»РёРјР°С‚Рµ РЅРµР»СЊР·СЏ.</p>
+						<h3>РћРіСЂР°РЅРёС‡РµРЅРёСЏ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё</h3>
+                    	<p style="padding-bottom:4px;">Р’СЃСЏ РїСЂРёРІРµРґРµРЅРЅР°СЏ РІ СЂР°Р·РµРґРµР»Рµ РёРЅС„РѕСЂРјР°С†РёСЏ РЅРѕСЃРёС‚ РѕР·РЅР°РєРѕРјРёС‚РµР»СЊРЅС‹Р№ С…Р°СЂР°РєС‚РµСЂ Рё РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ "РєР°Рє РµСЃС‚СЊ", Р±РµР· РєР°РєРёС…-Р»РёР±Рѕ РіР°СЂР°РЅС‚РёР№. РђРґРјРёРЅРёСЃС‚СЂР°С†РёСЏ СЃРµСЂРІРёСЃР° РЅРµ РЅРµСЃРµС‚ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё Р·Р° РІРѕР·РјРѕР¶РЅС‹Рµ СѓР±С‹С‚РєРё РёР»Рё Р¶РµСЂС‚РІС‹, СЃРІСЏР·Р°РЅРЅС‹Рµ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃРІРµРґРµРЅРёР№ РґР°РЅРЅРѕРіРѕ СЂР°Р·РґРµР»Р°.</p>
 		        	</div>
 			    </div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-   			</div>
 			</div>
   </div>
   <div class="main_container">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner"  >
-   			</div>
    			<div class="block_title main_container_title_width">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>КАКИЕ ОВОЩИ МОЖНО ВЫРАСТИТЬ В СРЕДНЕЙ ПОЛОСЕ РОССИИ?</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>РљРђРљРР• РћР’РћР©Р РњРћР–РќРћ Р’Р«Р РђРЎРўРРўР¬ Р’ РЎР Р•Р”РќР•Р™ РџРћР›РћРЎР• Р РћРЎРЎРР?</b></div>
    			</div>
 			</div>
 			<div class="block_content">
 		    	<div class="content">
-						<h2>Методы, способы и технологии выращивания овощей</h2>
-						<p>Выберите растение, которое Вас интересует</p>
+						<h2>РњРµС‚РѕРґС‹, СЃРїРѕСЃРѕР±С‹ Рё С‚РµС…РЅРѕР»РѕРіРёРё РІС‹СЂР°С‰РёРІР°РЅРёСЏ РѕРІРѕС‰РµР№</h2>
+						<p>Р’С‹Р±РµСЂРёС‚Рµ СЂР°СЃС‚РµРЅРёРµ, РєРѕС‚РѕСЂРѕРµ Р’Р°СЃ РёРЅС‚РµСЂРµСЃСѓРµС‚</p>
 						<div style="margin:1px;"><?php include("linklist2.php"); ?></div>
 			    </div>
 			</div>
 			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-   			</div>
 			</div>
   </div>
 </div>
@@ -158,15 +125,9 @@
 	<div class="yui-b">
   	 <div class="right_main">
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-   			</div>
-   			<div class="block_title" style="width:222px">
+   			<div class="block_title">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>РЕКЛАМА</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>Р Р•РљР›РђРњРђ</b></div>
    			</div>
 			</div>
 				<div class="block_content">
@@ -175,79 +136,40 @@
 					?>						
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 				<div class="block_top">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title">
 	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
-	 			 		<div class="title"><b>КОНТАКТЫ</b></div>
-	   			</div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+	 			 		<div class="title"><b>РљРћРќРўРђРљРўР«</b></div>
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:210px; margin-left:-5px;">
-						<p style="padding-bottom:4px;"><a href="mailto:korolkow@meteonova.ru" target="_blank">Электронная почта</a></p>
-						<p style="padding-bottom:4px;"><a href="/guestbook.htm">Гостевая книга</a></p>
+					<div class="content">
+						<p style="padding-bottom:4px;"><a href="mailto:korolkow@meteonova.ru" target="_blank">Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕС‡С‚Р°</a></p>
+						<p style="padding-bottom:4px;"><a href="/guestbook.htm">Р“РѕСЃС‚РµРІР°СЏ РєРЅРёРіР°</a></p>
 						<p style="padding-bottom:4px;">+7 (499) 390-55-16</p>
 						<p style="padding-bottom:0px;">+7 (925) 184-08-55</p>
 					</div>
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 				<div class="block_top">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-	   			</div>
-	   			<div class="block_title" style="width:222px;">
+	   			<div class="block_title">
 	 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
-	 			 		<div class="title"><b>БЛАГОДАРОНСТИ</b></div>
-	   			</div>
-	   			<div class="round_right">
-		 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+	 			 		<div class="title"><b>Р‘Р›РђР“РћР”РђР РћРќРЎРўР</b></div>
 	   			</div>
 				</div>
 				<div class="block_content" style="width:100%;">
-					<div class="content" style="width:210px;">
-	                    	<p style="padding-bottom:4px;">Выражаем благодарность специалистам Сельскохозяйственной академии им. Тимирязева и Балтийкому федеральноу университету им. Канта за помощь в разработке этого раздела.</p>
+					<div class="content">
+	                    	<p style="padding-bottom:4px;">Р’С‹СЂР°Р¶Р°РµРј Р±Р»Р°РіРѕРґР°СЂРЅРѕСЃС‚СЊ СЃРїРµС†РёР°Р»РёСЃС‚Р°Рј РЎРµР»СЊСЃРєРѕС…РѕР·СЏР№СЃС‚РІРµРЅРЅРѕР№ Р°РєР°РґРµРјРёРё РёРј. РўРёРјРёСЂСЏР·РµРІР° Рё Р‘Р°Р»С‚РёР№РєРѕРјСѓ С„РµРґРµСЂР°Р»СЊРЅРѕСѓ СѓРЅРёРІРµСЂСЃРёС‚РµС‚Сѓ РёРј. РљР°РЅС‚Р° Р·Р° РїРѕРјРѕС‰СЊ РІ СЂР°Р·СЂР°Р±РѕС‚РєРµ СЌС‚РѕРіРѕ СЂР°Р·РґРµР»Р°.</p>
 					</div>
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 			<div class="block_top">
-   			<div class="round_left">
-	 		  	<img src="/images/block_top_left.png" width="9" height="31" class="corner" >
-   			</div>
-   			<div class="block_title" style="width:222px">
+   			<div class="block_title">
  				  <div class="icon"><img src="/images/icon.png" width="26" height="26" ></div>
- 			 		<div class="title"><b>РЕКЛАМА</b></div>
-   			</div>
-   			<div class="round_right">
-	 				<img src="/images/block_top_right.png" width="9" height="31" class="corner" >
+ 			 		<div class="title"><b>Р Р•РљР›РђРњРђ</b></div>
    			</div>
 			</div>
 				<div class="block_content">
@@ -256,34 +178,15 @@
 					?>						
 				</div>
 				<div class="block_bottom">
-	   			<div class="round_left">
-		 		  	<img src="/images/block_bt_left.png" width="9" height="14" class="corner" >
-	   			</div>
-	   			<div class="block_bt" style="width:222px"></div>
-	   			<div class="round_right">
-		 				<img src="/images/block_bt_right.png" width="9" height="14" class="corner" >
-	   			</div>
 				</div>
 			</div>
 	</div>
 </div>
 <div class="right_block">
 					<div class="block_top">
-		   			<div class="round_left">
-	
-			 		  	<img src="/images/block_top_left.png"
-			 				width="9" height="31" class="corner"
-			 				 />
-		   			</div>
-		   			<div class="block_title" style="width:222px;">
-		 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Все новости о погоде на Метеонове" ></div>
-		 			 		<div class="title"><b>НОВОЕ О ПОГОДЕ</b></div>
-		   			</div>
-		   			<div class="round_right">
-			 				<img src="/images/block_top_right.png"
-			 				width="9" height="31" class="corner"
-			 				 />
-	
+		   			<div class="block_title">
+		 				  <div class="icon"><img src="/images/icon.png" width="26" height="26" alt="Р’СЃРµ РЅРѕРІРѕСЃС‚Рё Рѕ РїРѕРіРѕРґРµ РЅР° РњРµС‚РµРѕРЅРѕРІРµ" ></div>
+		 			 		<div class="title"><b>РќРћР’РћР• Рћ РџРћР“РћР”Р•</b></div>
 		   			</div>
 					</div>
 					<div class="block_content" style="width:100%;">
@@ -292,25 +195,13 @@
 						</div>
 					</div>
 					<div class="block_bottom">
-	
-		   			<div class="round_left">
-			 		  	<img src="/images/block_bt_left.png"
-			 				width="9" height="14" class="corner"
-			 				 />
-		   			</div>
-		   			<div class="block_bt" style="width:222px"></div>
-		   			<div class="round_right">
-			 				<img src="/images/block_bt_right.png"
-			 				width="9" height="14" class="corner"
-			 				 />
-		   			</div>
 					</div>
 </div>
 	  <div id="ft" role="contentinfo">
-	      <div class="copyright"><span>Copyright &copy; 2009-2018, Метеосистемы</span></div>
+	      <div class="copyright"><span>Copyright &copy; 2009-2020, РњРµС‚РµРѕСЃРёСЃС‚РµРјС‹</span></div>
 	      <div class="counters">
 	    <noindex>
-	        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?41.11" border="0" width="31" height="31" alt="" title="LiveInternet: показано число просмотров за 24 часа, посетителей за 24 часа и за сегодня"/></a></div>
+	        <div class="counter"><a rel="nofollow" href="//www.liveinternet.ru/click" target="_blank"><img src="//counter.yadro.ru/logo?45.10" border="0" width="31" height="31" alt="" title="LiveInternet: РїРѕРєР°Р·Р°РЅРѕ С‡РёСЃР»Рѕ РїСЂРѕСЃРјРѕС‚СЂРѕРІ Р·Р° 24 С‡Р°СЃР°, РїРѕСЃРµС‚РёС‚РµР»РµР№ Р·Р° 24 С‡Р°СЃР° Рё Р·Р° СЃРµРіРѕРґРЅСЏ"/></a></div>
 	    </noindex>
 	      </div>
 	  </div>

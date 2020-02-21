@@ -63,10 +63,10 @@ header("Pragma: no-cache");
 									<div id="map" class="map"></div> 									
 									<div class="legends">
 										<div class="legmini"></div>            
-									</div>    
+									</div>
+							</div>
+							<div class="map-wrapper"  style="height: 48px; background: #344fa8">
 									<div id="progress"></div>
-							</div>								
-							<div class="map-wrapper" style="margin-top: 30px; height: 24px">
 									<div id="timeline-wrapper">
 										<div class="play-button">  
 											<a class="play-button paused" href="#">
@@ -76,7 +76,7 @@ header("Pragma: no-cache");
 											    <div class="triangle-2"></div>
 											</a>
 										</div>									     
-										<div class="timeline" style="width:97%"></div>
+										<div class="timeline"></div>
 										<div class="clear"></div>     
 									</div>
 							</div>
@@ -181,32 +181,32 @@ header("Pragma: no-cache");
 	var _lat = parseFloat(getParameterByName('fi')) || (typeof lat != 'undefined'?lat:<%= lat %>),
 		_lng = parseFloat(getParameterByName('la')) || (typeof lng != 'undefined'?lng:<%= lng %>),
 		map = new Map({
-	    predict: 6,
-	    step: step,
-	    count: 20,
-	    visibleLayer: visibleLayer,
-	    lat: _lat,
-	    lng: _lng,
-	    zoom: zoom,
-	    minZoom: 4,
-	    maxZoom: 8,
-	    target: 'map',
-	    type: type,
-	    summertime: 0,
-	    progressbar: new Progress(document.getElementById('progress')),
-	    timeline: new Timeline(
-	        $('.timeline'),
-	        {summertime: 0, timeshift: -999, predict: 6, step: step, count: 20, maptype: type, display: 'block', select_hours: $('select[name="hours"]')} 
-	    ),
-	    callback: function(position) {	
-	    	map.opt.lat = position[1];
-	    	map.opt.lng = position[0];
-	    	history.pushState(
-	    		null,
-	    		null,
-	    		"map.htm?fi="+position[1]+"&la="+position[0]+"&type="+map.opt.type+"&step="+map.opt.step+"&vl="+map.opt.visibleLayer+"&zoom="+map.opt.zoom);
-	    }      
-	});
+			predict: 6,
+			step: step,
+			count: 20,
+			visibleLayer: visibleLayer,
+			lat: _lat,
+			lng: _lng,
+			zoom: zoom,
+			minZoom: 4,
+			maxZoom: 8,
+			target: 'map',
+			type: type,
+			summertime: 0,
+			progressbar: new Progress(document.getElementById('progress')),
+			timeline: new Timeline(
+				$('.timeline'),
+				{summertime: 0, timeshift: -999, predict: 6, step: step, count: 20, maptype: type, display: 'block', select_hours: $('select[name="hours"]')}
+			),
+			callback: function(position) {
+				map.opt.lat = position[1];
+				map.opt.lng = position[0];
+				history.pushState(
+					null,
+					null,
+					"map.htm?fi="+position[1]+"&la="+position[0]+"&type="+map.opt.type+"&step="+map.opt.step+"&vl="+map.opt.visibleLayer+"&zoom="+map.opt.zoom);
+			}
+		});
 	map.render();
 
 	var $select_map = $('select[name="map_types"]');

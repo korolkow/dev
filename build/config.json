@@ -33,6 +33,7 @@
         ],
         "js": [
             "../js/jquery-1.11.1.min.js",
+            "../js/jquery.mousewheel.min.js",
             "../js/utils.js",
             "../js/dancer.min.js",
             "../js/novaspeak.js",
@@ -154,6 +155,7 @@
                 "../css/inf.css"
             ],
             "js": [
+                "../js/jquery-ui.min.js",
                 "../js/bootstrap/bootstrap-colorpicker.min.js",
                 "../js/typeahead.jquery.min.js",
                 "../js/bootstrap/bootstrap-select.js",
@@ -280,6 +282,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/dancer.min.js",
@@ -340,6 +343,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/svgchart.js",
                 "../js/dancer.min.js",
@@ -357,6 +361,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/svgchart.js",
@@ -389,6 +394,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/dancer.min.js",
@@ -406,6 +412,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/dancer.min.js",
@@ -420,6 +427,7 @@
                 "../css/v2/dropdownlist.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/svgchart.js"
@@ -445,6 +453,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -454,10 +463,13 @@
             "tpl": "../meteonova/ru_mn2_dsk_agro_ru",
             "css": [
                 "../css/frc.css",
-                "../css/agro.css",
-                "../css/v2/dropdownlist.css"
+                "../css/v2/agro.css",
+                "../css/v2/dropdownlist.css",
+                "../css/ol3.css",
+                "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -472,6 +484,7 @@
                 "../css/map.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -483,6 +496,7 @@
                 "../css/frc.css"
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js"
             ]
@@ -520,6 +534,7 @@
 
             ],
             "js": [
+                "../js/jquery.mousewheel.min.js",
                 "../js/slider.js",
                 "../js/dropdownlist.js",
                 "../js/novaspeak.js",
