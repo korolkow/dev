@@ -15,6 +15,7 @@ var Map = function(opt) {
 	this.isMapMove = false;
 	this.ghostZoom = opt.zoom;
 	this.dataLabel = 0;
+	this.mousePositionControl = opt.mousePositionControl;
 	this.render = function() {
 		var view = new ol.View({
 	        center: ol.proj.transform([opt.lng, opt.lat], 'EPSG:4326', 'EPSG:3857'),
@@ -27,14 +28,16 @@ var Map = function(opt) {
 	      layers: [new ol.layer.Tile({
 	          source: new ol.source.OSM()
 	        })],
-          controls: (opt.minZoom?[new ol.control.Zoom()]:[]),	      
+          controls: (opt.minZoom?[new ol.control.Zoom()]:[]),
 	      target: opt.target,
 	      units: "m",
 	      view: view,
 	      overlays: opt.overlays?opt.overlays: [],
-	      interactions: ol.interaction.defaults({mouseWheelZoom: (opt.mouseWheelZoom===true?true:false)}),
+	      interactions: ol.interaction.defaults({mouseWheelZoom: (opt.mouseWheelZoom===true?true:false)})
 	    });
 	    this.map.addControl(new ol.control.Attribution({collapsible: false}));
+        if (typeof this.mousePositionControl !== 'undefined')
+        	this.map.addControl(this.mousePositionControl);
 	    var self = this;    
 
 		/*var geolocation = new ol.Geolocation({
@@ -90,7 +93,8 @@ var Map = function(opt) {
             	if (opt.callback) opt.callback(ol.proj.transform(ol.extent.getCenter(self.map.getView().calculateExtent(self.map.getSize())), 'EPSG:3857', 'EPSG:4326'));
 		    };
 		}
-	    this.map.on('moveend', $.proxy(function(e){ 
+
+	    this.map.on('moveend', $.proxy(function(e) {
 	    	if (opt.type) self.renderLayer(this, e);
 	    	if (opt.callback) opt.callback(ol.proj.transform(ol.extent.getCenter(self.map.getView().calculateExtent(self.map.getSize())), 'EPSG:3857', 'EPSG:4326'));
 			if (this.ghostZoom != this.map.getView().getZoom()) {

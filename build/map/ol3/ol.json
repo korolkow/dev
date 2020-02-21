@@ -1,0 +1,56 @@
+{
+    "exports": [
+        "ol.Map",
+        "ol.Map#addControl",
+        "ol.Map#on",
+        "ol.Map#addLayer",
+        "ol.Map#getView",
+        "ol.Map#getSize",
+        "ol.View",
+        "ol.View#calculateExtent",
+        "ol.View#getZoom",
+        "ol.control.Control",
+        "ol.control.Zoom",
+        "ol.control.MousePosition",
+        "ol.control.Attribution",
+        "ol.layer.Tile",
+        "ol.layer.Vector",
+        "ol.layer.Vector#getSource",
+        "ol.layer.Vector#setVisible",
+        "ol.layer.Layer#setMap",
+        "ol.source.OSM",
+        "ol.source.Vector",
+        "ol.source.Vector#addFeatures",
+        "ol.format.KML",
+        "ol.format.KML#readFeatures",
+        "ol.coordinate.createStringXY",
+        "ol.proj.transform",
+        "ol.interaction.defaults",
+        "ol.Geolocation",
+        "ol.extent.getBottomLeft",
+        "ol.extent.getTopRight",
+        "ol.extent.getCenter",
+        "ol.Overlay",
+        "ol.Overlay#setPosition"
+    ],
+    "compile": {
+        "externs": [
+            "externs/bingmaps.js",
+            "externs/closure-compiler.js",
+            "externs/geojson.js",
+            "externs/oli.js",
+            "externs/olx.js",
+            "externs/proj4js.js",
+            "externs/tilejson.js",
+            "externs/topojson.js"
+        ],
+        "define": [
+            "ol.DEBUG=false"
+        ],
+        "extra_annotation_name": [
+            "api", "observable"
+        ],
+        "compilation_level": "ADVANCED",
+        "manage_closure_dependencies": true
+    }
+}

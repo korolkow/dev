@@ -1,0 +1,5 @@
+Build ol.js
+$ mkdir openlayers
+$ npm install openlayers
+$ cd node_modules/openlayers
+$ node tasks/build.js build/ol.json build/ol-custom.js
