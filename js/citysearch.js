@@ -9,7 +9,7 @@ var CitySearch = function(obj) {
 //var AjaxRequest = function(reqStr, obj, callbacks) {
 var AjaxRequest = function(city, obj, callbacks) {
 	if (callbacks.doBefore) callbacks.doBefore();
-	this.url = '/listcache/lc_' + city + '.json';
+	this.url = '//meteonova.ru/listcache/lc_' + city + '.json';
 	this.getXmlHttp = function() {
 	  var xmlhttp;
 	  try {

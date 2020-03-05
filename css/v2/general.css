@@ -1624,3 +1624,22 @@ button {
     background: linear-gradient(90deg, rgba(185,191,205,1) 0%, rgba(185,191,205,1) 40%, rgba(255,255,255,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#b9bfcd",endColorstr="#ffffff",GradientType=1);
 }
+
+.star {
+    text-decoration: none;
+    height: 18px;
+    width: 18px;
+    font-size: 18px;
+    margin-right: 8px;
+    display: inline-block;
+
+}
+
+.star:after {
+    content: "\2605";
+    color: #d2d2d2;
+}
+
+.star.yellow:after {
+    color: #ffca00;
+}

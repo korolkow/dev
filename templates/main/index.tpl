@@ -133,45 +133,24 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 				@@include('<%= tpl_path %>/blog.tpl')
 				</div>
 			</div>
-			<div class="block_bottom">
-   			<div class="round_left">
-
-	 		  	<img src="/images/block_bt_left.png"
-	 				width="9" height="14" class="corner"
-	 				 />
-   			</div>
-   			<div class="block_bt center_container_title_width"></div>
-   			<div class="round_right">
-	 				<img src="/images/block_bt_right.png"
-	 				width="9" height="14" class="corner"
-	 				 />
-   			</div>
-			</div>
+			<div class="block_bottom"></div>
   		</div>
  	</div>
-  	<div class="main_container">
-			<div class="block_city" style="height: 47px;">
-				<div class="round_left">
-					<img src="/images/city_left.png" width="10" height="46" class="corner">
-				</div>
-				<div class="city_content">
-						<div class="serchcontent">
-									<div class="searchform frc main" id="searchform">
-										<div class="left-input l">
-											<div class="right-input r">
-												<div class="img" id="searchform_img"></div>
-												<div class="fill-input c">
-													<input class="search grey" type="text" placeholder="поиск погоды - введите название населенного пункта" onload="this.value = 'поиск погоды - введите название населенного пункта'" onfocus="setSuggest(this, 'searchform', 'searchform_img', 'поиск погоды - введите название населенного пункта')">
-												</div>
-											</div>
-										</div>
-									</div>
-						</div>
-				</div>
-				<div class="round_right">
-					<img src="/images/city_right.png" width="10" height="46" class="corner">
-				</div>
+	<div class="main_container">
+		<div class="block_top" style="width: 100%;position: relative; float: left;border-top-left-radius: 4px;border-top-right-radius: 4px; height: 8px; background: #fff;"></div>
+		<div class="block_content">
+			<div class="content" style="padding-top: 0">
+				<input class="search-control typeahead" type="search" placeholder="поиск погоды - введите название населенного пункта" id="search-input">
 			</div>
+		</div>
+		<div class="block_bottom"></div>
+	</div>
+  	<div class="main_container">
+		<div class="block_top" style="float:none">
+			<div class="block_title">
+				<div class="title"><b>ПОГОДА ПО ГОРОДАМ</b></div>
+			</div>
+		</div>
 			<div class="block_content">
 				<div class="content" id="block_list">
 					<div class="loader" id="loader"></div>
@@ -183,20 +162,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 					</div>
 			   </div>
 			</div>
-			<div class="block_bottom">
-   			<div class="round_left">
-	 		  	<img src="/images/block_bt_left.png"
-	 				width="9" height="14" class="corner"
-	 				 />
-   			</div>
-   			<div class="block_bt main_container_title_width"></div>
-   			<div class="round_right">
-
-	 				<img src="/images/block_bt_right.png"
-	 				width="9" height="14" class="corner"
-	 				 />
-   			</div>
-			</div>
+			<div class="block_bottom"></div>
   </div>
 <?php
 	if (file_exists('ban728x90.php')) require("ban728x90.php");
@@ -645,29 +611,16 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 	@@include('../footer/<%= tpl_path %>/index.tpl')
 </div>
 </div>
-	<script type="text/javascript">	
-	var suggest = null;
-	function setSuggest(obj, parent, loader, str) {
-			suggest = new mnovaSuggest(
-				{
-					o: 'suggest',
-					tpl: '<div id="%id%" onmouseover = "suggest.mouseOver(null, this)" onclick = "suggest.mouseClick()">%name%<span class="dc">%mun_name%%d_name%%c_name%</span></div>',
-		 			nulltpl: '<div class="discript" id="discript" onClick = "suggest.mouseClick()"><span class="e"><a id="err_a" href="/mgfind.htm?%input.val%">%input.val%</a></span></div>',
-					tplc: '<div class="discript"><span class="c"><a href="/search/?req=listcountries">Страны:</a></span></div>',
-					tplmu: '<div class="discript"><span class="d">Районы:</span></div>',
-					tpld: '<div class="discript"><span class="d">Области:</span></div>',
-					tplt: '<div class="discript"><span class="t">Города:</span></div>',
-					tpla: '<div class="discript"><span class="d">Аэропорты:</span></div>',
-					tpl_allsearch: 'Все результаты'					
-				},
-				{
-					parent: parent,
-					o: obj,				
-					loader: loader,
-					defVal: str
-				}
-			);
-	}
-	</script>
+<script type="text/javascript">
+    $(function () {
+        var f = new Favorities();
+		//f.add({"id": "27511", "name": "Истра", "country": { "id": "156", "name": "Россия"}, "type":"t", "favorite": true});
+        //f.add({"id": "27612", "name": "Москва", "country": { "id": "156", "name": "Россия"}, "type":"t"});
+        $('.search-control.typeahead').searchAutocomplete({
+			id: townindex,
+			defaultList: f.getItems()
+		});
+    });
+</script>
 </body>
 </html>

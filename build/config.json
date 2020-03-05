@@ -37,6 +37,7 @@
             "../js/utils.js",
             "../js/dancer.min.js",
             "../js/novaspeak.js",
+            "../js/search_autocomplete.js",
             "../js/citysearch.js",
             "../js/dropdownlist.js",
             "../js/jquery.vdrop.min.js",
@@ -47,6 +48,7 @@
             "../js/amcharts/themes/light.js",
             "../js/bootstrap/bootstrap-colorpicker.min.js",
             "../js/typeahead.jquery.min.js",
+            "../js/typeahead.js",
             "../js/bootstrap/bootstrap-select.js",
             "../js/bootstrap/bootstrap.js",
             "../js/engine.js",
@@ -56,7 +58,8 @@
             "../js/owl.carousel.min.js",
             "../js/slider.js",
             "../js/svgchart.js",
-            "../js/chart.min.js"
+            "../js/chart.min.js",
+            "../js/favorities.js"
         ]
     },
     "static_files" : [
@@ -65,16 +68,18 @@
             "tpls": [ "../templates/main/index.tpl" ],
             "css": [
                 "../css/frc.css",
-                "../css/v2/dropdownlist.css",
+                "../css/typeaheadjs.css",
                 "../css/v2/mgfind.css",
                 "../css/ol3.css",
                 "../css/map.css"
             ],
             "js": [
-                "../js/dropdownlist.js",
+                "../js/citysearch.js",
+                "../js/typeahead.js",
+                "../js/search_autocomplete.js",
                 "../js/dancer.min.js",
                 "../js/novaspeak.js",
-                "../js/citysearch.js"
+                "../js/favorities.js"
             ],
             "extname": ".html",
             "path": "/"
