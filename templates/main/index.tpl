@@ -140,7 +140,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 		<div class="block_top" style="width: 100%;position: relative; float: left;border-top-left-radius: 4px;border-top-right-radius: 4px; height: 8px; background: #fff;"></div>
 		<div class="block_content">
 			<div class="content" style="padding-top: 0">
-				<input class="search-control typeahead" type="search" placeholder="поиск погоды - введите название населенного пункта" id="search-input">
+				<input class="search-control typeahead" type="search" placeholder="Поиск по городу" id="search-input">
 			</div>
 		</div>
 		<div class="block_bottom"></div>
@@ -613,13 +613,33 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 </div>
 <script type="text/javascript">
     $(function () {
-        var f = new Favorities();
-		//f.add({"id": "27511", "name": "Истра", "country": { "id": "156", "name": "Россия"}, "type":"t", "favorite": true});
-        //f.add({"id": "27612", "name": "Москва", "country": { "id": "156", "name": "Россия"}, "type":"t"});
-        $('.search-control.typeahead').searchAutocomplete({
+        var citiesList = new LastViewedCities();
+        citiesList.add({"id": "27511", "name": "Истра", "country": { "id": "156", "name": "Россия"}, "type":"t", "favorite": true});
+    	citiesList.add({"id": "27612", "name": "Москва", "country": { "id": "156", "name": "Россия"}, "type":"t"});
+		var input =  $('.search-control.typeahead');
+
+        input.searchAutocomplete({
 			id: townindex,
-			defaultList: f.getItems()
+			defaultList: citiesList
 		});
+
+        $(document).on('click', '.star', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('yellow');
+            var o = $(this).attr('data-attr');
+            if ($(this).hasClass('yellow')) citiesList.setFavorite(JSON.parse(o), true);
+            else citiesList.setFavorite(JSON.parse(o), false);
+            input.typeahead('destroy');
+            input.searchAutocomplete({
+                id: townindex,
+                defaultList: citiesList
+            });
+            input.trigger('focus');
+            //var ev = $.Event("keydown");
+            //ev.keyCode = ev.which = 40;
+            //input.trigger(ev);
+            //return true;
+        });
     });
 </script>
 </body>

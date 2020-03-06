@@ -3,14 +3,13 @@ $(function () {
     jQuery.fn.searchAutocomplete = function (opt) {
         var el = this,
             cityId = opt.id,
-            favoritesList =  opt.defaultList.filter(function(item) {
-               return item.favorite === true
-            }),
-            viewedList = opt.defaultList.filter(function(item) {
-                return item.favorite !== true
-            })
+            favoritesList = [],
+            viewedList = [];
 
         var getFavoritesItems = function() {
+            favoritesList =  opt.defaultList.getItems().filter(function(item) {
+                return item.favorite === true
+            });
             return function findMatches(q, cb) {
                 if (q === '')
                     cb(favoritesList || []);
@@ -20,6 +19,9 @@ $(function () {
         };
 
         var getViewedItems = function() {
+            viewedList = opt.defaultList.getItems().filter(function(item) {
+                return item.favorite !== true
+            });
             return function findMatches(q, cb) {
                 if (q === '')
                     cb(viewedList || []);
@@ -33,7 +35,7 @@ $(function () {
                 var countriesList = [];
                 var used = {};
                 if (q === '') {
-                    countriesList = opt.defaultList.map(function (item) {return item.country});
+                    countriesList = opt.defaultList.getItems().map(function (item) {return item.country});
                     countriesList = countriesList.filter(function (obj) {
                         return obj.id in used ? 0 : (used[ obj.id ] = 1);
                     })
@@ -59,7 +61,7 @@ $(function () {
                             return '<div><h3>Мои пункты</h3></div>';
                         },
                         suggestion: function(data) {
-                            return '<div><span class="star yellow"></span><strong>' + data.id + '</strong>, ' + data.name + '</div>';
+                            return '<div><a href="#" class="star yellow" data-attr=\'' + JSON.stringify(data) + '\'></a><strong>' + data.id + '</strong>, ' + data.name + '</div>';
                         }
                     }
                 },
@@ -73,7 +75,7 @@ $(function () {
                             return '<div><h3>Недавно просмотренные</h3></div>';
                         },
                         suggestion: function(data) {
-                            return '<div><span class="star"></span><strong>' + data.id + '</strong>, ' + data.name + '</div>';
+                            return '<div><a href="#" class="star" data-attr=\'' + JSON.stringify(data) + '\'></a><strong>' + data.id + '</strong>, ' + data.name + '</div>';
                         }
                     }
                 },
@@ -106,7 +108,7 @@ $(function () {
                             return data.query === ''?'<div><h3>Ближайшие пункты</h3></div>':'<div><h3>Найденные пункты</h3></div>'
                         },
                         suggestion: function(data) {
-                            return '<div><span class="star"></span><strong>' + data.id + '</strong>, ' + data.name + '</div>';
+                            return '<div>' + (data.query === ''?'<span class="star"></span>':'') + '<strong>' + data.id + '</strong>, ' + data.name + '</div>';
                         },
                         notFound: '<div class="empty">По вашему запросу ничего не найдено</div><div class="all-result"><a href="#">Нет нужного пункта? Воспользуйтесь Мегапоиском</a></div>',
                     }
@@ -139,11 +141,9 @@ $(function () {
                     templates: {
                         header: '<div><h3>Найденные аэропорты</h3></div>',
                         suggestion: function(data) {
-                            return '<div><span class="star"></span><strong>' + data.id + '</strong>, ' + data.name + '</div>';
+                            return '<div><strong>' + data.id + '</strong>, ' + data.name + '</div>';
                         },
-                        footer: function(data) {
-                            return '<div class="all-result"><a href="#">Все результаты</a></div>';
-                        }
+                        footer: '<div class="all-result"><a href="#">Все результаты</a></div>'
                     }
                 },
                 {
@@ -161,9 +161,9 @@ $(function () {
                     }
                 }
             ).bind('typeahead:select', function (ev, suggestion) {
-                location.href = '/pogoda/' + suggestion.id
+                //location.href = '/pogoda/' + suggestion.id
             }).bind('typeahead:active', function () {
-                $(this).prop('placeholder', '')
+                $(this).prop('placeholder', 'Поиск по городу');
             })
         }()
     }

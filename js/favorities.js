@@ -1,4 +1,4 @@
-var Favorities = function(callback) {
+var LastViewedCities = function(callback) {
 	this.localstorage = new Localstorage(callback);
 	this.init = function() {
         if (callback) callback();
@@ -9,35 +9,43 @@ var Favorities = function(callback) {
 		else return false;
 	};
 	this.add = function(data) {
-		this.localstorage.setItem('favorities', data);
-		//jAlert((data.type == 't'?'Город (пункт) ':'Аэропорт ')+data.name+' добавлен в список избранных', 'метеонова');
+		if (this.check(data) === false)
+			this.localstorage.setItem('lastViewedCities', data);
 		if (callback) callback();
 	};
+	this.setFavorite = function(data, isFavirite) {
+		data.favorite = isFavirite;
+		var items = this.getItems();
+		items = items.map(function(item) {
+			if (item.id === data.id) return data;
+			else return item;
+		});
+        this.localstorage.updateItem('lastViewedCities', items);
+	}
 	this.remove = function(data) {
-		
 		var i = 0, j = 0,
-				f = this.localstorage.getItem('favorities');	
+				f = this.localstorage.getItem('lastViewedCities');
 		if (f && f.length>0) {
 			$.each(f, function(index) {
 				if(f[index].id == data.id) j = i;
 				i++;
 			});
 			f.splice(j, 1);
-			localStorage.removeItem('favorities');
+			localStorage.removeItem('lastViewedCities');
 			if (f.length>0)
 				$.each(f, $.proxy(function(index) {
-					this.localstorage.setItem('favorities', f[index]);	
+					this.localstorage.setItem('lastViewedCities', f[index]);
 				}, this));
 			//jAlert((data.type == 't'?'Город (пункт) ':'Аэропорт ')+data.name+' удалён из списка избранных', 'метеонова');
             if (callback) callback();
 		}
 	};
 	this.check = function(data) {
-		if (this.localstorage.isData('favorities', data)) return true;
+		if (this.localstorage.isData('lastViewedCities', data)) return true;
 		else return false;	
 	};
 	this.getItems = function() {
-		var f = this.localstorage.getItem('favorities');
+		var f = this.localstorage.getItem('lastViewedCities');
 		if (f && f.length>0) return f;
 		else return [];
 	}
@@ -81,5 +89,8 @@ var Localstorage = function() {
 		var str = localStorage.getItem(key);
 		if (str) return JSON.parse(str);
 		else return null;	
-	}	
+	}
+	this.updateItem = function(key, value) {
+        localStorage.setItem(key, JSON.stringify(value));
+	}
 }
