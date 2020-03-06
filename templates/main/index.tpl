@@ -627,8 +627,23 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
             e.preventDefault();
             $(this).toggleClass('yellow');
             var o = $(this).attr('data-attr');
-            if ($(this).hasClass('yellow')) citiesList.setFavorite(JSON.parse(o), true);
-            else citiesList.setFavorite(JSON.parse(o), false);
+            if (o) {
+                if ($(this).hasClass('yellow')) citiesList.setFavorite(JSON.parse(o), true);
+                else citiesList.setFavorite(JSON.parse(o), false);
+                repairTypeahead();
+            }
+        });
+
+    	$(document).on('click', '.close', function(e) {
+            e.preventDefault();
+            var o = $(this).attr('data-attr');
+            if (o) {
+                citiesList.remove(JSON.parse(o));
+                repairTypeahead();
+            }
+        });
+
+    	function repairTypeahead() {
             input.typeahead('destroy');
             input.searchAutocomplete({
                 id: townindex,
@@ -639,7 +654,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
             //ev.keyCode = ev.which = 40;
             //input.trigger(ev);
             //return true;
-        });
+		}
     });
 </script>
 </body>

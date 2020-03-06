@@ -61,7 +61,14 @@ $(function () {
                             return '<div><h3>Мои пункты</h3></div>';
                         },
                         suggestion: function(data) {
-                            return '<div><a href="#" class="star yellow" data-attr=\'' + JSON.stringify(data) + '\'></a><strong>' + data.id + '</strong>, ' + data.name + '</div>';
+                            return [
+                                '<div>',
+                                '<a href="#" class="star yellow" data-attr=\'' + JSON.stringify(data) + '\'></a>',
+                                '<strong>' + data.id + '</strong>',
+                                data.name,
+                                '<a href="#" class="close" data-attr=\'' + JSON.stringify(data) + '\'></a>',
+                                '</div>'
+                            ].join('\n');
                         }
                     }
                 },
@@ -75,7 +82,14 @@ $(function () {
                             return '<div><h3>Недавно просмотренные</h3></div>';
                         },
                         suggestion: function(data) {
-                            return '<div><a href="#" class="star" data-attr=\'' + JSON.stringify(data) + '\'></a><strong>' + data.id + '</strong>, ' + data.name + '</div>';
+                            return [
+                                '<div>',
+                                '<a href="#" class="star" data-attr=\'' + JSON.stringify(data) + '\'></a>',
+                                '<strong>' + data.id + '</strong>',
+                                data.name,
+                                '<a href="#" class="close" data-attr=\'' + JSON.stringify(data) + '\'></a>',
+                                '</div>'
+                            ].join('\n');
                         }
                     }
                 },
