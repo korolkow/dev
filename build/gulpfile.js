@@ -59,10 +59,10 @@ function copyJsSctipts() {
         .pipe(gulpif(isProd, uglify()));
     var stream = merge2();
     stream.add(defJs);
-    if (isProd() === false) {
+    //if (isProd() === false) {
         const js = src(config.commonScripts.js);
         stream.add(js);
-    }
+    //}
     return stream.pipe(gulpSSH.dest(savepath + '/js/'))
 }
 

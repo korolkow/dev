@@ -66,7 +66,7 @@ header("Pragma: no-cache");
 									</div>
 							</div>
 							<div class="map-wrapper"  style="height: 48px; background: #344fa8">
-									<div id="progress"></div>
+									<div id="progress" class="fat"></div>
 									<div id="timeline-wrapper">
 										<div class="play-button">  
 											<a class="play-button paused" href="#">

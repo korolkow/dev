@@ -71,6 +71,8 @@ var svgChart = function (opt) {
                     var x = w * j + 5,
                         y = (h * value.pc_h + delta) -  height  * (1 - (context.maxVal - v) / (context.maxVal  - context.minVal)) + context.padding_top;
 
+                    if (isNaN(y) === true) y = 0;
+
                     if (val.type === 'rect') {
                         x = w * j + 5 + 1;
                         var plotHeight =  (h * value.pc_h + delta) - y + context.padding_top;
@@ -106,7 +108,10 @@ var svgChart = function (opt) {
                         }
                     }
                 });
-                if (value.type !== 'rect' && value.type !== 'path' && points.length > 0) {
+                if (value.type !== 'rect' &&
+                    value.type !== 'path' &&
+                    points.length > 0
+                ) {
                     content += context.svgPath(points, context.bezierCommand, index, val, value.show);
                     points = [];
                 }
