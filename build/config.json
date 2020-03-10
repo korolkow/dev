@@ -59,7 +59,8 @@
             "../js/slider.js",
             "../js/svgchart.js",
             "../js/chart.min.js",
-            "../js/favorities.js"
+            "../js/favorities.js",
+            "../js/geo.js"
         ]
     },
     "static_files" : [

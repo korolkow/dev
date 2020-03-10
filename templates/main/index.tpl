@@ -141,6 +141,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 		<div class="block_content">
 			<div class="content" style="padding-top: 0">
 				<input class="search-control typeahead" type="search" placeholder="Поиск по городу" id="search-input">
+				<div class="button location"></div>
 			</div>
 		</div>
 		<div class="block_bottom"></div>

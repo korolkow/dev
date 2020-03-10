@@ -1667,3 +1667,33 @@ button {
 .close:after {
     transform: rotate(-45deg);
 }
+
+.button.location {
+    width: 32px;
+    height: 21px;
+    position: absolute;
+    right: 16px;
+    background: url(/images/location.svg) no-repeat;
+    background-size: 21px auto;
+    z-index: 2;
+    top: 4px;
+    background-position: 5px 0px;
+    cursor: pointer;
+}
+
+.button.location.loader_spinner {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 21px;
+    height: 21px;
+    right: 21px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    background: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
