@@ -3,3 +3,6 @@ $ mkdir openlayers
 $ npm install openlayers
 $ cd node_modules/openlayers
 $ node tasks/build.js build/ol.json build/ol-custom.js
+
+
+ВНИМАНИЕ!!! После сборки небходимо переименовать название функций Ya во что то другое. Конфликт с Яндекс рекламой!!!
