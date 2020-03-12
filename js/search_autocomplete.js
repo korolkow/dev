@@ -2,7 +2,7 @@ $(function () {
     "use strict";
     jQuery.fn.searchAutocomplete = function (opt) {
         var el = this,
-            cityId = opt.id,
+            cityId = opt.cityId,
             favoritesList = [],
             viewedList = [],
             lat = opt.lat,
@@ -10,12 +10,12 @@ $(function () {
             type = opt.type;
 
         var getFavoritesItems = function() {
-            if (opt.defaultList)
-                favoritesList =  opt.defaultList.getItems().filter(function(item) {
+            if (opt.citiesList)
+                favoritesList =  opt.citiesList.getItems().filter(function(item) {
                     return item.favorite === true
                 });
             return function findMatches(q, cb) {
-                if (q === '' && opt.defaultList)
+                if (q === '' && opt.citiesList)
                     cb(favoritesList || []);
                 else
                     cb([]);
@@ -23,12 +23,12 @@ $(function () {
         };
 
         var getViewedItems = function() {
-            if (opt.defaultList)
-                viewedList = opt.defaultList.getItems().filter(function(item) {
+            if (opt.citiesList)
+                viewedList = opt.citiesList.getItems().filter(function(item) {
                     return item.favorite !== true
                 });
             return function findMatches(q, cb) {
-                if (q === '' && opt.defaultList)
+                if (q === '' && opt.citiesList)
                     cb(viewedList || []);
                 else
                     cb([]);
@@ -39,8 +39,8 @@ $(function () {
             return function findMatches(q, cb) {
                 var countriesList = [];
                 var used = {};
-                if (q === '' && opt.defaultList) {
-                    countriesList = opt.defaultList.getItems().map(function (item) {return item.country});
+                if (q === '' && opt.citiesList) {
+                    countriesList = opt.citiesList.getItems().map(function (item) {return item.country});
                     countriesList = countriesList.filter(function (obj) {
                         return obj.id in used ? 0 : (used[ obj.id ] = 1);
                     })
@@ -51,15 +51,13 @@ $(function () {
 
         var getGeoError = function() {
             return function findMatches(q, cb) {
-                console.log(type);
                 if (type === 'error') {
-                    console.log(opt.error);
-                    cb([ opt.error ]);
+                    cb([{error: opt.error}]);
                 }
                 else
                     cb([]);
-            }
-        }
+            };
+        };
 
         return function () {
             el.typeahead(
@@ -230,11 +228,15 @@ $(function () {
                 },
                 {
                     name: 'error',
-                    source: getGeoError,
+                    source: getGeoError(),
                     limit: 1,
+                    display: 'value',
                     templates: {
+                        header: function(data) {
+                            return '<div><h3>Геопоиск</h3></div>';
+                        },
                         suggestion: function(data) {
-                            '<div class="empty">'+data+'</div><div class="all-result"><a href="#">Нет нужного пункта? Воспользуйтесь Мегапоиском</a></div>'
+                            return '<div class="empty">'+data.error+'</div><div class="all-result"><a href="#">Нет нужного пункта? Воспользуйтесь Мегапоиском</a></div>'
                         }
                     }
                 }
@@ -242,72 +244,91 @@ $(function () {
                 //location.href = '/pogoda/' + suggestion.id
             }).bind('typeahead:active', function () {
                 $(this).prop('placeholder', 'Поиск по городу');
+            }).bind('typeahead:close', function () {
+               $(this).typeahead('destroy');
             })
+        }()
+    }
+});
 
-            $('.button.location').unbind('click').bind('click', function() {
-                var $location = $(this)
-                $location.addClass('loader_spinner');
+var AutoComplete = function(opt) {
+    this.init = function() {
+        var context = this;
+        $(document).bind('click', function (e) {
+            if ($(e.target).hasClass('typeahead')) {
+                context.drawAutocomplete(opt);
+            }
+            else if ($(e.target).hasClass('location')) {
+                $(e.target).addClass('loader_spinner');
                 if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        el.typeahead('destroy');
-                        el.searchAutocomplete({
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        context.drawAutocomplete({
                             type: 'geolocation',
                             lat: position.coords.latitude.toString(),
                             lng: position.coords.longitude.toString()
                         });
-                        el.trigger('focus');
-                        $location.removeClass('loader_spinner');
-                    }, geoError, { enableHighAccuracy: true , timeout: 10 * 1000, maximumAge: 5 * 60 * 1000})
+                    }, geoError, { enableHighAccuracy: true , timeout: 10 * 1000, maximumAge: 5 * 60 * 1000 })
                 }
                 else {
-                    geoError('Информация о ближайших пунктах временно недоступна. Браузер не поддерживает сервис геолокации')
+                    geoError(
+                        'Информация о ближайших пунктах временно недоступна. Браузер не поддерживает сервис геолокации')
                 }
-            })
+            }
+        });
 
-            var geoError = function (error) {
-                var strError = 'Информация о ближайших пунктах временно недоступна';
-                var fError = function (error) {
-                    console.log(error);
-                    if (typeof error.code !== 'undefined') {
-                        switch (error.code) {
-                            case 0:
-                                strError = 'Информация о ближайших пунктах временно недоступна. Попробуйте позже или воспользуйтесь поиском городов по первым буквам'
-                                break
-                            case 1:
-                                strError = 'Вы запретили запрос за геоданными'
-                                break
-                            case 2:
-                                strError = 'Информация о ближайших пунктах временно недоступна. Попробуйте позже или воспользуйтесь поиском городов по первым буквам'
-                                break
-                            case 3:
-                                strError = 'Информация о ближайших пунктах временно недоступна. Попробуйте позже или воспользуйтесь поиском городов по первым буквам'
-                                break
-                        }
+        var geoError = function (error) {
+            var strError = 'Информация о ближайших пунктах временно недоступна';
+            var fError = function (error) {
+                if (typeof error.code !== 'undefined') {
+                    switch (error.code) {
+                        case 0:
+                            strError = 'Информация о ближайших пунктах временно недоступна. Попробуйте позже или воспользуйтесь поиском городов по первым буквам'
+                            break
+                        case 1:
+                            strError = 'Вы запретили запрос за геоданными'
+                            break
+                        case 2:
+                            strError = 'Информация о ближайших пунктах временно недоступна. Попробуйте позже или воспользуйтесь поиском городов по первым буквам'
+                            break
+                        case 3:
+                            strError = 'Информация о ближайших пунктах временно недоступна. Попробуйте позже или воспользуйтесь поиском городов по первым буквам'
+                            break
                     }
                 }
 
-                var script = document.createElement('script')
-                script.type = 'text/javascript'
-                script.src = 'js/geo.js'
-                script.onload = function () {
-                    if (geo_position_js.init()) {
-                        geo_position_js.getCurrentPosition(function(position) {
-                            el.typeahead('destroy');
-                            el.searchAutocomplete({
-                                type: 'geolocation',
-                                lat: position.coords.latitude.toString(),
-                                lng: position.coords.longitude.toString()
-                            });
-                            el.trigger('focus');
-                        }, fError, { enableHighAccuracy: true , timeout: 10 * 1000, maximumAge: 5 * 60 * 1000 })
-                    }
-                    else {
-                        fError();
-                    }
-                }
-                document.getElementsByTagName('head')[0].appendChild(script);
+                context.drawAutocomplete({
+                    type: 'error',
+                    error: strError
+                });
             }
 
-        }()
+            var script = document.createElement('script')
+            script.type = 'text/javascript'
+            script.src = 'js/geo.js'
+            script.onload = function () {
+                if (geo_position_js.init()) {
+                    geo_position_js.getCurrentPosition(function(position) {
+                        context.drawAutocomplete({
+                            type: 'geolocation',
+                            lat: position.coords.latitude.toString(),
+                            lng: position.coords.longitude.toString()
+                        });
+                    }, fError, { enableHighAccuracy: true , timeout: 10 * 1000, maximumAge: 5 * 60 * 1000 })
+                }
+                else {
+                    fError();
+                }
+            }
+            document.getElementsByTagName('head')[0].appendChild(script);
+        }
     }
-});
+
+    this.drawAutocomplete = function(data) {
+        opt.locationBtn.addClass('loader_spinner');
+        opt.input.searchAutocomplete(data);
+        opt.locationBtn.removeClass('loader_spinner');
+        opt.input.trigger('focus');
+    }
+
+    this.init();
+}

@@ -140,7 +140,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 		<div class="block_top" style="width: 100%;position: relative; float: left;border-top-left-radius: 4px;border-top-right-radius: 4px; height: 8px; background: #fff;"></div>
 		<div class="block_content">
 			<div class="content" style="padding-top: 0">
-				<input class="search-control typeahead" type="search" placeholder="Поиск по городу" id="search-input">
+				<input class="search-control typeahead" type="search" placeholder="Поиск по городу" id="search-input" autocomplete="off">
 				<div class="button location"></div>
 			</div>
 		</div>
@@ -617,14 +617,15 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
         var citiesList = new LastViewedCities();
         citiesList.add({"id": "27511", "name": "Истра", "country": { "id": "156", "name": "Россия"}, "type":"t", "favorite": true});
     	citiesList.add({"id": "27612", "name": "Москва", "country": { "id": "156", "name": "Россия"}, "type":"t"});
-		var input =  $('.search-control.typeahead');
 
-        input.searchAutocomplete({
-			id: townindex,
-			defaultList: citiesList
+    	var autocomplete = new AutoComplete({
+			input: $('.search-control.typeahead'),
+            locationBtn: $('.button.location'),
+			cityId: townindex,
+            citiesList: citiesList
 		});
 
-        $(document).on('click', '.star', function(e) {
+        /*$(document).on('click', '.star', function(e) {
             e.preventDefault();
             $(this).toggleClass('yellow');
             var o = $(this).attr('data-attr');
@@ -655,7 +656,7 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
             //ev.keyCode = ev.which = 40;
             //input.trigger(ev);
             //return true;
-		}
+		}*/
     });
 </script>
 </body>
