@@ -305,23 +305,23 @@ header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT"); ?>
 					var o = document.getElementById('block_list');
 					var div = document.createElement('div');
 					div.style.marginBottom = "12px";
-					var item = items.shift();
+					/*var item = items.shift();
 					var content = '<a href="/list/countries">Все страны</a> › <a href="/list/countries/'+item.c_name_en.toLowerCase()+'">'+item.c_name+'</a> › '+
 								  (typeof item.d_id != 'undefined'?'<a href="/list/regions/'+item.d_id+'">'+item.d_name+'</a> › ':'') +
 								  (typeof item.mun_id != 'undefined'&&item.mun_name !=item.name?'<a href="/list/municipals/'+item.mun_id+'">'+item.mun_name+'</a> › ':'')+
 								  '<a href="/weather/'+item.id+'-'+item.name_en.replace(' ', '_')+'.htm"><b>'+item.name+'</b></a>';
 					div.innerHTML = content;
-					o.insertBefore(div, o.firstChild);
+					o.insertBefore(div, o.firstChild);*/
 					//document.getElementById('nearby').innerHTML = '<a href="http://www.meteonova.ru/frc/'+item.id+'.htm">'+item.name + "</a> - ближайшие пункты";
 				}
 				var tpl = '<div style="width:100%; margin-bottom: %marginbottom%px; white-space: nowrap;"><a href="/weather/%id%-%name_en%.htm">%name%</a></div>';
 				var str = '';
 				document.getElementById('block_list').setAttribute('class', 'content list');
-				var rowCnt = 14;
+				var rowCnt = 15;
 				j = 0;
 				for (var i = 0; i<items.length; i++) {
 					if (j==0) str += '<td valign="top" width="160" style="overflow:hidden;"><table width="100%" cellspacing="0" cellpadding="0"><tr><td>';
-					str += tpl.replace('%id%', items[i].id).replace('%name_en%', items[i].name_en.replace(' ', '_')).replace('%name%', (i<5?'<b>'+items[i].name+'</b>':items[i].name)).replace('%marginbottom%', j == rowCnt-1?0:7);
+					str += tpl.replace('%id%', items[i].id).replace('%name_en%', items[i].name_en.replace(' ', '_')).replace('%name%', (i<6?'<b>'+items[i].name+'</b>':items[i].name)).replace('%marginbottom%', j == rowCnt-1?0:7);
 					j++;
 					if (j == rowCnt) {str += '</td></tr></table></td>'; j=0; if (j==0 && i!= items.length-1) str += '<td style="width: 15px"></td>';}
 				}

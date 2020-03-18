@@ -330,7 +330,6 @@ function hasClass(o, c) {
 	if (!o) return '';	
 	return o.className.match(new RegExp('(\\s|^)'+c+'(\\s|$)'));
 }
-
 mnovaSuggest.prototype.escape = function(str) {
 	var trans = [];
 	for (var i = 0x410; i <= 0x44F; i++) trans[i] = i - 0x350; // A-?a-y

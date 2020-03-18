@@ -170,7 +170,7 @@ function buildStaticPages() {
                 )
             )
             .pipe(replace('<html>', '<html lang="ru">'))
-            .pipe(replace('windows-1251', 'utf-8'))
+            .pipe(gulpif(item.name !== 'search', replace('windows-1251', 'utf-8')))
             .pipe(replace('style="width:222px;"', ''))
             .pipe(replace('style="width:222px"', ''))
             .pipe(replace('img width="70"', 'img width="90"'))

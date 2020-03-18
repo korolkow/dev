@@ -199,7 +199,7 @@ $list->getList();
 <html>
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 @@include('../main/<%= tpl_path %>/meta_description.tpl')
 @@include('../main/<%= tpl_path %>/meta_keywords.tpl')
 <title>МЕТЕОНОВА - поиск погоды. <?php echo $list->title;?></title>
