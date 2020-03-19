@@ -12,7 +12,7 @@ class Config {
 class ProcList {
 	public  $sqls = array(
 				'countries' =>'SELECT name_en AS id, name_ru AS name FROM countries where nRegion = 1 OR nRegion = 2 ORDER BY name_ru',
-				'cities' => 'SELECT Town.index AS id, Town.name_ru AS name, Town.name_en AS name_en FROM Town, regions WHERE regions.capital_s=Town.index and regions.nCountry=<%= country_id %> ORDER BY Town.name_ru',
+				'cities' => 'SELECT Town.index AS id, Town.name_ru AS name, Town.name_en AS name_en FROM Town, regions WHERE regions.capital_s=Town.index and regions.nCountry=<%= country_id %> GROUP BY Town.name_en ORDER BY Town.name_ru',
 				'favorites' =>'SELECT Town.index AS id, Town.name_ru AS name, Town.name_en AS name_en FROM Town where Town.name_ru IN ("Агра", "Аликанте", "Алматы", "Алушта", "Андорра-ла-Велья", "Анкара", "Анталья","Антананариву", "Астана", "Асуан", "Афины",  "Бангкок", "Бари", "Барселона", "Белек", "Берн","Бишкек", "Братислава", "Брюссель", "Будва", "Бухара", "Буэнос-Айрес", "Валлетта", "Варадеро", "Венеция", "Вильнюс", "Генуя", "Гиза", "Гоа", "Денпасар", "Джакарта", "Дубаи", "Душанбе", "Евпатория", "Женева", "Загреб", "Золотые Пески", "Ибица", "Ираклион", "Карловы Вары","Катманду", "Кейптаун", "Киев", "Кушадасы", "Ларнака", "Лимассол", "Лиссабон", "Луксор", "Мадрид", "Майами-Бич", "Мале", "Марианске-Лазне", "Мармарис", "Марса-Матрух", "Миконос", "Минск", "Монреаль", "Неаполь", "Ницца", "Нью-Йорк", "Осло", "Паланга", "Палма-де-Майорка", "Паттайя", "Пиза", "Подгорица", "Прага", "Пхукет", "Рига", "Рим", "Рио-де-Жанейро", "Родос", "Самуи", "Санья (Ясянь)", "Сафага", "Севастополь", "Сеул", "Сингапур", "Солнечный Берег", "Сплит", "Стамбул", "Стокгольм", "Таллин", "Ташкент", "Тбилиси", "Тель-Авив", "Токио", "Тунис", "Феодосия", "Хельсинки", "Хошимин", "Хургада", "Шанхай", "Шарджа", "Шарм-эль-Шейх", "Эдинбург", "Эйлат", "Юрмала") OR Town.index IN (10381, 06240, 72403, 78347, 03969, 16006, 71628, 07149, 54511, 38696, 15614, 16170, 33990) ORDER BY Town.name_ru'
 			);
 	public $pushString = '';
@@ -50,7 +50,7 @@ class ProcList {
 			}
 		}
 		try {
-			$res = $this->db->query(iconv("windows-1251", "UTF-8", $sql));
+			$res = $this->db->query($sql);
 		}
 		catch(PDOException $e) {
 			echo $e->getMessage();
@@ -83,7 +83,6 @@ class ProcList {
 				$i++; 
 			}
 			$pushString.= '</table></td>';
-			$pushString = iconv("UTF-8", "windows-1251", $pushString);
 			$this->pushString.= '<div class="title2">'.$title.'</div><table width=100% border=0 cellspacing=0 cellpadding=0 style="table-layout: fixed;"><tr valign=top>'.$pushString.'</td></tr></table>';	
 		}
 		else {
@@ -98,7 +97,7 @@ $list->getList();
 <html>
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="Метеонова: поиск погоды. Список стран ">
 <meta name="keywords" content="погода прогноз голос робот погода <%= country_name %> карта магнитные бури две недели <?php echo $list->title;?>">
 <title>МЕТЕОНОВА - поиск погоды. <?php echo $list->title;?></title>

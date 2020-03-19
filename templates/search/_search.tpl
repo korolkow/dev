@@ -110,6 +110,7 @@ return $res;
 }
 
 function add($sql, $template, $title) {
+var_dump($sql);
 $sth = $this->call($sql);
 if ($sth->rowCount()>0) {
 $this->pushString.='<div class="title2">'.$title.'</div><table border=0 cellspacing=3 cellpadding=3><tr valign="top"><td>';
