@@ -43,7 +43,7 @@ class ProcList {
 			if (count($this->pathTokens[1])>1) {
 				$this->pathTokens[2] = str_replace('-', ' ', $this->pathTokens[1][1]);
 			}
-			$this->pathTokens[1] = str_replace('-', ' ', $this->pathTokens[1][0]); 
+			$this->pathTokens[1] = str_replace('-', ' ', $this->pathTokens[1][0]);
 			break;
 		}
   	}
@@ -66,19 +66,29 @@ class ProcList {
   								'<a style="'.$style.'" href="/avia/%href.htm">%name</a>'		
   							);	
 						return;
-					}  					
+					}
+					switch ($this->pathTokens[1]) {
+						case "Russian Federation":
+							$countryName = 'russia';
+							break;
+						case "United States of America":
+							$countryName = 'United States';
+							break;
+						default:
+							$countryName =$this->pathTokens[1];
+					}
   					$rowCount = $this->add(
-  						str_replace('%name', $this->pathTokens[1], $this->sqls["countries"]["regions"]),
+  						str_replace('%name', $countryName, $this->sqls["countries"]["regions"]),
   						'<a style="'.$style.'" href="'.Config::$UrlToList.'/regions/%href">%name</a>'		
   					);
   					if ($rowCount == 0) {
   						$this->title = "Список городов по стране";
 						$this->add(
-  							str_replace('%name', $this->pathTokens[1], $this->sqls["countries"]["cities"]),
+  							str_replace('%name', $countryName, $this->sqls["countries"]["cities"]),
   							'<a style="'.$style.'" href="/weather/%href.htm">%name</a>'
   						);
   					}
-  					$this->citiesLink = '<br><a style="margin-left: 20px;" href="'.Config::$UrlToList.'/countries/'.$this->pathTokens[1].'/airports/">Полный список аэропортов по региону</a>';   					
+  					$this->citiesLink = '<br><a href="'.Config::$UrlToList.'/countries/'.$this->pathTokens[1].'/airports/">Полный список аэропортов по региону</a>';
   				break;
   				case "region":
 					if (isset($this->pathTokens[2]) && $this->pathTokens[2] == 'all') {
@@ -95,7 +105,7 @@ class ProcList {
   							str_replace('%id', $this->pathTokens[1], $this->sqls["regions"]["municipal"]),
   							'<a style="'.$style.'" href="'.Config::$UrlToList.'/municipals/%href">%name</a>'		
   						);
-						$this->citiesLink = '<br><a style="margin-left: 20px;" href="'.Config::$UrlToList.'/regions/'.$this->pathTokens[1].'/all/">Полный список городов по региону</a>'; 
+						$this->citiesLink = '<br><a href="'.Config::$UrlToList.'/regions/'.$this->pathTokens[1].'/all/">Полный список городов по региону</a>';
   						if ($rowCount == 0) {
 							$this->citiesLink = '';
   							$this->title = "Список городов по";
